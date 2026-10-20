@@ -1,0 +1,102 @@
+[
+  {
+    "id": "open",
+    "story": null,
+    "title": "Opening",
+    "start_s": 0.0,
+    "end_s": 18.6,
+    "status": "card",
+    "placeholder": null,
+    "needs": null
+  },
+  {
+    "id": "a0-title",
+    "story": "A",
+    "title": "Story A",
+    "start_s": 18.6,
+    "end_s": 22.6,
+    "status": "card",
+    "placeholder": null,
+    "needs": null
+  },
+  {
+    "id": "a1-skills",
+    "story": "A",
+    "title": "The skills",
+    "start_s": 22.6,
+    "end_s": 39.9,
+    "status": "no footage",
+    "placeholder": null,
+    "needs": "two single-skill runs from story A's record (the two skills job one chains), each delivered"
+  },
+  {
+    "id": "a2-request",
+    "story": "A",
+    "title": "The request",
+    "start_s": 39.9,
+    "end_s": 65.2,
+    "status": "placeholder",
+    "placeholder": "development dry run of job one (lane T), not the investigation",
+    "needs": "the investigation's job_run.json: message_log (request, proposal, approval) and acceptance"
+  },
+  {
+    "id": "a3-naive",
+    "story": "A",
+    "title": "The naive attempt",
+    "start_s": 65.2,
+    "end_s": 90.4,
+    "status": "placeholder",
+    "placeholder": "development dry run: the agent's first program on development starts 0 and 1, not the naive chain on the release starts",
+    "needs": "the naive chain on story A's release starts (the release receipt's naive episodes), with its count"
+  },
+  {
+    "id": "a4-investigation",
+    "story": "A",
+    "title": "The investigation",
+    "start_s": 90.4,
+    "end_s": 110.2,
+    "status": "placeholder",
+    "placeholder": "development dry run: the agent's first session, one query and its first program; no check was saved",
+    "needs": "the agent's session: the object traces it reads, its saved check (the SQL on screen, from the library's checks/<name>.json), the failing moment it finds, and the transitions it tests"
+  },
+  {
+    "id": "a5-release",
+    "story": "A",
+    "title": "The release",
+    "start_s": 110.2,
+    "end_s": 133.7,
+    "status": "no footage",
+    "placeholder": null,
+    "needs": "the release run: receipt.json (N, K, delivered, naive_delivered, rescued, broken, pairs) and, from its run directories, the program's and the naive chain's episode on the first rescued start, side by side; the agent's account to the shift lead"
+  },
+  {
+    "id": "a6-next-shift",
+    "story": "A",
+    "title": "The next shift",
+    "start_s": 133.7,
+    "end_s": 162.1,
+    "status": "no footage",
+    "placeholder": null,
+    "needs": "the job list with job one and its check; an operator's command running job one from a fresh start; the second request; job two's session invoking the saved check; the two cost accounts side by side"
+  },
+  {
+    "id": "a7-close",
+    "story": "A",
+    "title": "What changed",
+    "start_s": 162.1,
+    "end_s": 172.0,
+    "status": "placeholder",
+    "placeholder": "the claim waits for both jobs' release receipts",
+    "needs": null
+  },
+  {
+    "id": "close",
+    "story": null,
+    "title": "The record",
+    "start_s": 172.0,
+    "end_s": 179.5,
+    "status": "card",
+    "placeholder": null,
+    "needs": null
+  }
+]

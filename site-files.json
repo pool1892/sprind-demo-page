@@ -1,0 +1,100 @@
+{
+  "format": "fleetlab.film-site-files/1",
+  "film": {
+    "role": "web",
+    "file": "film.mp4",
+    "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b",
+    "bytes": 4175424,
+    "width": 1280,
+    "height": 720,
+    "fps": 20,
+    "seconds": 179.5,
+    "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
+    "audio": "AAC 128 kb/s, 48000 Hz mono",
+    "streams": {
+      "line0": "Duration: 00:02:59.50, start: 0.000000, bitrate: 186 kb/s",
+      "line1": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 178 kb/s, 20 fps, 20 tbr, 10240 tbn (default)",
+      "line2": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 1 kb/s (default)"
+    }
+  },
+  "record_converter": null,
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clips/a3-naive-e000101-855b3ab8.rerender.mp4",
+      "bytes": 1267165,
+      "sha256": "855b3ab8130863998b616a1d9cdb65d8da2bd3fb9c334f54ad3adee8e8197b19"
+    },
+    {
+      "path": "clips/a3-naive-e000101-85ffe733.mp4",
+      "bytes": 164348,
+      "sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e"
+    },
+    {
+      "path": "clips/a3-naive-e000102-30ce904e.mp4",
+      "bytes": 220466,
+      "sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a"
+    },
+    {
+      "path": "clips/a3-naive-e000102-4e11a353.rerender.mp4",
+      "bytes": 1553518,
+      "sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e"
+    },
+    {
+      "path": "film/captions.vtt",
+      "bytes": 3862,
+      "sha256": "19a1ead218527dfddba0d1f75ed428c6aed8cd25682ad7ce643e457eadd2aaf4"
+    },
+    {
+      "path": "film/chapters.json",
+      "bytes": 3104,
+      "sha256": "dfc2ce51681a4e4c65f8f0f9bbac2f0460ee1edb19b61e4985254715da297b0c"
+    },
+    {
+      "path": "film/chapters.vtt",
+      "bytes": 464,
+      "sha256": "9f2adbeb29d1993e119d1ecd8a51c21c273bcdf72cfe224d78286570d793affc"
+    },
+    {
+      "path": "film/film.json",
+      "bytes": 15788,
+      "sha256": "2633401257f9e78b5f55fdf76f198f4046b66e8bf6a318b9a19ba7fcd7ce8f89"
+    },
+    {
+      "path": "film/film.mp4",
+      "bytes": 4175424,
+      "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b"
+    },
+    {
+      "path": "film/poster.jpg",
+      "bytes": 116003,
+      "sha256": "a81555146115ecb3be7a6c695349d7524e33af022eca47028a447a888caa6277"
+    },
+    {
+      "path": "film/timeline.md",
+      "bytes": 2178,
+      "sha256": "72ff98811cb57599cacce87bdce6683005d13cfb04d1464c30943a4c88f60850"
+    },
+    {
+      "path": "film/timeline.png",
+      "bytes": 310017,
+      "sha256": "f38d6fda1b8acc3e58738b39143a24c577d60a34bab4dc3b9b159572a207208e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11811,
+      "sha256": "e21cfa1066bab73cc674f278793d2bae7dc39d72c4eb54884c1d186d3fe09e08"
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 2751,
+      "sha256": "f062cde23da3c7da5b25e2fc076a495f3a598995b5b5ef9bb37daa3324a89655"
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}

@@ -1,0 +1,483 @@
+{
+ "format": "fleetlab.film-public/1",
+ "note": "Public provenance: runs, tables and files by stable identifier and SHA-256. The full provenance, with where each file lies, is kept with the run records.",
+ "built": "2026-10-20T04:07:31+00:00",
+ "code_commit": "98e6719aef6a2e74f34f0245f99aed33f612f88d",
+ "film": [
+  {
+   "role": "master",
+   "file": "film-master.mp4",
+   "sha256": "a9901cc181ed24f3d293271cfb72db034c473f2a713d2c519ed4bc01dbddb274",
+   "bytes": 8289107,
+   "width": 1920,
+   "height": 1080,
+   "fps": 20,
+   "seconds": 179.5,
+   "video": "H.264 high, crf 16, preset slow",
+   "audio": "AAC 192 kb/s, 48000 Hz mono"
+  },
+  {
+   "role": "web",
+   "file": "film.mp4",
+   "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b",
+   "bytes": 4175424,
+   "width": 1280,
+   "height": 720,
+   "fps": 20,
+   "seconds": 179.5,
+   "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
+   "audio": "AAC 128 kb/s, 48000 Hz mono"
+  }
+ ],
+ "private_provenance_sha256": "3217eda695d06d21bb48cf65094322959465e6294e7f1bb4de4bdb1e169832cf",
+ "beats": [
+  {
+   "id": "open",
+   "story": null,
+   "title": "Opening",
+   "start_s": 0.0,
+   "end_s": 18.6,
+   "status": "card",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 41,
+    "seconds": 17.3,
+    "timing": "estimated reading pace",
+    "text": "This is a simulated robot installation: one robot arm at a kitchen table. Its policy, the model that turns camera images into motion, is fixed. Agents watch the installation, run experiments on it, and change how the installation uses that policy.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 0.0,
+     "end_s": 18.6,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a0-title",
+   "story": "A",
+   "title": "Story A",
+   "start_s": 18.6,
+   "end_s": 22.6,
+   "status": "card",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 6,
+    "seconds": 2.7,
+    "timing": "estimated reading pace",
+    "text": "First story: make this one job.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 18.6,
+     "end_s": 22.6,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a1-skills",
+   "story": "A",
+   "title": "The skills",
+   "start_s": 22.6,
+   "end_s": 39.9,
+   "status": "no footage",
+   "placeholder": null,
+   "needs": "two single-skill runs from story A's record (the two skills job one chains), each delivered",
+   "narration": {
+    "words": 37,
+    "seconds": 16.0,
+    "timing": "estimated reading pace",
+    "text": "The robot already has skills. Each skill is one task on this table, done by the policy under its own instruction. Here, each one runs alone and delivers. The policy does not change anywhere in this film.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "slate",
+     "start_s": 22.6,
+     "end_s": 39.9,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a2-request",
+   "story": "A",
+   "title": "The request",
+   "start_s": 39.9,
+   "end_s": 65.2,
+   "status": "placeholder",
+   "placeholder": "development dry run of job one (lane T), not the investigation",
+   "needs": "the investigation's job_run.json: message_log (request, proposal, approval) and acceptance",
+   "narration": {
+    "words": 57,
+    "seconds": 24.0,
+    "timing": "estimated reading pace",
+    "text": "A shift lead asks for one job: two skills in a row, ending in a stated arrangement. The lead adds a rule about the order. The agent proposes the bar: the job must deliver on at least 18 of 20 fresh starts it was never run on. The lead approves that bar before any program is tested.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "messages",
+     "start_s": 39.9,
+     "end_s": 65.2,
+     "clips": [],
+     "counts": [
+      {
+       "text": "18 of 20",
+       "detail": "the approved bar: deliveries required on the reserved release starts (K 18, N 20)",
+       "kind": "literal",
+       "k": null,
+       "n": null,
+       "where": null,
+       "success": null,
+       "key": null,
+       "tables": [],
+       "source": "dry-run-job-one-1846/job_run.json: acceptance"
+      }
+     ],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/job_run.json",
+       "sha256": "9a665528bc267cf832de1761d5202e90b98c724b202e256dcba16869a6f31079"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a3-naive",
+   "story": "A",
+   "title": "The naive attempt",
+   "start_s": 65.2,
+   "end_s": 90.4,
+   "status": "placeholder",
+   "placeholder": "development dry run: the agent's first program on development starts 0 and 1, not the naive chain on the release starts",
+   "needs": "the naive chain on story A's release starts (the release receipt's naive episodes), with its count",
+   "narration": {
+    "words": 56,
+    "seconds": 23.9,
+    "timing": "estimated reading pace",
+    "text": "The obvious chain switches to the next skill the moment the first one reports success. That is the signal published scores count. But it can fire while the hand still holds the item, and the arrangement ends wrong. On the {release_n} reserved starts, the obvious chain delivers on {release_naive_delivered}. A success signal is not a delivery.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 65.2,
+     "end_s": 75.55,
+     "clips": [
+      {
+       "label": "development start 0: the bowl never reaches the cabinet top",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run",
+       "episode": "e000101",
+       "control_steps_shown": [
+        0,
+        392
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e",
+       "file": "clips/a3-naive-e000101-85ffe733.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+        },
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/robot_steps/e000101.parquet",
+         "sha256": "8d1ac6793907f80d7142b46bc640f5af8628b3f99bdd8a0d3e4cb3ad97e820af"
+        },
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_step_events.parquet",
+         "sha256": "447e4693b52072d840354c5155a0e0576781a579b92a53d39d29d2323f70e8cc"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "855b3ab8130863998b616a1d9cdb65d8da2bd3fb9c334f54ad3adee8e8197b19",
+        "file": "clips/a3-naive-e000101-855b3ab8.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 393,
+         "recorded_hashes": 393,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "f6e9d5a87c50256b",
+         "end_state_hash": "f6e9d5a87c50256b",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "0 of 2 delivered",
+       "detail": "the agent's first program, development starts 0 and 1 (dry run)",
+       "kind": "computed",
+       "k": 0,
+       "n": 2,
+       "where": {
+        "job_id": "j0001"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "clip",
+     "start_s": 75.55,
+     "end_s": 90.4,
+     "clips": [
+      {
+       "label": "development start 1: the bowl's goal holds, then the hand is still on it",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        411
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a",
+       "file": "clips/a3-naive-e000102-30ce904e.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+        },
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/robot_steps/e000102.parquet",
+         "sha256": "c5976b7d3c0a4fc5feffdbdbbf8bc4a3fe2eaaf27fdebff697b1744c7b7ced3d"
+        },
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_step_events.parquet",
+         "sha256": "447e4693b52072d840354c5155a0e0576781a579b92a53d39d29d2323f70e8cc"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e",
+        "file": "clips/a3-naive-e000102-4e11a353.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 412,
+         "recorded_hashes": 412,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "ef877a3b52322608",
+         "end_state_hash": "ef877a3b52322608",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "0 of 2 delivered",
+       "detail": "the agent's first program, development starts 0 and 1 (dry run)",
+       "kind": "computed",
+       "k": 0,
+       "n": 2,
+       "where": {
+        "job_id": "j0001"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+        }
+       ]
+      }
+     ],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a4-investigation",
+   "story": "A",
+   "title": "The investigation",
+   "start_s": 90.4,
+   "end_s": 110.2,
+   "status": "placeholder",
+   "placeholder": "development dry run: the agent's first session, one query and its first program; no check was saved",
+   "needs": "the agent's session: the object traces it reads, its saved check (the SQL on screen, from the library's checks/<name>.json), the failing moment it finds, and the transitions it tests",
+   "narration": {
+    "words": 44,
+    "seconds": 18.5,
+    "timing": "estimated reading pace",
+    "text": "The agent reads the object traces and writes its own check: did a later step undo an earlier one, and is everything released and at rest? It finds the failing moment. Then it tests transitions on the installation itself, 2 development starts in all.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "calls",
+     "start_s": 90.4,
+     "end_s": 99.4,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/agent-runs/20261019T184619-0ad75d86/stdout.jsonl",
+       "sha256": "59f25c90c8eb0dfb7075726b97a45f9a5913d3f90741bef387788d06242b9e8a"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 99.4,
+     "end_s": 110.2,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/batch.json",
+       "sha256": "dfb60ed319c496a6b1bbd680b67d3fe120f074c06bf621825d5f50778e83c9e6"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a5-release",
+   "story": "A",
+   "title": "The release",
+   "start_s": 110.2,
+   "end_s": 133.7,
+   "status": "no footage",
+   "placeholder": null,
+   "needs": "the release run: receipt.json (N, K, delivered, naive_delivered, rescued, broken, pairs) and, from its run directories, the program's and the naive chain's episode on the first rescued start, side by side; the agent's account to the shift lead",
+   "narration": {
+    "words": 51,
+    "seconds": 22.2,
+    "timing": "estimated reading pace",
+    "text": "The agent freezes its program and runs it on {release_n} reserved starts it has never seen. It delivers on {release_delivered}; the bar was {release_k}. The obvious chain, on the same starts, delivers on {release_naive_delivered}. Rescued: {release_rescued}. Broken: {release_broken}. Then the agent explains the change to the shift lead in plain words.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "slate",
+     "start_s": 110.2,
+     "end_s": 133.7,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a6-next-shift",
+   "story": "A",
+   "title": "The next shift",
+   "start_s": 133.7,
+   "end_s": 162.1,
+   "status": "no footage",
+   "placeholder": null,
+   "needs": "the job list with job one and its check; an operator's command running job one from a fresh start; the second request; job two's session invoking the saved check; the two cost accounts side by side",
+   "narration": {
+    "words": 64,
+    "seconds": 27.1,
+    "timing": "estimated reading pace",
+    "text": "The job and the check join the installation's job list, and an operator runs the job with one command from a fresh start. Then a second request arrives. The agent runs the saved check and reuses its method. Job one took 1 sessions, 2 simulated starts and 1 minutes of the agent's model time. Job two took {job_two_sessions} sessions, {job_two_starts} starts and {job_two_model_minutes} minutes.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "slate",
+     "start_s": 133.7,
+     "end_s": 162.1,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a7-close",
+   "story": "A",
+   "title": "What changed",
+   "start_s": 162.1,
+   "end_s": 172.0,
+   "status": "placeholder",
+   "placeholder": "the claim waits for both jobs' release receipts",
+   "needs": null,
+   "narration": {
+    "words": 20,
+    "seconds": 8.6,
+    "timing": "estimated reading pace",
+    "text": "The robot policy stayed the same. The installation gained {library_jobs} jobs and a check it did not have this morning.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 162.1,
+     "end_s": 172.0,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "story": null,
+   "title": "The record",
+   "start_s": 172.0,
+   "end_s": 179.5,
+   "status": "card",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 14,
+    "seconds": 6.2,
+    "timing": "estimated reading pace",
+    "text": "Every clip in this film is a recorded run. The record lists each one.",
+    "voice_sha256": null
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 172.0,
+     "end_s": 179.5,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  }
+ ]
+}
