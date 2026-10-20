@@ -1,35 +1,35 @@
 {
  "format": "fleetlab.film-public/1",
  "note": "Public provenance: runs, tables and files by stable identifier and SHA-256. The full provenance, with where each file lies, is kept with the run records.",
- "built": "2026-10-20T10:32:15+00:00",
- "code_commit": "71d9a0435cdf993253a11080095ce2d687fed4f9",
+ "built": "2026-10-20T10:41:06+00:00",
+ "code_commit": "7efeab7cf2d3a0cf97be218cbbbdcbb4a770e101",
  "film": [
   {
    "role": "master",
    "file": "film-master.mp4",
-   "sha256": "6df2e4ab05a82587a237518f48aa43e8c374d536732e9d5c924aeb159cc42caa",
-   "bytes": 38666980,
+   "sha256": "56b7e6b9bb3b0539cecb2fc6f6c26fc4325111a5f615666d8b5219c0efc5ce9e",
+   "bytes": 38711573,
    "width": 1920,
    "height": 1080,
    "fps": 20,
-   "seconds": 403.6,
+   "seconds": 407.95,
    "video": "H.264 high, crf 16, preset slow",
    "audio": "AAC 192 kb/s, 48000 Hz mono"
   },
   {
    "role": "web",
    "file": "film.mp4",
-   "sha256": "1cdf3ce710e21e1512bc8ad1d695c279fd0bb691f098f0d4e56bd4aae6f6cdec",
-   "bytes": 19206777,
+   "sha256": "5572fe1db75cc258dd4b3c1b061952bf54d4ae449e0eb0ef3d2f24b38c73c50a",
+   "bytes": 19231771,
    "width": 1280,
    "height": 720,
    "fps": 20,
-   "seconds": 403.6,
+   "seconds": 407.95,
    "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
    "audio": "AAC 128 kb/s, 48000 Hz mono"
   }
  ],
- "private_provenance_sha256": "8966f7651acbdd1d79b29b99ec3b679f52fe270ea2c5687580b4788361d419cf",
+ "private_provenance_sha256": "b9b1f8138a84ea518b6252020a5d7542c464ec480dd80781098408d112b9fa09",
  "beats": [
   {
    "id": "open",
@@ -45,7 +45,7 @@
     "seconds": 17.415,
     "timing": "measured audio",
     "text": "This is a simulated robot installation: one robot arm at a kitchen table. Its policy, the model that turns camera images into motion, is fixed. Agents watch the installation, run experiments on it, and change how the installation uses that policy.",
-    "voice_sha256": "9d71075a4f7cccf5c82ba1689c54e53df316f1d5edf36f6a72392795832b604c"
+    "voice_sha256": "46eab3f22bbef2a671669b4ee07dd0d3bcf34dd5aad4cc7d81c6e3dc4e18173b"
    },
    "shots": [
     {
@@ -72,7 +72,7 @@
     "seconds": 2.508,
     "timing": "measured audio",
     "text": "First story: make this one job.",
-    "voice_sha256": "33084fb5544109753d165c6325ea9d77242fd6f852fb773e0215edaa9d640376"
+    "voice_sha256": "6408470a15b4c5326921acc8b086f0eff8b7a4333da635cfcae1bcef796d76c4"
    },
    "shots": [
     {
@@ -99,7 +99,7 @@
     "seconds": 13.746,
     "timing": "measured audio",
     "text": "The robot already has skills. Each skill is one task on this table, done by the policy under its own instruction. Here, each one runs alone and delivers. The policy does not change anywhere in this film.",
-    "voice_sha256": "4a633b34d7e26973d3f8ea2a01a1c46b2b833b9abc81aebda67767885d4ee77c"
+    "voice_sha256": "26526b63d5e418e037a749f9bc8f1d7000c32ab5a01237474578125731218de3"
    },
    "shots": [
     {
@@ -264,7 +264,7 @@
     "seconds": 18.808,
     "timing": "measured audio",
     "text": "A shift lead asks for one job: the cheese into the black bowl, and the loaded bowl onto the cabinet top. The cheese goes in before the bowl moves. The agent proposes the bar: the job must deliver on at least 14 of 20 fresh starts it was never run on. The lead approves that bar before any program is tested.",
-    "voice_sha256": "cffa7d89bbec4d057a8c56e6bf96d7523e87c48852c9da52b5bb40b3846944d3"
+    "voice_sha256": "ce8ed8bd0efff422e6d579a4e53492447c6821271381c880be66d54092f5a3d9"
    },
    "shots": [
     {
@@ -296,7 +296,7 @@
     "seconds": 14.721,
     "timing": "measured audio",
     "text": "The obvious chain switches to the next skill the moment the first one reports success. That is the signal published scores count. On the first 10 development starts, it delivers on 0. A success signal is not a delivery.",
-    "voice_sha256": "caf056e3860bc81b22d79fad5f86a0fc5825e48e16b174fb4fd83120a73313f0"
+    "voice_sha256": "5c03b270379f45d8f7e3da80d813fb17c7f1c86d0a8bf107898f345c4f86ad0f"
    },
    "shots": [
     {
@@ -390,7 +390,7 @@
     "seconds": 28.189,
     "timing": "measured audio",
     "text": "The agent reads the object traces, looks at the frames, and writes its own check: was the cheese released and settled when the bowl task began, and did it stay in the bowl to the end? Then it tests transitions on the installation. Letting the cheese instruction run on a little after its goal first holds delivers on 9 of the same 10 starts. On 20 fresh starts, the same program delivers on 11. Adding a return home at the end breaks starts that had delivered.",
-    "voice_sha256": "886f852747ef328c11842a25e79f7c00d2ae20518fab5a638770802b08521be7"
+    "voice_sha256": "d476a6a09f354f89206c4c3e09444c1d219647cbedddcfce2a0eaa4e1a15e354"
    },
    "shots": [
     {
@@ -702,7 +702,7 @@
     "seconds": 17.601,
     "timing": "measured audio",
     "text": "The result is short of the bar, so the agent does not release the job. It writes its account to the shift lead: the best fresh result, 11 of 20, against the agreed 14 of 20, and a finishing change that made things worse. It saves its checks and a skill for the next shift.",
-    "voice_sha256": "a030f9bd954f4b1a177be45dbfc078f8ae583de765a2c60274b3448e84c6dc96"
+    "voice_sha256": "b73dfc4772223cc61c02c77750f0fa0d9efacea483175d2aae9bdf9241e51c95"
    },
    "shots": [
     {
@@ -738,16 +738,16 @@
    "story": "A",
    "title": "The second shift",
    "start_s": 122.05,
-   "end_s": 175.2,
+   "end_s": 179.35,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 140,
-    "seconds": 51.873,
+    "words": 150,
+    "seconds": 56.007,
     "timing": "measured audio",
-    "text": "A second shift takes the same request, with the first shift's checks and skill in its library. It runs the first shift's check on its own baseline before adapting it. A longer continuation delivers on 17 of 20 starts. Those starts had been examined before, so the agent does not count them as fresh evidence, and it stops without a release as well. A third shift starts from the second's library. For it, the lead adds that a release which misses on the reserved starts is acceptable. Its shorter continuation delivers on 9 of 10 development starts, and the agent saves it as a job. The first shift took 5 sessions, 100 simulated starts and 38 minutes of the agent's model time; the second, 5 sessions, 130 starts and 45 minutes; the third, 5 sessions, 60 starts and 39 minutes.",
-    "voice_sha256": "770c3cb9f7118952a7af1f3c2d8dcd530dcd9984ef4c69f8c52453a7a4bed76b"
+    "text": "A second shift takes the same request, with the first shift's checks and skill in its library. It runs the first shift's check on its own baseline before adapting it. A longer continuation delivers on 17 of 20 starts. Those starts had been examined before, so the agent does not count them as fresh evidence, and it stops without a release as well. A third shift starts from the second's library. For it, the lead adds that a release which misses on the reserved starts is acceptable. Its shorter continuation delivers on 9 of 10 development starts, and the agent saves it as a job. The first shift took 5 sessions, 100 development executions on 30 distinct starts, and 38 minutes of the agent's model time; the second, 5 sessions, 130 executions on 30 starts and 45 minutes; the third, 5 sessions, 60 executions on 10 starts and 39 minutes.",
+    "voice_sha256": "fafc8e9889a32989f58033bdce34df38cafd208f3600ceda2ef3f60acde05b6a"
    },
    "shots": [
     {
@@ -932,7 +932,7 @@
     {
      "kind": "clip",
      "start_s": 152.25,
-     "end_s": 175.2,
+     "end_s": 179.35,
      "clips": [
       {
        "label": "the saved program (j0004), development start 0, the first it delivered on",
@@ -1010,23 +1010,23 @@
    "id": "a7-release",
    "story": "A",
    "title": "The release",
-   "start_s": 175.2,
-   "end_s": 198.5,
+   "start_s": 179.35,
+   "end_s": 202.85,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
     "words": 54,
-    "seconds": 21.409,
+    "seconds": 22.198,
     "timing": "measured audio",
     "text": "The saved job runs on the 20 reserved starts, which no shift had touched, and the naive chain runs on the same starts. The lead's bar is 14. The job delivers on 13; the naive chain on 1. Rescued: 13. Broken: 1. Order violations: 0. Short of the bar, the job is not released.",
-    "voice_sha256": "441495ebecf09f798a3b4e144a244df30caa6c71dac10fc4111e2fc9dcedec74"
+    "voice_sha256": "528c4aab816e1f3b962c65bbfeac0b075a4b7743ac8dc58a81ddb07f1729fc6b"
    },
    "shots": [
     {
      "kind": "pair",
-     "start_s": 175.2,
-     "end_s": 185.5,
+     "start_s": 179.35,
+     "end_s": 189.65,
      "clips": [
       {
        "label": "naive chain, reserved start 31",
@@ -1165,16 +1165,16 @@
     },
     {
      "kind": "card",
-     "start_s": 185.5,
-     "end_s": 191.5,
+     "start_s": 189.65,
+     "end_s": 195.65,
      "clips": [],
      "counts": [],
      "files": []
     },
     {
      "kind": "text",
-     "start_s": 191.5,
-     "end_s": 198.5,
+     "start_s": 195.65,
+     "end_s": 202.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1190,8 +1190,8 @@
    "id": "a8-close",
    "story": "A",
    "title": "What changed",
-   "start_s": 198.5,
-   "end_s": 227.5,
+   "start_s": 202.85,
+   "end_s": 231.85,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1200,13 +1200,13 @@
     "seconds": 12.26,
     "timing": "measured audio",
     "text": "The robot policy stayed the same. The job is not released. The installation's library now holds the saved job, 4 checks and the skills of every shift, and the next shift starts from them.",
-    "voice_sha256": "65197efd32f3f51819aae3f32027fffdde4bdb19a8057e5019052cfba14fdaf8"
+    "voice_sha256": "40834710a91a7c72050308450561087b052ab49fa9eddcee44f37732c71b3fb0"
    },
    "shots": [
     {
      "kind": "messages",
-     "start_s": 198.5,
-     "end_s": 202.5,
+     "start_s": 202.85,
+     "end_s": 206.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1218,8 +1218,8 @@
     },
     {
      "kind": "messages",
-     "start_s": 202.5,
-     "end_s": 206.5,
+     "start_s": 206.85,
+     "end_s": 210.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1231,8 +1231,8 @@
     },
     {
      "kind": "messages",
-     "start_s": 206.5,
-     "end_s": 212.5,
+     "start_s": 210.85,
+     "end_s": 216.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1244,8 +1244,8 @@
     },
     {
      "kind": "text",
-     "start_s": 212.5,
-     "end_s": 215.5,
+     "start_s": 216.85,
+     "end_s": 219.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1257,8 +1257,8 @@
     },
     {
      "kind": "text",
-     "start_s": 215.5,
-     "end_s": 218.5,
+     "start_s": 219.85,
+     "end_s": 222.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1270,8 +1270,8 @@
     },
     {
      "kind": "text",
-     "start_s": 218.5,
-     "end_s": 221.5,
+     "start_s": 222.85,
+     "end_s": 225.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1283,8 +1283,8 @@
     },
     {
      "kind": "card",
-     "start_s": 221.5,
-     "end_s": 227.5,
+     "start_s": 225.85,
+     "end_s": 231.85,
      "clips": [],
      "counts": [],
      "files": []
@@ -1295,8 +1295,8 @@
    "id": "b0-title",
    "story": "B",
    "title": "Story B",
-   "start_s": 227.5,
-   "end_s": 232.7,
+   "start_s": 231.85,
+   "end_s": 237.05,
    "status": "card",
    "placeholder": null,
    "needs": null,
@@ -1305,13 +1305,13 @@
     "seconds": 3.901,
     "timing": "measured audio",
     "text": "Second story: make that a check the next shift can run.",
-    "voice_sha256": "7449bafbcfd3b9cb68394e21e8ae8bfea5bd32a8fae6c696f611a1653a7140bb"
+    "voice_sha256": "9fbefac462e8dc81edbe7a6cef85b52a066dd1c1fb7da066e7d8ece3053917d6"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 227.5,
-     "end_s": 232.7,
+     "start_s": 231.85,
+     "end_s": 237.05,
      "clips": [],
      "counts": [],
      "files": []
@@ -1322,8 +1322,8 @@
    "id": "b1-constraint",
    "story": "B",
    "title": "The fleet and the lag that misleads",
-   "start_s": 232.7,
-   "end_s": 255.45,
+   "start_s": 237.05,
+   "end_s": 259.8,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1332,13 +1332,13 @@
     "seconds": 21.455,
     "timing": "measured audio",
     "text": "A fleet of robot arms works at several sites. At one site, inference stays in the customer's data center, so commands arrive late, and nobody on site can undo that. Task telemetry shows a lag there, and a lag on one robot at another site as well. From the telemetry alone, the agent cannot tell what kind of lag each one is.",
-    "voice_sha256": "aef8745b9aa428d0bf7711a58205624d4b3e665f6a8bc847b74014edce9391f8"
+    "voice_sha256": "87ee5941f3b3b574a7c2870e627ff42ab1387260161eab2a6a9b01db4e622f5d"
    },
    "shots": [
     {
      "kind": "image",
-     "start_s": 232.7,
-     "end_s": 237.7,
+     "start_s": 237.05,
+     "end_s": 242.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1350,8 +1350,8 @@
     },
     {
      "kind": "clip",
-     "start_s": 237.7,
-     "end_s": 245.25,
+     "start_s": 242.05,
+     "end_s": 249.6,
      "clips": [
       {
        "label": "site s1, robot r04, day 4: a failed attempt (first failure at s1)",
@@ -1425,8 +1425,8 @@
     },
     {
      "kind": "clip",
-     "start_s": 245.25,
-     "end_s": 255.45,
+     "start_s": 249.6,
+     "end_s": 259.8,
      "clips": [
       {
        "label": "robot r06, day 1: a failed attempt (its first failure)",
@@ -1461,8 +1461,8 @@
    "id": "b2-instrument",
    "story": "B",
    "title": "The instrument",
-   "start_s": 255.45,
-   "end_s": 286.5,
+   "start_s": 259.8,
+   "end_s": 290.85,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1471,13 +1471,13 @@
     "seconds": 29.768,
     "timing": "measured audio",
     "text": "So the agent builds a measurement. From a bounded set of motions it composes a step probe, and asks for it on a robot at the delayed site, on the lagging robot, on a healthy reference and on a robot at the third site. Commanded against measured: at the delayed site, the arm starts late by the same amount every time. On the lagging robot, the delay changes from one repeat to the next, and grows within the probe. One is a fixed delay. The other is a backlog.",
-    "voice_sha256": "882062976c8c0258752cc86b66bb362236ac2477d15c0c742c2e9547347eb738"
+    "voice_sha256": "9ae10b47b81a6cc7dc0668c3fcd7cbd3b4be337684e8b508ee6eb719a2f6733e"
    },
    "shots": [
     {
      "kind": "calls",
-     "start_s": 255.45,
-     "end_s": 262.45,
+     "start_s": 259.8,
+     "end_s": 266.8,
      "clips": [],
      "counts": [],
      "files": [
@@ -1489,8 +1489,8 @@
     },
     {
      "kind": "image",
-     "start_s": 262.45,
-     "end_s": 286.5,
+     "start_s": 266.8,
+     "end_s": 290.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1506,8 +1506,8 @@
    "id": "b3-change",
    "story": "B",
    "title": "The change",
-   "start_s": 286.5,
-   "end_s": 331.15,
+   "start_s": 290.85,
+   "end_s": 335.5,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1516,13 +1516,13 @@
     "seconds": 18.576,
     "timing": "measured audio",
     "text": "The probe picks candidates; task experiments on paired starts decide. The agent adopts its changes, each with its reason: compensate for the delay at the first site rather than remove it, roll back the software update at the third site, and service the lagging robot's controller.",
-    "voice_sha256": "67655bd1527091097191d248250e39c8f4f4a711a769d56d8e5594b63656ebe0"
+    "voice_sha256": "b754680f12d6652fec31252fba588d695fc7ac76fa031cb6abe20a5ba1001acf"
    },
    "shots": [
     {
      "kind": "image",
-     "start_s": 286.5,
-     "end_s": 290.5,
+     "start_s": 290.85,
+     "end_s": 294.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1534,8 +1534,8 @@
     },
     {
      "kind": "text",
-     "start_s": 290.5,
-     "end_s": 296.5,
+     "start_s": 294.85,
+     "end_s": 300.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -1547,8 +1547,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 296.5,
-     "end_s": 304.05,
+     "start_s": 300.85,
+     "end_s": 308.4,
      "clips": [
       {
        "label": "x0002 control, robot r01",
@@ -1602,8 +1602,8 @@
     },
     {
      "kind": "text",
-     "start_s": 304.05,
-     "end_s": 310.05,
+     "start_s": 308.4,
+     "end_s": 314.4,
      "clips": [],
      "counts": [],
      "files": [
@@ -1615,8 +1615,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 310.05,
-     "end_s": 317.6,
+     "start_s": 314.4,
+     "end_s": 321.95,
      "clips": [
       {
        "label": "x0001 control, robot r10",
@@ -1670,8 +1670,8 @@
     },
     {
      "kind": "text",
-     "start_s": 317.6,
-     "end_s": 323.6,
+     "start_s": 321.95,
+     "end_s": 327.95,
      "clips": [],
      "counts": [],
      "files": [
@@ -1683,8 +1683,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 323.6,
-     "end_s": 331.15,
+     "start_s": 327.95,
+     "end_s": 335.5,
      "clips": [
       {
        "label": "x0003 control, robot r06",
@@ -1742,8 +1742,8 @@
    "id": "b4-evaluation",
    "story": "B",
    "title": "The evaluation",
-   "start_s": 331.15,
-   "end_s": 353.25,
+   "start_s": 335.5,
+   "end_s": 357.6,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1752,13 +1752,13 @@
     "seconds": 20.805,
     "timing": "measured audio",
     "text": "Then the changed fleet runs 576 reserved attempts the agent never saw, beside the original state on the same attempts. Before: 451 of 576 succeed. After: 558. Rescued: 113. Broken: 6. The lagging robot goes from 29 to 46 of 48.",
-    "voice_sha256": "c7195fa39e61ca54c800922ed0b715ff6a95397e5d534cdb5f294bd02efa9a8f"
+    "voice_sha256": "2c027f0f5b86a7d044f6054e79d0eaf1ee72a5a0586562bee0caa6685031bd29"
    },
    "shots": [
     {
      "kind": "image",
-     "start_s": 331.15,
-     "end_s": 336.15,
+     "start_s": 335.5,
+     "end_s": 340.5,
      "clips": [],
      "counts": [
       {
@@ -1813,8 +1813,8 @@
     },
     {
      "kind": "image",
-     "start_s": 336.15,
-     "end_s": 340.15,
+     "start_s": 340.5,
+     "end_s": 344.5,
      "clips": [],
      "counts": [],
      "files": [
@@ -1826,8 +1826,8 @@
     },
     {
      "kind": "image",
-     "start_s": 340.15,
-     "end_s": 353.25,
+     "start_s": 344.5,
+     "end_s": 357.6,
      "clips": [],
      "counts": [
       {
@@ -1954,8 +1954,8 @@
    "id": "b5-second-use",
    "story": "B",
    "title": "The second use",
-   "start_s": 353.25,
-   "end_s": 398.05,
+   "start_s": 357.6,
+   "end_s": 402.4,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1964,13 +1964,13 @@
     "seconds": 43.514,
     "timing": "measured audio",
     "text": "The probe and its analysis became a recipe in the library, runnable on named robots. On a later fleet, robots fail again, and the recipe runs. At the third site, the arms first move at row 18 and are half-way at row 21: a fixed delay. The robot that fails on its own responds like the healthy reference. Its first movement: row 1. The reference: row 1. So the skill's rule points at the images, not at the controller service that fixed the first fleet. The operator's recorded decision follows it: no service for that robot; inspect its images and its change log, and test the first fleet's adaptation at the third site before adopting it.",
-    "voice_sha256": "8000701d578c013ccae4024ce9ff2fdc7048c5119bbea53f041de3afe7065a28"
+    "voice_sha256": "b73019e2d2717d45b8f0b05b2cc4fb391b632782704869d04f19c6421fea0111"
    },
    "shots": [
     {
      "kind": "clip",
-     "start_s": 353.25,
-     "end_s": 360.8,
+     "start_s": 357.6,
+     "end_s": 365.15,
      "clips": [
       {
        "label": "later fleet, robot r06, day 2: a failed attempt (its first failure)",
@@ -2044,8 +2044,8 @@
     },
     {
      "kind": "image",
-     "start_s": 360.8,
-     "end_s": 368.8,
+     "start_s": 365.15,
+     "end_s": 373.15,
      "clips": [],
      "counts": [],
      "files": [
@@ -2057,8 +2057,8 @@
     },
     {
      "kind": "text",
-     "start_s": 368.8,
-     "end_s": 374.8,
+     "start_s": 373.15,
+     "end_s": 379.15,
      "clips": [],
      "counts": [],
      "files": [
@@ -2070,8 +2070,8 @@
     },
     {
      "kind": "text",
-     "start_s": 374.8,
-     "end_s": 398.05,
+     "start_s": 379.15,
+     "end_s": 402.4,
      "clips": [],
      "counts": [],
      "files": [
@@ -2087,8 +2087,8 @@
    "id": "close",
    "story": null,
    "title": "The record",
-   "start_s": 398.05,
-   "end_s": 403.6,
+   "start_s": 402.4,
+   "end_s": 407.95,
    "status": "card",
    "placeholder": null,
    "needs": null,
@@ -2097,13 +2097,13 @@
     "seconds": 4.272,
     "timing": "measured audio",
     "text": "Every clip in this film is a recorded run. The record lists each one.",
-    "voice_sha256": "d1920d6a1444d20280c827f9495c1e429f5067e89ae4b724a2e9d034747ed9ce"
+    "voice_sha256": "af95552b9e28784dd391d145d01916789b617059e9b2d0a0eb78ccfe8e3faacf"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 398.05,
-     "end_s": 403.6,
+     "start_s": 402.4,
+     "end_s": 407.95,
      "clips": [],
      "counts": [],
      "files": []
