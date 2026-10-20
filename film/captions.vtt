@@ -229,245 +229,254 @@ Against the lead's bar of 12, the job is
 released.
 
 50
-00:03:04.550 --> 00:03:06.934
+00:03:04.550 --> 00:03:06.863
 The robot policy stayed the same.
 
 51
-00:03:06.934 --> 00:03:11.808
+00:03:06.863 --> 00:03:11.592
 The installation now runs a released job
 it did not have before the first shift:
 
 52
-00:03:11.808 --> 00:03:15.570
+00:03:11.592 --> 00:03:15.241
 the cheese in the bowl, and the loaded
 bowl on the cabinet.
 
 53
-00:03:15.570 --> 00:03:20.285
+00:03:15.241 --> 00:03:19.816
 Behind it, the library holds the job, 4
 checks and the skills of every shift.
 
 54
-00:03:20.285 --> 00:03:24.576
+00:03:19.816 --> 00:03:22.489
 The second job, the bowl onto the plate,
-builds on job one's library.
 
 55
-00:03:24.576 --> 00:03:29.503
-Its first shift tests job one's checks on
-its own first runs and saves a check of
+00:03:22.489 --> 00:03:25.470
+builds on job one's library over three
+shifts:
 
 56
-00:03:29.503 --> 00:03:30.563
-its own;
+00:03:25.470 --> 00:03:28.400
+the first two each save a check of their
+own,
 
 57
-00:03:30.563 --> 00:03:33.530
-its second starts from the released
-library,
+00:03:28.400 --> 00:03:33.283
+and the third builds a guarded placement
+retry that delivers on 7 of 10 development
 
 58
-00:03:33.530 --> 00:03:37.662
-runs job one's audit on its own baseline,
-adapts job one's recipe,
+00:03:33.283 --> 00:03:34.260
+starts.
 
 59
-00:03:37.662 --> 00:03:41.795
-and saves a new check and 2 skills from 90
-development executions.
+00:03:34.260 --> 00:03:38.732
+On the 20 reserved starts it delivers on
+7, level with the naive chain's 7,
 
 60
-00:03:43.100 --> 00:03:47.001
+00:03:38.732 --> 00:03:41.919
+so the installation's release check holds
+it back,
+
+61
+00:03:41.919 --> 00:03:45.928
+and the library keeps the program and 6
+checks for the next shift.
+
+62
+00:03:52.550 --> 00:03:56.451
 Second story: make that a check the next
 shift can run.
 
-61
-00:03:48.300 --> 00:03:51.518
+63
+00:03:57.750 --> 00:04:00.968
 A fleet of robot arms works at several
 sites.
 
-62
-00:03:51.518 --> 00:03:55.527
+64
+00:04:00.968 --> 00:04:04.977
 At one site, inference stays in the
 customer's data center,
 
-63
-00:03:55.527 --> 00:03:59.479
+65
+00:04:04.977 --> 00:04:08.929
 so commands arrive late, and nobody on
 site can undo that.
 
-64
-00:03:59.479 --> 00:04:04.730
+66
+00:04:08.929 --> 00:04:14.180
 Task telemetry shows a lag there, and a
 lag on one robot at another site as well.
 
-65
-00:04:04.730 --> 00:04:09.755
+67
+00:04:14.180 --> 00:04:19.205
 From the telemetry alone, the agent cannot
 tell what kind of lag each one is.
 
-66
-00:04:11.050 --> 00:04:13.448
+68
+00:04:20.500 --> 00:04:22.898
 So the agent builds a measurement.
 
-67
-00:04:13.448 --> 00:04:16.941
+69
+00:04:22.898 --> 00:04:26.391
 From a bounded set of motions it composes
 a step probe,
 
-68
-00:04:16.941 --> 00:04:21.164
+70
+00:04:26.391 --> 00:04:30.614
 and asks for it on a robot at the delayed
 site, on the lagging robot,
 
-69
-00:04:21.164 --> 00:04:24.709
+71
+00:04:30.614 --> 00:04:34.159
 on a healthy reference and on a robot at
 the third site.
 
-70
-00:04:24.709 --> 00:04:27.837
+72
+00:04:34.159 --> 00:04:37.287
 Commanded against measured: at the delayed
 site,
 
-71
-00:04:27.837 --> 00:04:31.069
+73
+00:04:37.287 --> 00:04:40.519
 the arm starts late by the same amount
 every time.
 
-72
-00:04:31.069 --> 00:04:35.240
+74
+00:04:40.519 --> 00:04:44.690
 On the lagging robot, the delay changes
 from one repeat to the next,
 
-73
-00:04:35.240 --> 00:04:37.273
+75
+00:04:44.690 --> 00:04:46.723
 and grows within the probe.
 
-74
-00:04:37.273 --> 00:04:38.993
+76
+00:04:46.723 --> 00:04:48.443
 One is a fixed delay.
 
-75
-00:04:38.993 --> 00:04:40.818
+77
+00:04:48.443 --> 00:04:50.268
 The other is a backlog.
 
-76
-00:04:42.100 --> 00:04:46.578
+78
+00:04:51.550 --> 00:04:56.028
 The probe picks candidates; task
 experiments on paired starts decide.
 
-77
-00:04:46.578 --> 00:04:50.061
+79
+00:04:56.028 --> 00:04:59.511
 The agent adopts its changes, each with
 its reason:
 
-78
-00:04:50.061 --> 00:04:54.318
+80
+00:04:59.511 --> 00:05:03.768
 compensate for the delay at the first site
 rather than remove it,
 
-79
-00:04:54.318 --> 00:04:57.635
+81
+00:05:03.768 --> 00:05:07.085
 roll back the software update at the third
 site,
 
-80
-00:04:57.635 --> 00:05:00.676
+82
+00:05:07.085 --> 00:05:10.126
 and service the lagging robot's
 controller.
 
-81
-00:05:26.750 --> 00:05:32.343
+83
+00:05:36.200 --> 00:05:41.793
 Then the changed fleet runs 576 reserved
 attempts the agent never saw,
 
-82
-00:05:32.343 --> 00:05:36.368
+84
+00:05:41.793 --> 00:05:45.818
 beside the original state on the same
 attempts.
 
-83
-00:05:36.368 --> 00:05:39.028
+85
+00:05:45.818 --> 00:05:48.478
 Before: 451 of 576 succeed.
 
-84
-00:05:39.028 --> 00:05:40.597
+86
+00:05:48.478 --> 00:05:50.047
 After: 558.
 
-85
-00:05:40.597 --> 00:05:42.303
+87
+00:05:50.047 --> 00:05:51.753
 Rescued: 113.
 
-86
-00:05:42.303 --> 00:05:43.803
+88
+00:05:51.753 --> 00:05:53.253
 Broken: 6.
 
-87
-00:05:43.803 --> 00:05:47.555
+89
+00:05:53.253 --> 00:05:57.005
 The lagging robot goes from 29 to 46 of
 48.
 
-88
-00:05:48.850 --> 00:05:53.980
+90
+00:05:58.300 --> 00:06:03.430
 The probe and its analysis became a recipe
 in the library, runnable on named robots.
 
-89
-00:05:53.980 --> 00:05:57.668
+91
+00:06:03.430 --> 00:06:07.118
 On a later fleet, robots fail again, and
 the recipe runs.
 
-90
-00:05:57.668 --> 00:05:59.271
+92
+00:06:07.118 --> 00:06:08.721
 At the third site,
 
-91
-00:05:59.271 --> 00:06:04.188
+93
+00:06:08.721 --> 00:06:13.638
 the arms first move 18 rows after the
 command and are half-way 21 rows after it:
 
-92
-00:06:04.188 --> 00:06:05.577
+94
+00:06:13.638 --> 00:06:15.027
 a fixed delay.
 
-93
-00:06:05.577 --> 00:06:09.853
+95
+00:06:15.027 --> 00:06:19.303
 The robot that fails on its own responds
 like the healthy reference.
 
-94
-00:06:09.853 --> 00:06:14.876
+96
+00:06:19.303 --> 00:06:24.326
 Its first movement comes 1 row after the
 command; the reference's, 1 row after it.
 
-95
-00:06:14.876 --> 00:06:17.709
+97
+00:06:24.326 --> 00:06:27.159
 So the skill's rule points at the images,
 
-96
-00:06:17.709 --> 00:06:21.396
+98
+00:06:27.159 --> 00:06:30.846
 not at the controller service that fixed
 the first fleet.
 
-97
-00:06:21.396 --> 00:06:25.832
+99
+00:06:30.846 --> 00:06:35.282
 The operator's recorded decision follows
 it: no service for that robot;
 
-98
-00:06:25.832 --> 00:06:28.504
+100
+00:06:35.282 --> 00:06:37.954
 inspect its images and its change log,
 
-99
-00:06:28.504 --> 00:06:33.154
+101
+00:06:37.954 --> 00:06:42.604
 and test the first fleet's adaptation at
 the third site before adopting it.
 
-100
-00:06:34.450 --> 00:06:36.958
+102
+00:06:43.900 --> 00:06:46.408
 Every clip in this film is a recorded run.
 
-101
-00:06:36.958 --> 00:06:38.722
+103
+00:06:46.408 --> 00:06:48.172
 The record lists each one.
