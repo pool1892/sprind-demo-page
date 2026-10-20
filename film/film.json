@@ -1,57 +1,57 @@
 {
  "format": "fleetlab.film-public/1",
  "note": "Public provenance: runs, tables and files by stable identifier and SHA-256. The full provenance, with where each file lies, is kept with the run records.",
- "built": "2026-10-20T04:07:31+00:00",
- "code_commit": "98e6719aef6a2e74f34f0245f99aed33f612f88d",
+ "built": "2026-10-20T10:32:15+00:00",
+ "code_commit": "71d9a0435cdf993253a11080095ce2d687fed4f9",
  "film": [
   {
    "role": "master",
    "file": "film-master.mp4",
-   "sha256": "a9901cc181ed24f3d293271cfb72db034c473f2a713d2c519ed4bc01dbddb274",
-   "bytes": 8289107,
+   "sha256": "6df2e4ab05a82587a237518f48aa43e8c374d536732e9d5c924aeb159cc42caa",
+   "bytes": 38666980,
    "width": 1920,
    "height": 1080,
    "fps": 20,
-   "seconds": 179.5,
+   "seconds": 403.6,
    "video": "H.264 high, crf 16, preset slow",
    "audio": "AAC 192 kb/s, 48000 Hz mono"
   },
   {
    "role": "web",
    "file": "film.mp4",
-   "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b",
-   "bytes": 4175424,
+   "sha256": "1cdf3ce710e21e1512bc8ad1d695c279fd0bb691f098f0d4e56bd4aae6f6cdec",
+   "bytes": 19206777,
    "width": 1280,
    "height": 720,
    "fps": 20,
-   "seconds": 179.5,
+   "seconds": 403.6,
    "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
    "audio": "AAC 128 kb/s, 48000 Hz mono"
   }
  ],
- "private_provenance_sha256": "3217eda695d06d21bb48cf65094322959465e6294e7f1bb4de4bdb1e169832cf",
+ "private_provenance_sha256": "8966f7651acbdd1d79b29b99ec3b679f52fe270ea2c5687580b4788361d419cf",
  "beats": [
   {
    "id": "open",
    "story": null,
    "title": "Opening",
    "start_s": 0.0,
-   "end_s": 18.6,
+   "end_s": 18.7,
    "status": "card",
    "placeholder": null,
    "needs": null,
    "narration": {
     "words": 41,
-    "seconds": 17.3,
-    "timing": "estimated reading pace",
+    "seconds": 17.415,
+    "timing": "measured audio",
     "text": "This is a simulated robot installation: one robot arm at a kitchen table. Its policy, the model that turns camera images into motion, is fixed. Agents watch the installation, run experiments on it, and change how the installation uses that policy.",
-    "voice_sha256": null
+    "voice_sha256": "9d71075a4f7cccf5c82ba1689c54e53df316f1d5edf36f6a72392795832b604c"
    },
    "shots": [
     {
      "kind": "card",
      "start_s": 0.0,
-     "end_s": 18.6,
+     "end_s": 18.7,
      "clips": [],
      "counts": [],
      "files": []
@@ -62,23 +62,23 @@
    "id": "a0-title",
    "story": "A",
    "title": "Story A",
-   "start_s": 18.6,
-   "end_s": 22.6,
+   "start_s": 18.7,
+   "end_s": 22.5,
    "status": "card",
    "placeholder": null,
    "needs": null,
    "narration": {
     "words": 6,
-    "seconds": 2.7,
-    "timing": "estimated reading pace",
+    "seconds": 2.508,
+    "timing": "measured audio",
     "text": "First story: make this one job.",
-    "voice_sha256": null
+    "voice_sha256": "33084fb5544109753d165c6325ea9d77242fd6f852fb773e0215edaa9d640376"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 18.6,
-     "end_s": 22.6,
+     "start_s": 18.7,
+     "end_s": 22.5,
      "clips": [],
      "counts": [],
      "files": []
@@ -89,25 +89,163 @@
    "id": "a1-skills",
    "story": "A",
    "title": "The skills",
-   "start_s": 22.6,
-   "end_s": 39.9,
-   "status": "no footage",
+   "start_s": 22.5,
+   "end_s": 37.55,
+   "status": "record",
    "placeholder": null,
-   "needs": "two single-skill runs from story A's record (the two skills job one chains), each delivered",
+   "needs": null,
    "narration": {
     "words": 37,
-    "seconds": 16.0,
-    "timing": "estimated reading pace",
+    "seconds": 13.746,
+    "timing": "measured audio",
     "text": "The robot already has skills. Each skill is one task on this table, done by the policy under its own instruction. Here, each one runs alone and delivers. The policy does not change anywhere in this film.",
-    "voice_sha256": null
+    "voice_sha256": "4a633b34d7e26973d3f8ea2a01a1c46b2b833b9abc81aebda67767885d4ee77c"
    },
    "shots": [
     {
-     "kind": "slate",
-     "start_s": 22.6,
-     "end_s": 39.9,
-     "clips": [],
-     "counts": [],
+     "kind": "clip",
+     "start_s": 22.5,
+     "end_s": 26.2,
+     "clips": [
+      {
+       "label": "skill: put the cream cheese in the bowl, development start 0",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/skills/cheese",
+       "episode": "e000101",
+       "control_steps_shown": [
+        0,
+        95
+       ],
+       "outcome": "delivered",
+       "video_sha256": "9482448e46b34eba8476ad7327738fdc048ea6f4705b10628ffba7ce94eadd2e",
+       "file": "clips/a1-skills-e000101-9482448e.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/skills/cheese/log/job_episodes.parquet",
+         "sha256": "d5eb945dc811529b6f2cf0ab011606820d37399da36133e770d588423a83acf3"
+        },
+        {
+         "id": "probes:demo/2026-10-21/skills/cheese/log/robot_steps/e000101.parquet",
+         "sha256": "59b237676958a57e36edeebaf8f02047dbc19dfbb5dc434b18b5f0ec9f2d112d"
+        },
+        {
+         "id": "probes:demo/2026-10-21/skills/cheese/log/job_step_events.parquet",
+         "sha256": "a7a423de2ee5075d40ad62860686a6939f6ecd5a85ed806edbc05e115ca022f0"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "f810fe548c544378c7c7eb4a0afffb58c6097661ab6ea8a9019f378829ed706b",
+        "file": "clips/a1-skills-e000101-f810fe54.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 96,
+         "recorded_hashes": 96,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "a4705686a5faf010",
+         "end_state_hash": "a4705686a5faf010",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "9482448e46b34eba8476ad7327738fdc048ea6f4705b10628ffba7ce94eadd2e"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "3 of 3 delivered",
+       "detail": "the skill alone, development starts 0 to 2 (base task 6)",
+       "kind": "computed",
+       "k": 3,
+       "n": 3,
+       "where": {},
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/skills/cheese/log/job_episodes.parquet",
+         "sha256": "d5eb945dc811529b6f2cf0ab011606820d37399da36133e770d588423a83acf3"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "clip",
+     "start_s": 26.2,
+     "end_s": 37.55,
+     "clips": [
+      {
+       "label": "skill: put the bowl on top of the cabinet, development start 0",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/skills/cabinet",
+       "episode": "e000101",
+       "control_steps_shown": [
+        0,
+        103
+       ],
+       "outcome": "delivered",
+       "video_sha256": "d2a5ab98aef6f67b757e468facef9872f62e38cf0ee3e0474fd207cf2b26b3d2",
+       "file": "clips/a1-skills-e000101-d2a5ab98.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/skills/cabinet/log/job_episodes.parquet",
+         "sha256": "676068e02412f0a8438a0c270f2419be824cac8139f7ce314d91c7fc95532bad"
+        },
+        {
+         "id": "probes:demo/2026-10-21/skills/cabinet/log/robot_steps/e000101.parquet",
+         "sha256": "4cf40accb317d4f47c84f56d97d6758c33b9951d85aa876052f40265bf085b58"
+        },
+        {
+         "id": "probes:demo/2026-10-21/skills/cabinet/log/job_step_events.parquet",
+         "sha256": "bafab0b8b8ec3166715d77e40d72e604264165cc56455ea7a0555a45d5ace138"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "e92105909b400652471ee0820ebbd6c8711194f86685fde3593f05b048fe5ad6",
+        "file": "clips/a1-skills-e000101-e9210590.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 104,
+         "recorded_hashes": 104,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "bd3956954a0585e8",
+         "end_state_hash": "bd3956954a0585e8",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "d2a5ab98aef6f67b757e468facef9872f62e38cf0ee3e0474fd207cf2b26b3d2"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "3 of 3 delivered",
+       "detail": "the skill alone, development starts 0 to 2 (base task 3)",
+       "kind": "computed",
+       "k": 3,
+       "n": 3,
+       "where": {},
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/skills/cabinet/log/job_episodes.parquet",
+         "sha256": "676068e02412f0a8438a0c270f2419be824cac8139f7ce314d91c7fc95532bad"
+        }
+       ]
+      }
+     ],
      "files": []
     }
    ]
@@ -116,42 +254,29 @@
    "id": "a2-request",
    "story": "A",
    "title": "The request",
-   "start_s": 39.9,
-   "end_s": 65.2,
-   "status": "placeholder",
-   "placeholder": "development dry run of job one (lane T), not the investigation",
-   "needs": "the investigation's job_run.json: message_log (request, proposal, approval) and acceptance",
+   "start_s": 37.55,
+   "end_s": 57.65,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
    "narration": {
-    "words": 57,
-    "seconds": 24.0,
-    "timing": "estimated reading pace",
-    "text": "A shift lead asks for one job: two skills in a row, ending in a stated arrangement. The lead adds a rule about the order. The agent proposes the bar: the job must deliver on at least 18 of 20 fresh starts it was never run on. The lead approves that bar before any program is tested.",
-    "voice_sha256": null
+    "words": 61,
+    "seconds": 18.808,
+    "timing": "measured audio",
+    "text": "A shift lead asks for one job: the cheese into the black bowl, and the loaded bowl onto the cabinet top. The cheese goes in before the bowl moves. The agent proposes the bar: the job must deliver on at least 14 of 20 fresh starts it was never run on. The lead approves that bar before any program is tested.",
+    "voice_sha256": "cffa7d89bbec4d057a8c56e6bf96d7523e87c48852c9da52b5bb40b3846944d3"
    },
    "shots": [
     {
      "kind": "messages",
-     "start_s": 39.9,
-     "end_s": 65.2,
+     "start_s": 37.55,
+     "end_s": 57.65,
      "clips": [],
-     "counts": [
-      {
-       "text": "18 of 20",
-       "detail": "the approved bar: deliveries required on the reserved release starts (K 18, N 20)",
-       "kind": "literal",
-       "k": null,
-       "n": null,
-       "where": null,
-       "success": null,
-       "key": null,
-       "tables": [],
-       "source": "dry-run-job-one-1846/job_run.json: acceptance"
-      }
-     ],
+     "counts": [],
      "files": [
       {
-       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/job_run.json",
-       "sha256": "9a665528bc267cf832de1761d5202e90b98c724b202e256dcba16869a6f31079"
+       "id": "probes:demo/2026-10-21/job-one/run-3/job_run.json",
+       "sha256": "64b4c2a7dab8c0c8d80008b656d46ac26a0cffdd4ba44e6306e2c46ac81a3788"
       }
      ]
     }
@@ -161,103 +286,28 @@
    "id": "a3-naive",
    "story": "A",
    "title": "The naive attempt",
-   "start_s": 65.2,
-   "end_s": 90.4,
-   "status": "placeholder",
-   "placeholder": "development dry run: the agent's first program on development starts 0 and 1, not the naive chain on the release starts",
-   "needs": "the naive chain on story A's release starts (the release receipt's naive episodes), with its count",
+   "start_s": 57.65,
+   "end_s": 73.65,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
    "narration": {
-    "words": 56,
-    "seconds": 23.9,
-    "timing": "estimated reading pace",
-    "text": "The obvious chain switches to the next skill the moment the first one reports success. That is the signal published scores count. But it can fire while the hand still holds the item, and the arrangement ends wrong. On the {release_n} reserved starts, the obvious chain delivers on {release_naive_delivered}. A success signal is not a delivery.",
-    "voice_sha256": null
+    "words": 39,
+    "seconds": 14.721,
+    "timing": "measured audio",
+    "text": "The obvious chain switches to the next skill the moment the first one reports success. That is the signal published scores count. On the first 10 development starts, it delivers on 0. A success signal is not a delivery.",
+    "voice_sha256": "caf056e3860bc81b22d79fad5f86a0fc5825e48e16b174fb4fd83120a73313f0"
    },
    "shots": [
     {
      "kind": "clip",
-     "start_s": 65.2,
-     "end_s": 75.55,
+     "start_s": 57.65,
+     "end_s": 73.65,
      "clips": [
       {
-       "label": "development start 0: the bowl never reaches the cabinet top",
+       "label": "naive chain, development start 1",
        "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run",
-       "episode": "e000101",
-       "control_steps_shown": [
-        0,
-        392
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e",
-       "file": "clips/a3-naive-e000101-85ffe733.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
-        },
-        {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/robot_steps/e000101.parquet",
-         "sha256": "8d1ac6793907f80d7142b46bc640f5af8628b3f99bdd8a0d3e4cb3ad97e820af"
-        },
-        {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_step_events.parquet",
-         "sha256": "447e4693b52072d840354c5155a0e0576781a579b92a53d39d29d2323f70e8cc"
-        }
-       ],
-       "rerender": {
-        "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "855b3ab8130863998b616a1d9cdb65d8da2bd3fb9c334f54ad3adee8e8197b19",
-        "file": "clips/a3-naive-e000101-855b3ab8.rerender.mp4",
-        "comparison": {
-         "label": "re-render",
-         "hashes_compared": 393,
-         "recorded_hashes": 393,
-         "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "f6e9d5a87c50256b",
-         "end_state_hash": "f6e9d5a87c50256b",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e"
-        }
-       }
-      }
-     ],
-     "counts": [
-      {
-       "text": "0 of 2 delivered",
-       "detail": "the agent's first program, development starts 0 and 1 (dry run)",
-       "kind": "computed",
-       "k": 0,
-       "n": 2,
-       "where": {
-        "job_id": "j0001"
-       },
-       "success": "delivered is true",
-       "key": [
-        "episode_id"
-       ],
-       "tables": [
-        {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
-        }
-       ]
-      }
-     ],
-     "files": []
-    },
-    {
-     "kind": "clip",
-     "start_s": 75.55,
-     "end_s": 90.4,
-     "clips": [
-      {
-       "label": "development start 1: the bowl's goal holds, then the hand is still on it",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run",
+       "run": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run",
        "episode": "e000102",
        "control_steps_shown": [
         0,
@@ -265,26 +315,26 @@
        ],
        "outcome": "not delivered",
        "video_sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a",
-       "file": "clips/a3-naive-e000102-30ce904e.mp4",
+       "file": "clips/a4-investigation-e000102-30ce904e.mp4",
        "records_read": [
         {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "cffa5c785943807e912d647633721f989b9d5ef86f96f12db45dd9c6000e2760"
         },
         {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/robot_steps/e000102.parquet",
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/robot_steps/e000102.parquet",
          "sha256": "c5976b7d3c0a4fc5feffdbdbbf8bc4a3fe2eaaf27fdebff697b1744c7b7ced3d"
         },
         {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_step_events.parquet",
-         "sha256": "447e4693b52072d840354c5155a0e0576781a579b92a53d39d29d2323f70e8cc"
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_step_events.parquet",
+         "sha256": "1b5016a030ab42827119b65c5a850c3ccfeea8db9d25f16b8accfaea0f06db5b"
         }
        ],
        "rerender": {
         "used": true,
         "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
         "video_sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e",
-        "file": "clips/a3-naive-e000102-4e11a353.rerender.mp4",
+        "file": "clips/a4-investigation-e000102-4e11a353.rerender.mp4",
         "comparison": {
          "label": "re-render",
          "hashes_compared": 412,
@@ -302,11 +352,11 @@
      ],
      "counts": [
       {
-       "text": "0 of 2 delivered",
-       "detail": "the agent's first program, development starts 0 and 1 (dry run)",
+       "text": "0 of 10 delivered",
+       "detail": "the naive chain, development starts 0 to 9",
        "kind": "computed",
        "k": 0,
-       "n": 2,
+       "n": 10,
        "where": {
         "job_id": "j0001"
        },
@@ -316,8 +366,8 @@
        ],
        "tables": [
         {
-         "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "52b5c657ce738c838458583a70999fc915d3cb8552d7f70b7abff3753a2b3f3f"
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "cffa5c785943807e912d647633721f989b9d5ef86f96f12db45dd9c6000e2760"
         }
        ]
       }
@@ -330,125 +380,1706 @@
    "id": "a4-investigation",
    "story": "A",
    "title": "The investigation",
-   "start_s": 90.4,
-   "end_s": 110.2,
-   "status": "placeholder",
-   "placeholder": "development dry run: the agent's first session, one query and its first program; no check was saved",
-   "needs": "the agent's session: the object traces it reads, its saved check (the SQL on screen, from the library's checks/<name>.json), the failing moment it finds, and the transitions it tests",
+   "start_s": 73.65,
+   "end_s": 103.15,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
    "narration": {
-    "words": 44,
-    "seconds": 18.5,
-    "timing": "estimated reading pace",
-    "text": "The agent reads the object traces and writes its own check: did a later step undo an earlier one, and is everything released and at rest? It finds the failing moment. Then it tests transitions on the installation itself, 2 development starts in all.",
-    "voice_sha256": null
+    "words": 86,
+    "seconds": 28.189,
+    "timing": "measured audio",
+    "text": "The agent reads the object traces, looks at the frames, and writes its own check: was the cheese released and settled when the bowl task began, and did it stay in the bowl to the end? Then it tests transitions on the installation. Letting the cheese instruction run on a little after its goal first holds delivers on 9 of the same 10 starts. On 20 fresh starts, the same program delivers on 11. Adding a return home at the end breaks starts that had delivered.",
+    "voice_sha256": "886f852747ef328c11842a25e79f7c00d2ae20518fab5a638770802b08521be7"
    },
    "shots": [
     {
      "kind": "calls",
-     "start_s": 90.4,
-     "end_s": 99.4,
+     "start_s": 73.65,
+     "end_s": 82.65,
      "clips": [],
      "counts": [],
      "files": [
       {
-       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/agent-runs/20261019T184619-0ad75d86/stdout.jsonl",
-       "sha256": "59f25c90c8eb0dfb7075726b97a45f9a5913d3f90741bef387788d06242b9e8a"
+       "id": "probes:demo/2026-10-21/job-one/run-3/agent-runs/20261019T230801-9eb82e42/stdout.jsonl",
+       "sha256": "0e75c973e55e099ac54be704598b62d1137460f2d3e42ab59033451b429b83aa"
+      }
+     ]
+    },
+    {
+     "kind": "pair",
+     "start_s": 82.65,
+     "end_s": 93.45,
+     "clips": [
+      {
+       "label": "naive chain (j0001), start 1",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        411
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a",
+       "file": "clips/a4-investigation-e000102-30ce904e.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "cffa5c785943807e912d647633721f989b9d5ef86f96f12db45dd9c6000e2760"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/robot_steps/e000102.parquet",
+         "sha256": "c5976b7d3c0a4fc5feffdbdbbf8bc4a3fe2eaaf27fdebff697b1744c7b7ced3d"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_step_events.parquet",
+         "sha256": "1b5016a030ab42827119b65c5a850c3ccfeea8db9d25f16b8accfaea0f06db5b"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e",
+        "file": "clips/a4-investigation-e000102-4e11a353.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 412,
+         "recorded_hashes": 412,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "ef877a3b52322608",
+         "end_state_hash": "ef877a3b52322608",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a"
+        }
+       }
+      },
+      {
+       "label": "the cheese instruction runs on (j0004), start 1",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-3/runs/session-02/run",
+       "episode": "e000402",
+       "control_steps_shown": [
+        0,
+        216
+       ],
+       "outcome": "delivered",
+       "video_sha256": "1e13b4b2344d039d6ad8bbf5bd28bcd73df3fac32f69cf69e5f1ca8b2b7aff4d",
+       "file": "clips/a4-investigation-e000402-1e13b4b2.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/log/job_episodes.parquet",
+         "sha256": "157f5cce85af266b359f84796b195444dee0db0d8cb218444f4d92e0b29c0b60"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/log/robot_steps/e000402.parquet",
+         "sha256": "d2a024e34dca4a904bf588ffdea5c2538502fa6143a73c3fc574dbd0e946bc81"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/log/job_step_events.parquet",
+         "sha256": "1145d490bc883092e8101973d5e814c4075cb64cb700ae7a0a6a1930f05f80a8"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "a5af9bb819b8ff477f887fe6903110f0203706a562d6663d82e4dfae3b544d4b",
+        "file": "clips/a4-investigation-e000402-a5af9bb8.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 217,
+         "recorded_hashes": 217,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "4b96262077bd4955",
+         "end_state_hash": "4b96262077bd4955",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "1e13b4b2344d039d6ad8bbf5bd28bcd73df3fac32f69cf69e5f1ca8b2b7aff4d"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "naive: 0 of 10",
+       "detail": "development starts 0 to 9",
+       "kind": "computed",
+       "k": 0,
+       "n": 10,
+       "where": {
+        "job_id": "j0001"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/log/job_episodes.parquet",
+         "sha256": "cffa5c785943807e912d647633721f989b9d5ef86f96f12db45dd9c6000e2760"
+        }
+       ]
+      },
+      {
+       "text": "tuned: 9 of 10",
+       "detail": "the same starts",
+       "kind": "computed",
+       "k": 9,
+       "n": 10,
+       "where": {
+        "job_id": "j0004"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/log/job_episodes.parquet",
+         "sha256": "157f5cce85af266b359f84796b195444dee0db0d8cb218444f4d92e0b29c0b60"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "pair",
+     "start_s": 93.45,
+     "end_s": 103.15,
+     "clips": [
+      {
+       "label": "tuned program (j0006), start 11",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-3/runs/session-03/run",
+       "episode": "e000602",
+       "control_steps_shown": [
+        0,
+        246
+       ],
+       "outcome": "delivered",
+       "video_sha256": "c2d13c85bc45952a18b78cba79fcde32b36235a48fd9eec9851de4c817645477",
+       "file": "clips/a4-investigation-e000602-c2d13c85.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "7b981fd730f2648e7fe8d624d9f510c114b30171261f663a3ac2fa8188ee52dd"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/log/robot_steps/e000602.parquet",
+         "sha256": "9c53c6615ddf8a6615a960151dac9b0a53b8340bbb1896cbe1f6f10cde8af86e"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/log/job_step_events.parquet",
+         "sha256": "c1a5fd3cc81b17223952d586fb9bab586e977bb55dff85f96b87a4d311e76a3a"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "1cfc66d085f9a493ad11a57512d97c375f6b33d2bfc8898a7af4cf3cc9967dd4",
+        "file": "clips/a4-investigation-e000602-1cfc66d0.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 247,
+         "recorded_hashes": 247,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "be2445fe478c3d5b",
+         "end_state_hash": "be2445fe478c3d5b",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "c2d13c85bc45952a18b78cba79fcde32b36235a48fd9eec9851de4c817645477"
+        }
+       }
+      },
+      {
+       "label": "plus a return home (j0007), start 11",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-3/runs/session-04/run",
+       "episode": "e000702",
+       "control_steps_shown": [
+        0,
+        265
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "fee986e0761e0dfaf5e0339a0e101cd6eb311892804bec222b4f41f9cc3a25e4",
+       "file": "clips/a4-investigation-e000702-fee986e0.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/log/job_episodes.parquet",
+         "sha256": "41f688fbf5ce745964a0d99e09138be2e414337d3e2b1dfd365d5cc804153406"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/log/robot_steps/e000702.parquet",
+         "sha256": "511ecf6c0f20104e1a039c099766c5904191b996587b5f6182648a0fb3c4973a"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/log/job_step_events.parquet",
+         "sha256": "d009856331afb2515d269a62a82902ef1a283a8b759ba2f6ce5d5e3a2f972e42"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "9effbfbd15ccedb309507fb030bc9d9ffa3a83800be036cc18a441618613b8bc",
+        "file": "clips/a4-investigation-e000702-9effbfbd.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 266,
+         "recorded_hashes": 266,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "d0c5e4bf9f2c62e3",
+         "end_state_hash": "d0c5e4bf9f2c62e3",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "fee986e0761e0dfaf5e0339a0e101cd6eb311892804bec222b4f41f9cc3a25e4"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "tuned, fresh starts: 11 of 20",
+       "detail": "development starts 10 to 29",
+       "kind": "computed",
+       "k": 11,
+       "n": 20,
+       "where": {
+        "job_id": "j0006"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "7b981fd730f2648e7fe8d624d9f510c114b30171261f663a3ac2fa8188ee52dd"
+        }
+       ]
+      },
+      {
+       "text": "with return home: 4 of 20",
+       "detail": "the same starts",
+       "kind": "computed",
+       "k": 4,
+       "n": 20,
+       "where": {
+        "job_id": "j0007"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/log/job_episodes.parquet",
+         "sha256": "41f688fbf5ce745964a0d99e09138be2e414337d3e2b1dfd365d5cc804153406"
+        }
+       ]
+      }
+     ],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a5-account",
+   "story": "A",
+   "title": "The account",
+   "start_s": 103.15,
+   "end_s": 122.05,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 55,
+    "seconds": 17.601,
+    "timing": "measured audio",
+    "text": "The result is short of the bar, so the agent does not release the job. It writes its account to the shift lead: the best fresh result, 11 of 20, against the agreed 14 of 20, and a finishing change that made things worse. It saves its checks and a skill for the next shift.",
+    "voice_sha256": "a030f9bd954f4b1a177be45dbfc078f8ae583de765a2c60274b3448e84c6dc96"
+   },
+   "shots": [
+    {
+     "kind": "text",
+     "start_s": 103.15,
+     "end_s": 112.15,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json",
+       "sha256": "ee7b94831c231f1c9480df299d5bab47d6bc19c07dfd284f28f4add3d563415f"
       }
      ]
     },
     {
      "kind": "text",
-     "start_s": 99.4,
-     "end_s": 110.2,
+     "start_s": 112.15,
+     "end_s": 122.05,
      "clips": [],
      "counts": [],
      "files": [
       {
-       "id": "probes:demo/2026-10-20/tools/dry-run-job-one-1846/runs/session-01/batch.json",
-       "sha256": "dfb60ed319c496a6b1bbd680b67d3fe120f074c06bf621825d5f50778e83c9e6"
+       "id": "probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json",
+       "sha256": "ee7b94831c231f1c9480df299d5bab47d6bc19c07dfd284f28f4add3d563415f"
       }
      ]
     }
    ]
   },
   {
-   "id": "a5-release",
+   "id": "a6-second-shift",
    "story": "A",
-   "title": "The release",
-   "start_s": 110.2,
-   "end_s": 133.7,
-   "status": "no footage",
+   "title": "The second shift",
+   "start_s": 122.05,
+   "end_s": 175.2,
+   "status": "record",
    "placeholder": null,
-   "needs": "the release run: receipt.json (N, K, delivered, naive_delivered, rescued, broken, pairs) and, from its run directories, the program's and the naive chain's episode on the first rescued start, side by side; the agent's account to the shift lead",
-   "narration": {
-    "words": 51,
-    "seconds": 22.2,
-    "timing": "estimated reading pace",
-    "text": "The agent freezes its program and runs it on {release_n} reserved starts it has never seen. It delivers on {release_delivered}; the bar was {release_k}. The obvious chain, on the same starts, delivers on {release_naive_delivered}. Rescued: {release_rescued}. Broken: {release_broken}. Then the agent explains the change to the shift lead in plain words.",
-    "voice_sha256": null
-   },
-   "shots": [
-    {
-     "kind": "slate",
-     "start_s": 110.2,
-     "end_s": 133.7,
-     "clips": [],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "a6-next-shift",
-   "story": "A",
-   "title": "The next shift",
-   "start_s": 133.7,
-   "end_s": 162.1,
-   "status": "no footage",
-   "placeholder": null,
-   "needs": "the job list with job one and its check; an operator's command running job one from a fresh start; the second request; job two's session invoking the saved check; the two cost accounts side by side",
-   "narration": {
-    "words": 64,
-    "seconds": 27.1,
-    "timing": "estimated reading pace",
-    "text": "The job and the check join the installation's job list, and an operator runs the job with one command from a fresh start. Then a second request arrives. The agent runs the saved check and reuses its method. Job one took 1 sessions, 2 simulated starts and 1 minutes of the agent's model time. Job two took {job_two_sessions} sessions, {job_two_starts} starts and {job_two_model_minutes} minutes.",
-    "voice_sha256": null
-   },
-   "shots": [
-    {
-     "kind": "slate",
-     "start_s": 133.7,
-     "end_s": 162.1,
-     "clips": [],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "a7-close",
-   "story": "A",
-   "title": "What changed",
-   "start_s": 162.1,
-   "end_s": 172.0,
-   "status": "placeholder",
-   "placeholder": "the claim waits for both jobs' release receipts",
    "needs": null,
    "narration": {
-    "words": 20,
-    "seconds": 8.6,
-    "timing": "estimated reading pace",
-    "text": "The robot policy stayed the same. The installation gained {library_jobs} jobs and a check it did not have this morning.",
-    "voice_sha256": null
+    "words": 140,
+    "seconds": 51.873,
+    "timing": "measured audio",
+    "text": "A second shift takes the same request, with the first shift's checks and skill in its library. It runs the first shift's check on its own baseline before adapting it. A longer continuation delivers on 17 of 20 starts. Those starts had been examined before, so the agent does not count them as fresh evidence, and it stops without a release as well. A third shift starts from the second's library. For it, the lead adds that a release which misses on the reserved starts is acceptable. Its shorter continuation delivers on 9 of 10 development starts, and the agent saves it as a job. The first shift took 5 sessions, 100 simulated starts and 38 minutes of the agent's model time; the second, 5 sessions, 130 starts and 45 minutes; the third, 5 sessions, 60 starts and 39 minutes.",
+    "voice_sha256": "770c3cb9f7118952a7af1f3c2d8dcd530dcd9984ef4c69f8c52453a7a4bed76b"
+   },
+   "shots": [
+    {
+     "kind": "calls",
+     "start_s": 122.05,
+     "end_s": 129.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-5/agent-runs/20261020T003226-147b8792/stdout.jsonl",
+       "sha256": "48f495dcbcca8d50efe245fca5c9cb2983a938d452d856c6fd12acabc78f8eb7"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 129.05,
+     "end_s": 136.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json",
+       "sha256": "af80bbe07b669596a1cc2b27acba95e096b993de4ed3de7b1873ce1ee3d7e559"
+      }
+     ]
+    },
+    {
+     "kind": "pair",
+     "start_s": 136.05,
+     "end_s": 145.25,
+     "clips": [
+      {
+       "label": "shorter continuation (j0006), start 11",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-5/runs/session-03/run",
+       "episode": "e000602",
+       "control_steps_shown": [
+        0,
+        337
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "9d9d90d27e88b6863b6446874bfb6c43d9785b0f3f8b57026c6289a8be6f1905",
+       "file": "clips/a6-second-shift-e000602-9d9d90d2.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "b8c03fb7ba58bbaab808aaf3eed8474f2866435a00e7c7d6e99b11f8c0039597"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/log/robot_steps/e000602.parquet",
+         "sha256": "333c2e779fd403cbf573cc64ee63c56d0091e7dc722290c1fe7dde19f6416d03"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/log/job_step_events.parquet",
+         "sha256": "5e2ad486ff31b641d30782f39a5be06efe75d6f47e621eda96f6fb6a124489ca"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "d7c02bebf9604bb0fef9df5d3ebae8d376683aa4b18a61faf8d0b808e694aba6",
+        "file": "clips/a6-second-shift-e000602-d7c02beb.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 338,
+         "recorded_hashes": 338,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "214f98ce24598d25",
+         "end_state_hash": "214f98ce24598d25",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "9d9d90d27e88b6863b6446874bfb6c43d9785b0f3f8b57026c6289a8be6f1905"
+        }
+       }
+      },
+      {
+       "label": "longer continuation (j0008), start 11",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-5/runs/session-04/run",
+       "episode": "e000802",
+       "control_steps_shown": [
+        0,
+        347
+       ],
+       "outcome": "delivered",
+       "video_sha256": "50ccb59a9eb3d4f1bd13e826a0758f73ddfb32426dd1dbbfced566e851ae7208",
+       "file": "clips/a6-second-shift-e000802-50ccb59a.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/log/job_episodes.parquet",
+         "sha256": "debd150c2242f4133cde6209de0d311d5d8199d06bb5b98dc2080a052484e399"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/log/robot_steps/e000802.parquet",
+         "sha256": "33d05c44f2b2b3e0d5e5f446c54c51918e43b6111ecd58d052b61688a5108dad"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/log/job_step_events.parquet",
+         "sha256": "3f070d0d665fc7731d18389e88448cd16d814a367b7aa02f7493112d411824c0"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "25b4d8f1b481502d964e7bd3f5b5385aee38d70e483178cc0392e3a1530242e4",
+        "file": "clips/a6-second-shift-e000802-25b4d8f1.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 348,
+         "recorded_hashes": 348,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "4cb969b765e2e8f1",
+         "end_state_hash": "4cb969b765e2e8f1",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "50ccb59a9eb3d4f1bd13e826a0758f73ddfb32426dd1dbbfced566e851ae7208"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "shorter continuation: 11 of 20",
+       "detail": "development starts 10 to 29",
+       "kind": "computed",
+       "k": 11,
+       "n": 20,
+       "where": {
+        "job_id": "j0006"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "b8c03fb7ba58bbaab808aaf3eed8474f2866435a00e7c7d6e99b11f8c0039597"
+        }
+       ]
+      },
+      {
+       "text": "longer continuation: 17 of 20",
+       "detail": "the same, already examined starts",
+       "kind": "computed",
+       "k": 17,
+       "n": 20,
+       "where": {
+        "job_id": "j0008"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/log/job_episodes.parquet",
+         "sha256": "debd150c2242f4133cde6209de0d311d5d8199d06bb5b98dc2080a052484e399"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "text",
+     "start_s": 145.25,
+     "end_s": 152.25,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/job_run.json",
+       "sha256": "c4976de7495eb755b4e83653b1fb2e502ea58b0431adafa6054b327a1b5269cd"
+      }
+     ]
+    },
+    {
+     "kind": "clip",
+     "start_s": 152.25,
+     "end_s": 175.2,
+     "clips": [
+      {
+       "label": "the saved program (j0004), development start 0, the first it delivered on",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-6/runs/session-03/run",
+       "episode": "e000401",
+       "control_steps_shown": [
+        0,
+        329
+       ],
+       "outcome": "delivered",
+       "video_sha256": "68ca532ae2679de49125a2df8014529e2f891e9c284fa0b73a865e21e0b8bc4c",
+       "file": "clips/a6-second-shift-e000401-68ca532a.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "b47a41ae3fd524ff1d4be799f015b492ce797b4f9408780ecfbb32cd8d65d596"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/log/robot_steps/e000401.parquet",
+         "sha256": "3e5cc3195028eb0879b114b3cae1d3b0af10afd171759ce149812d9696e97ab1"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/log/job_step_events.parquet",
+         "sha256": "073f2310d651f171bde3e8d8c68f95d6e632d00cf85927db5c90d32eab4531b1"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "f1fb90ae8f8a6b3bc0035fa7626ec443c0cd7de53f7ebef1fd9b8fd071324264",
+        "file": "clips/a6-second-shift-e000401-f1fb90ae.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 330,
+         "recorded_hashes": 330,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "894458796c4b5b89",
+         "end_state_hash": "894458796c4b5b89",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "68ca532ae2679de49125a2df8014529e2f891e9c284fa0b73a865e21e0b8bc4c"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "9 of 10 delivered",
+       "detail": "the third shift's saved program, development starts 0 to 9",
+       "kind": "computed",
+       "k": 9,
+       "n": 10,
+       "where": {
+        "job_id": "j0004"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/log/job_episodes.parquet",
+         "sha256": "b47a41ae3fd524ff1d4be799f015b492ce797b4f9408780ecfbb32cd8d65d596"
+        }
+       ]
+      }
+     ],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "a7-release",
+   "story": "A",
+   "title": "The release",
+   "start_s": 175.2,
+   "end_s": 198.5,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 54,
+    "seconds": 21.409,
+    "timing": "measured audio",
+    "text": "The saved job runs on the 20 reserved starts, which no shift had touched, and the naive chain runs on the same starts. The lead's bar is 14. The job delivers on 13; the naive chain on 1. Rescued: 13. Broken: 1. Order violations: 0. Short of the bar, the job is not released.",
+    "voice_sha256": "441495ebecf09f798a3b4e144a244df30caa6c71dac10fc4111e2fc9dcedec74"
+   },
+   "shots": [
+    {
+     "kind": "pair",
+     "start_s": 175.2,
+     "end_s": 185.5,
+     "clips": [
+      {
+       "label": "naive chain, reserved start 31",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-6/release/run/run",
+       "episode": "e000202",
+       "control_steps_shown": [
+        0,
+        391
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "73cc4807a02f776f1030673747f2625bcb9f3241094d7347996894e653d6c1ce",
+       "file": "clips/a7-release-e000202-73cc4807.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_episodes.parquet",
+         "sha256": "df2bb6b5a06382000ef84bd59ecda1740121f4f8ec3ad933b411737a5b15d8f2"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/robot_steps/e000202.parquet",
+         "sha256": "4ba884b64d5dcda3e1380370c2b1914a3fa07ca76f65b81c089c636836079c20"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_step_events.parquet",
+         "sha256": "44be5a42c2826e2790a93a4b53dbbe02ab356ccca1383bf2d5cd2a6e268f2eda"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "6c59a96dc4d81ce8cb1f91b484298f2892dc9d3168cdbfe9d60c2b0e0217909d",
+        "file": "clips/a7-release-e000202-6c59a96d.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 392,
+         "recorded_hashes": 392,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "e11cc0360898eb41",
+         "end_state_hash": "e11cc0360898eb41",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "73cc4807a02f776f1030673747f2625bcb9f3241094d7347996894e653d6c1ce"
+        }
+       }
+      },
+      {
+       "label": "the saved job, reserved start 31",
+       "layout": "jobs-run",
+       "run": "probes:demo/2026-10-21/job-one/run-6/release/run/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        206
+       ],
+       "outcome": "delivered",
+       "video_sha256": "b1a890aa01487aa38fd525bf706b7c9f52f1e3b6bf507c3ee7eb280f35977cee",
+       "file": "clips/a7-release-e000102-b1a890aa.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_episodes.parquet",
+         "sha256": "df2bb6b5a06382000ef84bd59ecda1740121f4f8ec3ad933b411737a5b15d8f2"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/robot_steps/e000102.parquet",
+         "sha256": "7dad4c60ace19b4974696783ed36dede1da3d0dff6b6692574b66313831efdd6"
+        },
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_step_events.parquet",
+         "sha256": "44be5a42c2826e2790a93a4b53dbbe02ab356ccca1383bf2d5cd2a6e268f2eda"
+        }
+       ],
+       "rerender": {
+        "used": true,
+        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
+        "video_sha256": "35553244008a2744e97f8b50ad0050ebef9fd9ed46a6cd54267a08d8c5b31811",
+        "file": "clips/a7-release-e000102-35553244.rerender.mp4",
+        "comparison": {
+         "label": "re-render",
+         "hashes_compared": 207,
+         "recorded_hashes": 207,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "recorded_end_state_hash": "332f01112eb91798",
+         "end_state_hash": "332f01112eb91798",
+         "image_size": 720,
+         "recorded_image_size": 360,
+         "original_video_sha256": "b1a890aa01487aa38fd525bf706b7c9f52f1e3b6bf507c3ee7eb280f35977cee"
+        }
+       }
+      }
+     ],
+     "counts": [
+      {
+       "text": "naive chain: 1 of 20",
+       "detail": "the reserved release starts",
+       "kind": "computed",
+       "k": 1,
+       "n": 20,
+       "where": {
+        "job_id": "j0002"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_episodes.parquet",
+         "sha256": "df2bb6b5a06382000ef84bd59ecda1740121f4f8ec3ad933b411737a5b15d8f2"
+        }
+       ]
+      },
+      {
+       "text": "saved job: 13 of 20",
+       "detail": "the same reserved starts",
+       "kind": "computed",
+       "k": 13,
+       "n": 20,
+       "where": {
+        "job_id": "j0001"
+       },
+       "success": "delivered is true",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-21/job-one/run-6/release/run/run/log/job_episodes.parquet",
+         "sha256": "df2bb6b5a06382000ef84bd59ecda1740121f4f8ec3ad933b411737a5b15d8f2"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "card",
+     "start_s": 185.5,
+     "end_s": 191.5,
+     "clips": [],
+     "counts": [],
+     "files": []
+    },
+    {
+     "kind": "text",
+     "start_s": 191.5,
+     "end_s": 198.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json",
+       "sha256": "3de2cd8a113095504c5f03534575152a683b45c0f67111944deda015a7085f24"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a8-close",
+   "story": "A",
+   "title": "What changed",
+   "start_s": 198.5,
+   "end_s": 227.5,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 34,
+    "seconds": 12.26,
+    "timing": "measured audio",
+    "text": "The robot policy stayed the same. The job is not released. The installation's library now holds the saved job, 4 checks and the skills of every shift, and the next shift starts from them.",
+    "voice_sha256": "65197efd32f3f51819aae3f32027fffdde4bdb19a8057e5019052cfba14fdaf8"
+   },
+   "shots": [
+    {
+     "kind": "messages",
+     "start_s": 198.5,
+     "end_s": 202.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/release/library/index.json",
+       "sha256": "64fe1ad357dc864d584ee5ec9664810c2ca1a581d6c11ced4d09f83d7ac0f0cd"
+      }
+     ]
+    },
+    {
+     "kind": "messages",
+     "start_s": 202.5,
+     "end_s": 206.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/release/library/index.json",
+       "sha256": "64fe1ad357dc864d584ee5ec9664810c2ca1a581d6c11ced4d09f83d7ac0f0cd"
+      }
+     ]
+    },
+    {
+     "kind": "messages",
+     "start_s": 206.5,
+     "end_s": 212.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/release/library/index.json",
+       "sha256": "64fe1ad357dc864d584ee5ec9664810c2ca1a581d6c11ced4d09f83d7ac0f0cd"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 212.5,
+     "end_s": 215.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-3/job_run.json",
+       "sha256": "64b4c2a7dab8c0c8d80008b656d46ac26a0cffdd4ba44e6306e2c46ac81a3788"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 215.5,
+     "end_s": 218.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-5/job_run.json",
+       "sha256": "2ba8fe6dca147d8738a10aafcd3270306e2f315abc614476ca1fcf9d6be317d6"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 218.5,
+     "end_s": 221.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-6/job_run.json",
+       "sha256": "c4976de7495eb755b4e83653b1fb2e502ea58b0431adafa6054b327a1b5269cd"
+      }
+     ]
+    },
+    {
+     "kind": "card",
+     "start_s": 221.5,
+     "end_s": 227.5,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b0-title",
+   "story": "B",
+   "title": "Story B",
+   "start_s": 227.5,
+   "end_s": 232.7,
+   "status": "card",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 11,
+    "seconds": 3.901,
+    "timing": "measured audio",
+    "text": "Second story: make that a check the next shift can run.",
+    "voice_sha256": "7449bafbcfd3b9cb68394e21e8ae8bfea5bd32a8fae6c696f611a1653a7140bb"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 162.1,
-     "end_s": 172.0,
+     "start_s": 227.5,
+     "end_s": 232.7,
      "clips": [],
      "counts": [],
      "files": []
+    }
+   ]
+  },
+  {
+   "id": "b1-constraint",
+   "story": "B",
+   "title": "The fleet and the lag that misleads",
+   "start_s": 232.7,
+   "end_s": 255.45,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 62,
+    "seconds": 21.455,
+    "timing": "measured audio",
+    "text": "A fleet of robot arms works at several sites. At one site, inference stays in the customer's data center, so commands arrive late, and nobody on site can undo that. Task telemetry shows a lag there, and a lag on one robot at another site as well. From the telemetry alone, the agent cannot tell what kind of lag each one is.",
+    "voice_sha256": "aef8745b9aa428d0bf7711a58205624d4b3e665f6a8bc847b74014edce9391f8"
+   },
+   "shots": [
+    {
+     "kind": "image",
+     "start_s": 232.7,
+     "end_s": 237.7,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/r1-fleet-sites.png",
+       "sha256": "e952e90c78cf161acf69caf2694f90687adc62447e54fccc602bc95727b888a7"
+      }
+     ]
+    },
+    {
+     "kind": "clip",
+     "start_s": 237.7,
+     "end_s": 245.25,
+     "clips": [
+      {
+       "label": "site s1, robot r04, day 4: a failed attempt (first failure at s1)",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/worlds/STORYB/export",
+       "episode": "e000010",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "failure",
+       "video_sha256": "ed4256079d41eaea79c797a75ff1ab393e0baf04bfd57bf517976943dc678e9a",
+       "file": "clips/b1-constraint-e000010-ed425607.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/episodes.parquet",
+         "sha256": "66707a337abdca6771c5da33ade90bef8dcef8a20b61fb81d1d38704afa093cf"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/steps/e000010.parquet",
+         "sha256": "037218179ecbabc07356bb5aa0820d54277f9017d2512cddb225fc272eb529f6"
+        }
+       ]
+      }
+     ],
+     "counts": [
+      {
+       "text": "site s1: 174 of 288 succeed",
+       "detail": "the fleet's regular work before any change",
+       "kind": "computed",
+       "k": 174,
+       "n": 288,
+       "where": {
+        "site_id": "s1",
+        "experiment_id": null
+       },
+       "success": "outcome = 'success'",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/episodes.parquet",
+         "sha256": "66707a337abdca6771c5da33ade90bef8dcef8a20b61fb81d1d38704afa093cf"
+        }
+       ]
+      },
+      {
+       "text": "robot r06: 48 of 72 succeed",
+       "detail": "the fleet's regular work before any change",
+       "kind": "computed",
+       "k": 48,
+       "n": 72,
+       "where": {
+        "robot_id": "r06",
+        "experiment_id": null
+       },
+       "success": "outcome = 'success'",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/episodes.parquet",
+         "sha256": "66707a337abdca6771c5da33ade90bef8dcef8a20b61fb81d1d38704afa093cf"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "clip",
+     "start_s": 245.25,
+     "end_s": 255.45,
+     "clips": [
+      {
+       "label": "robot r06, day 1: a failed attempt (its first failure)",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/worlds/STORYB/export",
+       "episode": "e000041",
+       "control_steps_shown": [
+        0,
+        255
+       ],
+       "outcome": "failure",
+       "video_sha256": "d09a79ba54d7fc8a1cdf9e089cbffab73c4863e431a0cbb131433be374ea7906",
+       "file": "clips/b1-constraint-e000041-d09a79ba.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/episodes.parquet",
+         "sha256": "66707a337abdca6771c5da33ade90bef8dcef8a20b61fb81d1d38704afa093cf"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB/export/log/steps/e000041.parquet",
+         "sha256": "77964382244575d5f4218cddb2d640bfb32818cac1fe613b67e303cfac9e0a3e"
+        }
+       ]
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b2-instrument",
+   "story": "B",
+   "title": "The instrument",
+   "start_s": 255.45,
+   "end_s": 286.5,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 89,
+    "seconds": 29.768,
+    "timing": "measured audio",
+    "text": "So the agent builds a measurement. From a bounded set of motions it composes a step probe, and asks for it on a robot at the delayed site, on the lagging robot, on a healthy reference and on a robot at the third site. Commanded against measured: at the delayed site, the arm starts late by the same amount every time. On the lagging robot, the delay changes from one repeat to the next, and grows within the probe. One is a fixed delay. The other is a backlog.",
+    "voice_sha256": "882062976c8c0258752cc86b66bb362236ac2477d15c0c742c2e9547347eb738"
+   },
+   "shots": [
+    {
+     "kind": "calls",
+     "start_s": 255.45,
+     "end_s": 262.45,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/agent-runs/20261019T225055-cc5371d4/stdout.jsonl",
+       "sha256": "cb0b78bcb99f8f65c3d5e93fd843f2293c229291916ce05fe38b12f2bd09374f"
+      }
+     ]
+    },
+    {
+     "kind": "image",
+     "start_s": 262.45,
+     "end_s": 286.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/film/rehearsal-3/figures/probe-first-fleet.png",
+       "sha256": "aa301a643ff0e544309171092a88c26c75e6095d2027b3cad482be7aabfacd62"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b3-change",
+   "story": "B",
+   "title": "The change",
+   "start_s": 286.5,
+   "end_s": 331.15,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 46,
+    "seconds": 18.576,
+    "timing": "measured audio",
+    "text": "The probe picks candidates; task experiments on paired starts decide. The agent adopts its changes, each with its reason: compensate for the delay at the first site rather than remove it, roll back the software update at the third site, and service the lagging robot's controller.",
+    "voice_sha256": "67655bd1527091097191d248250e39c8f4f4a711a769d56d8e5594b63656ebe0"
+   },
+   "shots": [
+    {
+     "kind": "image",
+     "start_s": 286.5,
+     "end_s": 290.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/r1-experiments.png",
+       "sha256": "75658dcb5bb03fb50cd795f50fe378297aa2776dc568891d7b87f6414b8cb1c5"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 290.5,
+     "end_s": 296.5,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/ledgers/ledger-r1.json",
+       "sha256": "4a63422c989d9915b0dfab53bd37e8c0ffadb81bcc0eaaef30f636ee55d9037b"
+      }
+     ]
+    },
+    {
+     "kind": "pair",
+     "start_s": 296.5,
+     "end_s": 304.05,
+     "clips": [
+      {
+       "label": "x0002 control, robot r01",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e001939",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "failure",
+       "video_sha256": "a428f94ce238d9be4be0073a1abdbbe7bcacbe1b7ad39d95e60774a262928b43",
+       "file": "clips/b3-change-e001939-a428f94c.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e001939.parquet",
+         "sha256": "92564e9980ebcf45eb5741101fc3adb3aec8e254abcb8d1dfc195f264e8cb0b8"
+        }
+       ]
+      },
+      {
+       "label": "x0002 arm 2: compensation 17, robot r01",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e001941",
+       "control_steps_shown": [
+        0,
+        166
+       ],
+       "outcome": "success",
+       "video_sha256": "196c375fa895c7d802fcfc6321dde17481adcdfdbd692ca34247c72ff575688b",
+       "file": "clips/b3-change-e001941-196c375f.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e001941.parquet",
+         "sha256": "253723fb1aa6fa67abb8dc09baadd73cc45fb4859842f419bb49e4ba70052e91"
+        }
+       ]
+      }
+     ],
+     "counts": [],
+     "files": []
+    },
+    {
+     "kind": "text",
+     "start_s": 304.05,
+     "end_s": 310.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/ledgers/ledger-r1.json",
+       "sha256": "4a63422c989d9915b0dfab53bd37e8c0ffadb81bcc0eaaef30f636ee55d9037b"
+      }
+     ]
+    },
+    {
+     "kind": "pair",
+     "start_s": 310.05,
+     "end_s": 317.6,
+     "clips": [
+      {
+       "label": "x0001 control, robot r10",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e001744",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "failure",
+       "video_sha256": "8bd6c1a4d8cf5c5a86192d763ad37ad53a161d513e7427f7739805dd97c5db40",
+       "file": "clips/b3-change-e001744-8bd6c1a4.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e001744.parquet",
+         "sha256": "3735099a4c4f262a86fe2567f429ddc6bc0d5f5e8a45f5a931113c2acd6a1a5d"
+        }
+       ]
+      },
+      {
+       "label": "x0001 arm 1: software reverted, robot r10",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e001745",
+       "control_steps_shown": [
+        0,
+        89
+       ],
+       "outcome": "success",
+       "video_sha256": "0252567e85479aa45de3fe85df33ee47e7dd938c40cd8ad4aa51459910c6902c",
+       "file": "clips/b3-change-e001745-0252567e.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e001745.parquet",
+         "sha256": "b368d95b459f3586755d76e544ba090765f0bfb28d7a07912cea4e098648a48a"
+        }
+       ]
+      }
+     ],
+     "counts": [],
+     "files": []
+    },
+    {
+     "kind": "text",
+     "start_s": 317.6,
+     "end_s": 323.6,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/ledgers/ledger-r1.json",
+       "sha256": "4a63422c989d9915b0dfab53bd37e8c0ffadb81bcc0eaaef30f636ee55d9037b"
+      }
+     ]
+    },
+    {
+     "kind": "pair",
+     "start_s": 323.6,
+     "end_s": 331.15,
+     "clips": [
+      {
+       "label": "x0003 control, robot r06",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e002117",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "failure",
+       "video_sha256": "ff8c5ddcbaaec507ab43c4170e660ae09f4add8e82494836a5dae4dffd31db32",
+       "file": "clips/b3-change-e002117-ff8c5ddc.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e002117.parquet",
+         "sha256": "649068e98cf183cd41f5a6c8a717203ce9e894e46c130c6bb9daa3957bb0d2b5"
+        }
+       ]
+      },
+      {
+       "label": "x0003 arm 1: controller serviced, robot r06",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02",
+       "episode": "e002118",
+       "control_steps_shown": [
+        0,
+        144
+       ],
+       "outcome": "success",
+       "video_sha256": "ffac83706626d8e607678b609b9468e6dd44ce8c5ea2968d536de4fed7d1bae7",
+       "file": "clips/b3-change-e002118-ffac8370.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/episodes.parquet",
+         "sha256": "592fdc3341b08a8ede4514f0a9c85edc1c38d3e9adaf9f1f6b9218d215c09bda"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/experiments/w08-20261019T224617-a1f33d/session-02/log/steps/e002118.parquet",
+         "sha256": "f77307ec9fc09f12b739eb15f2cdb87a8d00aded02705b6e726b02f620b1765f"
+        }
+       ]
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b4-evaluation",
+   "story": "B",
+   "title": "The evaluation",
+   "start_s": 331.15,
+   "end_s": 353.25,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 41,
+    "seconds": 20.805,
+    "timing": "measured audio",
+    "text": "Then the changed fleet runs 576 reserved attempts the agent never saw, beside the original state on the same attempts. Before: 451 of 576 succeed. After: 558. Rescued: 113. Broken: 6. The lagging robot goes from 29 to 46 of 48.",
+    "voice_sha256": "c7195fa39e61ca54c800922ed0b715ff6a95397e5d534cdb5f294bd02efa9a8f"
+   },
+   "shots": [
+    {
+     "kind": "image",
+     "start_s": 331.15,
+     "end_s": 336.15,
+     "clips": [],
+     "counts": [
+      {
+       "text": "before: 451 of 576",
+       "detail": "original state, the reserved attempts",
+       "kind": "computed",
+       "k": 451,
+       "n": 576,
+       "where": {
+        "state": "original"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      },
+      {
+       "text": "after: 558 of 576",
+       "detail": "after the adopted changes, the same attempts",
+       "kind": "computed",
+       "k": 558,
+       "n": 576,
+       "where": {
+        "state": "round-2"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      }
+     ],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/panel-states.png",
+       "sha256": "697bea4bca9ecd80e2805160d47c701714af44306fcef33b00da7fd1c262294c"
+      }
+     ]
+    },
+    {
+     "kind": "image",
+     "start_s": 336.15,
+     "end_s": 340.15,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/panel-pairs.png",
+       "sha256": "5358aa61b9db21dc6b1c4f24407097a8697770f4154160e25241fadc8dda3f70"
+      }
+     ]
+    },
+    {
+     "kind": "image",
+     "start_s": 340.15,
+     "end_s": 353.25,
+     "clips": [],
+     "counts": [
+      {
+       "text": "s1 after: 184 of 192",
+       "detail": null,
+       "kind": "computed",
+       "k": 184,
+       "n": 192,
+       "where": {
+        "state": "round-2",
+        "site_id": "s1"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      },
+      {
+       "text": "s2 after: 187 of 192",
+       "detail": null,
+       "kind": "computed",
+       "k": 187,
+       "n": 192,
+       "where": {
+        "state": "round-2",
+        "site_id": "s2"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      },
+      {
+       "text": "s3 after: 187 of 192",
+       "detail": null,
+       "kind": "computed",
+       "k": 187,
+       "n": 192,
+       "where": {
+        "state": "round-2",
+        "site_id": "s3"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      },
+      {
+       "text": "r06 before: 29 of 48",
+       "detail": null,
+       "kind": "computed",
+       "k": 29,
+       "n": 48,
+       "where": {
+        "state": "original",
+        "robot_id": "r06"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      },
+      {
+       "text": "r06 after: 46 of 48",
+       "detail": null,
+       "kind": "computed",
+       "k": 46,
+       "n": 48,
+       "where": {
+        "state": "round-2",
+        "robot_id": "r06"
+       },
+       "success": "success is true",
+       "key": [
+        "state",
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/evaluation/attempts.parquet",
+         "sha256": "61371fcf19421f94435827cfc460e1ed93e00269157b3b41cbaeaed1873bc875"
+        }
+       ]
+      }
+     ],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/panel-robots.png",
+       "sha256": "31be0b2136f71bf30b5502d037d7211591221e011df74850f5a3c1948c05ec2f"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b5-second-use",
+   "story": "B",
+   "title": "The second use",
+   "start_s": 353.25,
+   "end_s": 398.05,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 116,
+    "seconds": 43.514,
+    "timing": "measured audio",
+    "text": "The probe and its analysis became a recipe in the library, runnable on named robots. On a later fleet, robots fail again, and the recipe runs. At the third site, the arms first move at row 18 and are half-way at row 21: a fixed delay. The robot that fails on its own responds like the healthy reference. Its first movement: row 1. The reference: row 1. So the skill's rule points at the images, not at the controller service that fixed the first fleet. The operator's recorded decision follows it: no service for that robot; inspect its images and its change log, and test the first fleet's adaptation at the third site before adopting it.",
+    "voice_sha256": "8000701d578c013ccae4024ce9ff2fdc7048c5119bbea53f041de3afe7065a28"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 353.25,
+     "end_s": 360.8,
+     "clips": [
+      {
+       "label": "later fleet, robot r06, day 2: a failed attempt (its first failure)",
+       "layout": "fleet-log",
+       "run": "probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/export",
+       "episode": "e000175",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "failure",
+       "video_sha256": "b64a7b8d072b8e953e02b2a13d3c1da2279ab567a4645b73635a08c025a312f0",
+       "file": "clips/b5-second-use-e000175-b64a7b8d.mp4",
+       "records_read": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/export/log/episodes.parquet",
+         "sha256": "b8e52b460916697ea93e35811c975dea6c6500cace3aba849ecc715def62d4b1"
+        },
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/export/log/steps/e000175.parquet",
+         "sha256": "7a4f90e488c8af0ce9f2590371f127265ddbb17659625e9c6370a6c0384847dd"
+        }
+       ]
+      }
+     ],
+     "counts": [
+      {
+       "text": "robot r06: 51 of 72 succeed",
+       "detail": "the later fleet's regular work",
+       "kind": "computed",
+       "k": 51,
+       "n": 72,
+       "where": {
+        "robot_id": "r06",
+        "experiment_id": null
+       },
+       "success": "outcome = 'success'",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/export/log/episodes.parquet",
+         "sha256": "b8e52b460916697ea93e35811c975dea6c6500cace3aba849ecc715def62d4b1"
+        }
+       ]
+      },
+      {
+       "text": "robot r11: 30 of 72 succeed",
+       "detail": "the later fleet's regular work",
+       "kind": "computed",
+       "k": 30,
+       "n": 72,
+       "where": {
+        "robot_id": "r11",
+        "experiment_id": null
+       },
+       "success": "outcome = 'success'",
+       "key": [
+        "episode_id"
+       ],
+       "tables": [
+        {
+         "id": "probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/export/log/episodes.parquet",
+         "sha256": "b8e52b460916697ea93e35811c975dea6c6500cace3aba849ecc715def62d4b1"
+        }
+       ]
+      }
+     ],
+     "files": []
+    },
+    {
+     "kind": "image",
+     "start_s": 360.8,
+     "end_s": 368.8,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/second-use/check-2/probe.png",
+       "sha256": "281fa3bbad8bc51a14efa23f6283b8569706b5aa28eb858c9403e023c8d32294"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 368.8,
+     "end_s": 374.8,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/learned/learned-81c70b2a7a9e3b60/skills/separate-fixed-transport-delay-from-controller-backlog/SKILL.md",
+       "sha256": "21782f0eb1fe1a7bbd65092dc1fe3232823abf2a90a8263f077b6a6a7c33b736"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 374.8,
+     "end_s": 398.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-20/instrument/second-use/check-2/decision.md",
+       "sha256": "7b5487eca469724bda86024402cf8787428e717a3f57f326d545ff058813275b"
+      }
+     ]
     }
    ]
   },
@@ -456,23 +2087,23 @@
    "id": "close",
    "story": null,
    "title": "The record",
-   "start_s": 172.0,
-   "end_s": 179.5,
+   "start_s": 398.05,
+   "end_s": 403.6,
    "status": "card",
    "placeholder": null,
    "needs": null,
    "narration": {
     "words": 14,
-    "seconds": 6.2,
-    "timing": "estimated reading pace",
+    "seconds": 4.272,
+    "timing": "measured audio",
     "text": "Every clip in this film is a recorded run. The record lists each one.",
-    "voice_sha256": null
+    "voice_sha256": "d1920d6a1444d20280c827f9495c1e429f5067e89ae4b724a2e9d034747ed9ce"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 172.0,
-     "end_s": 179.5,
+     "start_s": 398.05,
+     "end_s": 403.6,
      "clips": [],
      "counts": [],
      "files": []

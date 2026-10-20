@@ -3,21 +3,21 @@
   "film": {
     "role": "web",
     "file": "film.mp4",
-    "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b",
-    "bytes": 4175424,
+    "sha256": "1cdf3ce710e21e1512bc8ad1d695c279fd0bb691f098f0d4e56bd4aae6f6cdec",
+    "bytes": 19206777,
     "width": 1280,
     "height": 720,
     "fps": 20,
-    "seconds": 179.5,
+    "seconds": 403.6,
     "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
     "audio": "AAC 128 kb/s, 48000 Hz mono",
     "streams": {
-      "line0": "Duration: 00:02:59.50, start: 0.000000, bitrate: 186 kb/s",
-      "line1": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 178 kb/s, 20 fps, 20 tbr, 10240 tbn (default)",
-      "line2": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 1 kb/s (default)"
+      "line0": "Duration: 00:06:43.60, start: 0.000000, bitrate: 380 kb/s",
+      "line1": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 261 kb/s, 20 fps, 20 tbr, 10240 tbn (default)",
+      "line2": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 112 kb/s (default)"
     }
   },
-  "record_converter": null,
+  "record_converter": "Python-Markdown",
   "files": [
     {
       "path": ".nojekyll",
@@ -25,14 +25,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "clips/a3-naive-e000101-855b3ab8.rerender.mp4",
-      "bytes": 1267165,
-      "sha256": "855b3ab8130863998b616a1d9cdb65d8da2bd3fb9c334f54ad3adee8e8197b19"
+      "path": "clips/a1-skills-e000101-9482448e.mp4",
+      "bytes": 66456,
+      "sha256": "9482448e46b34eba8476ad7327738fdc048ea6f4705b10628ffba7ce94eadd2e"
     },
     {
-      "path": "clips/a3-naive-e000101-85ffe733.mp4",
-      "bytes": 164348,
-      "sha256": "85ffe733f0f9435bd75671ef16d491b0751f5e944834965700aa4ab92741810e"
+      "path": "clips/a1-skills-e000101-d2a5ab98.mp4",
+      "bytes": 70298,
+      "sha256": "d2a5ab98aef6f67b757e468facef9872f62e38cf0ee3e0474fd207cf2b26b3d2"
+    },
+    {
+      "path": "clips/a1-skills-e000101-e9210590.rerender.mp4",
+      "bytes": 443239,
+      "sha256": "e92105909b400652471ee0820ebbd6c8711194f86685fde3593f05b048fe5ad6"
+    },
+    {
+      "path": "clips/a1-skills-e000101-f810fe54.rerender.mp4",
+      "bytes": 411767,
+      "sha256": "f810fe548c544378c7c7eb4a0afffb58c6097661ab6ea8a9019f378829ed706b"
     },
     {
       "path": "clips/a3-naive-e000102-30ce904e.mp4",
@@ -45,49 +55,189 @@
       "sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e"
     },
     {
+      "path": "clips/a4-investigation-e000102-30ce904e.mp4",
+      "bytes": 220466,
+      "sha256": "30ce904ec658f682d405883853cee00de71f6d34e137ea9659946bb35292697a"
+    },
+    {
+      "path": "clips/a4-investigation-e000102-4e11a353.rerender.mp4",
+      "bytes": 1553518,
+      "sha256": "4e11a353eea29c885664c87f9aadd1086e286ecd4e27b903a5e70f668aa0da8e"
+    },
+    {
+      "path": "clips/a4-investigation-e000402-1e13b4b2.mp4",
+      "bytes": 119176,
+      "sha256": "1e13b4b2344d039d6ad8bbf5bd28bcd73df3fac32f69cf69e5f1ca8b2b7aff4d"
+    },
+    {
+      "path": "clips/a4-investigation-e000402-a5af9bb8.rerender.mp4",
+      "bytes": 771929,
+      "sha256": "a5af9bb819b8ff477f887fe6903110f0203706a562d6663d82e4dfae3b544d4b"
+    },
+    {
+      "path": "clips/a4-investigation-e000602-1cfc66d0.rerender.mp4",
+      "bytes": 880992,
+      "sha256": "1cfc66d085f9a493ad11a57512d97c375f6b33d2bfc8898a7af4cf3cc9967dd4"
+    },
+    {
+      "path": "clips/a4-investigation-e000602-c2d13c85.mp4",
+      "bytes": 134077,
+      "sha256": "c2d13c85bc45952a18b78cba79fcde32b36235a48fd9eec9851de4c817645477"
+    },
+    {
+      "path": "clips/a4-investigation-e000702-9effbfbd.rerender.mp4",
+      "bytes": 1017687,
+      "sha256": "9effbfbd15ccedb309507fb030bc9d9ffa3a83800be036cc18a441618613b8bc"
+    },
+    {
+      "path": "clips/a4-investigation-e000702-fee986e0.mp4",
+      "bytes": 141436,
+      "sha256": "fee986e0761e0dfaf5e0339a0e101cd6eb311892804bec222b4f41f9cc3a25e4"
+    },
+    {
+      "path": "clips/a6-second-shift-e000401-68ca532a.mp4",
+      "bytes": 183528,
+      "sha256": "68ca532ae2679de49125a2df8014529e2f891e9c284fa0b73a865e21e0b8bc4c"
+    },
+    {
+      "path": "clips/a6-second-shift-e000401-f1fb90ae.rerender.mp4",
+      "bytes": 1333702,
+      "sha256": "f1fb90ae8f8a6b3bc0035fa7626ec443c0cd7de53f7ebef1fd9b8fd071324264"
+    },
+    {
+      "path": "clips/a6-second-shift-e000602-9d9d90d2.mp4",
+      "bytes": 184580,
+      "sha256": "9d9d90d27e88b6863b6446874bfb6c43d9785b0f3f8b57026c6289a8be6f1905"
+    },
+    {
+      "path": "clips/a6-second-shift-e000602-d7c02beb.rerender.mp4",
+      "bytes": 1320715,
+      "sha256": "d7c02bebf9604bb0fef9df5d3ebae8d376683aa4b18a61faf8d0b808e694aba6"
+    },
+    {
+      "path": "clips/a6-second-shift-e000802-25b4d8f1.rerender.mp4",
+      "bytes": 1339089,
+      "sha256": "25b4d8f1b481502d964e7bd3f5b5385aee38d70e483178cc0392e3a1530242e4"
+    },
+    {
+      "path": "clips/a6-second-shift-e000802-50ccb59a.mp4",
+      "bytes": 181828,
+      "sha256": "50ccb59a9eb3d4f1bd13e826a0758f73ddfb32426dd1dbbfced566e851ae7208"
+    },
+    {
+      "path": "clips/a7-release-e000102-35553244.rerender.mp4",
+      "bytes": 777008,
+      "sha256": "35553244008a2744e97f8b50ad0050ebef9fd9ed46a6cd54267a08d8c5b31811"
+    },
+    {
+      "path": "clips/a7-release-e000102-b1a890aa.mp4",
+      "bytes": 121335,
+      "sha256": "b1a890aa01487aa38fd525bf706b7c9f52f1e3b6bf507c3ee7eb280f35977cee"
+    },
+    {
+      "path": "clips/a7-release-e000202-6c59a96d.rerender.mp4",
+      "bytes": 1330526,
+      "sha256": "6c59a96dc4d81ce8cb1f91b484298f2892dc9d3168cdbfe9d60c2b0e0217909d"
+    },
+    {
+      "path": "clips/a7-release-e000202-73cc4807.mp4",
+      "bytes": 175551,
+      "sha256": "73cc4807a02f776f1030673747f2625bcb9f3241094d7347996894e653d6c1ce"
+    },
+    {
+      "path": "clips/b1-constraint-e000010-ed425607.mp4",
+      "bytes": 181581,
+      "sha256": "ed4256079d41eaea79c797a75ff1ab393e0baf04bfd57bf517976943dc678e9a"
+    },
+    {
+      "path": "clips/b1-constraint-e000041-d09a79ba.mp4",
+      "bytes": 164122,
+      "sha256": "d09a79ba54d7fc8a1cdf9e089cbffab73c4863e431a0cbb131433be374ea7906"
+    },
+    {
+      "path": "clips/b3-change-e001744-8bd6c1a4.mp4",
+      "bytes": 145608,
+      "sha256": "8bd6c1a4d8cf5c5a86192d763ad37ad53a161d513e7427f7739805dd97c5db40"
+    },
+    {
+      "path": "clips/b3-change-e001745-0252567e.mp4",
+      "bytes": 66108,
+      "sha256": "0252567e85479aa45de3fe85df33ee47e7dd938c40cd8ad4aa51459910c6902c"
+    },
+    {
+      "path": "clips/b3-change-e001939-a428f94c.mp4",
+      "bytes": 177621,
+      "sha256": "a428f94ce238d9be4be0073a1abdbbe7bcacbe1b7ad39d95e60774a262928b43"
+    },
+    {
+      "path": "clips/b3-change-e001941-196c375f.mp4",
+      "bytes": 110741,
+      "sha256": "196c375fa895c7d802fcfc6321dde17481adcdfdbd692ca34247c72ff575688b"
+    },
+    {
+      "path": "clips/b3-change-e002117-ff8c5ddc.mp4",
+      "bytes": 163200,
+      "sha256": "ff8c5ddcbaaec507ab43c4170e660ae09f4add8e82494836a5dae4dffd31db32"
+    },
+    {
+      "path": "clips/b3-change-e002118-ffac8370.mp4",
+      "bytes": 93047,
+      "sha256": "ffac83706626d8e607678b609b9468e6dd44ce8c5ea2968d536de4fed7d1bae7"
+    },
+    {
+      "path": "clips/b5-second-use-e000175-b64a7b8d.mp4",
+      "bytes": 116814,
+      "sha256": "b64a7b8d072b8e953e02b2a13d3c1da2279ab567a4645b73635a08c025a312f0"
+    },
+    {
       "path": "film/captions.vtt",
-      "bytes": 3862,
-      "sha256": "19a1ead218527dfddba0d1f75ed428c6aed8cd25682ad7ce643e457eadd2aaf4"
+      "bytes": 8518,
+      "sha256": "159946f3d39a78c4cd4b78b8afb21d36d1885a0a4290ae99c228a523565daeda"
     },
     {
       "path": "film/chapters.json",
-      "bytes": 3104,
-      "sha256": "dfc2ce51681a4e4c65f8f0f9bbac2f0460ee1edb19b61e4985254715da297b0c"
+      "bytes": 3237,
+      "sha256": "eb64b25b7f88a9ca3292b46f3ca4b09756199984f7892538cb7e2a118d1a73b5"
     },
     {
       "path": "film/chapters.vtt",
-      "bytes": 464,
-      "sha256": "9f2adbeb29d1993e119d1ecd8a51c21c273bcdf72cfe224d78286570d793affc"
+      "bytes": 816,
+      "sha256": "10c7edc0413f42f58b49e50726e0ba1c9e48008da5e6ded40a76a118ec12c1ef"
     },
     {
       "path": "film/film.json",
-      "bytes": 15788,
-      "sha256": "2633401257f9e78b5f55fdf76f198f4046b66e8bf6a318b9a19ba7fcd7ce8f89"
+      "bytes": 69691,
+      "sha256": "3ada983aa864e8be68e83a4ef4761bad1b667456f91f32f8df5a58ac132505fb"
     },
     {
       "path": "film/film.mp4",
-      "bytes": 4175424,
-      "sha256": "7fd8b22e789d046ea5ae88c96b4c8d2d6408b6c2c51d492b733336189777678b"
+      "bytes": 19206777,
+      "sha256": "1cdf3ce710e21e1512bc8ad1d695c279fd0bb691f098f0d4e56bd4aae6f6cdec"
     },
     {
       "path": "film/poster.jpg",
-      "bytes": 116003,
-      "sha256": "a81555146115ecb3be7a6c695349d7524e33af022eca47028a447a888caa6277"
+      "bytes": 129645,
+      "sha256": "4ee0c25985b18bc7f420f3e36adc280225e13306b2c93516b9ff3867f70c9a31"
     },
     {
       "path": "film/timeline.md",
-      "bytes": 2178,
-      "sha256": "72ff98811cb57599cacce87bdce6683005d13cfb04d1464c30943a4c88f60850"
+      "bytes": 2313,
+      "sha256": "d20595921c4dd2c11e29c2d7a07842cac3828d1cbe33fb1b467098452427430d"
     },
     {
       "path": "film/timeline.png",
-      "bytes": 310017,
-      "sha256": "f38d6fda1b8acc3e58738b39143a24c577d60a34bab4dc3b9b159572a207208e"
+      "bytes": 626089,
+      "sha256": "5d5f2074dd79757369dc6257889744b3c03f131c3a2c7626ea8051ce4edbf234"
     },
     {
       "path": "index.html",
-      "bytes": 11811,
-      "sha256": "e21cfa1066bab73cc674f278793d2bae7dc39d72c4eb54884c1d186d3fe09e08"
+      "bytes": 25672,
+      "sha256": "0fbccb2d77f6be4cdc3d66277a6ecf7f8f9de82b8bc706cce714014a7f528007"
+    },
+    {
+      "path": "record/index.html",
+      "bytes": 111018,
+      "sha256": "7e76f6ce9c7b0fc01616ebd911d6338deda4575899b5a711b59cdc9dbac77672"
     },
     {
       "path": "static/style.css",

@@ -1,210 +1,471 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:05.536
+00:00:00.500 --> 00:00:05.569
 This is a simulated robot installation:
 one robot arm at a kitchen table.
 
 2
-00:00:05.536 --> 00:00:10.335
+00:00:05.569 --> 00:00:10.400
 Its policy, the model that turns camera
 images into motion, is fixed.
 
 3
-00:00:10.335 --> 00:00:14.186
+00:00:10.400 --> 00:00:14.277
 Agents watch the installation, run
 experiments on it,
 
 4
-00:00:14.186 --> 00:00:17.800
+00:00:14.277 --> 00:00:17.915
 and change how the installation uses that
 policy.
 
 5
-00:00:19.100 --> 00:00:21.800
+00:00:19.200 --> 00:00:21.708
 First story: make this one job.
 
 6
-00:00:23.100 --> 00:00:25.745
+00:00:23.000 --> 00:00:25.273
 The robot already has skills.
 
 7
-00:00:25.745 --> 00:00:31.874
+00:00:25.273 --> 00:00:30.538
 Each skill is one task on this table, done
 by the policy under its own instruction.
 
 8
-00:00:31.874 --> 00:00:35.165
+00:00:30.538 --> 00:00:33.365
 Here, each one runs alone and delivers.
 
 9
-00:00:35.165 --> 00:00:39.100
+00:00:33.365 --> 00:00:36.746
 The policy does not change anywhere in
 this film.
 
 10
-00:00:40.400 --> 00:00:47.146
-A shift lead asks for one job: two skills
-in a row, ending in a stated arrangement.
+00:00:38.050 --> 00:00:41.771
+A shift lead asks for one job: the cheese
+into the black bowl,
 
 11
-00:00:47.146 --> 00:00:50.625
-The lead adds a rule about the order.
+00:00:41.771 --> 00:00:44.437
+and the loaded bowl onto the cabinet top.
 
 12
-00:00:50.625 --> 00:00:53.394
-The agent proposes the bar:
+00:00:44.437 --> 00:00:47.102
+The cheese goes in before the bowl moves.
 
 13
-00:00:53.394 --> 00:00:59.572
-the job must deliver on at least 18 of 20
-fresh starts it was never run on.
+00:00:47.102 --> 00:00:49.063
+The agent proposes the bar:
 
 14
-00:00:59.572 --> 00:01:04.400
+00:00:49.063 --> 00:00:53.438
+the job must deliver on at least 14 of 20
+fresh starts it was never run on.
+
+15
+00:00:53.438 --> 00:00:56.858
 The lead approves that bar before any
 program is tested.
 
-15
-00:01:05.700 --> 00:01:10.752
+16
+00:00:58.150 --> 00:01:02.914
 The obvious chain switches to the next
 skill the moment the first one reports
 
-16
-00:01:10.752 --> 00:01:11.888
+17
+00:01:02.914 --> 00:01:03.985
 success.
 
-17
-00:01:11.888 --> 00:01:14.953
+18
+00:01:03.985 --> 00:01:06.876
 That is the signal published scores count.
 
-18
-00:01:14.953 --> 00:01:20.403
-But it can fire while the hand still holds
-the item, and the arrangement ends wrong.
-
 19
-00:01:20.403 --> 00:01:23.071
-On the {release_n} reserved starts,
+00:01:06.876 --> 00:01:10.355
+On the first 10 development starts, it
+delivers on 0.
 
 20
-00:01:23.071 --> 00:01:26.932
-the obvious chain delivers on
-{release_naive_delivered}.
-
-21
-00:01:26.932 --> 00:01:29.600
+00:01:10.355 --> 00:01:12.871
 A success signal is not a delivery.
 
+21
+00:01:14.150 --> 00:01:18.925
+The agent reads the object traces, looks
+at the frames, and writes its own check:
+
 22
-00:01:30.900 --> 00:01:35.207
-The agent reads the object traces and
-writes its own check:
+00:01:18.925 --> 00:01:22.673
+was the cheese released and settled when
+the bowl task began,
 
 23
-00:01:35.207 --> 00:01:40.605
-did a later step undo an earlier one, and
-is everything released and at rest?
+00:01:22.673 --> 00:01:25.292
+and did it stay in the bowl to the end?
 
 24
-00:01:40.605 --> 00:01:43.031
-It finds the failing moment.
+00:01:25.292 --> 00:01:28.270
+Then it tests transitions on the
+installation.
 
 25
-00:01:43.031 --> 00:01:46.974
-Then it tests transitions on the
-installation itself,
+00:01:28.270 --> 00:01:33.097
+Letting the cheese instruction run on a
+little after its goal first holds delivers
 
 26
-00:01:46.974 --> 00:01:49.400
-2 development starts in all.
+00:01:33.097 --> 00:01:35.099
+on 9 of the same 10 starts.
 
 27
-00:01:50.700 --> 00:01:55.387
-The agent freezes its program and runs it
-on {release_n} reserved starts it has
+00:01:35.099 --> 00:01:38.385
+On 20 fresh starts, the same program
+delivers on 11.
 
 28
-00:01:55.387 --> 00:01:56.572
-never seen.
+00:01:38.385 --> 00:01:42.339
+Adding a return home at the end breaks
+starts that had delivered.
 
 29
-00:01:56.572 --> 00:02:00.281
-It delivers on {release_delivered}; the
-bar was {release_k}.
+00:01:43.650 --> 00:01:48.203
+The result is short of the bar, so the
+agent does not release the job.
 
 30
-00:02:00.281 --> 00:02:04.865
-The obvious chain, on the same starts,
-delivers on {release_naive_delivered}.
+00:01:48.203 --> 00:01:52.922
+It writes its account to the shift lead:
+the best fresh result, 11 of 20,
 
 31
-00:02:04.865 --> 00:02:06.874
-Rescued: {release_rescued}.
+00:01:52.922 --> 00:01:57.753
+against the agreed 14 of 20, and a
+finishing change that made things worse.
 
 32
-00:02:06.874 --> 00:02:08.779
-Broken: {release_broken}.
+00:01:57.753 --> 00:02:01.251
+It saves its checks and a skill for the
+next shift.
 
 33
-00:02:08.779 --> 00:02:12.900
-Then the agent explains the change to the
-shift lead in plain words.
+00:02:02.550 --> 00:02:05.266
+A second shift takes the same request,
 
 34
-00:02:14.200 --> 00:02:17.959
-The job and the check join the
-installation's job list,
+00:02:05.266 --> 00:02:08.905
+with the first shift's checks and skill in
+its library.
 
 35
-00:02:17.959 --> 00:02:22.280
-and an operator runs the job with one
-command from a fresh start.
+00:02:08.905 --> 00:02:13.414
+It runs the first shift's check on its own
+baseline before adapting it.
 
 36
-00:02:22.280 --> 00:02:24.636
-Then a second request arrives.
+00:02:13.414 --> 00:02:16.781
+A longer continuation delivers on 17 of 20
+starts.
 
 37
-00:02:24.636 --> 00:02:28.283
-The agent runs the saved check and reuses
-its method.
+00:02:16.781 --> 00:02:19.497
+Those starts had been examined before,
 
 38
-00:02:28.283 --> 00:02:30.303
-Job one took 1 sessions,
+00:02:19.497 --> 00:02:22.919
+so the agent does not count them as fresh
+evidence,
 
 39
-00:02:30.303 --> 00:02:34.287
-2 simulated starts and 1 minutes of the
-agent's model time.
+00:02:22.919 --> 00:02:25.689
+and it stops without a release as well.
 
 40
-00:02:34.287 --> 00:02:37.260
-Job two took {job_two_sessions} sessions,
+00:02:25.689 --> 00:02:28.894
+A third shift starts from the second's
+library.
 
 41
-00:02:37.260 --> 00:02:41.300
-{job_two_starts} starts and
-{job_two_model_minutes} minutes.
+00:02:28.894 --> 00:02:29.926
+For it,
 
 42
-00:02:42.600 --> 00:02:45.129
-The robot policy stayed the same.
+00:02:29.926 --> 00:02:34.869
+the lead adds that a release which misses
+on the reserved starts is acceptable.
 
 43
-00:02:45.129 --> 00:02:50.076
-The installation gained {library_jobs}
-jobs and a check it did not have this
+00:02:34.869 --> 00:02:38.997
+Its shorter continuation delivers on 9 of
+10 development starts,
 
 44
-00:02:50.076 --> 00:02:51.200
-morning.
+00:02:38.997 --> 00:02:41.387
+and the agent saves it as a job.
 
 45
-00:02:52.500 --> 00:02:56.139
-Every clip in this film is a recorded run.
+00:02:41.387 --> 00:02:43.777
+The first shift took 5 sessions,
 
 46
-00:02:56.139 --> 00:02:58.700
+00:02:43.777 --> 00:02:48.448
+100 simulated starts and 38 minutes of the
+agent's model time; the second,
+
+47
+00:02:48.448 --> 00:02:52.414
+5 sessions, 130 starts and 45 minutes; the
+third, 5 sessions,
+
+48
+00:02:52.414 --> 00:02:54.423
+60 starts and 39 minutes.
+
+49
+00:02:55.700 --> 00:03:00.713
+The saved job runs on the 20 reserved
+starts, which no shift had touched,
+
+50
+00:03:00.713 --> 00:03:04.016
+and the naive chain runs on the same
+starts.
+
+51
+00:03:04.016 --> 00:03:05.962
+The lead's bar is 14.
+
+52
+00:03:05.962 --> 00:03:09.324
+The job delivers on 13; the naive chain on
+1.
+
+53
+00:03:09.324 --> 00:03:10.739
+Rescued: 13.
+
+54
+00:03:10.739 --> 00:03:12.037
+Broken: 1.
+
+55
+00:03:12.037 --> 00:03:13.924
+Order violations: 0.
+
+56
+00:03:13.924 --> 00:03:17.109
+Short of the bar, the job is not released.
+
+57
+00:03:19.000 --> 00:03:21.378
+The robot policy stayed the same.
+
+58
+00:03:21.378 --> 00:03:23.280
+The job is not released.
+
+59
+00:03:23.280 --> 00:03:26.610
+The installation's library now holds the
+saved job,
+
+60
+00:03:26.610 --> 00:03:31.260
+4 checks and the skills of every shift,
+and the next shift starts from them.
+
+61
+00:03:48.000 --> 00:03:51.901
+Second story: make that a check the next
+shift can run.
+
+62
+00:03:53.200 --> 00:03:56.418
+A fleet of robot arms works at several
+sites.
+
+63
+00:03:56.418 --> 00:04:00.427
+At one site, inference stays in the
+customer's data center,
+
+64
+00:04:00.427 --> 00:04:04.379
+so commands arrive late, and nobody on
+site can undo that.
+
+65
+00:04:04.379 --> 00:04:09.630
+Task telemetry shows a lag there, and a
+lag on one robot at another site as well.
+
+66
+00:04:09.630 --> 00:04:14.655
+From the telemetry alone, the agent cannot
+tell what kind of lag each one is.
+
+67
+00:04:15.950 --> 00:04:18.348
+So the agent builds a measurement.
+
+68
+00:04:18.348 --> 00:04:21.841
+From a bounded set of motions it composes
+a step probe,
+
+69
+00:04:21.841 --> 00:04:26.064
+and asks for it on a robot at the delayed
+site, on the lagging robot,
+
+70
+00:04:26.064 --> 00:04:29.609
+on a healthy reference and on a robot at
+the third site.
+
+71
+00:04:29.609 --> 00:04:32.737
+Commanded against measured: at the delayed
+site,
+
+72
+00:04:32.737 --> 00:04:35.969
+the arm starts late by the same amount
+every time.
+
+73
+00:04:35.969 --> 00:04:40.140
+On the lagging robot, the delay changes
+from one repeat to the next,
+
+74
+00:04:40.140 --> 00:04:42.173
+and grows within the probe.
+
+75
+00:04:42.173 --> 00:04:43.893
+One is a fixed delay.
+
+76
+00:04:43.893 --> 00:04:45.718
+The other is a backlog.
+
+77
+00:04:47.000 --> 00:04:51.478
+The probe picks candidates; task
+experiments on paired starts decide.
+
+78
+00:04:51.478 --> 00:04:54.961
+The agent adopts its changes, each with
+its reason:
+
+79
+00:04:54.961 --> 00:04:59.218
+compensate for the delay at the first site
+rather than remove it,
+
+80
+00:04:59.218 --> 00:05:02.535
+roll back the software update at the third
+site,
+
+81
+00:05:02.535 --> 00:05:05.576
+and service the lagging robot's
+controller.
+
+82
+00:05:31.650 --> 00:05:37.243
+Then the changed fleet runs 576 reserved
+attempts the agent never saw,
+
+83
+00:05:37.243 --> 00:05:41.268
+beside the original state on the same
+attempts.
+
+84
+00:05:41.268 --> 00:05:43.928
+Before: 451 of 576 succeed.
+
+85
+00:05:43.928 --> 00:05:45.497
+After: 558.
+
+86
+00:05:45.497 --> 00:05:47.203
+Rescued: 113.
+
+87
+00:05:47.203 --> 00:05:48.703
+Broken: 6.
+
+88
+00:05:48.703 --> 00:05:52.455
+The lagging robot goes from 29 to 46 of
+48.
+
+89
+00:05:53.750 --> 00:05:59.161
+The probe and its analysis became a recipe
+in the library, runnable on named robots.
+
+90
+00:05:59.161 --> 00:06:03.050
+On a later fleet, robots fail again, and
+the recipe runs.
+
+91
+00:06:03.050 --> 00:06:08.010
+At the third site, the arms first move at
+row 18 and are half-way at row 21:
+
+92
+00:06:08.010 --> 00:06:09.476
+a fixed delay.
+
+93
+00:06:09.476 --> 00:06:13.985
+The robot that fails on its own responds
+like the healthy reference.
+
+94
+00:06:13.985 --> 00:06:16.127
+Its first movement: row 1.
+
+95
+00:06:16.127 --> 00:06:17.987
+The reference: row 1.
+
+96
+00:06:17.987 --> 00:06:20.975
+So the skill's rule points at the images,
+
+97
+00:06:20.975 --> 00:06:24.864
+not at the controller service that fixed
+the first fleet.
+
+98
+00:06:24.864 --> 00:06:29.542
+The operator's recorded decision follows
+it: no service for that robot;
+
+99
+00:06:29.542 --> 00:06:32.360
+inspect its images and its change log,
+
+100
+00:06:32.360 --> 00:06:37.264
+and test the first fleet's adaptation at
+the third site before adopting it.
+
+101
+00:06:38.550 --> 00:06:41.058
+Every clip in this film is a recorded run.
+
+102
+00:06:41.058 --> 00:06:42.822
 The record lists each one.

@@ -2,13 +2,20 @@
 
 | Beat | Story | Title | Start (s) | Length (s) | Footage | Clips | Needs |
 | --- | --- | --- | ---: | ---: | --- | --- | --- |
-| open |  | Opening | 0.0 | 18.6 | card | none |  |
-| a0-title | A | Story A | 18.6 | 4.0 | card | none |  |
-| a1-skills | A | The skills | 22.6 | 17.3 | no footage | none | two single-skill runs from story A's record (the two skills job one chains), each delivered |
-| a2-request | A | The request | 39.9 | 25.3 | placeholder (development dry run of job one (lane T), not the investigation) | none | the investigation's job_run.json: message_log (request, proposal, approval) and acceptance |
-| a3-naive | A | The naive attempt | 65.2 | 25.2 | placeholder (development dry run: the agent's first program on development starts 0 and 1, not the naive chain on the release starts) | probes:session-01/run e000101 steps 0-392; probes:session-01/run e000102 steps 0-411 | the naive chain on story A's release starts (the release receipt's naive episodes), with its count |
-| a4-investigation | A | The investigation | 90.4 | 19.8 | placeholder (development dry run: the agent's first session, one query and its first program; no check was saved) | none | the agent's session: the object traces it reads, its saved check (the SQL on screen, from the library's checks/<name>.json), the failing moment it finds, and the transitions it tests |
-| a5-release | A | The release | 110.2 | 23.5 | no footage | none | the release run: receipt.json (N, K, delivered, naive_delivered, rescued, broken, pairs) and, from its run directories, the program's and the naive chain's episode on the first rescued start, side by side; the agent's account to the shift lead |
-| a6-next-shift | A | The next shift | 133.7 | 28.4 | no footage | none | the job list with job one and its check; an operator's command running job one from a fresh start; the second request; job two's session invoking the saved check; the two cost accounts side by side |
-| a7-close | A | What changed | 162.1 | 9.9 | placeholder (the claim waits for both jobs' release receipts) | none |  |
-| close |  | The record | 172.0 | 7.5 | card | none |  |
+| open |  | Opening | 0.0 | 18.7 | card | none |  |
+| a0-title | A | Story A | 18.7 | 3.8 | card | none |  |
+| a1-skills | A | The skills | 22.5 | 15.1 | record | probes:skills/cheese e000101 steps 0-95; probes:skills/cabinet e000101 steps 0-103 |  |
+| a2-request | A | The request | 37.5 | 20.1 | record | none |  |
+| a3-naive | A | The naive attempt | 57.6 | 16.0 | record | probes:session-01/run e000102 steps 0-411 |  |
+| a4-investigation | A | The investigation | 73.7 | 29.5 | record | probes:session-01/run e000102 steps 0-411; probes:session-02/run e000402 steps 0-216; probes:session-03/run e000602 steps 0-246; probes:session-04/run e000702 steps 0-265 |  |
+| a5-account | A | The account | 103.2 | 18.9 | record | none |  |
+| a6-second-shift | A | The second shift | 122.0 | 53.1 | record | probes:session-03/run e000602 steps 0-337; probes:session-04/run e000802 steps 0-347; probes:session-03/run e000401 steps 0-329 |  |
+| a7-release | A | The release | 175.2 | 23.3 | record | probes:run/run e000202 steps 0-391; probes:run/run e000102 steps 0-206 |  |
+| a8-close | A | What changed | 198.5 | 29.0 | record | none |  |
+| b0-title | B | Story B | 227.5 | 5.2 | card | none |  |
+| b1-constraint | B | The fleet and the lag that misleads | 232.7 | 22.8 | record | probes:STORYB/export e000010 steps 0-280; probes:STORYB/export e000041 steps 0-255 |  |
+| b2-instrument | B | The instrument | 255.4 | 31.1 | record | none |  |
+| b3-change | B | The change | 286.5 | 44.6 | record | probes:w08-20261019T224617-a1f33d/session-02 e001939 steps 0-280; probes:w08-20261019T224617-a1f33d/session-02 e001941 steps 0-166; probes:w08-20261019T224617-a1f33d/session-02 e001744 steps 0-280; probes:w08-20261019T224617-a1f33d/session-02 e001745 steps 0-89; probes:w08-20261019T224617-a1f33d/session-02 e002117 steps 0-280; probes:w08-20261019T224617-a1f33d/session-02 e002118 steps 0-144 |  |
+| b4-evaluation | B | The evaluation | 331.1 | 22.1 | record | none |  |
+| b5-second-use | B | The second use | 353.2 | 44.8 | record | probes:STORYB-LATER/export e000175 steps 0-280 |  |
+| close |  | The record | 398.1 | 5.5 | card | none |  |
