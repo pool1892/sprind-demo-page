@@ -1,57 +1,57 @@
 {
  "format": "fleetlab.film-public/1",
  "note": "Public provenance: runs, tables and files by stable identifier and SHA-256. The full provenance, with where each file lies, is kept with the run records.",
- "built": "2026-10-20T10:41:06+00:00",
- "code_commit": "7efeab7cf2d3a0cf97be218cbbbdcbb4a770e101",
+ "built": "2026-10-20T16:39:05+00:00",
+ "code_commit": "23e522da4d88e409d3d3c1d46be43a4afb43cfac",
  "film": [
   {
    "role": "master",
    "file": "film-master.mp4",
-   "sha256": "56b7e6b9bb3b0539cecb2fc6f6c26fc4325111a5f615666d8b5219c0efc5ce9e",
-   "bytes": 38711573,
+   "sha256": "0a8a8e4359f16b49c3818ecfe59a12eb6c9e2ed47bde7dcbf78fc77f5a2b2a08",
+   "bytes": 37442500,
    "width": 1920,
    "height": 1080,
    "fps": 20,
-   "seconds": 407.95,
+   "seconds": 399.5,
    "video": "H.264 high, crf 16, preset slow",
    "audio": "AAC 192 kb/s, 48000 Hz mono"
   },
   {
    "role": "web",
    "file": "film.mp4",
-   "sha256": "5572fe1db75cc258dd4b3c1b061952bf54d4ae449e0eb0ef3d2f24b38c73c50a",
-   "bytes": 19231771,
+   "sha256": "e2b577e426ec3223e21a0951c8d7d814ec657aa6c5895aa65b9c6cc65923f01e",
+   "bytes": 18674195,
    "width": 1280,
    "height": 720,
    "fps": 20,
-   "seconds": 407.95,
+   "seconds": 399.5,
    "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
    "audio": "AAC 128 kb/s, 48000 Hz mono"
   }
  ],
- "private_provenance_sha256": "b9b1f8138a84ea518b6252020a5d7542c464ec480dd80781098408d112b9fa09",
+ "private_provenance_sha256": "c880192f39b91894d01286ee9ddfaf736605724001a7eed4b42b183d12587e86",
  "beats": [
   {
    "id": "open",
    "story": null,
    "title": "Opening",
    "start_s": 0.0,
-   "end_s": 18.7,
+   "end_s": 22.15,
    "status": "card",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 41,
-    "seconds": 17.415,
+    "words": 50,
+    "seconds": 20.852,
     "timing": "measured audio",
-    "text": "This is a simulated robot installation: one robot arm at a kitchen table. Its policy, the model that turns camera images into motion, is fixed. Agents watch the installation, run experiments on it, and change how the installation uses that policy.",
-    "voice_sha256": "46eab3f22bbef2a671669b4ee07dd0d3bcf34dd5aad4cc7d81c6e3dc4e18173b"
+    "text": "This is a simulated robot installation: one robot arm at a kitchen table. Its policy, the model that turns its camera images, a written instruction and the hand's measured pose into motion, is fixed. Agents watch the installation, run experiments on it, and change how the installation uses that policy.",
+    "voice_sha256": "6fd43597363c1fb3d73688709421aa7800aa42be2f3bcfd19e6157f62583a4bf"
    },
    "shots": [
     {
      "kind": "card",
      "start_s": 0.0,
-     "end_s": 18.7,
+     "end_s": 22.15,
      "clips": [],
      "counts": [],
      "files": []
@@ -62,8 +62,8 @@
    "id": "a0-title",
    "story": "A",
    "title": "Story A",
-   "start_s": 18.7,
-   "end_s": 22.5,
+   "start_s": 22.15,
+   "end_s": 25.95,
    "status": "card",
    "placeholder": null,
    "needs": null,
@@ -77,8 +77,8 @@
    "shots": [
     {
      "kind": "card",
-     "start_s": 18.7,
-     "end_s": 22.5,
+     "start_s": 22.15,
+     "end_s": 25.95,
      "clips": [],
      "counts": [],
      "files": []
@@ -89,8 +89,8 @@
    "id": "a1-skills",
    "story": "A",
    "title": "The skills",
-   "start_s": 22.5,
-   "end_s": 37.55,
+   "start_s": 25.95,
+   "end_s": 41.0,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -104,8 +104,8 @@
    "shots": [
     {
      "kind": "clip",
-     "start_s": 22.5,
-     "end_s": 26.2,
+     "start_s": 25.95,
+     "end_s": 29.65,
      "clips": [
       {
        "label": "skill: put the cream cheese in the bowl, development start 0",
@@ -177,8 +177,8 @@
     },
     {
      "kind": "clip",
-     "start_s": 26.2,
-     "end_s": 37.55,
+     "start_s": 29.65,
+     "end_s": 41.0,
      "clips": [
       {
        "label": "skill: put the bowl on top of the cabinet, development start 0",
@@ -254,23 +254,23 @@
    "id": "a2-request",
    "story": "A",
    "title": "The request",
-   "start_s": 37.55,
-   "end_s": 57.65,
+   "start_s": 41.0,
+   "end_s": 59.85,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 61,
-    "seconds": 18.808,
+    "words": 53,
+    "seconds": 17.554,
     "timing": "measured audio",
-    "text": "A shift lead asks for one job: the cheese into the black bowl, and the loaded bowl onto the cabinet top. The cheese goes in before the bowl moves. The agent proposes the bar: the job must deliver on at least 14 of 20 fresh starts it was never run on. The lead approves that bar before any program is tested.",
-    "voice_sha256": "ce8ed8bd0efff422e6d579a4e53492447c6821271381c880be66d54092f5a3d9"
+    "text": "A shift lead asks for one job: the cheese into the black bowl, and the loaded bowl onto the cabinet top. The cheese goes in before the bowl moves. The shift lead's bar: 3 deliveries in every 5 fresh starts, 12 of 20. The agent offers to be judged on 14 of 20.",
+    "voice_sha256": "5cf7675e06967fe223b567fb866df562be4b82c8b9fc3fd4f4ab40c66a7edd1c"
    },
    "shots": [
     {
-     "kind": "messages",
-     "start_s": 37.55,
-     "end_s": 57.65,
+     "kind": "text",
+     "start_s": 41.0,
+     "end_s": 46.0,
      "clips": [],
      "counts": [],
      "files": [
@@ -279,6 +279,27 @@
        "sha256": "64b4c2a7dab8c0c8d80008b656d46ac26a0cffdd4ba44e6306e2c46ac81a3788"
       }
      ]
+    },
+    {
+     "kind": "text",
+     "start_s": 46.0,
+     "end_s": 50.0,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-one/run-3/job_run.json",
+       "sha256": "64b4c2a7dab8c0c8d80008b656d46ac26a0cffdd4ba44e6306e2c46ac81a3788"
+      }
+     ]
+    },
+    {
+     "kind": "card",
+     "start_s": 50.0,
+     "end_s": 59.85,
+     "clips": [],
+     "counts": [],
+     "files": []
     }
    ]
   },
@@ -286,8 +307,8 @@
    "id": "a3-naive",
    "story": "A",
    "title": "The naive attempt",
-   "start_s": 57.65,
-   "end_s": 73.65,
+   "start_s": 59.85,
+   "end_s": 75.85,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -301,8 +322,8 @@
    "shots": [
     {
      "kind": "clip",
-     "start_s": 57.65,
-     "end_s": 73.65,
+     "start_s": 59.85,
+     "end_s": 75.85,
      "clips": [
       {
        "label": "naive chain, development start 1",
@@ -380,8 +401,8 @@
    "id": "a4-investigation",
    "story": "A",
    "title": "The investigation",
-   "start_s": 73.65,
-   "end_s": 103.15,
+   "start_s": 75.85,
+   "end_s": 105.35,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -395,8 +416,8 @@
    "shots": [
     {
      "kind": "calls",
-     "start_s": 73.65,
-     "end_s": 82.65,
+     "start_s": 75.85,
+     "end_s": 84.85,
      "clips": [],
      "counts": [],
      "files": [
@@ -408,8 +429,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 82.65,
-     "end_s": 93.45,
+     "start_s": 84.85,
+     "end_s": 95.65,
      "clips": [
       {
        "label": "naive chain (j0001), start 1",
@@ -548,8 +569,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 93.45,
-     "end_s": 103.15,
+     "start_s": 95.65,
+     "end_s": 105.35,
      "clips": [
       {
        "label": "tuned program (j0006), start 11",
@@ -692,23 +713,23 @@
    "id": "a5-account",
    "story": "A",
    "title": "The account",
-   "start_s": 103.15,
-   "end_s": 122.05,
+   "start_s": 105.35,
+   "end_s": 124.8,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 55,
-    "seconds": 17.601,
+    "words": 56,
+    "seconds": 18.158,
     "timing": "measured audio",
-    "text": "The result is short of the bar, so the agent does not release the job. It writes its account to the shift lead: the best fresh result, 11 of 20, against the agreed 14 of 20, and a finishing change that made things worse. It saves its checks and a skill for the next shift.",
-    "voice_sha256": "b73dfc4772223cc61c02c77750f0fa0d9efacea483175d2aae9bdf9241e51c95"
+    "text": "The first shift writes its account to the shift lead and hands on what it built: a check that finds where a delivery is lost, and a skill on why a return home can break a delivery. It took 5 sessions, 100 development executions on 30 distinct starts, and 38 minutes of the agent's model time.",
+    "voice_sha256": "20b518aa565c5226457201a845fb0b7c241040ac6191a3b203ff5d60762bb330"
    },
    "shots": [
     {
      "kind": "text",
-     "start_s": 103.15,
-     "end_s": 112.15,
+     "start_s": 105.35,
+     "end_s": 117.35,
      "clips": [],
      "counts": [],
      "files": [
@@ -720,14 +741,14 @@
     },
     {
      "kind": "text",
-     "start_s": 112.15,
-     "end_s": 122.05,
+     "start_s": 117.35,
+     "end_s": 124.8,
      "clips": [],
      "counts": [],
      "files": [
       {
-       "id": "probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json",
-       "sha256": "ee7b94831c231f1c9480df299d5bab47d6bc19c07dfd284f28f4add3d563415f"
+       "id": "probes:demo/2026-10-21/job-one/run-3/job_run.json",
+       "sha256": "64b4c2a7dab8c0c8d80008b656d46ac26a0cffdd4ba44e6306e2c46ac81a3788"
       }
      ]
     }
@@ -737,23 +758,23 @@
    "id": "a6-second-shift",
    "story": "A",
    "title": "The second shift",
-   "start_s": 122.05,
-   "end_s": 179.35,
+   "start_s": 124.8,
+   "end_s": 161.75,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 150,
-    "seconds": 56.007,
+    "words": 94,
+    "seconds": 33.437,
     "timing": "measured audio",
-    "text": "A second shift takes the same request, with the first shift's checks and skill in its library. It runs the first shift's check on its own baseline before adapting it. A longer continuation delivers on 17 of 20 starts. Those starts had been examined before, so the agent does not count them as fresh evidence, and it stops without a release as well. A third shift starts from the second's library. For it, the lead adds that a release which misses on the reserved starts is acceptable. Its shorter continuation delivers on 9 of 10 development starts, and the agent saves it as a job. The first shift took 5 sessions, 100 development executions on 30 distinct starts, and 38 minutes of the agent's model time; the second, 5 sessions, 130 executions on 30 starts and 45 minutes; the third, 5 sessions, 60 executions on 10 starts and 39 minutes.",
-    "voice_sha256": "fafc8e9889a32989f58033bdce34df38cafd208f3600ceda2ef3f60acde05b6a"
+    "text": "The second shift starts from that library. It runs the first shift's check on its own baseline, then builds a sharper one that finds where the load is lost in transport. Its longer continuation delivers on 17 of 20 starts it had already examined. It took 5 sessions, 130 executions on 30 starts and 45 minutes. The third shift starts from the library of both. Its shorter continuation delivers on 9 of 10 development starts, and the agent saves it as the job, in 5 sessions, 60 executions on 10 starts and 39 minutes.",
+    "voice_sha256": "7959e5f39550e52d7cf2c7271687e1d9ceb6d1ecc6d508d74df1e7640822ea06"
    },
    "shots": [
     {
      "kind": "calls",
-     "start_s": 122.05,
-     "end_s": 129.05,
+     "start_s": 124.8,
+     "end_s": 131.8,
      "clips": [],
      "counts": [],
      "files": [
@@ -765,8 +786,8 @@
     },
     {
      "kind": "text",
-     "start_s": 129.05,
-     "end_s": 136.05,
+     "start_s": 131.8,
+     "end_s": 138.8,
      "clips": [],
      "counts": [],
      "files": [
@@ -778,8 +799,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 136.05,
-     "end_s": 145.25,
+     "start_s": 138.8,
+     "end_s": 148.0,
      "clips": [
       {
        "label": "shorter continuation (j0006), start 11",
@@ -918,21 +939,21 @@
     },
     {
      "kind": "text",
-     "start_s": 145.25,
-     "end_s": 152.25,
+     "start_s": 148.0,
+     "end_s": 153.0,
      "clips": [],
      "counts": [],
      "files": [
       {
        "id": "probes:demo/2026-10-21/job-one/run-6/job_run.json",
-       "sha256": "c4976de7495eb755b4e83653b1fb2e502ea58b0431adafa6054b327a1b5269cd"
+       "sha256": "7ceb6ea211328a57e1617f4bbeb3084aaa2ce28da321e47648eab3163ba926b4"
       }
      ]
     },
     {
      "kind": "clip",
-     "start_s": 152.25,
-     "end_s": 179.35,
+     "start_s": 153.0,
+     "end_s": 161.75,
      "clips": [
       {
        "label": "the saved program (j0004), development start 0, the first it delivered on",
@@ -1010,23 +1031,23 @@
    "id": "a7-release",
    "story": "A",
    "title": "The release",
-   "start_s": 179.35,
-   "end_s": 202.85,
+   "start_s": 161.75,
+   "end_s": 184.05,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 54,
-    "seconds": 22.198,
+    "words": 49,
+    "seconds": 20.434,
     "timing": "measured audio",
-    "text": "The saved job runs on the 20 reserved starts, which no shift had touched, and the naive chain runs on the same starts. The lead's bar is 14. The job delivers on 13; the naive chain on 1. Rescued: 13. Broken: 1. Order violations: 0. Short of the bar, the job is not released.",
-    "voice_sha256": "528c4aab816e1f3b962c65bbfeac0b075a4b7743ac8dc58a81ddb07f1729fc6b"
+    "text": "The saved job runs on the 20 reserved starts no shift had touched, and the naive chain runs on the same starts. The job delivers on 13; the naive chain on 1. Rescued: 13. Broken: 1. Order violations: 0. Against the lead's bar of 12, the job is released.",
+    "voice_sha256": "0a1302ad0fab89977f307708ebf12a14dac1c3a404a3f07ecc5709514c5c2b3b"
    },
    "shots": [
     {
      "kind": "pair",
-     "start_s": 179.35,
-     "end_s": 189.65,
+     "start_s": 161.75,
+     "end_s": 172.05,
      "clips": [
       {
        "label": "naive chain, reserved start 31",
@@ -1165,22 +1186,22 @@
     },
     {
      "kind": "card",
-     "start_s": 189.65,
-     "end_s": 195.65,
+     "start_s": 172.05,
+     "end_s": 178.05,
      "clips": [],
      "counts": [],
      "files": []
     },
     {
      "kind": "text",
-     "start_s": 195.65,
-     "end_s": 202.85,
+     "start_s": 178.05,
+     "end_s": 184.05,
      "clips": [],
      "counts": [],
      "files": [
       {
-       "id": "probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json",
-       "sha256": "3de2cd8a113095504c5f03534575152a683b45c0f67111944deda015a7085f24"
+       "id": "probes:demo/2026-10-21/job-one/run-6/job_run.json",
+       "sha256": "7ceb6ea211328a57e1617f4bbeb3084aaa2ce28da321e47648eab3163ba926b4"
       }
      ]
     }
@@ -1190,23 +1211,23 @@
    "id": "a8-close",
    "story": "A",
    "title": "What changed",
-   "start_s": 202.85,
-   "end_s": 231.85,
+   "start_s": 184.05,
+   "end_s": 222.6,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 34,
-    "seconds": 12.26,
+    "words": 111,
+    "seconds": 37.245,
     "timing": "measured audio",
-    "text": "The robot policy stayed the same. The job is not released. The installation's library now holds the saved job, 4 checks and the skills of every shift, and the next shift starts from them.",
-    "voice_sha256": "40834710a91a7c72050308450561087b052ab49fa9eddcee44f37732c71b3fb0"
+    "text": "The robot policy stayed the same. The installation now runs a released job it did not have before the first shift: the cheese in the bowl, and the loaded bowl on the cabinet. Behind it, the library holds the job, 4 checks and the skills of every shift. The second job, the bowl onto the plate, builds on job one's library. Its first shift tests job one's checks on its own first runs and saves a check of its own; its second starts from the released library, runs job one's audit on its own baseline, adapts job one's recipe, and saves a new check and 2 skills from 90 development executions.",
+    "voice_sha256": "bd44aa3313d6946f6c5f01f2c7706037871f852678f0aceb5bea3469a58c4685"
    },
    "shots": [
     {
      "kind": "messages",
-     "start_s": 202.85,
-     "end_s": 206.85,
+     "start_s": 184.05,
+     "end_s": 187.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1218,8 +1239,8 @@
     },
     {
      "kind": "messages",
-     "start_s": 206.85,
-     "end_s": 210.85,
+     "start_s": 187.05,
+     "end_s": 190.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1231,8 +1252,8 @@
     },
     {
      "kind": "messages",
-     "start_s": 210.85,
-     "end_s": 216.85,
+     "start_s": 190.05,
+     "end_s": 194.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1244,8 +1265,8 @@
     },
     {
      "kind": "text",
-     "start_s": 216.85,
-     "end_s": 219.85,
+     "start_s": 194.05,
+     "end_s": 196.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1257,8 +1278,8 @@
     },
     {
      "kind": "text",
-     "start_s": 219.85,
-     "end_s": 222.85,
+     "start_s": 196.05,
+     "end_s": 198.05,
      "clips": [],
      "counts": [],
      "files": [
@@ -1270,21 +1291,73 @@
     },
     {
      "kind": "text",
-     "start_s": 222.85,
-     "end_s": 225.85,
+     "start_s": 198.05,
+     "end_s": 200.05,
      "clips": [],
      "counts": [],
      "files": [
       {
        "id": "probes:demo/2026-10-21/job-one/run-6/job_run.json",
-       "sha256": "c4976de7495eb755b4e83653b1fb2e502ea58b0431adafa6054b327a1b5269cd"
+       "sha256": "7ceb6ea211328a57e1617f4bbeb3084aaa2ce28da321e47648eab3163ba926b4"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 200.05,
+     "end_s": 203.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-two/run-1/job_run.json",
+       "sha256": "c3431535d60a36cff627bd639f21e1c3cc7d3dd863375eb5cac56be199daa3cd"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 203.05,
+     "end_s": 207.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-two/run-2/job_run.json",
+       "sha256": "dbcaf5d298bfaeb232db3ebbef46d2c453951246c083c4ca8a8e25cad6c630b9"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 207.05,
+     "end_s": 210.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-two/run-2/job_run.json",
+       "sha256": "dbcaf5d298bfaeb232db3ebbef46d2c453951246c083c4ca8a8e25cad6c630b9"
+      }
+     ]
+    },
+    {
+     "kind": "text",
+     "start_s": 210.05,
+     "end_s": 213.05,
+     "clips": [],
+     "counts": [],
+     "files": [
+      {
+       "id": "probes:demo/2026-10-21/job-two/run-2/job_run.json",
+       "sha256": "dbcaf5d298bfaeb232db3ebbef46d2c453951246c083c4ca8a8e25cad6c630b9"
       }
      ]
     },
     {
      "kind": "card",
-     "start_s": 225.85,
-     "end_s": 231.85,
+     "start_s": 213.05,
+     "end_s": 222.6,
      "clips": [],
      "counts": [],
      "files": []
@@ -1295,8 +1368,8 @@
    "id": "b0-title",
    "story": "B",
    "title": "Story B",
-   "start_s": 231.85,
-   "end_s": 237.05,
+   "start_s": 222.6,
+   "end_s": 227.8,
    "status": "card",
    "placeholder": null,
    "needs": null,
@@ -1310,8 +1383,8 @@
    "shots": [
     {
      "kind": "card",
-     "start_s": 231.85,
-     "end_s": 237.05,
+     "start_s": 222.6,
+     "end_s": 227.8,
      "clips": [],
      "counts": [],
      "files": []
@@ -1322,8 +1395,8 @@
    "id": "b1-constraint",
    "story": "B",
    "title": "The fleet and the lag that misleads",
-   "start_s": 237.05,
-   "end_s": 259.8,
+   "start_s": 227.8,
+   "end_s": 250.55,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1337,8 +1410,8 @@
    "shots": [
     {
      "kind": "image",
-     "start_s": 237.05,
-     "end_s": 242.05,
+     "start_s": 227.8,
+     "end_s": 232.8,
      "clips": [],
      "counts": [],
      "files": [
@@ -1350,8 +1423,8 @@
     },
     {
      "kind": "clip",
-     "start_s": 242.05,
-     "end_s": 249.6,
+     "start_s": 232.8,
+     "end_s": 240.35,
      "clips": [
       {
        "label": "site s1, robot r04, day 4: a failed attempt (first failure at s1)",
@@ -1425,8 +1498,8 @@
     },
     {
      "kind": "clip",
-     "start_s": 249.6,
-     "end_s": 259.8,
+     "start_s": 240.35,
+     "end_s": 250.55,
      "clips": [
       {
        "label": "robot r06, day 1: a failed attempt (its first failure)",
@@ -1461,8 +1534,8 @@
    "id": "b2-instrument",
    "story": "B",
    "title": "The instrument",
-   "start_s": 259.8,
-   "end_s": 290.85,
+   "start_s": 250.55,
+   "end_s": 281.6,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1476,8 +1549,8 @@
    "shots": [
     {
      "kind": "calls",
-     "start_s": 259.8,
-     "end_s": 266.8,
+     "start_s": 250.55,
+     "end_s": 257.55,
      "clips": [],
      "counts": [],
      "files": [
@@ -1489,8 +1562,8 @@
     },
     {
      "kind": "image",
-     "start_s": 266.8,
-     "end_s": 290.85,
+     "start_s": 257.55,
+     "end_s": 281.6,
      "clips": [],
      "counts": [],
      "files": [
@@ -1506,8 +1579,8 @@
    "id": "b3-change",
    "story": "B",
    "title": "The change",
-   "start_s": 290.85,
-   "end_s": 335.5,
+   "start_s": 281.6,
+   "end_s": 326.25,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1521,8 +1594,8 @@
    "shots": [
     {
      "kind": "image",
-     "start_s": 290.85,
-     "end_s": 294.85,
+     "start_s": 281.6,
+     "end_s": 285.6,
      "clips": [],
      "counts": [],
      "files": [
@@ -1534,8 +1607,8 @@
     },
     {
      "kind": "text",
-     "start_s": 294.85,
-     "end_s": 300.85,
+     "start_s": 285.6,
+     "end_s": 291.6,
      "clips": [],
      "counts": [],
      "files": [
@@ -1547,8 +1620,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 300.85,
-     "end_s": 308.4,
+     "start_s": 291.6,
+     "end_s": 299.15,
      "clips": [
       {
        "label": "x0002 control, robot r01",
@@ -1602,8 +1675,8 @@
     },
     {
      "kind": "text",
-     "start_s": 308.4,
-     "end_s": 314.4,
+     "start_s": 299.15,
+     "end_s": 305.15,
      "clips": [],
      "counts": [],
      "files": [
@@ -1615,8 +1688,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 314.4,
-     "end_s": 321.95,
+     "start_s": 305.15,
+     "end_s": 312.7,
      "clips": [
       {
        "label": "x0001 control, robot r10",
@@ -1670,8 +1743,8 @@
     },
     {
      "kind": "text",
-     "start_s": 321.95,
-     "end_s": 327.95,
+     "start_s": 312.7,
+     "end_s": 318.7,
      "clips": [],
      "counts": [],
      "files": [
@@ -1683,8 +1756,8 @@
     },
     {
      "kind": "pair",
-     "start_s": 327.95,
-     "end_s": 335.5,
+     "start_s": 318.7,
+     "end_s": 326.25,
      "clips": [
       {
        "label": "x0003 control, robot r06",
@@ -1742,8 +1815,8 @@
    "id": "b4-evaluation",
    "story": "B",
    "title": "The evaluation",
-   "start_s": 335.5,
-   "end_s": 357.6,
+   "start_s": 326.25,
+   "end_s": 348.35,
    "status": "record",
    "placeholder": null,
    "needs": null,
@@ -1757,8 +1830,8 @@
    "shots": [
     {
      "kind": "image",
-     "start_s": 335.5,
-     "end_s": 340.5,
+     "start_s": 326.25,
+     "end_s": 331.25,
      "clips": [],
      "counts": [
       {
@@ -1813,8 +1886,8 @@
     },
     {
      "kind": "image",
-     "start_s": 340.5,
-     "end_s": 344.5,
+     "start_s": 331.25,
+     "end_s": 335.25,
      "clips": [],
      "counts": [],
      "files": [
@@ -1826,8 +1899,8 @@
     },
     {
      "kind": "image",
-     "start_s": 344.5,
-     "end_s": 357.6,
+     "start_s": 335.25,
+     "end_s": 348.35,
      "clips": [],
      "counts": [
       {
@@ -1954,23 +2027,23 @@
    "id": "b5-second-use",
    "story": "B",
    "title": "The second use",
-   "start_s": 357.6,
-   "end_s": 402.4,
+   "start_s": 348.35,
+   "end_s": 393.95,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 116,
-    "seconds": 43.514,
+    "words": 125,
+    "seconds": 44.304,
     "timing": "measured audio",
-    "text": "The probe and its analysis became a recipe in the library, runnable on named robots. On a later fleet, robots fail again, and the recipe runs. At the third site, the arms first move at row 18 and are half-way at row 21: a fixed delay. The robot that fails on its own responds like the healthy reference. Its first movement: row 1. The reference: row 1. So the skill's rule points at the images, not at the controller service that fixed the first fleet. The operator's recorded decision follows it: no service for that robot; inspect its images and its change log, and test the first fleet's adaptation at the third site before adopting it.",
-    "voice_sha256": "b73019e2d2717d45b8f0b05b2cc4fb391b632782704869d04f19c6421fea0111"
+    "text": "The probe and its analysis became a recipe in the library, runnable on named robots. On a later fleet, robots fail again, and the recipe runs. At the third site, the arms first move 18 rows after the command and are half-way 21 rows after it: a fixed delay. The robot that fails on its own responds like the healthy reference. Its first movement comes 1 row after the command; the reference's, 1 row after it. So the skill's rule points at the images, not at the controller service that fixed the first fleet. The operator's recorded decision follows it: no service for that robot; inspect its images and its change log, and test the first fleet's adaptation at the third site before adopting it.",
+    "voice_sha256": "ffbbbb04fd3c9aeafbd51094eb57c5a08ca4353fee35371f94081e8a7e0bb045"
    },
    "shots": [
     {
      "kind": "clip",
-     "start_s": 357.6,
-     "end_s": 365.15,
+     "start_s": 348.35,
+     "end_s": 355.9,
      "clips": [
       {
        "label": "later fleet, robot r06, day 2: a failed attempt (its first failure)",
@@ -2044,8 +2117,8 @@
     },
     {
      "kind": "image",
-     "start_s": 365.15,
-     "end_s": 373.15,
+     "start_s": 355.9,
+     "end_s": 363.9,
      "clips": [],
      "counts": [],
      "files": [
@@ -2057,8 +2130,8 @@
     },
     {
      "kind": "text",
-     "start_s": 373.15,
-     "end_s": 379.15,
+     "start_s": 363.9,
+     "end_s": 369.9,
      "clips": [],
      "counts": [],
      "files": [
@@ -2070,8 +2143,8 @@
     },
     {
      "kind": "text",
-     "start_s": 379.15,
-     "end_s": 402.4,
+     "start_s": 369.9,
+     "end_s": 393.95,
      "clips": [],
      "counts": [],
      "files": [
@@ -2087,8 +2160,8 @@
    "id": "close",
    "story": null,
    "title": "The record",
-   "start_s": 402.4,
-   "end_s": 407.95,
+   "start_s": 393.95,
+   "end_s": 399.5,
    "status": "card",
    "placeholder": null,
    "needs": null,
@@ -2102,8 +2175,8 @@
    "shots": [
     {
      "kind": "card",
-     "start_s": 402.4,
-     "end_s": 407.95,
+     "start_s": 393.95,
+     "end_s": 399.5,
      "clips": [],
      "counts": [],
      "files": []

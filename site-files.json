@@ -3,18 +3,18 @@
   "film": {
     "role": "web",
     "file": "film.mp4",
-    "sha256": "5572fe1db75cc258dd4b3c1b061952bf54d4ae449e0eb0ef3d2f24b38c73c50a",
-    "bytes": 19231771,
+    "sha256": "e2b577e426ec3223e21a0951c8d7d814ec657aa6c5895aa65b9c6cc65923f01e",
+    "bytes": 18674195,
     "width": 1280,
     "height": 720,
     "fps": 20,
-    "seconds": 407.95,
+    "seconds": 399.5,
     "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
     "audio": "AAC 128 kb/s, 48000 Hz mono",
     "streams": {
-      "line0": "Duration: 00:06:47.95, start: 0.000000, bitrate: 377 kb/s",
-      "line1": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 257 kb/s, 20 fps, 20 tbr, 10240 tbn (default)",
-      "line2": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 113 kb/s (default)"
+      "line0": "Duration: 00:06:39.50, start: 0.000000, bitrate: 373 kb/s",
+      "line1": "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720, 250 kb/s, 20 fps, 20 tbr, 10240 tbn (default)",
+      "line2": "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, mono, fltp, 117 kb/s (default)"
     }
   },
   "record_converter": "Python-Markdown",
@@ -191,53 +191,53 @@
     },
     {
       "path": "film/captions.vtt",
-      "bytes": 8616,
-      "sha256": "9021011ec1648d116e2f8fe199fe1a1854852a8bbf1384eb224df31030137a99"
+      "bytes": 8691,
+      "sha256": "0e1f3f158f895a9b155913b471ba863673c100fb247b94a39f81a37c113e19b9"
     },
     {
       "path": "film/chapters.json",
-      "bytes": 3240,
-      "sha256": "689ea10cf12399cc998c99af01ade60ed11dfe4137415065b343c29271559489"
+      "bytes": 3241,
+      "sha256": "f705b6c1b86f9847f0714c95a4300831cd84e60a34c854480873d67bca7f297a"
     },
     {
       "path": "film/chapters.vtt",
       "bytes": 816,
-      "sha256": "ff546b2b678cb303636a0560f6e958aee9038d14cfe9a156b7f1142198ab95f3"
+      "sha256": "71a878ac8fb8257fd69ff8d6a2a68cd195d46a189b44dfc51413dd418c122bf9"
     },
     {
       "path": "film/film.json",
-      "bytes": 69782,
-      "sha256": "5878e82a526ad82ee940e8c725dad5ad2b99e53572b2f251a6ec1bcaf35f1515"
+      "bytes": 71476,
+      "sha256": "44ebc65584f76eb5a7219418317b075776e675434cf40c06ce99743a5eac94c0"
     },
     {
       "path": "film/film.mp4",
-      "bytes": 19231771,
-      "sha256": "5572fe1db75cc258dd4b3c1b061952bf54d4ae449e0eb0ef3d2f24b38c73c50a"
+      "bytes": 18674195,
+      "sha256": "e2b577e426ec3223e21a0951c8d7d814ec657aa6c5895aa65b9c6cc65923f01e"
     },
     {
       "path": "film/poster.jpg",
-      "bytes": 129645,
-      "sha256": "4ee0c25985b18bc7f420f3e36adc280225e13306b2c93516b9ff3867f70c9a31"
+      "bytes": 129436,
+      "sha256": "5cd50952248c873b6895c9bc1d5f6726bd8c0aedcc8e2570d28943c5c3b09f5f"
     },
     {
       "path": "film/timeline.md",
       "bytes": 2313,
-      "sha256": "002c4c9c4417e15c19e7a625cf31897fe98ecefe5b98ece45964b7a2599d944a"
+      "sha256": "2320133b4591c8d3655ceac3b18d8237bb66c40dc93d38c39c99ff395f279f8d"
     },
     {
       "path": "film/timeline.png",
-      "bytes": 621946,
-      "sha256": "e389fc80af1bbfd3ded6382e8ad7d79c33d650f489e285ef242892f38c00ed64"
+      "bytes": 631093,
+      "sha256": "8ab5adab86429aa29dc776e0e37785ed3c0e8989de204d52debdf56d11e9897e"
     },
     {
       "path": "index.html",
-      "bytes": 25739,
-      "sha256": "1dcc9be86e9841eac69fcfb858a4ce39508b22749e28535db12ea4f9c1017522"
+      "bytes": 26532,
+      "sha256": "135afe812c7ae446c736f233e062836b4e7741fa10bd99502e9fa471510e39f7"
     },
     {
       "path": "record/index.html",
-      "bytes": 116408,
-      "sha256": "bcbc00926035ea27d0c5d1806ec33acf06e668442a0e89f6c1bc9ac1ba3c1392"
+      "bytes": 132319,
+      "sha256": "e9bbcd56e4a7daf62c647bad73d4bcb5216d40a61bde943758f9a2ab1124c9ff"
     },
     {
       "path": "static/style.css",

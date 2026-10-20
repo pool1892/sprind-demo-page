@@ -17,20 +17,49 @@ run, what was counted and which recorded run each number and clip comes from. Th
 at the end list every record by an identifier and a SHA-256 checksum, a fingerprint that
 changes if a single byte of the file changes. Everything happens in simulation, in LIBERO,
 a public benchmark of household manipulation tasks, on the MuJoCo physics engine.</p>
+<h2 id="the-results">The results</h2>
+<p>The robot's policy never changed. What changed is what the installation around it can do.</p>
+<ul>
+<li><strong>Job one, released.</strong> Three shifts of an AI agent turned two of the robot's skills into
+  one job. On 20 arrangements of the scene held back for the release, which no
+  program had run on, the released program delivered on 13 of
+  20 (65%; 95% interval 43% to 82%); the obvious chain of the same two skills, which switches
+  skills the moment the first one's success signal fires, delivered on
+  1 of 20 (5%; 95% interval 1% to 24%). Start by start, the
+  program delivered on 13 where the chain did not and missed 1
+  where the chain delivered, with 0 violations of the required
+  order, cheese before bowl.</li>
+<li><strong>Job two, started from job one's library.</strong> A second request, the loaded bowl onto a
+  plate, has had two shifts, each starting from job one's library and handing over its own
+  checks and learned skills. The first shift's best program delivered on 6 of
+  10 development starts; the second ran job one's saved check on its first
+  program and found that the loading goal can hold before the fingers have let go of the
+  cheese.</li>
+<li><strong>Story B: a measurement built, then used again.</strong> On a fleet of 12 simulated
+  arms at 3 sites, an agent composed a step-response probe, a short scripted
+  motion that times how each robot's hand follows its commands, tested candidate changes
+  in paired experiments and adopted 3. On a held-back set of task attempts
+  the agent never saw, the fleet with those changes succeeded on 558 of
+  576 (97%; 95% interval 95% to 98%), the fleet as it was on 451 of
+  576 (78%; 95% interval 75% to 81%); 113 attempts that failed
+  before succeeded after, 6 the other way round. Saved as a recipe, the probe
+  ran with one command on a later fleet and told that fleet's fixed transport delay apart
+  from a failing robot whose hand moves promptly.</li>
+</ul>
+<p>The sections below define each term in full and give every count with its record.</p>
 <h2 id="the-installation-and-its-fixed-policy">The installation and its fixed policy</h2>
 <p>An <em>installation</em> here is one simulated robot arm at a kitchen table, with its objects,
 the software that runs it and the records it keeps. The arm is driven by a <em>policy</em>: a
-trained model, X-VLA, that turns camera images and a written instruction into motion. The
-policy is fixed; none of its weights change anywhere in this film. What changes is how the
-installation uses it.</p>
+trained model, X-VLA, that turns camera images, the hand's measured position and
+orientation, and a written instruction into motion. The policy is fixed; none of its
+weights change anywhere in this film. What changes is how the installation uses it.</p>
 <p>A <em>skill</em> is one task the policy does on its own under its own instruction, such as putting
 an item into a bowl. This installation has 10 skills, the tasks of LIBERO's
 goal suite, all in one scene. The film opens with 2 recorded runs of single
 skills; by the delivery check described below, 2 of them delivered.</p>
 <h2 id="story-a-the-request">Story A: the request</h2>
-<p>The <em>shift lead</em> asks the installation for work and approves its conditions. Here the lead
-is scripted: its words and its rule for approving were fixed before any run. The request,
-in the lead's words: "Make this one job: the cheese goes into the black bowl and the bowl goes up onto the cabinet top. The cheese goes in before the bowl moves. The next shift needs it to deliver on at least two of every three starts it is released on."</p>
+<p>The <em>shift lead</em> asks the installation for work and sets the bar a release must pass; here
+the lead's words are scripted. The request, in the lead's words: "Make this one job: the cheese goes into the black bowl and the bowl goes up onto the cabinet top. The cheese goes in before the bowl moves."</p>
 <p>The <em>requested goals</em>, in LIBERO's spelling, are <code>On cream_cheese_1 akita_black_bowl_1</code>; <code>On akita_black_bowl_1 wooden_cabinet_1_top_side</code>. The <em>order rule</em> is that
 goal 1 (On akita_black_bowl_1 wooden_cabinet_1_top_side) may not first hold before goal 0 (On cream_cheese_1 akita_black_bowl_1) first holds. It is checked on the recorded trace of every run, and a program
 whose runs broke it cannot be released. A <em>start</em> is one fresh beginning of the scene, one
@@ -41,14 +70,12 @@ qualifying run at the end and refused to the agent until then.</p>
 requested goal holds, as LIBERO's predicate functions judge it; no part of the robot
 touches the objects the goals name; those objects are at rest, slower than one centimetre
 and 0.15 radians a second; and the gripper is open.</p>
-<p>Before any program ran, the agent proposed the <em>acceptance condition</em>: run on N =
-20 release starts and deliver on at least K = 14 of them. The
-lead's fixed rule approves any N of at least 20 with K of at least 2/3 of N,
-and it replied: "Approved: the job is released when it delivers on at least 14 of 20 reserved release starts it was never run on. This condition stands for the whole request."</p>
-<p>The request the agent reads changed twice, and the lead's approval rule did not. The host
-stopped the first attempt and added the sentence "The next shift needs it to deliver on at least two of every three starts it is released on."; until then the agent
-was not told the share it had to reach, although the lead's rule was already
-2/3. After the two completed investigations below, the lead added: "When a program reaches that share on the development starts you tried it on, save it: the reserved starts decide, and a release that misses there is acceptable to me."</p>
+<p>Before any program ran, the agent proposed the <em>acceptance condition</em>, one run of the
+frozen program on N = 20 release starts with at least K = 14
+deliveries, and the lead approved it for the request. After the release run, the shift lead
+set the bar for releases at 3 deliveries in every 5
+reserved starts (60%) and judged the recorded run against it, K =
+12 of 20; the recorded runs on all 20 starts are unchanged.</p>
 <h2 id="story-a-the-naive-chain">Story A: the naive chain</h2>
 <p>The <em>naive chain</em> is the obvious way to chain skills, run by the host (the people and code
 that run the installation, outside the agent's reach) as the comparison at the release. It
@@ -56,7 +83,7 @@ switches to the next skill's instruction the moment LIBERO's native success sign
 the signal every published LIBERO score counts, and does nothing in between. The first
 shift's agent began with that chain itself: on development starts 0 to 9 it
 delivered on 0 of 10. Its account: "This simply switched from the cheese instruction to the bowl instruction when each goal first held. The bowl step timed out on 9 starts."</p>
-<h2 id="story-a-the-investigation">Story A: the investigation</h2>
+<h2 id="story-a-three-shifts-build-the-job">Story A: three shifts build the job</h2>
 <p>A <em>job</em> is several skills done in one continuous scene. The agent writes it as a
 <em>program</em>: up to eight <em>steps</em>, each a policy step with an instruction and a condition that
 ends it, a short scripted motion of the hand or gripper, a wait, or a return of the hand
@@ -64,11 +91,335 @@ to where it started. A program is named by a digest of its exact text.</p>
 <p>The agent is an AI model, gpt-6-astra at reasoning effort xhigh.
 A <em>shift</em> is one investigation, in several sessions; between them the installation runs
 the queued programs and records every control step. A <em>check</em> is a database query over
-those records, saved with its purpose so that anyone can run it again.</p>
-<p>The first shift took 5 sessions, 250 tool calls and
-37.7 minutes of model time. It ran 6 distinct
-programs in 8 program runs: 100 program executions
-across 30 distinct development starts.</p>
+those records, saved with its purpose so that anyone can run it again. A <em>learned skill</em>
+is a note an agent writes for later agents: when a method applies and what to look at; the
+installation audits it for leaked answers before keeping it. The <em>job library</em> is the
+installation's list of saved jobs, checks and probe recipes, which an operator can run
+with one command. Each shift starts with the library the shifts before it left.</p>
+<p>The first two shifts handed over checks and skills rather than a program, each keeping the
+reserved starts for a program it judged ready:</p>
+<ul>
+<li>The first shift found the transition that matters: continuing the cheese instruction for
+  40 steps after its goal first holds delivered on 9 of the chain's
+  10 starts and on 11 of 20 fresh development starts,
+  10 to 29 (55%; 95% interval 34% to 74%), and the shift saved 1
+  learned skill and the checks post-goal-release-retention and released-handoff-and-retention.</li>
+<li>The second shift, with that library mounted, tested both checks against its own baseline
+  before it built on them, delivered on 9 of 10 with a
+  30-step continuation and on 17 of 20 development starts,
+  10 to 29 (85%; 95% interval 64% to 95%), with a 60-step one, and saved the check
+  loaded-transfer-diagnosis and 2 learned skills.</li>
+</ul>
+<p>The third shift, with both shifts' library mounted (3 checks), built the
+job cheese-loaded-bowl-to-cabinet: the cheese instruction until its goal holds, a
+30-step continuation of it, then the bowl instruction. On development
+starts 0 to 9 it delivered on 9 of 10. Its account of the
+design: "Shorter loading continuation switches during the observed withdrawal phase; final continuation was retained because it recovered temporary placement losses." It saved the check transfer-and-finish-audit: "It distinguishes order failures, unreached goals, load loss, destination loss, and other host delivery-state failures, and locates goal losses even when they recover." And it kept
+2 learned skills.</p>
+<h2 id="story-a-the-release">Story A: the release</h2>
+<p>The installation froze the program (digest beginning 4c2e8caa80cb) and ran it once on
+the 20 reserved release starts, 30 to 49, with the naive chain on the
+same starts. The program delivered on 13 of
+20 (65%; 95% interval 43% to 82%); the naive chain delivered on 1 of
+20 (5%; 95% interval 1% to 24%). <em>Rescued</em> counts the starts the program delivered and
+the naive chain did not: 13. <em>Broken</em> counts the reverse: 1.
+Both delivered on 0, neither on 6. The program broke the
+order rule 0 times. Judged against the shift lead's bar of
+12 of 20, the receipt (SHA-256 beginning ca986e805ec3) records
+that the program met the shift lead's bar on starts no program had run on and was released. The released job is in the installation's library,
+which an operator runs with one command.</p>
+<p>The three shifts side by side:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>First shift</th>
+<th>Second shift</th>
+<th>Third shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent sessions</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tool calls</td>
+<td>250</td>
+<td>268</td>
+<td>255</td>
+</tr>
+<tr>
+<td>Program executions (distinct development starts)</td>
+<td>100 (30)</td>
+<td>130 (30)</td>
+<td>60 (10)</td>
+</tr>
+<tr>
+<td>Minutes of model time</td>
+<td>37.7</td>
+<td>44.6</td>
+<td>39.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="story-a-a-second-job">Story A: a second job</h2>
+<p>A second request asked the installation for another job: "One more job for the line: the cheese goes into the black bowl and the bowl goes onto the plate. The cheese goes in before the bowl moves." Its goals,
+in LIBERO's spelling, are <code>On cream_cheese_1 akita_black_bowl_1</code>; <code>On akita_black_bowl_1 plate_1</code>; its order rule is that goal 1 (On akita_black_bowl_1 plate_1) may not first hold before goal 0 (On cream_cheese_1 akita_black_bowl_1) first holds. Two shifts
+have worked on it, each starting from job one's library and handing over its own checks
+and learned skills:</p>
+<ul>
+<li>The first shift, with job one's library as its second shift left it, tested the
+  inherited checks on its first program: "I used the inherited handoff-versus-transport distinction and tested the inherited loaded-transfer-diagnosis and released-handoff-and-retention checks on this request's direct run." Its best program, which
+  names the bowl holding the cheese in its instruction and retries the transfer,
+  delivered on 6 of 10 development starts. It handed over a check:
+  "The saved check handoff-versus-transfer-failure distinguishes handoff readiness, target never reached, goal loss, and unfinished final release."</li>
+<li>The second shift, with job one's released library, ran job one's saved check on its
+  first program: "I also tested the earlier transfer-and-finish-audit on this baseline; it returned 4 passes and 6 target-never-reached failures." Its finding: "A loading goal could hold before the fingers physically released the cheese." It handed over the
+  check handoff-versus-delivery-audit: "It distinguishes the state at an instruction switch from eventual delivery, reports goal losses, and identifies the failing stage."</li>
+</ul>
+<p>The shifts on job two side by side:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>First shift</th>
+<th>Second shift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Library mounted</td>
+<td>job one's after its second shift: 3 checks</td>
+<td>job one's released library: 1 released job, 4 checks</td>
+</tr>
+<tr>
+<td>Programs (program executions)</td>
+<td>12 (120)</td>
+<td>9 (90)</td>
+</tr>
+<tr>
+<td>Distinct development starts</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Best program run, delivered</td>
+<td>6 of 10</td>
+<td>4 of 10</td>
+</tr>
+<tr>
+<td>Checks and learned skills handed over</td>
+<td>1 and 2</td>
+<td>1 and 2</td>
+</tr>
+<tr>
+<td>Agent sessions</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tool calls</td>
+<td>323</td>
+<td>329</td>
+</tr>
+<tr>
+<td>Minutes of model time</td>
+<td>47.9</td>
+<td>46.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="story-a-what-the-installation-keeps">Story A: what the installation keeps</h2>
+<p>After both jobs, the installation's job library holds 1 released job and
+5 checks, every one written by an agent, with the learned skills each shift
+kept. The robot's policy is the same.</p>
+<h2 id="story-b-the-fleet">Story B: the fleet</h2>
+<p>A <em>fleet</em> here is 12 simulated arms at 3 sites doing ordinary
+pick-and-place tasks from LIBERO day after day, with the same fixed policy. The agent sees
+what an operator would see: each attempt's outcome, the robots' telemetry, a change log,
+maintenance and costs.</p>
+<p>A <em>lasting condition</em> lowers success and cannot be removed by any action an operator or
+the agent can take. The public note of site s1 says: "The robots at this site are driven by policy servers in the customer's own data centre, over a wide-area network link. This is the customer's requirement and stays."
+Commands from a distant server reach those arms late. In regular work on days
+0 to 5, before the agent's first decision, that site succeeded on
+174 of 288 (60%; 95% interval 55% to 66%)
+attempts, the other sites on 512 of
+576 (89%; 95% interval 86% to 91%).</p>
+<h2 id="story-b-the-lag-that-misleads">Story B: the lag that misleads</h2>
+<p>Ordinary telemetry gives one rough number per robot: how many control steps (50
+milliseconds each) its hand trails its commands. A slow command path, a controller that
+falls behind and a policy that reacts late all raise it. The agent wrote the lesson into
+the skill it kept: "Task alignment lag alone mixes policy behavior with transport and controller dynamics."</p>
+<h2 id="story-b-the-probe">Story B: the probe</h2>
+<p>A <em>step-response probe</em> is a short scripted motion with the policy switched off: hold
+still, step the hand along one axis, step back, hold, repeated, while the installation
+records where the hand is. The <em>response shapes</em> it can show, in the agent's starting
+skill: a fixed dead time (the hand starts late by the same amount every time), a dead time
+that grows as a backlog builds, a prompt start that falls short as in a weak arm, and a
+prompt healthy response, which places the cause elsewhere, such as the cameras.</p>
+<p>In round one the agent composed probe p0001 and ran it on 4 robots,
+3 times each. Read from its records, after the step out and the step back:
+r01 (site s1): first moved after 18 and 18 control steps, half-way after 21 and 21; r06 (site s2): first moved after 4, 12 and 5 then 37, 45 and 39 control steps, half-way after 7, 15 and 8 then 40, 48 and 42; r08 (site s2): first moved after 1 and 1 control steps, half-way after 4 and 4; r10 (site s3): first moved after 1 and 1 control steps, half-way after 4 and 4. The agent's reading: "Thus the isolated robot differed in timing, not unloaded reach; the upstream suspect had a normal motion path."</p>
+<h2 id="story-b-the-decision">Story B: the decision</h2>
+<p>The probe proposes candidates; experiments decide. An <em>experiment</em> runs ordinary task
+attempts on chosen robots with and without a change, on matched starts, so <em>rescued</em> and
+<em>broken</em> compare them attempt by attempt. A <em>latency compensation</em> of n control steps
+makes the arm skip the first n commands of every action sequence the policy predicts after
+the first, so the commands it runs are the ones meant for the moment they arrive. Round
+one's experiments:</p>
+<table>
+<thead>
+<tr>
+<th>Experiment</th>
+<th>Change tested</th>
+<th>Without it</th>
+<th>With it</th>
+<th>Rescued</th>
+<th>Broken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x0001</td>
+<td>a rollback of the software update at site s3</td>
+<td>49 of 66 (74%; 95% interval 63% to 83%)</td>
+<td>66 of 66 (100%; 95% interval 94% to 100%)</td>
+<td>17</td>
+<td>0</td>
+</tr>
+<tr>
+<td>x0001</td>
+<td>a rollback of the scene camera's calibration change at site s3</td>
+<td>49 of 66 (74%; 95% interval 63% to 83%)</td>
+<td>52 of 66 (79%; 95% interval 67% to 87%)</td>
+<td>6</td>
+<td>3</td>
+</tr>
+<tr>
+<td>x0002</td>
+<td>a latency compensation of 8 control steps at site s1</td>
+<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
+<td>40 of 44 (91%; 95% interval 79% to 96%)</td>
+<td>12</td>
+<td>1</td>
+</tr>
+<tr>
+<td>x0002</td>
+<td>a latency compensation of 17 control steps at site s1</td>
+<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
+<td>43 of 44 (98%; 95% interval 88% to 100%)</td>
+<td>14</td>
+<td>0</td>
+</tr>
+<tr>
+<td>x0002</td>
+<td>a latency compensation of 26 control steps at site s1</td>
+<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
+<td>38 of 44 (86%; 95% interval 73% to 94%)</td>
+<td>13</td>
+<td>4</td>
+</tr>
+<tr>
+<td>x0003</td>
+<td>a service of robot r06's controller</td>
+<td>13 of 24 (54%; 95% interval 35% to 72%)</td>
+<td>24 of 24 (100%; 95% interval 86% to 100%)</td>
+<td>11</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The agent adopted 3 changes: a latency compensation of 17 control steps at site s1; a rollback of the software update at site s3; a service of robot r06's controller. The fleet's recorded cost
+table, its estimate of operator time, puts them at 0.1, 0.1 and 3.0 operator hours,
+3.2 in all. In round two the agent adopted no change; round one's
+changes are the fleet's final state.</p>
+<h2 id="story-b-the-evaluation">Story B: the evaluation</h2>
+<p>The <em>reserved evaluation panel</em> is a set of task attempts on days after every recorded
+day, never run or seen by the agent; each state of the fleet is simulated on exactly these
+attempts. With the agent's changes the fleet succeeded on 558 of
+576 (97%; 95% interval 95% to 98%); as it was, on 451 of
+576 (78%; 95% interval 75% to 81%). 113 attempts were rescued and
+6 broken. By site and for the serviced robot:</p>
+<table>
+<thead>
+<tr>
+<th>Panel attempts</th>
+<th>The fleet as it was</th>
+<th>With the agent's changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>site s1 (the remote link)</td>
+<td>125 of 192 (65%; 95% interval 58% to 71%)</td>
+<td>184 of 192 (96%; 95% interval 92% to 98%)</td>
+</tr>
+<tr>
+<td>site s2</td>
+<td>170 of 192 (89%; 95% interval 83% to 92%)</td>
+<td>187 of 192 (97%; 95% interval 94% to 99%)</td>
+</tr>
+<tr>
+<td>site s3</td>
+<td>156 of 192 (81%; 95% interval 75% to 86%)</td>
+<td>187 of 192 (97%; 95% interval 94% to 99%)</td>
+</tr>
+<tr>
+<td>robot r06 (controller serviced)</td>
+<td>29 of 48 (60%; 95% interval 46% to 73%)</td>
+<td>46 of 48 (96%; 95% interval 86% to 99%)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="story-b-the-second-use">Story B: the second use</h2>
+<p>A <em>validated probe recipe</em> is the probe and its analysis saved with a learned skill, the
+robots as parameters, checked when saved and audited before it runs, with one command, on
+another fleet. The installation kept 3 learned skills from this engagement
+(library digest beginning 81c70b2a7a9e3b60); separate-fixed-transport-delay-from-controller-backlog carries the probe.</p>
+<p>A later fleet has its own remote-link site, s3. The robots were chosen, and a
+decision recorded from the readings, by the coordinator of the demo acting as the later fleet's operator, from that fleet's public records of
+its regular work, dated 2026-10-20 02:35 Pacific. At the linked site, r11 succeeded on
+30 of 72 (42%; 95% interval 31% to 53%) and r10 on 34 of
+72 (47%; 95% interval 36% to 59%). Outside it, the weakest robot was
+r06, 51 of 72 (71%; 95% interval 59% to 80%); r05, the
+reference, succeeded on 72 of 72 (100%; 95% interval 95% to 100%). The
+recipe run finished with the recorded outcome done. After the step out and the step
+back, r11's hand first moved after 18 and 18 control steps and
+r10's after 18 and 18; r06's after
+1 and 1, like the reference's 1 and 1.</p>
+<p>The skill's rule: "A normal probe with failing tasks calls for image/change-log investigation." The recipe tells the two cases apart: on the first fleet the
+isolated failing robot's delay grew from step to step, and the answer was a controller
+service; on the later fleet the failing robot's hand moves promptly, so the rule points to
+its images and change log. The recorded decision's next actions: "Next action for r06: inspect its images and its change log, as the skill's rule says for a normal probe with failing tasks" and
+"Next action for s3: the same adaptation the first fleet adopted for a fixed transport delay, to be confirmed by a task experiment on s3's robots before it is adopted, as the skill requires."</p>
+<h2 id="how-this-was-recorded">How this was recorded</h2>
+<p>Nothing in the film is staged or re-shot; every clip is a recorded run, listed below. A
+<em>verified re-render</em> re-executes a run's recorded actions at a higher resolution and is
+used only if every step's physics state and the final delivery check match the original,
+which is kept. The cut uses 11 re-renders; 11 matched on all
+2957 compared steps.</p>
+<p>The agent was never given the answer. It could read the requested goals, the definition of
+delivered and the order rule, and could not change them. The release starts, the
+evaluation panel, the host's earlier measurements and the causes the host put into the
+fleets were withheld from it.</p>
+<p>Three attempts at job one are not shown, the first, second and fourth: the host stopped
+the first to change the request (its record holds 1 session), and the second
+and fourth ended at the launch audit, which took an ordinary English word in the agent's
+own database query for a key of a hidden record (the second after 3
+sessions). In story B the loop driver stopped at the freeze of the learned skills on a
+labelling problem in its launch; the host froze the skills and evaluated both states with
+the driver's own functions, changing no decision of the agent.</p>
+<p>Counts are literal. A count resting on at least 20 runs carries a 95% Wilson interval, a
+standard range for a proportion; versions run on the same starts are compared start by
+start as rescued and broken.</p>
+<p>These are counts from tens to hundreds of runs, in one simulator.</p>
+<h2 id="every-program-run">Every program run</h2>
+<p>Every program run on development starts, with its deliveries, as its episode records hold
+them.</p>
+<p>Job one, first shift:</p>
 <table>
 <thead>
 <tr>
@@ -129,24 +480,7 @@ across 30 distinct development starts.</p>
 </tr>
 </tbody>
 </table>
-<p>The transition it found: "Continuing the cheese instruction for 40 steps after its first goal achievement improved the handoff." On the chain's starts that program delivered
-on 9 of 10; on development starts 10 to 29, new to this
-shift, on 11 of 20 (55%; 95% interval 34% to 74%). It saved the checks
-post-goal-release-retention; released-handoff-and-retention.</p>
-<h2 id="story-a-the-account">Story A: the account</h2>
-<p>The first shift stopped without saving a program for release. In its account to the
-lead: "The best fresh-development result, 11 of 20, did not give me sufficient confidence against the agreed 14-of-20 bar."</p>
-<h2 id="story-a-the-second-shift-with-the-library">Story A: the second shift, with the library</h2>
-<p>A <em>learned skill</em> is a note an agent writes for later agents: when a method applies and
-what to look at. The installation audits it for leaked answers before keeping it. The <em>job
-library</em> is the installation's list of saved jobs, checks and probe recipes, which an
-operator can run with one command. After the first shift it held 0
-jobs, 2 checks and 1 learned skill.</p>
-<p>The second shift worked on the same request with that library mounted. Its account: "I tested released-handoff-and-retention and post-goal-release-retention against this request's baseline traces before adapting their acquired-versus-retained distinction into the new check."
-It found the same transition: "Continuing the cheese instruction for 30 control steps after its goal first held delivered 9 of 10 on those tuning starts (j0005)." A longer continuation of 60 control
-steps delivered on 17 of 20 (85%; 95% interval 64% to 95%) on starts the shift had
-already examined, and on 5 of 10 on the first ten; the
-agent did not count that result as fresh evidence.</p>
+<p>Job one, second shift:</p>
 <table>
 <thead>
 <tr>
@@ -219,256 +553,207 @@ agent did not count that result as fresh evidence.</p>
 </tr>
 </tbody>
 </table>
-<p>It too stopped without a release, because "completing the initial release helped, but did not reliably solve acquisition and transport of a loaded bowl." In its words: "I judged the mixed revisions insufficiently supported for the reserved release."
-The first two shifts are one pair of runs on the same request, without and with the
-library; their costs, in the table below, do not show that the library made the second
-cheaper.</p>
-<h2 id="story-a-the-release-against-the-bar">Story A: the release, against the bar</h2>
-<p>The first two shifts declined to release. A third shift worked on the request with the
-lead's added sentence, with the first two shifts' library mounted. It saved the job
-cheese-loaded-bowl-to-cabinet, a 30-step continuation, after it delivered on
-9 of 10 development starts 0 to 9, this time without a run
-on fresh development starts.</p>
-<p>The installation froze the program (digest beginning 4c2e8caa80cb) and ran it once on
-the 20 reserved release starts, 30 to 49, with the naive chain on the
-same starts. The program delivered on 13 of
-20 (65%; 95% interval 43% to 82%), 1 short of the bar of 14. The
-naive chain delivered on 1 (5%; 95% interval 1% to 24%). <em>Rescued</em>
-counts the starts the program delivered and the naive chain did not: 13.
-<em>Broken</em> counts the reverse: 1. Both delivered on 0, neither on
-6. The program broke the order rule 0 times. The
-receipt says the program did not pass the approved condition and was not released. Those starts have now been used for this
-request, so by the installation's rules no later shift can be released on them.</p>
-<p>Its account: "cheese-loaded-bowl-to-cabinet completed its reserved-start trial but did not qualify for operational release. It delivered on 13 of 20 starts, one short of the approved 14 of 20, with zero recorded order violations." And: "Improvement over the naive chain does not meet the fixed acceptance bar."</p>
-<p>The three shifts side by side:</p>
+<p>Job one, third shift:</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>First shift</th>
-<th>Second shift</th>
-<th>Third shift</th>
+<th>Program run</th>
+<th>Program</th>
+<th>Development starts</th>
+<th>Delivered</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Agent sessions</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
+<td>j0001</td>
+<td>cheese-bowl-direct</td>
+<td>0 to 9</td>
+<td>0 of 10</td>
 </tr>
 <tr>
-<td>Tool calls</td>
-<td>250</td>
-<td>268</td>
-<td>255</td>
+<td>j0002</td>
+<td>cheese-bowl-complete60</td>
+<td>0 to 9</td>
+<td>5 of 10</td>
 </tr>
 <tr>
-<td>Program executions (distinct development starts)</td>
-<td>100 (30)</td>
-<td>130 (30)</td>
-<td>60 (10)</td>
+<td>j0003</td>
+<td>cheese-bowl-open60</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
 </tr>
 <tr>
-<td>Minutes of model time</td>
-<td>37.7</td>
-<td>44.6</td>
-<td>39.1</td>
+<td>j0004</td>
+<td>cheese-bowl-complete30</td>
+<td>0 to 9</td>
+<td>9 of 10</td>
+</tr>
+<tr>
+<td>j0005</td>
+<td>cheese-bowl-open60-home</td>
+<td>0 to 9</td>
+<td>5 of 10</td>
+</tr>
+<tr>
+<td>j0006</td>
+<td>cheese-bowl-complete60-home</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 </tbody>
 </table>
-<h2 id="story-a-a-second-job">Story A: a second job</h2>
-<p>A second request asked for another job, with the goals <code>On cream_cheese_1 akita_black_bowl_1</code>; <code>On akita_black_bowl_1 plate_1</code>, and its shift started
-with job one's library mounted (3 checks). On the same
-10 development starts it ran 12 programs in
-120 program executions: its first, the obvious chain, delivered on
-4 of 10, its best on 6 of 10. It saved nothing:
-"No program met your development save trigger." It took 5 sessions, 323 tool calls and
-47.9 minutes of model time, and left 1 new check and
-2 learned skills.</p>
-<h2 id="story-a-what-changed">Story A: what changed</h2>
-<p>After the three shifts, the installation's job library holds 1 saved job,
-not released, and 4 checks, every one written by an agent; the second shift
-added 2 learned skills. The robot's policy is the same.</p>
-<h2 id="story-b-the-fleet">Story B: the fleet</h2>
-<p>A <em>fleet</em> here is 12 simulated arms at 3 sites doing ordinary
-pick-and-place tasks from LIBERO day after day, with the same fixed policy. The agent sees
-what an operator would see: each attempt's outcome, the robots' telemetry, a change log,
-maintenance and costs.</p>
-<p>A <em>lasting condition</em> lowers success and cannot be removed by any action an operator or
-the agent can take. The public note of site s1 says: "The robots at this site are driven by policy servers in the customer's own data centre, over a wide-area network link. This is the customer's requirement and stays."
-Commands from a distant server reach those arms late. In regular work on days
-0 to 5, before the agent's first decision, that site succeeded on
-174 of 288 (60%; 95% interval 55% to 66%)
-attempts, the other sites on 512 of
-576 (89%; 95% interval 86% to 91%).</p>
-<h2 id="story-b-the-lag-that-misleads">Story B: the lag that misleads</h2>
-<p>Ordinary telemetry gives one rough number per robot: how many control steps (50
-milliseconds each) its hand trails its commands. A slow command path, a controller that
-falls behind and a policy that reacts late all raise it. The agent wrote the lesson into
-the skill it kept: "Task alignment lag alone mixes policy behavior with transport and controller dynamics."</p>
-<h2 id="story-b-the-probe">Story B: the probe</h2>
-<p>A <em>step-response probe</em> is a short scripted motion with the policy switched off: hold
-still, step the hand along one axis, step back, hold, repeated, while the installation
-records where the hand is. The <em>response shapes</em> it can show, in the agent's starting
-skill: a fixed dead time (the hand starts late by the same amount every time), a dead time
-that grows as a backlog builds, a prompt start that falls short as in a weak arm, and a
-prompt healthy response, which places the cause elsewhere, such as the cameras.</p>
-<p>In round one the agent composed probe p0001 and ran it on 4 robots,
-3 times each. Read from its records, after the step out and the step back:
-r01 (site s1): first moved after 18 and 18 control steps, half-way after 21 and 21; r06 (site s2): first moved after 4, 12 and 5 then 37, 45 and 39 control steps, half-way after 7, 15 and 8 then 40, 48 and 42; r08 (site s2): first moved after 1 and 1 control steps, half-way after 4 and 4; r10 (site s3): first moved after 1 and 1 control steps, half-way after 4 and 4. The agent's reading: "Thus the isolated robot differed in timing, not unloaded reach; the upstream suspect had a normal motion path."</p>
-<h2 id="story-b-the-decision">Story B: the decision</h2>
-<p>The probe proposes candidates; experiments decide. An <em>experiment</em> runs ordinary task
-attempts on chosen robots with and without a change, on matched starts, so <em>rescued</em> and
-<em>broken</em> compare them attempt by attempt. Round one's experiments:</p>
+<p>Job two, first shift:</p>
 <table>
 <thead>
 <tr>
-<th>Experiment</th>
-<th>Change tested</th>
-<th>Without it</th>
-<th>With it</th>
-<th>Rescued</th>
-<th>Broken</th>
+<th>Program run</th>
+<th>Program</th>
+<th>Development starts</th>
+<th>Delivered</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>x0001</td>
-<td>a rollback of the software update at site s3</td>
-<td>49 of 66 (74%; 95% interval 63% to 83%)</td>
-<td>66 of 66 (100%; 95% interval 94% to 100%)</td>
-<td>17</td>
-<td>0</td>
+<td>j0001</td>
+<td>cheese-bowl-direct</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 <tr>
-<td>x0001</td>
-<td>a rollback of the scene camera's calibration change at site s3</td>
-<td>49 of 66 (74%; 95% interval 63% to 83%)</td>
-<td>52 of 66 (79%; 95% interval 67% to 87%)</td>
-<td>6</td>
-<td>3</td>
+<td>j0002</td>
+<td>cheese-bowl-complete40</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
 </tr>
 <tr>
-<td>x0002</td>
-<td>a latency compensation of 8 control steps at site s1</td>
-<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
-<td>40 of 44 (91%; 95% interval 79% to 96%)</td>
-<td>12</td>
-<td>1</td>
+<td>j0003</td>
+<td>cheese-bowl-open40</td>
+<td>0 to 9</td>
+<td>2 of 10</td>
 </tr>
 <tr>
-<td>x0002</td>
-<td>a latency compensation of 17 control steps at site s1</td>
-<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
-<td>43 of 44 (98%; 95% interval 88% to 100%)</td>
-<td>14</td>
-<td>0</td>
+<td>j0004</td>
+<td>cheese-bowl-home-handoff</td>
+<td>0 to 9</td>
+<td>2 of 10</td>
 </tr>
 <tr>
-<td>x0002</td>
-<td>a latency compensation of 26 control steps at site s1</td>
-<td>29 of 44 (66%; 95% interval 51% to 78%)</td>
-<td>38 of 44 (86%; 95% interval 73% to 94%)</td>
-<td>13</td>
-<td>4</td>
+<td>j0005</td>
+<td>cheese-bowl-complete12</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 <tr>
-<td>x0003</td>
-<td>a service of robot r06's controller</td>
-<td>13 of 24 (54%; 95% interval 35% to 72%)</td>
-<td>24 of 24 (100%; 95% interval 86% to 100%)</td>
-<td>11</td>
-<td>0</td>
+<td>j0006</td>
+<td>cheese-bowl-open40-rise</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
+</tr>
+<tr>
+<td>j0007</td>
+<td>cheese-bowl-loaded-wording</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
+</tr>
+<tr>
+<td>j0008</td>
+<td>cheese-bowl-transfer-retries</td>
+<td>0 to 9</td>
+<td>5 of 10</td>
+</tr>
+<tr>
+<td>j0009</td>
+<td>cheese-bowl-complete12-retries</td>
+<td>0 to 9</td>
+<td>5 of 10</td>
+</tr>
+<tr>
+<td>j0010</td>
+<td>cheese-bowl-loaded-wording-retries</td>
+<td>0 to 9</td>
+<td>6 of 10</td>
+</tr>
+<tr>
+<td>j0011</td>
+<td>cheese-bowl-retry-clearance-reset</td>
+<td>0 to 9</td>
+<td>5 of 10</td>
+</tr>
+<tr>
+<td>j0012</td>
+<td>cheese-bowl-retry-loaded-fallback</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 </tbody>
 </table>
-<p>The agent adopted 3 changes: a latency compensation of 17 control steps at site s1; a rollback of the software update at site s3; a service of robot r06's controller. The fleet's recorded cost
-table, an estimate of operator time rather than measured labour, puts them at
-0.1, 0.1 and 3.0 operator hours, 3.2 in all. In round two it adopted
-no change and stopped.</p>
-<h2 id="story-b-the-evaluation">Story B: the evaluation</h2>
-<p>The <em>reserved evaluation panel</em> is a set of task attempts on days after every recorded
-day, never run or seen by the agent; each state of the fleet is simulated on exactly these
-attempts. The fleet as it was succeeded on 451 of
-576 (78%; 95% interval 75% to 81%); with the agent's changes, on
-558 of 576 (97%; 95% interval 95% to 98%). Round two changed nothing,
-so the state after round one is the final state, simulated once. 113 attempts
-were rescued and 6 broken. By site and for the serviced robot:</p>
+<p>Job two, second shift:</p>
 <table>
 <thead>
 <tr>
-<th>Panel attempts</th>
-<th>The fleet as it was</th>
-<th>With the agent's changes</th>
+<th>Program run</th>
+<th>Program</th>
+<th>Development starts</th>
+<th>Delivered</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>site s1 (the remote link)</td>
-<td>125 of 192 (65%; 95% interval 58% to 71%)</td>
-<td>184 of 192 (96%; 95% interval 92% to 98%)</td>
+<td>j0001</td>
+<td>cheese-bowl-plate-direct</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 <tr>
-<td>site s2</td>
-<td>170 of 192 (89%; 95% interval 83% to 92%)</td>
-<td>187 of 192 (97%; 95% interval 94% to 99%)</td>
+<td>j0002</td>
+<td>cheese-bowl-plate-complete30</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
 </tr>
 <tr>
-<td>site s3</td>
-<td>156 of 192 (81%; 95% interval 75% to 86%)</td>
-<td>187 of 192 (97%; 95% interval 94% to 99%)</td>
+<td>j0003</td>
+<td>cheese-bowl-plate-home</td>
+<td>0 to 9</td>
+<td>2 of 10</td>
 </tr>
 <tr>
-<td>robot r06 (controller serviced)</td>
-<td>29 of 48 (60%; 95% interval 46% to 73%)</td>
-<td>46 of 48 (96%; 95% interval 86% to 99%)</td>
+<td>j0004</td>
+<td>cheese-bowl-plate-open20</td>
+<td>0 to 9</td>
+<td>2 of 10</td>
+</tr>
+<tr>
+<td>j0005</td>
+<td>cheese-bowl-plate-open20-up5cm</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
+</tr>
+<tr>
+<td>j0006</td>
+<td>cheese-bowl-plate-rim-instruction</td>
+<td>0 to 9</td>
+<td>1 of 10</td>
+</tr>
+<tr>
+<td>j0007</td>
+<td>cheese-bowl-plate-rim-extended200-300</td>
+<td>0 to 9</td>
+<td>2 of 10</td>
+</tr>
+<tr>
+<td>j0008</td>
+<td>cheese-bowl-plate-rim200-canonical300</td>
+<td>0 to 9</td>
+<td>3 of 10</td>
+</tr>
+<tr>
+<td>j0009</td>
+<td>cheese-bowl-plate-clearance-center</td>
+<td>0 to 9</td>
+<td>4 of 10</td>
 </tr>
 </tbody>
 </table>
-<h2 id="story-b-the-second-use">Story B: the second use</h2>
-<p>A <em>validated probe recipe</em> is the probe and its analysis saved with a learned skill, the
-robots as parameters, checked when saved and audited before it runs, with one command, on
-another fleet. The installation kept
-3 learned skills from this engagement (library digest beginning
-81c70b2a7a9e3b60); separate-fixed-transport-delay-from-controller-backlog carries the probe.</p>
-<p>A later fleet has its own remote-link site, s3. The robots were chosen, and a
-decision recorded from the readings, by the coordinator of the demo acting as the later fleet's operator, from that fleet's public records of
-its regular work, dated 2026-10-20 02:35 Pacific. At the linked site, r11 succeeded on
-30 of 72 (42%; 95% interval 31% to 53%) and r10 on 34 of
-72 (47%; 95% interval 36% to 59%). Outside it, the weakest robot was
-r06, 51 of 72 (71%; 95% interval 59% to 80%); r05, the
-reference, succeeded on 72 of 72 (100%; 95% interval 95% to 100%). The
-run's recorded outcome: done. The hands of r11 and r10 first moved
-after 18 and 18 and 18 and 18 control steps; r06's after
-1 and 1, like the reference's 1 and 1.</p>
-<p>The skill's rule: "A normal probe with failing tasks calls for image/change-log investigation." On the first fleet the isolated failing robot showed a delay
-that grew from step to step, and the answer was a controller service. That answer does not
-fit here: the later fleet's failing robot moves promptly. The decision's next actions:
-"Next action for r06: inspect its images and its change log, as the skill's rule says for a normal probe with failing tasks" and "Next action for s3: the same adaptation the first fleet adopted for a fixed transport delay, to be confirmed by a task experiment on s3's robots before it is adopted, as the skill requires." Nothing was adopted or simulated on the later fleet.</p>
-<h2 id="how-this-was-recorded">How this was recorded</h2>
-<p>Nothing in the film is staged or re-shot; every clip is a recorded run, listed below. A
-<em>verified re-render</em> re-executes a run's recorded actions at a higher resolution and is
-used only if every step's physics state and the final delivery check match the original,
-which is kept. The cut uses
-11 re-renders; 11 matched on all 2957 compared
-steps.</p>
-<p>The agent was never given the answer. It could read the requested goals, the definition of
-delivered and the order rule, and could not change them. The release starts, the
-evaluation panel, the host's earlier measurements and the causes the host put into the
-fleets were withheld from it.</p>
-<p>Three other attempts at job one are not shown. The first is the attempt the host stopped
-to change the request; its record holds 1 session. The second failed after
-3 sessions on a false alarm of the launch audit: an ordinary English word in
-the agent's own database query is also a key of a hidden record. The fourth, between the
-two shifts shown, failed at launch on the same false alarm in the library it mounted. In
-story B the loop driver stopped at the freeze of the learned skills on a labelling problem
-in its launch; the host froze the skills and evaluated both states with the driver's own
-functions, changing no decision of the agent.</p>
-<p>Counts are literal. A count resting on at least 20 runs carries a 95% Wilson interval, a
-standard range for a proportion; versions run on the same starts are compared start by
-start as rescued and broken.</p>
-<p>These are counts from tens to hundreds of runs, in one simulator.</p>
 <h2 id="provenance">Provenance</h2>
 <p>The records this page is bound to:</p>
 <table>
@@ -482,10 +767,112 @@ start as rescued and broken.</p>
 </thead>
 <tbody>
 <tr>
+<td>job_one</td>
+<td>Job one, first shift: the request, every session, every batch of runs, the costs and the account</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code></td>
+<td><code>64b4c2a7dab8</code></td>
+</tr>
+<tr>
+<td>shift_one_episodes</td>
+<td>Job one, first shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code></td>
+<td><code>8f3306af5d18</code></td>
+</tr>
+<tr>
+<td>shift_one_episodes</td>
+<td>Job one, first shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code></td>
+<td><code>117bcb7ffc58</code></td>
+</tr>
+<tr>
+<td>shift_one_episodes</td>
+<td>Job one, first shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code></td>
+<td><code>7fc0607c6470</code></td>
+</tr>
+<tr>
+<td>shift_one_episodes</td>
+<td>Job one, first shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code></td>
+<td><code>60c0f7694530</code></td>
+</tr>
+<tr>
+<td>shift_one_account</td>
+<td>Job one, first shift: the account to the shift lead</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json</code></td>
+<td><code>ee7b94831c23</code></td>
+</tr>
+<tr>
+<td>job_one_library</td>
+<td>The job library as the first shift left it</td>
+<td><code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code></td>
+<td><code>bad0ef9aff4b</code></td>
+</tr>
+<tr>
+<td>shift_two</td>
+<td>Job one, second shift, with the first shift's library mounted</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code></td>
+<td><code>2ba8fe6dca14</code></td>
+</tr>
+<tr>
+<td>shift_two_episodes</td>
+<td>Job one, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code></td>
+<td><code>acb797b24ce2</code></td>
+</tr>
+<tr>
+<td>shift_two_episodes</td>
+<td>Job one, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code></td>
+<td><code>f15ebb027f63</code></td>
+</tr>
+<tr>
+<td>shift_two_episodes</td>
+<td>Job one, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code></td>
+<td><code>843242f0e994</code></td>
+</tr>
+<tr>
+<td>shift_two_episodes</td>
+<td>Job one, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code></td>
+<td><code>6a5d7e18a6cb</code></td>
+</tr>
+<tr>
+<td>shift_two_account</td>
+<td>Job one, second shift: the account to the shift lead</td>
+<td><code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code></td>
+<td><code>af80bbe07b66</code></td>
+</tr>
+<tr>
+<td>library</td>
+<td>The job library after both jobs</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/library/index.json</code></td>
+<td><code>d41aaafa21d0</code></td>
+</tr>
+<tr>
+<td>run_one</td>
+<td>Job one: the attempt the host stopped when the request changed</td>
+<td><code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code></td>
+<td><code>d79ab8e48514</code></td>
+</tr>
+<tr>
+<td>run_two</td>
+<td>Job one: the attempt that failed on the launch audit's false alarm</td>
+<td><code>probes:demo/2026-10-21/job-one/run-2/job_run.json</code></td>
+<td><code>50f9378b73b8</code></td>
+</tr>
+<tr>
+<td>job_one_release</td>
+<td>Job one's release receipt: the frozen program and the naive chain on the reserved starts</td>
+<td><code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code></td>
+<td><code>ca986e805ec3</code></td>
+</tr>
+<tr>
 <td>film</td>
 <td>The film's provenance: every beat, clip and count</td>
-<td><code>probes:demo/2026-10-20/film/final-8/provenance.json</code></td>
-<td><code>b9b1f8138a84</code></td>
+<td><code>probes:demo/2026-10-20/film/final-9/film/provenance.json</code></td>
+<td><code>c880192f39b9</code></td>
 </tr>
 <tr>
 <td>rerenders</td>
@@ -698,108 +1085,6 @@ start as rescued and broken.</p>
 <td><code>7b5487eca469</code></td>
 </tr>
 <tr>
-<td>job_one</td>
-<td>Job one, first shift: the request, every session, every batch of runs, the costs and the account</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code></td>
-<td><code>64b4c2a7dab8</code></td>
-</tr>
-<tr>
-<td>shift_one_episodes</td>
-<td>Job one, first shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code></td>
-<td><code>8f3306af5d18</code></td>
-</tr>
-<tr>
-<td>shift_one_episodes</td>
-<td>Job one, first shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code></td>
-<td><code>117bcb7ffc58</code></td>
-</tr>
-<tr>
-<td>shift_one_episodes</td>
-<td>Job one, first shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code></td>
-<td><code>7fc0607c6470</code></td>
-</tr>
-<tr>
-<td>shift_one_episodes</td>
-<td>Job one, first shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code></td>
-<td><code>60c0f7694530</code></td>
-</tr>
-<tr>
-<td>shift_one_account</td>
-<td>Job one, first shift: the account to the shift lead</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json</code></td>
-<td><code>ee7b94831c23</code></td>
-</tr>
-<tr>
-<td>job_one_library</td>
-<td>The job library as the first shift left it</td>
-<td><code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code></td>
-<td><code>bad0ef9aff4b</code></td>
-</tr>
-<tr>
-<td>shift_two</td>
-<td>Job one, second shift, with the first shift's library mounted</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code></td>
-<td><code>2ba8fe6dca14</code></td>
-</tr>
-<tr>
-<td>shift_two_episodes</td>
-<td>Job one, second shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code></td>
-<td><code>acb797b24ce2</code></td>
-</tr>
-<tr>
-<td>shift_two_episodes</td>
-<td>Job one, second shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code></td>
-<td><code>f15ebb027f63</code></td>
-</tr>
-<tr>
-<td>shift_two_episodes</td>
-<td>Job one, second shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code></td>
-<td><code>843242f0e994</code></td>
-</tr>
-<tr>
-<td>shift_two_episodes</td>
-<td>Job one, second shift: one row per program run's episode</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code></td>
-<td><code>6a5d7e18a6cb</code></td>
-</tr>
-<tr>
-<td>shift_two_account</td>
-<td>Job one, second shift: the account to the shift lead</td>
-<td><code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code></td>
-<td><code>af80bbe07b66</code></td>
-</tr>
-<tr>
-<td>library</td>
-<td>The job library after the three shifts</td>
-<td><code>probes:demo/2026-10-21/job-one/run-6/library/index.json</code></td>
-<td><code>64fe1ad357dc</code></td>
-</tr>
-<tr>
-<td>next_request</td>
-<td>Job one: the request of the run in progress</td>
-<td><code>probes:demo/2026-10-21/job-one/request.json</code></td>
-<td><code>bc9c645d2f7f</code></td>
-</tr>
-<tr>
-<td>run_one</td>
-<td>Job one: the attempt the host stopped when the request changed</td>
-<td><code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code></td>
-<td><code>d79ab8e48514</code></td>
-</tr>
-<tr>
-<td>run_two</td>
-<td>Job one: the attempt that failed on the launch audit's false alarm</td>
-<td><code>probes:demo/2026-10-21/job-one/run-2/job_run.json</code></td>
-<td><code>50f9378b73b8</code></td>
-</tr>
-<tr>
 <td>story_b_requests</td>
 <td>Story B: the agent's experiment requests</td>
 <td><code>probes:demo/2026-10-20/instrument/engagement-1/engagement/run#d332aaa0/outbox/experiments.jsonl</code></td>
@@ -824,16 +1109,10 @@ start as rescued and broken.</p>
 <td><code>ec32ed91d67d</code></td>
 </tr>
 <tr>
-<td>job_one_release</td>
-<td>Job one's release receipt: the frozen program and the naive chain on the reserved starts</td>
-<td><code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code></td>
-<td><code>6e7a5465c0b4</code></td>
-</tr>
-<tr>
 <td>shift_three</td>
 <td>Job one, third shift, with the library mounted</td>
 <td><code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code></td>
-<td><code>c4976de7495e</code></td>
+<td><code>7ceb6ea21132</code></td>
 </tr>
 <tr>
 <td>shift_three_episodes</td>
@@ -863,41 +1142,89 @@ start as rescued and broken.</p>
 <td>s3_saved_job</td>
 <td>Job one: the job the third shift saved</td>
 <td><code>probes:demo/2026-10-21/job-one/run-6/release/library/jobs/cheese-loaded-bowl-to-cabinet.json</code></td>
-<td><code>d62c36697bd7</code></td>
+<td><code>3f2228db95ab</code></td>
 </tr>
 <tr>
-<td>job_two</td>
-<td>Job two: the investigation, with job one's library mounted</td>
+<td>job_one_reissue</td>
+<td>Job one: the shift lead's bar applied to the recorded release run</td>
+<td><code>probes:demo/2026-10-21/job-one/run-6/host/reissue.json</code></td>
+<td><code>258a79670c86</code></td>
+</tr>
+<tr>
+<td>job_one_exposure</td>
+<td>Job one: the installation's log of release attempts on the reserved starts</td>
+<td><code>probes:demo/2026-10-21/job-one/run-6/release/library/release_exposure.jsonl</code></td>
+<td><code>5ea4b8cfd6c8</code></td>
+</tr>
+<tr>
+<td>job_two_s2</td>
+<td>Job two, second shift: the investigation, with job one's released library mounted</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code></td>
+<td><code>dbcaf5d298bf</code></td>
+</tr>
+<tr>
+<td>job_two_s2_episodes</td>
+<td>Job two, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/runs/session-01/run/episodes.jsonl</code></td>
+<td><code>4276c05ff0b4</code></td>
+</tr>
+<tr>
+<td>job_two_s2_episodes</td>
+<td>Job two, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/runs/session-02/run/episodes.jsonl</code></td>
+<td><code>92cc6c6e1a59</code></td>
+</tr>
+<tr>
+<td>job_two_s2_episodes</td>
+<td>Job two, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/runs/session-03/run/episodes.jsonl</code></td>
+<td><code>46d0a2e719d9</code></td>
+</tr>
+<tr>
+<td>job_two_s2_episodes</td>
+<td>Job two, second shift: one row per program run's episode</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/runs/session-04/run/episodes.jsonl</code></td>
+<td><code>f4359fce2ba6</code></td>
+</tr>
+<tr>
+<td>job_two_s2_account</td>
+<td>Job two, second shift: the account to the shift lead</td>
+<td><code>probes:demo/2026-10-21/job-two/run-2/analyses/w90-20261020T082642-8a45de/outbox/job_account.json</code></td>
+<td><code>b3c203ffde9a</code></td>
+</tr>
+<tr>
+<td>job_two_s1</td>
+<td>Job two, first shift: the investigation, with job one's library mounted</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code></td>
 <td><code>c3431535d60a</code></td>
 </tr>
 <tr>
-<td>job_two_episodes</td>
-<td>Job two: one row per program run's episode</td>
+<td>job_two_s1_episodes</td>
+<td>Job two, first shift: one row per program run's episode</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code></td>
 <td><code>aadf66f7f4cc</code></td>
 </tr>
 <tr>
-<td>job_two_episodes</td>
-<td>Job two: one row per program run's episode</td>
+<td>job_two_s1_episodes</td>
+<td>Job two, first shift: one row per program run's episode</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code></td>
 <td><code>7ecf4e53ade5</code></td>
 </tr>
 <tr>
-<td>job_two_episodes</td>
-<td>Job two: one row per program run's episode</td>
+<td>job_two_s1_episodes</td>
+<td>Job two, first shift: one row per program run's episode</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code></td>
 <td><code>2e2f597c924d</code></td>
 </tr>
 <tr>
-<td>job_two_episodes</td>
-<td>Job two: one row per program run's episode</td>
+<td>job_two_s1_episodes</td>
+<td>Job two, first shift: one row per program run's episode</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code></td>
 <td><code>7c50cc670477</code></td>
 </tr>
 <tr>
-<td>job_two_account</td>
-<td>Job two: the account to the shift lead</td>
+<td>job_two_s1_account</td>
+<td>Job two, first shift: the account to the shift lead</td>
 <td><code>probes:demo/2026-10-21/job-two/run-1/analyses/w90-20261020T023720-1bc834/outbox/job_account.json</code></td>
 <td><code>3774f1b44cb2</code></td>
 </tr>
@@ -915,6 +1242,132 @@ start as rescued and broken.</p>
 </thead>
 <tbody>
 <tr>
+<td>release_n</td>
+<td>20</td>
+<td>reserved release starts the frozen program and the naive chain ran on</td>
+<td>N of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_delivered</td>
+<td>13</td>
+<td>release starts the frozen program delivered on</td>
+<td>delivered of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_interval</td>
+<td>(65%; 95% interval 43% to 82%)</td>
+<td>the program's share and its 95% Wilson interval</td>
+<td>Wilson 95% interval of delivered over N from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_naive_delivered</td>
+<td>1</td>
+<td>the same release starts the naive chain delivered on</td>
+<td>naive_delivered of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_naive_interval</td>
+<td>(5%; 95% interval 1% to 24%)</td>
+<td>the naive chain's share and its 95% Wilson interval</td>
+<td>Wilson 95% interval of naive_delivered over N from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_rescued</td>
+<td>13</td>
+<td>release starts delivered by the program and not by the naive chain</td>
+<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_broken</td>
+<td>1</td>
+<td>release starts delivered by the naive chain and not by the program</td>
+<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_order_violations</td>
+<td>0</td>
+<td>the program's release runs that broke the order rule</td>
+<td>order_violations of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>j2s1_best_k</td>
+<td>6</td>
+<td>development starts job two's first shift's best program run delivered on</td>
+<td>the program run of job two's first shift with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
+</tr>
+<tr>
+<td>j2s1_best_n</td>
+<td>10</td>
+<td>development starts it ran on</td>
+<td>the program run of job two's first shift with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
+</tr>
+<tr>
+<td>b_robots</td>
+<td>12</td>
+<td>robots in story B's first fleet</td>
+<td>distinct robots in the regular work's episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/exports/start-01/log/episodes.parquet</code> (<code>66707a337abd</code>)</td>
+</tr>
+<tr>
+<td>b_sites</td>
+<td>3</td>
+<td>sites of story B's first fleet</td>
+<td>distinct sites in the regular work's episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/exports/start-01/log/episodes.parquet</code> (<code>66707a337abd</code>)</td>
+</tr>
+<tr>
+<td>b_round1_count</td>
+<td>3</td>
+<td>how many changes it adopted in round one</td>
+<td>round one's adopted actions, in words from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_final_k</td>
+<td>558</td>
+<td>panel attempts the fleet with the agent's changes succeeded on</td>
+<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_final_n</td>
+<td>576</td>
+<td>panel attempts of the fleet with the agent's changes</td>
+<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_final_interval</td>
+<td>(97%; 95% interval 95% to 98%)</td>
+<td>their share and its 95% Wilson interval</td>
+<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_original_k</td>
+<td>451</td>
+<td>panel attempts the fleet as it was succeeded on</td>
+<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_original_n</td>
+<td>576</td>
+<td>panel attempts of the fleet as it was</td>
+<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_original_interval</td>
+<td>(78%; 95% interval 75% to 81%)</td>
+<td>their share and its 95% Wilson interval</td>
+<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_rescued</td>
+<td>113</td>
+<td>panel attempts the final state succeeded on and the original did not</td>
+<td>the panel's attempts compared between the original and the final state from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
+<td>b_eval_broken</td>
+<td>6</td>
+<td>panel attempts the original succeeded on and the final state did not</td>
+<td>the panel's attempts compared between the original and the final state from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+</tr>
+<tr>
 <td>policy_skills</td>
 <td>10</td>
 <td>skills the fixed policy has, each one goal-suite task</td>
@@ -924,19 +1377,19 @@ start as rescued and broken.</p>
 <td>a1_clips</td>
 <td>2</td>
 <td>single-skill runs the film shows</td>
-<td>the film's single-skill clips and their recorded outcomes, counted from <code>probes:demo/2026-10-20/film/final-8/provenance.json</code> (<code>b9b1f8138a84</code>)</td>
+<td>the film's single-skill clips and their recorded outcomes, counted from <code>probes:demo/2026-10-20/film/final-9/film/provenance.json</code> (<code>c880192f39b9</code>)</td>
 </tr>
 <tr>
 <td>a1_delivered</td>
 <td>2</td>
 <td>of those, runs the delivery check passed</td>
-<td>the film's single-skill clips and their recorded outcomes, counted from <code>probes:demo/2026-10-20/film/final-8/provenance.json</code> (<code>b9b1f8138a84</code>)</td>
+<td>the film's single-skill clips and their recorded outcomes, counted from <code>probes:demo/2026-10-20/film/final-9/film/provenance.json</code> (<code>c880192f39b9</code>)</td>
 </tr>
 <tr>
 <td>job_one_request_text</td>
-<td>Make this one job: the cheese goes into the black bowl and the bowl goes up onto the cabinet top. The cheese goes in before the bowl moves. The next shift needs it to deliver on at least two of every three starts it is released on.</td>
-<td>the shift lead's request as the first shift received it, verbatim</td>
-<td>request.request_text of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>Make this one job: the cheese goes into the black bowl and the bowl goes up onto the cabinet top. The cheese goes in before the bowl moves.</td>
+<td>the shift lead's request, verbatim: the job and its order</td>
+<td>the third shift's request, verbatim, its first three sentences from <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
 </tr>
 <tr>
 <td>job_one_goals</td>
@@ -951,76 +1404,40 @@ start as rescued and broken.</p>
 <td>the order rules, listed from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
 </tr>
 <tr>
-<td>lead_fraction</td>
-<td>2/3</td>
-<td>the scripted lead's minimum share of N for K</td>
-<td>lead_fraction of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
 <td>acceptance_n</td>
 <td>20</td>
-<td>release starts in the approved acceptance condition</td>
-<td>acceptance.N of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>release starts in the acceptance condition the agent proposed and the lead approved</td>
+<td>acceptance.N of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
 </tr>
 <tr>
-<td>acceptance_k</td>
-<td>14</td>
-<td>deliveries that condition requires on those starts</td>
-<td>acceptance.K of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>release_bar_num</td>
+<td>3</td>
+<td>deliveries the shift lead's bar asks for in every release_bar_den reserved starts</td>
+<td>the receipt's lead_fraction, the shift lead's share from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
 </tr>
 <tr>
-<td>job_one_approval</td>
-<td>Approved: the job is released when it delivers on at least 14 of 20 reserved release starts it was never run on. This condition stands for the whole request.</td>
-<td>the scripted lead's approval, verbatim</td>
-<td>the lead's approval in the message log from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>job_one_agent_model</td>
-<td>gpt-6-astra</td>
-<td>the model that investigated</td>
-<td>agent.model of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>job_one_agent_effort</td>
-<td>xhigh</td>
-<td>its reasoning effort</td>
-<td>agent.effort of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>job_one_sessions</td>
+<td>release_bar_den</td>
 <td>5</td>
-<td>agent sessions of the first shift</td>
-<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>reserved starts the bar's share is counted over</td>
+<td>the receipt's lead_fraction, the shift lead's share from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
 </tr>
 <tr>
-<td>job_one_tool_calls</td>
-<td>250</td>
-<td>tool calls of the first shift</td>
-<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>release_bar_pct</td>
+<td>60%</td>
+<td>the bar's share as a percentage</td>
+<td>the receipt's lead_fraction, the shift lead's share from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
 </tr>
 <tr>
-<td>job_one_program_runs</td>
-<td>8</td>
-<td>program runs the first shift submitted on development starts</td>
-<td>program runs in the record's batches, counted from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>release_k</td>
+<td>12</td>
+<td>the shift lead's bar: deliveries a release needs on the reserved starts (K)</td>
+<td>K of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
 </tr>
 <tr>
-<td>job_one_programs</td>
-<td>6</td>
-<td>distinct programs among those runs</td>
-<td>distinct program digests in the batches, counted from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>job_one_starts</td>
-<td>100</td>
-<td>development starts the first shift's programs ran on, in all</td>
-<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>job_one_model_minutes</td>
-<td>37.7</td>
-<td>minutes of the agent's model time in the first shift</td>
-<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+<td>s3_offered_k</td>
+<td>14</td>
+<td>K in the acceptance condition the agent proposed and the lead approved for the request</td>
+<td>acceptance.K of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
 </tr>
 <tr>
 <td>s1_chain_starts</td>
@@ -1047,15 +1464,21 @@ start as rescued and broken.</p>
 <td>the first shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json</code> (<code>ee7b94831c23</code>)</td>
 </tr>
 <tr>
-<td>s1_programs_table</td>
-<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-chain | 0 to 9 | 0 of 10 | | j0002 | cheese-bowl-home-handoff | 0 to 9 | 4 of 10 | | j0003 | cheese-bowl-open-handoff | 0 to 9 | 4 of 10 | | j0004 | cheese-bowl-finish-placement | 0 to 9 | 9 of 10 | | j0005 | cheese-bowl-home-finish | 0 to 9 | 1 of 10 | | j0006 | cheese-bowl-finish-placement | 10 to 29 | 11 of 20 (55%; 95% interval 34% to 74%) | | j0007 | cheese-bowl-finish-placement-home | 10 to 29 | 4 of 20 (20%; 95% interval 8% to 42%) | | j0008 | cheese-bowl-finish-placement-home | 0 to 9 | 1 of 10 |</td>
-<td>every program run of the first shift with its deliveries</td>
-<td>every program run of the first shift from its episode records from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
+<td>job_one_agent_model</td>
+<td>gpt-6-astra</td>
+<td>the model that investigated</td>
+<td>agent.model of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
 </tr>
 <tr>
-<td>s1_finding_quote</td>
-<td>Continuing the cheese instruction for 40 steps after its first goal achievement improved the handoff.</td>
-<td>the first shift's account of the continuation</td>
+<td>job_one_agent_effort</td>
+<td>xhigh</td>
+<td>its reasoning effort</td>
+<td>agent.effort of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>s1_cont_steps</td>
+<td>40</td>
+<td>steps the first shift's best program continues the cheese instruction, in its account</td>
 <td>the first shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json</code> (<code>ee7b94831c23</code>)</td>
 </tr>
 <tr>
@@ -1083,21 +1506,45 @@ start as rescued and broken.</p>
 <td>the first shift's run j0006 (the same program on fresh starts), with a Wilson interval from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
 </tr>
 <tr>
-<td>s1_fresh_interval</td>
-<td>(55%; 95% interval 34% to 74%)</td>
-<td>its share and 95% Wilson interval</td>
-<td>the first shift's run j0006 (the same program on fresh starts), with a Wilson interval from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
-</tr>
-<tr>
 <td>s1_fresh_starts</td>
 <td>10 to 29</td>
 <td>the fresh development starts</td>
 <td>the starts of run j0006 from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
 </tr>
 <tr>
-<td>s2_finding_quote</td>
-<td>Continuing the cheese instruction for 30 control steps after its goal first held delivered 9 of 10 on those tuning starts (j0005).</td>
-<td>the second shift's account of the continuation</td>
+<td>s1_fresh_interval</td>
+<td>(55%; 95% interval 34% to 74%)</td>
+<td>its share and 95% Wilson interval</td>
+<td>the first shift's run j0006 (the same program on fresh starts), with a Wilson interval from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
+</tr>
+<tr>
+<td>job_one_learned_skills</td>
+<td>1</td>
+<td>learned skills kept after the first shift</td>
+<td>learned skills the frozen library kept, counted from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>job_one_check_name</td>
+<td>post-goal-release-retention and released-handoff-and-retention</td>
+<td>the checks the first shift saved</td>
+<td>the checks in the first shift's library, by name from <code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code> (<code>bad0ef9aff4b</code>)</td>
+</tr>
+<tr>
+<td>s2_short_k</td>
+<td>9</td>
+<td>development starts the shorter continuation delivered on (run j0005)</td>
+<td>the second shift's run j0005 (the shorter continuation), delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
+</tr>
+<tr>
+<td>s2_short_n</td>
+<td>10</td>
+<td>development starts it ran on</td>
+<td>the second shift's run j0005 (the shorter continuation), delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
+</tr>
+<tr>
+<td>s2_short_steps</td>
+<td>30</td>
+<td>control steps of the second shift's shorter continuation, in its account</td>
 <td>the second shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code> (<code>af80bbe07b66</code>)</td>
 </tr>
 <tr>
@@ -1113,166 +1560,28 @@ start as rescued and broken.</p>
 <td>the second shift's run j0008 (60-step continuation, starts 10 to 29), with a Wilson interval from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
 </tr>
 <tr>
+<td>s2_long_starts</td>
+<td>10 to 29</td>
+<td>the development starts of the longer continuation's run j0008</td>
+<td>the starts of the second shift's run j0008 from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
+</tr>
+<tr>
 <td>s2_long_interval</td>
 <td>(85%; 95% interval 64% to 95%)</td>
 <td>its share and 95% Wilson interval</td>
 <td>the second shift's run j0008 (60-step continuation, starts 10 to 29), with a Wilson interval from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
 </tr>
 <tr>
-<td>s2_long_first_k</td>
-<td>5</td>
-<td>starts it delivered on among the first ten</td>
-<td>the second shift's run j0007 (60-step continuation, starts 0 to 9) from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
-</tr>
-<tr>
-<td>s2_long_first_n</td>
-<td>10</td>
-<td>starts it ran on</td>
-<td>the second shift's run j0007 (60-step continuation, starts 0 to 9) from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
-</tr>
-<tr>
-<td>job_one_check_name</td>
-<td>post-goal-release-retention; released-handoff-and-retention</td>
-<td>the checks the first shift saved</td>
-<td>the checks in the first shift's library, by name from <code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code> (<code>bad0ef9aff4b</code>)</td>
-</tr>
-<tr>
-<td>s2_programs_table</td>
-<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-naive-chain | 0 to 9 | 0 of 10 | | j0002 | cheese-bowl-home-handoff | 0 to 9 | 4 of 10 | | j0003 | cheese-bowl-open-handoff | 0 to 9 | 3 of 10 | | j0004 | cheese-bowl-rise-handoff | 0 to 9 | 6 of 10 | | j0005 | cheese-bowl-complete-handoff | 0 to 9 | 9 of 10 | | j0006 | cheese-bowl-complete-handoff | 10 to 29 | 11 of 20 (55%; 95% interval 34% to 74%) | | j0007 | cheese-bowl-long-completion | 0 to 9 | 5 of 10 | | j0008 | cheese-bowl-long-completion | 10 to 29 | 17 of 20 (85%; 95% interval 64% to 95%) | | j0009 | cheese-bowl-lateral-clearance | 0 to 9 | 6 of 10 | | j0010 | cheese-bowl-lateral-clearance | 10 to 29 | 14 of 20 (70%; 95% interval 48% to 85%) |</td>
-<td>every program run of the second shift with its deliveries</td>
-<td>every program run of the second shift from its episode records from <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
-</tr>
-<tr>
-<td>s1_decision</td>
-<td>The best fresh-development result, 11 of 20, did not give me sufficient confidence against the agreed 14-of-20 bar.</td>
-<td>why the first shift did not release, in its words</td>
-<td>the first shift's account, its decision paragraph verbatim from <code>probes:demo/2026-10-21/job-one/run-3/analyses/w90-20261019T225523-5d81af/outbox/job_account.json</code> (<code>ee7b94831c23</code>)</td>
-</tr>
-<tr>
-<td>s2_decision</td>
-<td>I judged the mixed revisions insufficiently supported for the reserved release.</td>
-<td>the second shift's judgement on releasing, in its words</td>
+<td>s2_long_steps</td>
+<td>60</td>
+<td>control steps of the second shift's longer continuation, in its account</td>
 <td>the second shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code> (<code>af80bbe07b66</code>)</td>
 </tr>
 <tr>
-<td>release_digest</td>
-<td>4c2e8caa80cb</td>
-<td>the frozen program's SHA-256 digest, first 12 characters</td>
-<td>the released program's digest, first 12 characters from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_n</td>
-<td>20</td>
-<td>reserved release starts the frozen program and the naive chain ran on</td>
-<td>N of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_k</td>
-<td>14</td>
-<td>the approved K the release was judged against</td>
-<td>K of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_delivered</td>
-<td>13</td>
-<td>release starts the frozen program delivered on</td>
-<td>delivered of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_naive_delivered</td>
-<td>1</td>
-<td>the same release starts the naive chain delivered on</td>
-<td>naive_delivered of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_interval</td>
-<td>(65%; 95% interval 43% to 82%)</td>
-<td>the program's share and its 95% Wilson interval</td>
-<td>Wilson 95% interval of delivered over N from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_naive_interval</td>
-<td>(5%; 95% interval 1% to 24%)</td>
-<td>the naive chain's share and its 95% Wilson interval</td>
-<td>Wilson 95% interval of naive_delivered over N from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_rescued</td>
-<td>13</td>
-<td>release starts delivered by the program and not by the naive chain</td>
-<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_broken</td>
-<td>1</td>
-<td>release starts delivered by the naive chain and not by the program</td>
-<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_both</td>
-<td>0</td>
-<td>release starts both delivered on</td>
-<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_neither</td>
-<td>6</td>
-<td>release starts neither delivered on</td>
-<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_order_violations</td>
-<td>0</td>
-<td>the program's release runs that broke the order rule</td>
-<td>order_violations of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>job_one_library_jobs</td>
-<td>0</td>
-<td>jobs in the library after the first shift</td>
-<td>jobs in the first shift's library index, counted from <code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code> (<code>bad0ef9aff4b</code>)</td>
-</tr>
-<tr>
-<td>job_one_library_checks</td>
-<td>2</td>
-<td>checks in the library after the first shift</td>
-<td>checks in the first shift's library index, counted from <code>probes:demo/2026-10-21/job-one/run-3/library/index.json</code> (<code>bad0ef9aff4b</code>)</td>
-</tr>
-<tr>
-<td>job_one_learned_skills</td>
-<td>1</td>
-<td>learned skills kept after the first shift</td>
-<td>learned skills the frozen library kept, counted from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>s2_library_quote</td>
-<td>I tested released-handoff-and-retention and post-goal-release-retention against this request's baseline traces before adapting their acquired-versus-retained distinction into the new check.</td>
-<td>the second shift's account of using the mounted library</td>
-<td>the second shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code> (<code>af80bbe07b66</code>)</td>
-</tr>
-<tr>
-<td>s2_sessions</td>
-<td>5</td>
-<td>agent sessions of the second shift</td>
-<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
-</tr>
-<tr>
-<td>s2_tool_calls</td>
-<td>268</td>
-<td>tool calls of the second shift</td>
-<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
-</tr>
-<tr>
-<td>s2_starts</td>
-<td>130</td>
-<td>development starts the second shift's programs ran on</td>
-<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
-</tr>
-<tr>
-<td>s2_model_minutes</td>
-<td>44.6</td>
-<td>minutes of model time in the second shift</td>
-<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
+<td>s2_check_name</td>
+<td>loaded-transfer-diagnosis</td>
+<td>the check the second shift saved</td>
+<td>the checks the second shift's frozen library lists as its own from <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
 </tr>
 <tr>
 <td>s2_learned_skills</td>
@@ -1281,28 +1590,382 @@ start as rescued and broken.</p>
 <td>learned skills the second shift's frozen library lists as its own, counted from <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
 </tr>
 <tr>
+<td>s3_mounted_checks</td>
+<td>3</td>
+<td>checks in the library the third shift started with</td>
+<td>the checks of the library the third shift mounted, counted from <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>s3_job_name</td>
+<td>cheese-loaded-bowl-to-cabinet</td>
+<td>the job the third shift saved and released</td>
+<td>job_name of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>s3_job_continuation</td>
+<td>30</td>
+<td>control steps the saved program continues the first skill after its goal holds</td>
+<td>the saved program's fixed-length policy step from <code>probes:demo/2026-10-21/job-one/run-6/release/library/jobs/cheese-loaded-bowl-to-cabinet.json</code> (<code>3f2228db95ab</code>)</td>
+</tr>
+<tr>
+<td>s3_saved_starts</td>
+<td>0 to 9</td>
+<td>those development starts</td>
+<td>the development starts of the saved program's runs from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
+</tr>
+<tr>
+<td>s3_saved_k</td>
+<td>9</td>
+<td>development starts the saved program delivered on before it was saved</td>
+<td>the released program's development runs in the third shift, delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
+</tr>
+<tr>
+<td>s3_saved_n</td>
+<td>10</td>
+<td>development starts it ran on</td>
+<td>the released program's development runs in the third shift, delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
+</tr>
+<tr>
+<td>s3_finding</td>
+<td>Shorter loading continuation switches during the observed withdrawal phase; final continuation was retained because it recovered temporary placement losses.</td>
+<td>the third shift's account of its program's design, verbatim</td>
+<td>the third shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json</code> (<code>3de2cd8a1130</code>)</td>
+</tr>
+<tr>
+<td>s3_check_name</td>
+<td>transfer-and-finish-audit</td>
+<td>the check the third shift saved</td>
+<td>the checks the third shift's frozen library lists as its own from <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>s3_check_quote</td>
+<td>It distinguishes order failures, unreached goals, load loss, destination loss, and other host delivery-state failures, and locates goal losses even when they recover.</td>
+<td>the third shift's account of that check, verbatim</td>
+<td>the third shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json</code> (<code>3de2cd8a1130</code>)</td>
+</tr>
+<tr>
+<td>s3_learned_skills</td>
+<td>2</td>
+<td>learned skills the third shift kept</td>
+<td>learned skills the third shift's frozen library lists as its own, counted from <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>release_digest</td>
+<td>4c2e8caa80cb</td>
+<td>the frozen program's SHA-256 digest, first 12 characters</td>
+<td>the released program's digest, first 12 characters from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_starts</td>
+<td>30 to 49</td>
+<td>the reserved release starts, by stored arrangement</td>
+<td>the receipt's release starts from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_both</td>
+<td>0</td>
+<td>release starts both delivered on</td>
+<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_neither</td>
+<td>6</td>
+<td>release starts neither delivered on</td>
+<td>the receipt's pairs recounted start by start from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_receipt_sha</td>
+<td>ca986e805ec3</td>
+<td>the release receipt file's SHA-256, first 12 characters</td>
+<td>the receipt file's SHA-256 from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>release_outcome</td>
+<td>met the shift lead's bar on starts no program had run on and was released</td>
+<td>the receipt's judgement against the shift lead's bar, in words</td>
+<td>the receipt's starts_fresh, passed and released fields, in words from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>ca986e805ec3</code>)</td>
+</tr>
+<tr>
+<td>job_one_sessions</td>
+<td>5</td>
+<td>agent sessions of the first shift</td>
+<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>s2_sessions</td>
+<td>5</td>
+<td>agent sessions of the second shift</td>
+<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
+</tr>
+<tr>
+<td>s3_sessions</td>
+<td>5</td>
+<td>agent sessions of the third shift</td>
+<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>job_one_tool_calls</td>
+<td>250</td>
+<td>tool calls of the first shift</td>
+<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>s2_tool_calls</td>
+<td>268</td>
+<td>tool calls of the second shift</td>
+<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
+</tr>
+<tr>
+<td>s3_tool_calls</td>
+<td>255</td>
+<td>tool calls of the third shift</td>
+<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>job_one_starts</td>
+<td>100</td>
+<td>development starts the first shift's programs ran on, in all</td>
+<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>s1_distinct_starts</td>
+<td>30</td>
+<td>distinct development starts the shift's program executions used</td>
+<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
+</tr>
+<tr>
+<td>s2_starts</td>
+<td>130</td>
+<td>development starts the second shift's programs ran on</td>
+<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
+</tr>
+<tr>
+<td>s2_distinct_starts</td>
+<td>30</td>
+<td>distinct development starts the shift's program executions used</td>
+<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
+</tr>
+<tr>
+<td>s3_starts</td>
+<td>60</td>
+<td>program executions of the third shift on development starts</td>
+<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>s3_distinct_starts</td>
+<td>10</td>
+<td>distinct development starts the third shift's executions used</td>
+<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
+</tr>
+<tr>
+<td>job_one_model_minutes</td>
+<td>37.7</td>
+<td>minutes of the agent's model time in the first shift</td>
+<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
+</tr>
+<tr>
+<td>s2_model_minutes</td>
+<td>44.6</td>
+<td>minutes of model time in the second shift</td>
+<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>)</td>
+</tr>
+<tr>
+<td>s3_model_minutes</td>
+<td>39.1</td>
+<td>minutes of model time in the third shift</td>
+<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>)</td>
+</tr>
+<tr>
+<td>j2_request_text</td>
+<td>One more job for the line: the cheese goes into the black bowl and the bowl goes onto the plate. The cheese goes in before the bowl moves.</td>
+<td>the shift lead's second request, verbatim: the job and its order</td>
+<td>job two's request, verbatim, its first two sentences from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2_goals</td>
+<td><code>On cream_cheese_1 akita_black_bowl_1</code>; <code>On akita_black_bowl_1 plate_1</code></td>
+<td>job two's requested goals in LIBERO's spelling</td>
+<td>job two's requested goals, listed from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2_order_rules</td>
+<td>goal 1 (On akita_black_bowl_1 plate_1) may not first hold before goal 0 (On cream_cheese_1 akita_black_bowl_1) first holds</td>
+<td>job two's order rule in the record's words</td>
+<td>job two's order rules, listed from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_library_quote</td>
+<td>I used the inherited handoff-versus-transport distinction and tested the inherited loaded-transfer-diagnosis and released-handoff-and-retention checks on this request's direct run.</td>
+<td>job two's first shift's account of using the inherited checks, verbatim</td>
+<td>job two's first shift's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-1/analyses/w90-20261020T023720-1bc834/outbox/job_account.json</code> (<code>3774f1b44cb2</code>)</td>
+</tr>
+<tr>
+<td>j2s1_check_quote</td>
+<td>The saved check handoff-versus-transfer-failure distinguishes handoff readiness, target never reached, goal loss, and unfinished final release.</td>
+<td>job two's first shift's account of the check it saved, verbatim</td>
+<td>job two's first shift's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-1/analyses/w90-20261020T023720-1bc834/outbox/job_account.json</code> (<code>3774f1b44cb2</code>)</td>
+</tr>
+<tr>
+<td>j2s2_library_quote</td>
+<td>I also tested the earlier transfer-and-finish-audit on this baseline; it returned 4 passes and 6 target-never-reached failures.</td>
+<td>job two's account of using job one's saved check, verbatim</td>
+<td>job two's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-2/analyses/w90-20261020T082642-8a45de/outbox/job_account.json</code> (<code>b3c203ffde9a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_finding</td>
+<td>A loading goal could hold before the fingers physically released the cheese.</td>
+<td>job two's finding, verbatim from its account</td>
+<td>job two's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-2/analyses/w90-20261020T082642-8a45de/outbox/job_account.json</code> (<code>b3c203ffde9a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_check_name</td>
+<td>handoff-versus-delivery-audit</td>
+<td>the check job two's shift saved</td>
+<td>the checks job two's frozen library lists as its own from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s2_check_quote</td>
+<td>It distinguishes the state at an instruction switch from eventual delivery, reports goal losses, and identifies the failing stage.</td>
+<td>job two's account of that check, verbatim</td>
+<td>job two's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-2/analyses/w90-20261020T082642-8a45de/outbox/job_account.json</code> (<code>b3c203ffde9a</code>)</td>
+</tr>
+<tr>
+<td>j2s1_mounted_checks</td>
+<td>3</td>
+<td>checks in the library job two's first shift started with</td>
+<td>the checks of the library job two's first shift mounted, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_mounted_jobs</td>
+<td>1</td>
+<td>released jobs in the library job two's shift started with</td>
+<td>the jobs of the mounted library, counted from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s2_mounted_checks</td>
+<td>4</td>
+<td>checks in the library job two's shift started with</td>
+<td>the checks of the mounted library, counted from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_programs</td>
+<td>12</td>
+<td>distinct programs job two's first shift ran</td>
+<td>distinct program digests in the first shift's batches from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s1_executions</td>
+<td>120</td>
+<td>program executions of job two's first shift on development starts</td>
+<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_programs</td>
+<td>9</td>
+<td>distinct programs job two's shift ran</td>
+<td>distinct program digests in job two's batches from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s2_executions</td>
+<td>90</td>
+<td>program executions of job two's shift on development starts</td>
+<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_distinct_starts</td>
+<td>10</td>
+<td>distinct development starts job two's first shift's programs ran on</td>
+<td>distinct development starts among the first shift's episodes from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
+</tr>
+<tr>
+<td>j2s2_distinct_starts</td>
+<td>10</td>
+<td>distinct development starts job two's programs ran on</td>
+<td>distinct development starts among job two's episodes from <code>probes:demo/2026-10-21/job-two/run-2/runs/session-01/run/episodes.jsonl</code> (<code>4276c05ff0b4</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-02/run/episodes.jsonl</code> (<code>92cc6c6e1a59</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-03/run/episodes.jsonl</code> (<code>46d0a2e719d9</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-04/run/episodes.jsonl</code> (<code>f4359fce2ba6</code>)</td>
+</tr>
+<tr>
+<td>j2s2_best_k</td>
+<td>4</td>
+<td>starts job two's best program run delivered on (the first by name among equal counts)</td>
+<td>the program run of job two with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-2/runs/session-01/run/episodes.jsonl</code> (<code>4276c05ff0b4</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-02/run/episodes.jsonl</code> (<code>92cc6c6e1a59</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-03/run/episodes.jsonl</code> (<code>46d0a2e719d9</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-04/run/episodes.jsonl</code> (<code>f4359fce2ba6</code>)</td>
+</tr>
+<tr>
+<td>j2s2_best_n</td>
+<td>10</td>
+<td>starts it ran on</td>
+<td>the program run of job two with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-2/runs/session-01/run/episodes.jsonl</code> (<code>4276c05ff0b4</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-02/run/episodes.jsonl</code> (<code>92cc6c6e1a59</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-03/run/episodes.jsonl</code> (<code>46d0a2e719d9</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-04/run/episodes.jsonl</code> (<code>f4359fce2ba6</code>)</td>
+</tr>
+<tr>
+<td>j2s1_new_checks</td>
+<td>1</td>
+<td>checks job two's first shift saved</td>
+<td>the checks job two's first shift saved, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s1_learned</td>
+<td>2</td>
+<td>learned skills job two's first shift kept</td>
+<td>the learned skills job two's first shift kept, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_new_checks</td>
+<td>1</td>
+<td>checks job two's second shift saved</td>
+<td>the checks job two's second shift saved, counted from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s2_learned</td>
+<td>2</td>
+<td>learned skills job two's shift kept</td>
+<td>the learned skills job two's shift kept, counted from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_sessions</td>
+<td>5</td>
+<td>agent sessions of job two's first shift</td>
+<td>costs.sessions of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_sessions</td>
+<td>5</td>
+<td>agent sessions of job two's shift</td>
+<td>costs.sessions of <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_tool_calls</td>
+<td>323</td>
+<td>tool calls of job two's first shift</td>
+<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_tool_calls</td>
+<td>329</td>
+<td>tool calls of job two's shift</td>
+<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
+<td>j2s1_model_minutes</td>
+<td>47.9</td>
+<td>minutes of model time in job two's first shift</td>
+<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+</tr>
+<tr>
+<td>j2s2_model_minutes</td>
+<td>46.1</td>
+<td>minutes of model time in job two's shift</td>
+<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>)</td>
+</tr>
+<tr>
 <td>library_jobs</td>
 <td>1</td>
-<td>jobs in the installation's library after the three shifts</td>
-<td>entries of <code>probes:demo/2026-10-21/job-one/run-6/library/index.json</code> (<code>64fe1ad357dc</code>)</td>
+<td>jobs in the installation's library after both jobs, each saved with its release receipt</td>
+<td>entries of <code>probes:demo/2026-10-21/job-two/run-2/library/index.json</code> (<code>d41aaafa21d0</code>)</td>
 </tr>
 <tr>
 <td>library_checks</td>
-<td>4</td>
-<td>checks in the installation's library after the three shifts</td>
-<td>entries of <code>probes:demo/2026-10-21/job-one/run-6/library/index.json</code> (<code>64fe1ad357dc</code>)</td>
-</tr>
-<tr>
-<td>run1_sessions</td>
-<td>1</td>
-<td>sessions recorded by the attempt the host stopped</td>
-<td>the sessions the stopped attempt's record holds from <code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code> (<code>d79ab8e48514</code>)</td>
-</tr>
-<tr>
-<td>run2_sessions</td>
-<td>3</td>
-<td>sessions before the launch audit's false alarm</td>
-<td>the sessions the failed attempt's record holds from <code>probes:demo/2026-10-21/job-one/run-2/job_run.json</code> (<code>50f9378b73b8</code>)</td>
+<td>5</td>
+<td>checks in the installation's library after both jobs</td>
+<td>entries of <code>probes:demo/2026-10-21/job-two/run-2/library/index.json</code> (<code>d41aaafa21d0</code>)</td>
 </tr>
 <tr>
 <td>b_linked_site</td>
@@ -1315,18 +1978,6 @@ start as rescued and broken.</p>
 <td>The robots at this site are driven by policy servers in the customer's own data centre, over a wide-area network link. This is the customer's requirement and stays.</td>
 <td>that note, verbatim</td>
 <td>the site whose public note names a remote policy server from <code>probes:demo/2026-10-20/instrument/worlds/STORYB/files/description.json</code> (<code>d912f0398f4d</code>)</td>
-</tr>
-<tr>
-<td>b_robots</td>
-<td>12</td>
-<td>robots in story B's first fleet</td>
-<td>distinct robots in the regular work's episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/exports/start-01/log/episodes.parquet</code> (<code>66707a337abd</code>)</td>
-</tr>
-<tr>
-<td>b_sites</td>
-<td>3</td>
-<td>sites of story B's first fleet</td>
-<td>distinct sites in the regular work's episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/exports/start-01/log/episodes.parquet</code> (<code>66707a337abd</code>)</td>
 </tr>
 <tr>
 <td>b_ops_days</td>
@@ -1407,70 +2058,34 @@ start as rescued and broken.</p>
 <td>a sentence of the learned skill, verbatim from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/learned/learned-81c70b2a7a9e3b60/skills/separate-fixed-transport-delay-from-controller-backlog/SKILL.md</code> (<code>21782f0eb1fe</code>)</td>
 </tr>
 <tr>
+<td>b_experiments_table</td>
+<td>| Experiment | Change tested | Without it | With it | Rescued | Broken | |---|---|---|---|---|---| | x0001 | a rollback of the software update at site s3 | 49 of 66 (74%; 95% interval 63% to 83%) | 66 of 66 (100%; 95% interval 94% to 100%) | 17 | 0 | | x0001 | a rollback of the scene camera's calibration change at site s3 | 49 of 66 (74%; 95% interval 63% to 83%) | 52 of 66 (79%; 95% interval 67% to 87%) | 6 | 3 | | x0002 | a latency compensation of 8 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 40 of 44 (91%; 95% interval 79% to 96%) | 12 | 1 | | x0002 | a latency compensation of 17 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 43 of 44 (98%; 95% interval 88% to 100%) | 14 | 0 | | x0002 | a latency compensation of 26 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 38 of 44 (86%; 95% interval 73% to 94%) | 13 | 4 | | x0003 | a service of robot r06's controller | 13 of 24 (54%; 95% interval 35% to 72%) | 24 of 24 (100%; 95% interval 86% to 100%) | 11 | 0 |</td>
+<td>round one's experiments: successes without and with each change, rescued and broken</td>
+<td>each arm of round one's experiments against its paired control arm, from the agent's requests, the results and the episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/episodes.parquet</code> (<code>b565a97c0726</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/run#d332aaa0/outbox/experiments.jsonl</code> (<code>2b2225e2233e</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/run#d332aaa0/results/experiments.jsonl</code> (<code>0710c8cec044</code>)</td>
+</tr>
+<tr>
 <td>b_round1_actions</td>
 <td>a latency compensation of 17 control steps at site s1; a rollback of the software update at site s3; a service of robot r06's controller</td>
 <td>the changes the agent adopted in round one</td>
 <td>round one's adopted actions, in words from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
 </tr>
 <tr>
-<td>b_round1_count</td>
-<td>3</td>
-<td>how many changes it adopted in round one</td>
-<td>round one's adopted actions, in words from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
+<td>b_hours_each</td>
+<td>0.1, 0.1 and 3.0</td>
+<td>recorded operator-cost estimate of each adopted change, in order</td>
+<td>the fleet's recorded cost table for each adopted action from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/costs.parquet</code> (<code>ec32ed91d67d</code>)</td>
+</tr>
+<tr>
+<td>b_hours_total</td>
+<td>3.2</td>
+<td>their sum</td>
+<td>the fleet's recorded cost table for each adopted action from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/costs.parquet</code> (<code>ec32ed91d67d</code>)</td>
 </tr>
 <tr>
 <td>b_round2_actions</td>
 <td>no change</td>
 <td>the changes the agent adopted in round two</td>
 <td>round two's adopted actions, in words from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_original_k</td>
-<td>451</td>
-<td>panel attempts the fleet as it was succeeded on</td>
-<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_original_n</td>
-<td>576</td>
-<td>panel attempts of the fleet as it was</td>
-<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_original_interval</td>
-<td>(78%; 95% interval 75% to 81%)</td>
-<td>their share and its 95% Wilson interval</td>
-<td>the reserved panel's successes of state original, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_final_k</td>
-<td>558</td>
-<td>panel attempts the fleet with the agent's changes succeeded on</td>
-<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_final_n</td>
-<td>576</td>
-<td>panel attempts of the fleet with the agent's changes</td>
-<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_final_interval</td>
-<td>(97%; 95% interval 95% to 98%)</td>
-<td>their share and its 95% Wilson interval</td>
-<td>the reserved panel's successes of state round-2, its Wilson 95% interval checked against the record's from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_rescued</td>
-<td>113</td>
-<td>panel attempts the final state succeeded on and the original did not</td>
-<td>the panel's attempts compared between the original and the final state from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
-</tr>
-<tr>
-<td>b_eval_broken</td>
-<td>6</td>
-<td>panel attempts the original succeeded on and the final state did not</td>
-<td>the panel's attempts compared between the original and the final state from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>)</td>
 </tr>
 <tr>
 <td>b_eval_breakdown</td>
@@ -1503,21 +2118,21 @@ start as rescued and broken.</p>
 <td>the later fleet's site whose public note names a remote policy server from <code>probes:demo/2026-10-20/instrument/worlds/STORYB-LATER/files/description.json</code> (<code>321cac04f34e</code>)</td>
 </tr>
 <tr>
-<td>b2_outcome</td>
-<td>done</td>
-<td>the recipe run's outcome</td>
-<td>outcome.status of <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+<td>b2_decider</td>
+<td>the coordinator of the demo acting as the later fleet's operator</td>
+<td>who decided on the later fleet</td>
+<td>the decision's author, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
+</tr>
+<tr>
+<td>b2_decision_at</td>
+<td>2026-10-20 02:35 Pacific</td>
+<td>when the decision was recorded</td>
+<td>the decision's date and time, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
 </tr>
 <tr>
 <td>b2_fixed</td>
 <td>r11</td>
 <td>the robot in the recipe's role fixed_robot</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_fixed_first_move</td>
-<td>18 and 18</td>
-<td>control steps until fixed_robot's hand first moved, after the step out and the step back</td>
 <td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
 </tr>
 <tr>
@@ -1533,15 +2148,15 @@ start as rescued and broken.</p>
 <td>the later fleet's regular work of fixed_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
 </tr>
 <tr>
+<td>b2_fixed_interval</td>
+<td>(42%; 95% interval 31% to 53%)</td>
+<td>its share and 95% Wilson interval</td>
+<td>the later fleet's regular work of fixed_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+</tr>
+<tr>
 <td>b2_upstream</td>
 <td>r10</td>
 <td>the robot in the recipe's role upstream_robot</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_upstream_first_move</td>
-<td>18 and 18</td>
-<td>control steps until upstream_robot's hand first moved, after the step out and the step back</td>
 <td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
 </tr>
 <tr>
@@ -1557,40 +2172,10 @@ start as rescued and broken.</p>
 <td>the later fleet's regular work of upstream_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
 </tr>
 <tr>
-<td>b2_backlog</td>
-<td>r06</td>
-<td>the robot in the recipe's role backlog_robot</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_backlog_first_move</td>
-<td>1 and 1</td>
-<td>control steps until backlog_robot's hand first moved, after the step out and the step back</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_reference</td>
-<td>r05</td>
-<td>the robot in the recipe's role reference_robot</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_reference_first_move</td>
-<td>1 and 1</td>
-<td>control steps until reference_robot's hand first moved, after the step out and the step back</td>
-<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
-</tr>
-<tr>
-<td>b2_reference_k</td>
-<td>72</td>
-<td>successful regular-work attempts of reference_robot on the later fleet</td>
-<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
-</tr>
-<tr>
-<td>b2_reference_n</td>
-<td>72</td>
-<td>regular-work attempts of reference_robot on the later fleet</td>
-<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+<td>b2_upstream_interval</td>
+<td>(47%; 95% interval 36% to 59%)</td>
+<td>its share and 95% Wilson interval</td>
+<td>the later fleet's regular work of upstream_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
 </tr>
 <tr>
 <td>b2_lowest_robot</td>
@@ -1611,10 +2196,88 @@ start as rescued and broken.</p>
 <td>the robot with the lowest success outside the noted site, in the later fleet's regular work from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
 </tr>
 <tr>
+<td>b2_lowest_interval</td>
+<td>(71%; 95% interval 59% to 80%)</td>
+<td>its share and 95% Wilson interval</td>
+<td>the robot with the lowest success outside the noted site, in the later fleet's regular work from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+</tr>
+<tr>
+<td>b2_reference</td>
+<td>r05</td>
+<td>the robot in the recipe's role reference_robot</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_reference_k</td>
+<td>72</td>
+<td>successful regular-work attempts of reference_robot on the later fleet</td>
+<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+</tr>
+<tr>
+<td>b2_reference_n</td>
+<td>72</td>
+<td>regular-work attempts of reference_robot on the later fleet</td>
+<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+</tr>
+<tr>
+<td>b2_reference_interval</td>
+<td>(100%; 95% interval 95% to 100%)</td>
+<td>its share and 95% Wilson interval</td>
+<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
+</tr>
+<tr>
+<td>b2_outcome</td>
+<td>done</td>
+<td>the recipe run's outcome</td>
+<td>outcome.status of <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_fixed_first_move</td>
+<td>18 and 18</td>
+<td>control steps until fixed_robot's hand first moved, after the step out and the step back</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_upstream_first_move</td>
+<td>18 and 18</td>
+<td>control steps until upstream_robot's hand first moved, after the step out and the step back</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_backlog</td>
+<td>r06</td>
+<td>the robot in the recipe's role backlog_robot</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_backlog_first_move</td>
+<td>1 and 1</td>
+<td>control steps until backlog_robot's hand first moved, after the step out and the step back</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
+<td>b2_reference_first_move</td>
+<td>1 and 1</td>
+<td>control steps until reference_robot's hand first moved, after the step out and the step back</td>
+<td>the recipe run's probe episodes, first movement per commanded step from <code>probes:demo/2026-10-20/instrument/second-use/check-2/recipe-check.json</code> (<code>094875cac0ca</code>)</td>
+</tr>
+<tr>
 <td>b2_rule</td>
 <td>A normal probe with failing tasks calls for image/change-log investigation.</td>
 <td>the recipe skill's rule for a normal probe, verbatim</td>
 <td>a sentence of the learned skill, verbatim from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/learned/learned-81c70b2a7a9e3b60/skills/separate-fixed-transport-delay-from-controller-backlog/SKILL.md</code> (<code>21782f0eb1fe</code>)</td>
+</tr>
+<tr>
+<td>b2_next_r06</td>
+<td>Next action for r06: inspect its images and its change log, as the skill's rule says for a normal probe with failing tasks</td>
+<td>the operator's next action for the failing robot outside the linked site</td>
+<td>the decision's first next action, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
+</tr>
+<tr>
+<td>b2_next_s3</td>
+<td>Next action for s3: the same adaptation the first fleet adopted for a fixed transport delay, to be confirmed by a task experiment on s3's robots before it is adopted, as the skill requires.</td>
+<td>the operator's next action for the linked site</td>
+<td>the decision's second next action, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
 </tr>
 <tr>
 <td>rerenders</td>
@@ -1635,286 +2298,46 @@ start as rescued and broken.</p>
 <td>the cut's re-render reports, counted from <code>probes:demo/2026-10-20/film/final-5/rerenders/run-6-release/e000102.rerender.scene.720px.json</code> (<code>678ef5efc8f2</code>), <code>probes:demo/2026-10-20/film/final-5/rerenders/run-6-release/e000202.rerender.scene.720px.json</code> (<code>bee04c398790</code>), <code>probes:demo/2026-10-20/film/final-5/rerenders/run-6-s03/e000401.rerender.scene.720px.json</code> (<code>08cc6137ab73</code>), <code>probes:demo/2026-10-20/film/rehearsal-2/rerenders/cabinet/e000101.rerender.scene.720px.json</code> (<code>c3db962a5b95</code>), <code>probes:demo/2026-10-20/film/rehearsal-2/rerenders/cheese/e000101.rerender.scene.720px.json</code> (<code>cf6dbb0f0286</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-3-s01/e000102.rerender.scene.720px.json</code> (<code>45c9fe9649ae</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-3-s02/e000402.rerender.scene.720px.json</code> (<code>551b55b859a1</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-3-s03/e000602.rerender.scene.720px.json</code> (<code>e6862e55ac6a</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-3-s04/e000702.rerender.scene.720px.json</code> (<code>57032167cd36</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-5-s03/e000602.rerender.scene.720px.json</code> (<code>4e138796cb1c</code>), <code>probes:demo/2026-10-20/film/rehearsal-4/rerenders/run-5-s04/e000802.rerender.scene.720px.json</code> (<code>1c938ddc8bfa</code>)</td>
 </tr>
 <tr>
-<td>b2_decider</td>
-<td>the coordinator of the demo acting as the later fleet's operator</td>
-<td>who decided on the later fleet</td>
-<td>the decision's author, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
-</tr>
-<tr>
-<td>b2_decision_at</td>
-<td>2026-10-20 02:35 Pacific</td>
-<td>when the decision was recorded</td>
-<td>the decision's date and time, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
-</tr>
-<tr>
-<td>b2_next_r06</td>
-<td>Next action for r06: inspect its images and its change log, as the skill's rule says for a normal probe with failing tasks</td>
-<td>the operator's next action for the failing robot outside the linked site</td>
-<td>the decision's first next action, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
-</tr>
-<tr>
-<td>b2_next_s3</td>
-<td>Next action for s3: the same adaptation the first fleet adopted for a fixed transport delay, to be confirmed by a task experiment on s3's robots before it is adopted, as the skill requires.</td>
-<td>the operator's next action for the linked site</td>
-<td>the decision's second next action, verbatim from <code>probes:demo/2026-10-20/instrument/second-use/check-2/decision.md</code> (<code>7b5487eca469</code>)</td>
-</tr>
-<tr>
-<td>request_added_1</td>
-<td>The next shift needs it to deliver on at least two of every three starts it is released on.</td>
-<td>the sentence the host added to the request after stopping the first attempt</td>
-<td>the first shift's request, less the stopped attempt's from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>), <code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code> (<code>d79ab8e48514</code>)</td>
-</tr>
-<tr>
-<td>request_added_2</td>
-<td>When a program reaches that share on the development starts you tried it on, save it: the reserved starts decide, and a release that misses there is acceptable to me.</td>
-<td>the sentence the lead added after the two completed investigations</td>
-<td>the request of the run in progress, less the first shift's from <code>probes:demo/2026-10-21/job-one/request.json</code> (<code>bc9c645d2f7f</code>), <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>)</td>
-</tr>
-<tr>
-<td>run1_lead_fraction</td>
-<td>2/3</td>
-<td>the scripted lead's approval share in the stopped attempt</td>
-<td>lead_fraction of <code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code> (<code>d79ab8e48514</code>)</td>
-</tr>
-<tr>
-<td>s1_distinct_starts</td>
-<td>30</td>
-<td>distinct development starts the shift's program executions used</td>
-<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
-</tr>
-<tr>
-<td>s2_distinct_starts</td>
-<td>30</td>
-<td>distinct development starts the shift's program executions used</td>
-<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
-</tr>
-<tr>
-<td>s2_reason</td>
-<td>completing the initial release helped, but did not reliably solve acquisition and transport of a loaded bowl.</td>
-<td>why the second shift did not release, in its words</td>
-<td>the second shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-5/analyses/w90-20261020T002932-70409e/outbox/job_account.json</code> (<code>af80bbe07b66</code>)</td>
-</tr>
-<tr>
-<td>b2_fixed_interval</td>
-<td>(42%; 95% interval 31% to 53%)</td>
-<td>its share and 95% Wilson interval</td>
-<td>the later fleet's regular work of fixed_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
-</tr>
-<tr>
-<td>b2_upstream_interval</td>
-<td>(47%; 95% interval 36% to 59%)</td>
-<td>its share and 95% Wilson interval</td>
-<td>the later fleet's regular work of upstream_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
-</tr>
-<tr>
-<td>b2_reference_interval</td>
-<td>(100%; 95% interval 95% to 100%)</td>
-<td>its share and 95% Wilson interval</td>
-<td>the later fleet's regular work of reference_robot, successes over attempts from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
-</tr>
-<tr>
-<td>b2_lowest_interval</td>
-<td>(71%; 95% interval 59% to 80%)</td>
-<td>its share and 95% Wilson interval</td>
-<td>the robot with the lowest success outside the noted site, in the later fleet's regular work from <code>probes:demo/2026-10-20/instrument/second-use/check-2/export/log/episodes.parquet</code> (<code>b8e52b460916</code>)</td>
-</tr>
-<tr>
-<td>b_experiments_table</td>
-<td>| Experiment | Change tested | Without it | With it | Rescued | Broken | |---|---|---|---|---|---| | x0001 | a rollback of the software update at site s3 | 49 of 66 (74%; 95% interval 63% to 83%) | 66 of 66 (100%; 95% interval 94% to 100%) | 17 | 0 | | x0001 | a rollback of the scene camera's calibration change at site s3 | 49 of 66 (74%; 95% interval 63% to 83%) | 52 of 66 (79%; 95% interval 67% to 87%) | 6 | 3 | | x0002 | a latency compensation of 8 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 40 of 44 (91%; 95% interval 79% to 96%) | 12 | 1 | | x0002 | a latency compensation of 17 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 43 of 44 (98%; 95% interval 88% to 100%) | 14 | 0 | | x0002 | a latency compensation of 26 control steps at site s1 | 29 of 44 (66%; 95% interval 51% to 78%) | 38 of 44 (86%; 95% interval 73% to 94%) | 13 | 4 | | x0003 | a service of robot r06's controller | 13 of 24 (54%; 95% interval 35% to 72%) | 24 of 24 (100%; 95% interval 86% to 100%) | 11 | 0 |</td>
-<td>round one's experiments: successes without and with each change, rescued and broken</td>
-<td>each arm of round one's experiments against its paired control arm, from the agent's requests, the results and the episodes from <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/episodes.parquet</code> (<code>b565a97c0726</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/run#d332aaa0/outbox/experiments.jsonl</code> (<code>2b2225e2233e</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/run#d332aaa0/results/experiments.jsonl</code> (<code>0710c8cec044</code>)</td>
-</tr>
-<tr>
-<td>b_hours_each</td>
-<td>0.1, 0.1 and 3.0</td>
-<td>recorded operator-cost estimate of each adopted change, in order</td>
-<td>the fleet's recorded cost table for each adopted action from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/costs.parquet</code> (<code>ec32ed91d67d</code>)</td>
-</tr>
-<tr>
-<td>b_hours_total</td>
-<td>3.2</td>
-<td>their sum</td>
-<td>the fleet's recorded cost table for each adopted action from <code>probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json</code> (<code>bd82a0c6aced</code>), <code>probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/costs.parquet</code> (<code>ec32ed91d67d</code>)</td>
-</tr>
-<tr>
-<td>s3_job_name</td>
-<td>cheese-loaded-bowl-to-cabinet</td>
-<td>the job the third shift saved and released</td>
-<td>job_name of <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>s3_job_continuation</td>
-<td>30</td>
-<td>control steps the saved program continues the first skill after its goal holds</td>
-<td>the saved program's fixed-length policy step from <code>probes:demo/2026-10-21/job-one/run-6/release/library/jobs/cheese-loaded-bowl-to-cabinet.json</code> (<code>d62c36697bd7</code>)</td>
-</tr>
-<tr>
-<td>s3_saved_k</td>
-<td>9</td>
-<td>development starts the saved program delivered on before it was saved</td>
-<td>the released program's development runs in the third shift, delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
-</tr>
-<tr>
-<td>s3_saved_n</td>
-<td>10</td>
-<td>development starts it ran on</td>
-<td>the released program's development runs in the third shift, delivered over episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
-</tr>
-<tr>
-<td>s3_saved_starts</td>
-<td>0 to 9</td>
-<td>those development starts</td>
-<td>the development starts of the saved program's runs from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
-</tr>
-<tr>
-<td>release_starts</td>
-<td>30 to 49</td>
-<td>the reserved release starts, by stored arrangement</td>
-<td>the receipt's release starts from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>release_shortfall</td>
+<td>run1_sessions</td>
 <td>1</td>
-<td>deliveries the program fell short of the bar by</td>
-<td>the receipt's K less its delivered count from the records</td>
+<td>sessions recorded by the attempt the host stopped</td>
+<td>the sessions the stopped attempt's record holds from <code>probes:demo/2026-10-21/job-one/run-1/job_run.json</code> (<code>d79ab8e48514</code>)</td>
 </tr>
 <tr>
-<td>s3_decision</td>
-<td>cheese-loaded-bowl-to-cabinet completed its reserved-start trial but did not qualify for operational release. It delivered on 13 of 20 starts, one short of the approved 14 of 20, with zero recorded order violations.</td>
-<td>the third shift's account of the release, in its words</td>
-<td>the third shift's account, its opening sentences verbatim from <code>probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json</code> (<code>3de2cd8a1130</code>)</td>
-</tr>
-<tr>
-<td>s3_sessions</td>
-<td>5</td>
-<td>agent sessions of the third shift</td>
-<td>costs.sessions of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>c4976de7495e</code>)</td>
-</tr>
-<tr>
-<td>s3_tool_calls</td>
-<td>255</td>
-<td>tool calls of the third shift</td>
-<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>c4976de7495e</code>)</td>
-</tr>
-<tr>
-<td>s3_starts</td>
-<td>60</td>
-<td>program executions of the third shift on development starts</td>
-<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>c4976de7495e</code>)</td>
-</tr>
-<tr>
-<td>s3_model_minutes</td>
-<td>39.1</td>
-<td>minutes of model time in the third shift</td>
-<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>c4976de7495e</code>)</td>
-</tr>
-<tr>
-<td>s3_distinct_starts</td>
-<td>10</td>
-<td>distinct development starts the third shift's executions used</td>
-<td>distinct development starts among the shift's episodes from <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
-</tr>
-<tr>
-<td>s3_decision_2</td>
-<td>Improvement over the naive chain does not meet the fixed acceptance bar.</td>
-<td>the third shift's judgement of the release, in its words</td>
-<td>the third shift's account, verbatim from <code>probes:demo/2026-10-21/job-one/run-6/analyses/w90-20261020T023454-f0672b/outbox/job_account.json</code> (<code>3de2cd8a1130</code>)</td>
-</tr>
-<tr>
-<td>release_outcome</td>
-<td>did not pass the approved condition and was not released</td>
-<td>the receipt's outcome in words</td>
-<td>the receipt's passed and released fields, in words from <code>probes:demo/2026-10-21/job-one/run-6/release/run/run/receipt.json</code> (<code>6e7a5465c0b4</code>)</td>
-</tr>
-<tr>
-<td>j2_goals</td>
-<td><code>On cream_cheese_1 akita_black_bowl_1</code>; <code>On akita_black_bowl_1 plate_1</code></td>
-<td>job two's requested goals in LIBERO's spelling</td>
-<td>job two's requested goals, listed from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
-</tr>
-<tr>
-<td>j2_mounted_checks</td>
+<td>run2_sessions</td>
 <td>3</td>
-<td>checks in the library job two's shift started with</td>
-<td>the checks of the mounted library, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+<td>sessions before the launch audit's false alarm</td>
+<td>the sessions the failed attempt's record holds from <code>probes:demo/2026-10-21/job-one/run-2/job_run.json</code> (<code>50f9378b73b8</code>)</td>
 </tr>
 <tr>
-<td>j2_distinct_starts</td>
-<td>10</td>
-<td>distinct development starts job two's programs ran on</td>
-<td>distinct development starts among job two's episodes from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
+<td>s1_programs_table</td>
+<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-chain | 0 to 9 | 0 of 10 | | j0002 | cheese-bowl-home-handoff | 0 to 9 | 4 of 10 | | j0003 | cheese-bowl-open-handoff | 0 to 9 | 4 of 10 | | j0004 | cheese-bowl-finish-placement | 0 to 9 | 9 of 10 | | j0005 | cheese-bowl-home-finish | 0 to 9 | 1 of 10 | | j0006 | cheese-bowl-finish-placement | 10 to 29 | 11 of 20 (55%; 95% interval 34% to 74%) | | j0007 | cheese-bowl-finish-placement-home | 10 to 29 | 4 of 20 (20%; 95% interval 8% to 42%) | | j0008 | cheese-bowl-finish-placement-home | 0 to 9 | 1 of 10 |</td>
+<td>every program run of the first shift with its deliveries</td>
+<td>every program run of the first shift from its episode records from <code>probes:demo/2026-10-21/job-one/run-3/job_run.json</code> (<code>64b4c2a7dab8</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-01/run/episodes.jsonl</code> (<code>8f3306af5d18</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-02/run/episodes.jsonl</code> (<code>117bcb7ffc58</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-03/run/episodes.jsonl</code> (<code>7fc0607c6470</code>), <code>probes:demo/2026-10-21/job-one/run-3/runs/session-04/run/episodes.jsonl</code> (<code>60c0f7694530</code>)</td>
 </tr>
 <tr>
-<td>j2_programs</td>
-<td>12</td>
-<td>distinct programs job two's shift ran</td>
-<td>distinct program digests in job two's batches from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+<td>s2_programs_table</td>
+<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-naive-chain | 0 to 9 | 0 of 10 | | j0002 | cheese-bowl-home-handoff | 0 to 9 | 4 of 10 | | j0003 | cheese-bowl-open-handoff | 0 to 9 | 3 of 10 | | j0004 | cheese-bowl-rise-handoff | 0 to 9 | 6 of 10 | | j0005 | cheese-bowl-complete-handoff | 0 to 9 | 9 of 10 | | j0006 | cheese-bowl-complete-handoff | 10 to 29 | 11 of 20 (55%; 95% interval 34% to 74%) | | j0007 | cheese-bowl-long-completion | 0 to 9 | 5 of 10 | | j0008 | cheese-bowl-long-completion | 10 to 29 | 17 of 20 (85%; 95% interval 64% to 95%) | | j0009 | cheese-bowl-lateral-clearance | 0 to 9 | 6 of 10 | | j0010 | cheese-bowl-lateral-clearance | 10 to 29 | 14 of 20 (70%; 95% interval 48% to 85%) |</td>
+<td>every program run of the second shift with its deliveries</td>
+<td>every program run of the second shift from its episode records from <code>probes:demo/2026-10-21/job-one/run-5/job_run.json</code> (<code>2ba8fe6dca14</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-01/run/episodes.jsonl</code> (<code>acb797b24ce2</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-02/run/episodes.jsonl</code> (<code>f15ebb027f63</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-03/run/episodes.jsonl</code> (<code>843242f0e994</code>), <code>probes:demo/2026-10-21/job-one/run-5/runs/session-04/run/episodes.jsonl</code> (<code>6a5d7e18a6cb</code>)</td>
 </tr>
 <tr>
-<td>j2_executions</td>
-<td>120</td>
-<td>program executions of job two's shift on development starts</td>
-<td>costs.starts_charged of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+<td>s3_programs_table</td>
+<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-direct | 0 to 9 | 0 of 10 | | j0002 | cheese-bowl-complete60 | 0 to 9 | 5 of 10 | | j0003 | cheese-bowl-open60 | 0 to 9 | 3 of 10 | | j0004 | cheese-bowl-complete30 | 0 to 9 | 9 of 10 | | j0005 | cheese-bowl-open60-home | 0 to 9 | 5 of 10 | | j0006 | cheese-bowl-complete60-home | 0 to 9 | 4 of 10 |</td>
+<td>every program run of the third shift with its deliveries</td>
+<td>every program run of the third shift from its episode records from <code>probes:demo/2026-10-21/job-one/run-6/job_run.json</code> (<code>7ceb6ea21132</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-01/run/episodes.jsonl</code> (<code>2635deca19b2</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-02/run/episodes.jsonl</code> (<code>1dbd7646891b</code>), <code>probes:demo/2026-10-21/job-one/run-6/runs/session-03/run/episodes.jsonl</code> (<code>9c1dd2441eda</code>)</td>
 </tr>
 <tr>
-<td>j2_base_k</td>
-<td>4</td>
-<td>starts job two's first program delivered on</td>
-<td>job two's first program run, delivered over episodes from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
+<td>j2s1_programs_table</td>
+<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-direct | 0 to 9 | 4 of 10 | | j0002 | cheese-bowl-complete40 | 0 to 9 | 3 of 10 | | j0003 | cheese-bowl-open40 | 0 to 9 | 2 of 10 | | j0004 | cheese-bowl-home-handoff | 0 to 9 | 2 of 10 | | j0005 | cheese-bowl-complete12 | 0 to 9 | 4 of 10 | | j0006 | cheese-bowl-open40-rise | 0 to 9 | 3 of 10 | | j0007 | cheese-bowl-loaded-wording | 0 to 9 | 4 of 10 | | j0008 | cheese-bowl-transfer-retries | 0 to 9 | 5 of 10 | | j0009 | cheese-bowl-complete12-retries | 0 to 9 | 5 of 10 | | j0010 | cheese-bowl-loaded-wording-retries | 0 to 9 | 6 of 10 | | j0011 | cheese-bowl-retry-clearance-reset | 0 to 9 | 5 of 10 | | j0012 | cheese-bowl-retry-loaded-fallback | 0 to 9 | 4 of 10 |</td>
+<td>every program run of job two's first shift with its deliveries</td>
+<td>every program run of job two's first shift from its episode records from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
 </tr>
 <tr>
-<td>j2_base_n</td>
-<td>10</td>
-<td>starts it ran on</td>
-<td>job two's first program run, delivered over episodes from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
-</tr>
-<tr>
-<td>j2_best_k</td>
-<td>6</td>
-<td>starts job two's best program run delivered on</td>
-<td>the program run of job two with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
-</tr>
-<tr>
-<td>j2_best_n</td>
-<td>10</td>
-<td>starts it ran on</td>
-<td>the program run of job two with the most deliveries from <code>probes:demo/2026-10-21/job-two/run-1/runs/session-01/run/episodes.jsonl</code> (<code>aadf66f7f4cc</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-02/run/episodes.jsonl</code> (<code>7ecf4e53ade5</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-03/run/episodes.jsonl</code> (<code>2e2f597c924d</code>), <code>probes:demo/2026-10-21/job-two/run-1/runs/session-04/run/episodes.jsonl</code> (<code>7c50cc670477</code>)</td>
-</tr>
-<tr>
-<td>j2_decision</td>
-<td>No program met your development save trigger.</td>
-<td>job two's decision, in its words</td>
-<td>job two's account, verbatim from <code>probes:demo/2026-10-21/job-two/run-1/analyses/w90-20261020T023720-1bc834/outbox/job_account.json</code> (<code>3774f1b44cb2</code>)</td>
-</tr>
-<tr>
-<td>j2_sessions</td>
-<td>5</td>
-<td>agent sessions of job two's shift</td>
-<td>costs.sessions of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
-</tr>
-<tr>
-<td>j2_tool_calls</td>
-<td>323</td>
-<td>tool calls of job two's shift</td>
-<td>costs.tool_calls of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
-</tr>
-<tr>
-<td>j2_model_minutes</td>
-<td>47.9</td>
-<td>minutes of model time in job two's shift</td>
-<td>costs.model_seconds of <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
-</tr>
-<tr>
-<td>j2_new_checks</td>
-<td>1</td>
-<td>checks job two's shift saved</td>
-<td>the checks job two's shift saved, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
-</tr>
-<tr>
-<td>j2_learned</td>
-<td>2</td>
-<td>learned skills job two's shift kept</td>
-<td>the learned skills job two's shift kept, counted from <code>probes:demo/2026-10-21/job-two/run-1/job_run.json</code> (<code>c3431535d60a</code>)</td>
+<td>j2s2_programs_table</td>
+<td>| Program run | Program | Development starts | Delivered | |---|---|---|---| | j0001 | cheese-bowl-plate-direct | 0 to 9 | 4 of 10 | | j0002 | cheese-bowl-plate-complete30 | 0 to 9 | 3 of 10 | | j0003 | cheese-bowl-plate-home | 0 to 9 | 2 of 10 | | j0004 | cheese-bowl-plate-open20 | 0 to 9 | 2 of 10 | | j0005 | cheese-bowl-plate-open20-up5cm | 0 to 9 | 3 of 10 | | j0006 | cheese-bowl-plate-rim-instruction | 0 to 9 | 1 of 10 | | j0007 | cheese-bowl-plate-rim-extended200-300 | 0 to 9 | 2 of 10 | | j0008 | cheese-bowl-plate-rim200-canonical300 | 0 to 9 | 3 of 10 | | j0009 | cheese-bowl-plate-clearance-center | 0 to 9 | 4 of 10 |</td>
+<td>every program run of job two's shift with its deliveries</td>
+<td>every program run of job two's shift from its episode records from <code>probes:demo/2026-10-21/job-two/run-2/job_run.json</code> (<code>dbcaf5d298bf</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-01/run/episodes.jsonl</code> (<code>4276c05ff0b4</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-02/run/episodes.jsonl</code> (<code>92cc6c6e1a59</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-03/run/episodes.jsonl</code> (<code>46d0a2e719d9</code>), <code>probes:demo/2026-10-21/job-two/run-2/runs/session-04/run/episodes.jsonl</code> (<code>f4359fce2ba6</code>)</td>
 </tr>
 </tbody>
 </table>
