@@ -1,0 +1,2394 @@
+{
+ "format": "fleetlab.film-story-values/2",
+ "note": "Every number on the story page: in 'values', each number of the text with the value it was filled with and where it came from ('numbers' are the film's bound numbers, bound from the run records; the others are derived from the film data's recorded tables); in 'charts', every chart's numbers with the records they were read from; in 'fleet_record', the tables of the fleet record page.",
+ "text_sha256": "7352306ca16e1d2f56e744019d3dbaefe759951a8c44be2a3deea1eb50d1ac76",
+ "data_sha256": "4fe16eaea3fec9f6ae34e4fa9460bbd912dca7af733cbe44ac0a0b1f2336c48f",
+ "values": {
+  "b_comp_settings": {
+   "value": "3",
+   "source": "fleet.experiments: compensation settings tested"
+  },
+  "b_eval_broken": {
+   "value": "6",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_final_high": {
+   "value": "98%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_final_k": {
+   "value": "558",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_final_low": {
+   "value": "95%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_final_n": {
+   "value": "576",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_final_pct": {
+   "value": "97%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_original_high": {
+   "value": "81%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_original_k": {
+   "value": "451",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_original_low": {
+   "value": "75%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_original_n": {
+   "value": "576",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_original_pct": {
+   "value": "78%",
+   "source": "numbers (the bound script)"
+  },
+  "b_eval_rescued": {
+   "value": "113",
+   "source": "numbers (the bound script)"
+  },
+  "b_healthy_k": {
+   "value": "213",
+   "source": "fleet.regular_work: robots r05 r07 r08, successes"
+  },
+  "b_healthy_n": {
+   "value": "216",
+   "source": "fleet.regular_work: robots r05 r07 r08, attempts"
+  },
+  "b_healthy_robots": {
+   "value": "r05, r07 and r08",
+   "source": "front matter: healthy"
+  },
+  "b_link_site": {
+   "value": "site 1",
+   "source": "fleet.b_linked_site"
+  },
+  "b_overload_robot": {
+   "value": "r06",
+   "source": "fleet.experiments: the controller service"
+  },
+  "b_overload_site": {
+   "value": "site 2",
+   "source": "fleet.experiments: the controller service"
+  },
+  "b_probe_r01_out_s": {
+   "value": "0.9",
+   "source": "fleet.probe: r01, recorded steps, first 1 mm of movement, seconds"
+  },
+  "b_probe_r06_back_s": {
+   "value": "1.85",
+   "source": "fleet.probe: r06, recorded steps, first 1 mm of movement, seconds"
+  },
+  "b_probe_r06_out_s": {
+   "value": "0.2",
+   "source": "fleet.probe: r06, recorded steps, first 1 mm of movement, seconds"
+  },
+  "b_robots": {
+   "value": "12",
+   "source": "numbers (the bound script)"
+  },
+  "b_round1_count": {
+   "value": "3",
+   "source": "numbers (the bound script)"
+  },
+  "b_sites": {
+   "value": "3",
+   "source": "numbers (the bound script)"
+  },
+  "b_step_ms": {
+   "value": "50",
+   "source": "fleet.probe.step_s"
+  },
+  "b_update_site": {
+   "value": "site 3",
+   "source": "fleet.experiments: the software rollback"
+  },
+  "ci_level": {
+   "value": "95%",
+   "source": "fleetlab.film.record.Z95: the level of every Wilson interval on the page"
+  },
+  "r1_agent_model": {
+   "value": "gpt-6-astra",
+   "source": "numbers (the bound script)"
+  },
+  "r1_broken": {
+   "value": "0",
+   "source": "numbers (the bound script)"
+  },
+  "r1_confirm_k": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r1_confirm_n": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r1_delivered": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r1_finish_home_k": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r1_finish_home_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r1_home_only_k": {
+   "value": "6",
+   "source": "numbers (the bound script)"
+  },
+  "r1_home_only_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r1_naive_delivered": {
+   "value": "1",
+   "source": "numbers (the bound script)"
+  },
+  "r1_naive_high_pct": {
+   "value": "24%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_naive_low_pct": {
+   "value": "1%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_naive_pct": {
+   "value": "5%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_open_only_k": {
+   "value": "0",
+   "source": "numbers (the bound script)"
+  },
+  "r1_open_only_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r1_plain_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r1_release_high_pct": {
+   "value": "100%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_release_k": {
+   "value": "18",
+   "source": "numbers (the bound script)"
+  },
+  "r1_release_low_pct": {
+   "value": "84%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_release_n": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r1_release_pct": {
+   "value": "100%",
+   "source": "numbers (the bound script)"
+  },
+  "r1_rescued": {
+   "value": "19",
+   "source": "numbers (the bound script)"
+  },
+  "r1_wall_minutes": {
+   "value": "41",
+   "source": "numbers (the bound script)"
+  },
+  "r2_broken": {
+   "value": "0",
+   "source": "numbers (the bound script)"
+  },
+  "r2_confirm_k": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r2_confirm_n": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r2_delivered": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r2_loaded_k": {
+   "value": "4",
+   "source": "numbers (the bound script)"
+  },
+  "r2_loaded_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r2_naive_delivered": {
+   "value": "5",
+   "source": "numbers (the bound script)"
+  },
+  "r2_naive_high_pct": {
+   "value": "47%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_naive_low_pct": {
+   "value": "11%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_naive_pct": {
+   "value": "25%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_programs": {
+   "value": "18",
+   "source": "numbers (the bound script)"
+  },
+  "r2_release_high_pct": {
+   "value": "100%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_release_k": {
+   "value": "18",
+   "source": "numbers (the bound script)"
+  },
+  "r2_release_low_pct": {
+   "value": "84%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_release_n": {
+   "value": "20",
+   "source": "numbers (the bound script)"
+  },
+  "r2_release_pct": {
+   "value": "100%",
+   "source": "numbers (the bound script)"
+  },
+  "r2_relocate_k": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r2_relocate_n": {
+   "value": "10",
+   "source": "numbers (the bound script)"
+  },
+  "r2_rescued": {
+   "value": "15",
+   "source": "numbers (the bound script)"
+  },
+  "r2_wall_minutes": {
+   "value": "113",
+   "source": "numbers (the bound script)"
+  }
+ },
+ "charts": [
+  {
+   "figure": "fig-1-notebook",
+   "kind": "notebook",
+   "title": "The agent's lab notebook, job one",
+   "values": [
+    {
+     "program": "straight to the drawer (the plain chain)",
+     "role": "plain",
+     "k": 5,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true
+     ]
+    },
+    {
+     "program": "placement runs on, then the drawer",
+     "role": "other",
+     "k": 0,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "open the gripper first",
+     "role": "other",
+     "k": 0,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "go home first",
+     "role": "other",
+     "k": 6,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true
+     ]
+    },
+    {
+     "program": "open, then go home",
+     "role": "other",
+     "k": 5,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "let the placement finish, then go home",
+     "role": "winner",
+     "k": 10,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "drawer first, then the bowl",
+     "role": "other",
+     "k": 0,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "the same program, layouts never used",
+     "role": "confirm",
+     "k": 20,
+     "n": 20,
+     "layouts": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run/episodes.jsonl",
+     "sha256": "2788bfe9a76eec3061d8df929d2fbb5d251939980432916cbcddd2ab6395f3b1"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-02/run/episodes.jsonl",
+     "sha256": "de9e2b858bd29cacb932d2aa96ff7688c4ee488b420c655027211d1a46c752d1"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/episodes.jsonl",
+     "sha256": "9dbadc98a11ef8c9a3a61161d8a00bbeff3641ee9e0cbbd280fc0ccdd71a268d"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-04/run/episodes.jsonl",
+     "sha256": "ead0b6e044c104a7ba8de2cfc29bf7c5138b82655efc4237bab243c9ca4d6ac7"
+    }
+   ]
+  },
+  {
+   "figure": "fig-2-notebook",
+   "kind": "notebook",
+   "title": "The agent's lab notebook, job two",
+   "values": [
+    {
+     "program": "plate, then bowl (the plain chain)",
+     "role": "plain",
+     "k": 7,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "bowl, then plate",
+     "role": "other",
+     "k": 0,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "plate, then bowl, re-plan every 10 actions",
+     "role": "other",
+     "k": 0,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "plate, home, bowl",
+     "role": "other",
+     "k": 8,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "bowl, home, plate",
+     "role": "other",
+     "k": 2,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "bowl, let the placement finish, home, plate",
+     "role": "other",
+     "k": 4,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "plate twice, home, bowl",
+     "role": "other",
+     "k": 8,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "plate, home, plate again, home, bowl",
+     "role": "other",
+     "k": 8,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "plate, home, bowl, re-plan every 20",
+     "role": "other",
+     "k": 7,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "bowl, let the placement finish, home, plate, home",
+     "role": "other",
+     "k": 7,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "plate push stopped early, home, plate again, bowl",
+     "role": "other",
+     "k": 1,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+     ]
+    },
+    {
+     "program": "plate push stopped early, hand slid sideways, plate again, bowl",
+     "role": "other",
+     "k": 6,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "cheese loaded into the bowl",
+     "role": "loaded",
+     "k": 4,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+     ]
+    },
+    {
+     "program": "cheese loaded, bowl first",
+     "role": "other",
+     "k": 4,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "program": "cheese grabbed and set aside",
+     "role": "winner",
+     "k": 10,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "cheese lifted, then set aside",
+     "role": "other",
+     "k": 9,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "cheese loaded, the instruction names the loaded bowl",
+     "role": "other",
+     "k": 6,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true
+     ]
+    },
+    {
+     "program": "cheese loaded, the instruction asks for a grasp at the rim",
+     "role": "other",
+     "k": 6,
+     "n": 10,
+     "layouts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "completed": [
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "program": "the same program, layouts never used",
+     "role": "confirm",
+     "k": 20,
+     "n": 20,
+     "layouts": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/episodes.jsonl",
+     "sha256": "66161baf522d1b15bf9d296581d01a81d4abf9e1cae0c1ec56234bc758cb1399"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-02/run/episodes.jsonl",
+     "sha256": "20c53fb8b90e8c10f4ef42bb879c74de91f4c489a3f11b456b839226805efdf6"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-03/run/episodes.jsonl",
+     "sha256": "f737e127877a4c3e67df088fe2858170a2e236e998d5ee910a3053162ded50d2"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/episodes.jsonl",
+     "sha256": "ca154aaab10931fe90f6c7bbb2db1074aa8cd71cba380909d6ad70da5ccded5e"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/episodes.jsonl",
+     "sha256": "c94f8b905d073e850378f225690b9bc0dfdd98fa445a234efe9bf4e1fe63b240"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-06/run/episodes.jsonl",
+     "sha256": "879c6308a35493ebf41eb65d2a10f060719da0171eb31beb67e44f2cfe056530"
+    }
+   ]
+  },
+  {
+   "figure": "fig-3-exam",
+   "kind": "exam",
+   "title": "Plain chain against the agent's job, layout by layout",
+   "values": [
+    {
+     "job": "Job one: bowl on the cabinet, drawer open",
+     "row": "Plain chain",
+     "k": 1,
+     "n": 20,
+     "layouts": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+     ],
+     "completed": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "job": "Job one: bowl on the cabinet, drawer open",
+     "row": "Agent's job",
+     "k": 20,
+     "n": 20,
+     "layouts": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    },
+    {
+     "job": "Job two: plate at the stove, bowl on the cabinet",
+     "row": "Plain chain",
+     "k": 5,
+     "n": 20,
+     "layouts": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+     ],
+     "completed": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+     ]
+    },
+    {
+     "job": "Job two: plate at the stove, bowl on the cabinet",
+     "row": "Agent's job",
+     "k": 20,
+     "n": 20,
+     "layouts": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+     ],
+     "completed": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000201"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000202"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000203"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000204"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000205"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000206"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000207"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000208"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000209"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000210"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000211"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000212"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000213"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000214"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000215"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000216"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000217"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000218"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000219"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000220"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000101"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000102"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000103"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000104"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000105"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000106"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000107"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000108"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000109"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000110"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000111"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000112"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000113"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000114"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000115"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000116"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000117"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000118"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000119"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000120"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000201"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000202"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000203"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000204"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000205"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000206"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000207"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000208"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000209"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000210"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000211"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000212"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000213"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000214"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000215"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000216"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000217"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000218"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000219"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000220"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000101"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000102"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000103"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000104"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000105"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000106"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000107"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000108"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000109"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000110"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000111"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000112"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000113"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000114"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000115"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000116"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000117"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000118"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000119"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000120"
+    }
+   ]
+  },
+  {
+   "figure": "fig-4-fleet",
+   "kind": "fleet",
+   "title": "The regular work, robot by robot",
+   "values": [
+    {
+     "site": "site 1",
+     "robot": "r01",
+     "k": 43,
+     "n": 72
+    },
+    {
+     "site": "site 1",
+     "robot": "r02",
+     "k": 43,
+     "n": 72
+    },
+    {
+     "site": "site 1",
+     "robot": "r03",
+     "k": 42,
+     "n": 72
+    },
+    {
+     "site": "site 1",
+     "robot": "r04",
+     "k": 46,
+     "n": 72
+    },
+    {
+     "site": "site 2",
+     "robot": "r05",
+     "k": 71,
+     "n": 72
+    },
+    {
+     "site": "site 2",
+     "robot": "r06",
+     "k": 48,
+     "n": 72
+    },
+    {
+     "site": "site 2",
+     "robot": "r07",
+     "k": 70,
+     "n": 72
+    },
+    {
+     "site": "site 2",
+     "robot": "r08",
+     "k": 72,
+     "n": 72
+    },
+    {
+     "site": "site 3",
+     "robot": "r09",
+     "k": 63,
+     "n": 72
+    },
+    {
+     "site": "site 3",
+     "robot": "r10",
+     "k": 63,
+     "n": 72
+    },
+    {
+     "site": "site 3",
+     "robot": "r11",
+     "k": 62,
+     "n": 72
+    },
+    {
+     "site": "site 3",
+     "robot": "r12",
+     "k": 63,
+     "n": 72
+    },
+    {
+     "reference": "healthy robots r05, r07 and r08",
+     "k": 213,
+     "n": 216
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r1/exports/start-01/log/episodes.parquet",
+     "sha256": "66707a337abdca6771c5da33ade90bef8dcef8a20b61fb81d1d38704afa093cf"
+    }
+   ]
+  },
+  {
+   "figure": "fig-5-probe",
+   "kind": "probe",
+   "title": "The agent's test motion, as recorded",
+   "values": [
+    {
+     "robot": "site 1 · r01",
+     "shows": "the same wait out and back: a delay on the line",
+     "wait_steps": [
+      18,
+      18
+     ],
+     "wait_s": [
+      0.9,
+      0.9
+     ]
+    },
+    {
+     "robot": "site 2 · r06",
+     "shows": "on time out, far behind back: a backlog",
+     "wait_steps": [
+      4,
+      37
+     ],
+     "wait_s": [
+      0.2,
+      1.85
+     ]
+    },
+    {
+     "robot": "site 2 · r08",
+     "shows": "a healthy robot, for comparison",
+     "wait_steps": [
+      1,
+      1
+     ],
+     "wait_s": [
+      0.05,
+      0.05
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_episodes.parquet",
+     "sha256": "bf04fba5dbfcf2c7dea88a7e90b1aad39e5e579bf5d996ea05210a7bd4e75130"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_episodes.parquet",
+     "sha256": "bf04fba5dbfcf2c7dea88a7e90b1aad39e5e579bf5d996ea05210a7bd4e75130"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001729.parquet",
+     "sha256": "29bc2bb47fb0c49e480eed959a4a24ace546eec37f037be6c233baf0ce874fb2"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001730.parquet",
+     "sha256": "5e9808e9b2ea4dc2a4cd4c3d86ec54dc91a49899098227af22b56140c86e99cc"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001731.parquet",
+     "sha256": "772f81d272cb63b874902567a1cdbecae48d6edbeb8cf7a8bc01e9c1aeb872d2"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001732.parquet",
+     "sha256": "4c754d7b0e0b2d664fe1bad905939d1a328f1e8fa19b03cb841b1ed0cdcb13bb"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001733.parquet",
+     "sha256": "ecde7a11d8440f1c11d935154a4c8924c27ff8c4bc8fa67c36732ef02df2045c"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001734.parquet",
+     "sha256": "88854cc944f21dcc713fbf14ce42dfcb6abd282d9911c51e48f1bae8ef96b907"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001735.parquet",
+     "sha256": "e1a19b56baaafe42f4a35b38374482282f99e9b80f3a819eec9624467e06ef04"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001736.parquet",
+     "sha256": "fea3ec69c87c369905089b998130f8033ba525ab6c85483cc2da56e691f2c275"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001737.parquet",
+     "sha256": "0118dddf8864d0e20353d20d07dbac46f12b5e2443753041a093adff819e3d2d"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001738.parquet",
+     "sha256": "aa1d88c30eb5181b223a9afb8381dad52d70ae3361259cb044cf64d2588d508a"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001739.parquet",
+     "sha256": "6fbb06923a3554df63b3cad23d7b0e04ccf7db88d2a3ef62e7f15137568ac00b"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/probe_steps/e001740.parquet",
+     "sha256": "c97889def1fe35e956df6c22d01c9e204a94008e20c9e6fd2d36fdcf742e78c7"
+    }
+   ]
+  },
+  {
+   "figure": "fig-6-repairs",
+   "kind": "repairs",
+   "title": "The tested repairs",
+   "values": [
+    {
+     "site": "site 1",
+     "change": "latency compensation, 8 control steps",
+     "without": [
+      29,
+      44
+     ],
+     "with": [
+      40,
+      44
+     ],
+     "rescued": 12,
+     "broken": 1,
+     "decision": "not adopted"
+    },
+    {
+     "site": "site 1",
+     "change": "latency compensation, 17 control steps",
+     "without": [
+      29,
+      44
+     ],
+     "with": [
+      43,
+      44
+     ],
+     "rescued": 14,
+     "broken": 0,
+     "decision": "adopted"
+    },
+    {
+     "site": "site 1",
+     "change": "latency compensation, 26 control steps",
+     "without": [
+      29,
+      44
+     ],
+     "with": [
+      38,
+      44
+     ],
+     "rescued": 13,
+     "broken": 4,
+     "decision": "not adopted"
+    },
+    {
+     "site": "site 2",
+     "change": "simulated controller service for r06",
+     "without": [
+      13,
+      24
+     ],
+     "with": [
+      24,
+      24
+     ],
+     "rescued": 11,
+     "broken": 0,
+     "decision": "adopted"
+    },
+    {
+     "site": "site 3",
+     "change": "roll back the software update",
+     "without": [
+      49,
+      66
+     ],
+     "with": [
+      66,
+      66
+     ],
+     "rescued": 17,
+     "broken": 0,
+     "decision": "adopted"
+    },
+    {
+     "site": "site 3",
+     "change": "roll back the camera calibration change",
+     "without": [
+      49,
+      66
+     ],
+     "with": [
+      52,
+      66
+     ],
+     "rescued": 6,
+     "broken": 3,
+     "decision": "not adopted"
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/loop/rounds/r2/exports/start-02/log/episodes.parquet",
+     "sha256": "b565a97c07261c8f64c403f235c9d0fd58058fc5ce269ad41ad910565956d5e2"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/w08-20261019T224617-a1f33d/outbox/experiments.jsonl",
+     "sha256": "2b2225e2233ef7a042607c2732ce0c9e39a60e44b86e43ebdc15e3ad4bc39402"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/w08-20261019T224617-a1f33d/results/experiments.jsonl",
+     "sha256": "0710c8cec044c91b8acbae8d509b6d65d6f21bb2852744450085db8d83838ab3"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json",
+     "sha256": "bd82a0c6aced0ff2648da7031461563189b9623ed65542dedb59fe62b6f90d25"
+    }
+   ]
+  },
+  {
+   "figure": "fig-7-fleet-result",
+   "kind": "fleet-result",
+   "title": "576 attempts the agent never saw",
+   "values": [
+    {
+     "attempts": 576,
+     "before": 451,
+     "after": 558,
+     "both": 445,
+     "rescued": 113,
+     "broken": 6,
+     "neither": 12
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json",
+     "sha256": "bd82a0c6aced0ff2648da7031461563189b9623ed65542dedb59fe62b6f90d25"
+    }
+   ]
+  }
+ ],
+ "fleet_record": {
+  "regular_work": [
+   {
+    "site": "site 1",
+    "robot": "r01",
+    "k": 43,
+    "n": 72,
+    "pct": "60%",
+    "low_pct": "48%",
+    "high_pct": "70%"
+   },
+   {
+    "site": "site 1",
+    "robot": "r02",
+    "k": 43,
+    "n": 72,
+    "pct": "60%",
+    "low_pct": "48%",
+    "high_pct": "70%"
+   },
+   {
+    "site": "site 1",
+    "robot": "r03",
+    "k": 42,
+    "n": 72,
+    "pct": "58%",
+    "low_pct": "47%",
+    "high_pct": "69%"
+   },
+   {
+    "site": "site 1",
+    "robot": "r04",
+    "k": 46,
+    "n": 72,
+    "pct": "64%",
+    "low_pct": "52%",
+    "high_pct": "74%"
+   },
+   {
+    "site": "site 1",
+    "robot": "all",
+    "k": 174,
+    "n": 288,
+    "pct": "60%",
+    "low_pct": "55%",
+    "high_pct": "66%"
+   },
+   {
+    "site": "site 2",
+    "robot": "r05",
+    "k": 71,
+    "n": 72,
+    "pct": "99%",
+    "low_pct": "93%",
+    "high_pct": "100%"
+   },
+   {
+    "site": "site 2",
+    "robot": "r06",
+    "k": 48,
+    "n": 72,
+    "pct": "67%",
+    "low_pct": "55%",
+    "high_pct": "76%"
+   },
+   {
+    "site": "site 2",
+    "robot": "r07",
+    "k": 70,
+    "n": 72,
+    "pct": "97%",
+    "low_pct": "90%",
+    "high_pct": "99%"
+   },
+   {
+    "site": "site 2",
+    "robot": "r08",
+    "k": 72,
+    "n": 72,
+    "pct": "100%",
+    "low_pct": "95%",
+    "high_pct": "100%"
+   },
+   {
+    "site": "site 2",
+    "robot": "all",
+    "k": 261,
+    "n": 288,
+    "pct": "91%",
+    "low_pct": "87%",
+    "high_pct": "93%"
+   },
+   {
+    "site": "site 3",
+    "robot": "r09",
+    "k": 63,
+    "n": 72,
+    "pct": "88%",
+    "low_pct": "78%",
+    "high_pct": "93%"
+   },
+   {
+    "site": "site 3",
+    "robot": "r10",
+    "k": 63,
+    "n": 72,
+    "pct": "88%",
+    "low_pct": "78%",
+    "high_pct": "93%"
+   },
+   {
+    "site": "site 3",
+    "robot": "r11",
+    "k": 62,
+    "n": 72,
+    "pct": "86%",
+    "low_pct": "76%",
+    "high_pct": "92%"
+   },
+   {
+    "site": "site 3",
+    "robot": "r12",
+    "k": 63,
+    "n": 72,
+    "pct": "88%",
+    "low_pct": "78%",
+    "high_pct": "93%"
+   },
+   {
+    "site": "site 3",
+    "robot": "all",
+    "k": 251,
+    "n": 288,
+    "pct": "87%",
+    "low_pct": "83%",
+    "high_pct": "91%"
+   },
+   {
+    "site": "healthy reference",
+    "robot": "r05, r07, r08",
+    "k": 213,
+    "n": 216,
+    "pct": "99%",
+    "low_pct": "96%",
+    "high_pct": "100%"
+   }
+  ],
+  "probe": [
+   {
+    "robot": "r01",
+    "site": "site 1",
+    "repeats": 3,
+    "first_move_steps": "18 and 18",
+    "half_way_steps": "21 and 21"
+   },
+   {
+    "robot": "r06",
+    "site": "site 2",
+    "repeats": 3,
+    "first_move_steps": "4, 12 and 5 then 37, 45 and 39",
+    "half_way_steps": "7, 15 and 8 then 40, 48 and 42"
+   },
+   {
+    "robot": "r08",
+    "site": "site 2",
+    "repeats": 3,
+    "first_move_steps": "1 and 1",
+    "half_way_steps": "4 and 4"
+   },
+   {
+    "robot": "r10",
+    "site": "site 3",
+    "repeats": 3,
+    "first_move_steps": "1 and 1",
+    "half_way_steps": "4 and 4"
+   }
+  ],
+  "repairs": [
+   {
+    "experiment": "x0001",
+    "site": "site 3",
+    "change": "roll back the software update",
+    "without": {
+     "k": 49,
+     "n": 66,
+     "pct": "74%",
+     "low_pct": "63%",
+     "high_pct": "83%"
+    },
+    "with": {
+     "k": 66,
+     "n": 66,
+     "pct": "100%",
+     "low_pct": "94%",
+     "high_pct": "100%"
+    },
+    "rescued": 17,
+    "broken": 0,
+    "decision": "adopted"
+   },
+   {
+    "experiment": "x0001",
+    "site": "site 3",
+    "change": "roll back the camera calibration change",
+    "without": {
+     "k": 49,
+     "n": 66,
+     "pct": "74%",
+     "low_pct": "63%",
+     "high_pct": "83%"
+    },
+    "with": {
+     "k": 52,
+     "n": 66,
+     "pct": "79%",
+     "low_pct": "67%",
+     "high_pct": "87%"
+    },
+    "rescued": 6,
+    "broken": 3,
+    "decision": "not adopted"
+   },
+   {
+    "experiment": "x0002",
+    "site": "site 1",
+    "change": "latency compensation, 8 control steps",
+    "without": {
+     "k": 29,
+     "n": 44,
+     "pct": "66%",
+     "low_pct": "51%",
+     "high_pct": "78%"
+    },
+    "with": {
+     "k": 40,
+     "n": 44,
+     "pct": "91%",
+     "low_pct": "79%",
+     "high_pct": "96%"
+    },
+    "rescued": 12,
+    "broken": 1,
+    "decision": "not adopted"
+   },
+   {
+    "experiment": "x0002",
+    "site": "site 1",
+    "change": "latency compensation, 17 control steps",
+    "without": {
+     "k": 29,
+     "n": 44,
+     "pct": "66%",
+     "low_pct": "51%",
+     "high_pct": "78%"
+    },
+    "with": {
+     "k": 43,
+     "n": 44,
+     "pct": "98%",
+     "low_pct": "88%",
+     "high_pct": "100%"
+    },
+    "rescued": 14,
+    "broken": 0,
+    "decision": "adopted"
+   },
+   {
+    "experiment": "x0002",
+    "site": "site 1",
+    "change": "latency compensation, 26 control steps",
+    "without": {
+     "k": 29,
+     "n": 44,
+     "pct": "66%",
+     "low_pct": "51%",
+     "high_pct": "78%"
+    },
+    "with": {
+     "k": 38,
+     "n": 44,
+     "pct": "86%",
+     "low_pct": "73%",
+     "high_pct": "94%"
+    },
+    "rescued": 13,
+    "broken": 4,
+    "decision": "not adopted"
+   },
+   {
+    "experiment": "x0003",
+    "site": "site 2",
+    "change": "simulated controller service for r06",
+    "without": {
+     "k": 13,
+     "n": 24,
+     "pct": "54%",
+     "low_pct": "35%",
+     "high_pct": "72%"
+    },
+    "with": {
+     "k": 24,
+     "n": 24,
+     "pct": "100%",
+     "low_pct": "86%",
+     "high_pct": "100%"
+    },
+    "rescued": 11,
+    "broken": 0,
+    "decision": "adopted"
+   }
+  ],
+  "evaluation": [
+   {
+    "state": "As the fleet was",
+    "k": 451,
+    "n": 576,
+    "pct": "78%",
+    "low_pct": "75%",
+    "high_pct": "81%"
+   },
+   {
+    "state": "With the agent's 3 changes",
+    "k": 558,
+    "n": 576,
+    "pct": "97%",
+    "low_pct": "95%",
+    "high_pct": "98%"
+   },
+   {
+    "state": "paired",
+    "rescued": 113,
+    "broken": 6
+   }
+  ]
+ }
+}

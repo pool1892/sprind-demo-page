@@ -1,206 +1,862 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:02.773
-The robot's policy never changes.
+00:00:00.450 --> 00:00:02.906
+This robot can put a bowl on a cabinet.
 
 2
-00:00:02.773 --> 00:00:06.259
-An engineering agent improves the
-installation around it.
+00:00:03.016 --> 00:00:04.404
+It can open a drawer.
 
 3
-00:00:07.550 --> 00:00:12.262
-First job: the bowl on the cabinet and the
-middle drawer open, together,
+00:00:04.525 --> 00:00:08.557
+Ask for both in one job, and it gets it
+right in just 1 of 20 fresh
 
 4
-00:00:12.262 --> 00:00:14.842
-on at least 18 of 20 fresh starts.
+00:00:08.577 --> 00:00:10.267
+tries.
 
 5
-00:00:14.842 --> 00:00:17.535
-The robot has a skill for each half.
+00:00:14.717 --> 00:00:17.301
+Robot AI models are learning skills fast.
 
 6
-00:00:18.850 --> 00:00:23.471
-Chained plainly, the hand turns to the
-drawer still touching the bowl,
+00:00:17.387 --> 00:00:20.130
+But a business needs whole
+jobs done reliably,
 
 7
-00:00:23.471 --> 00:00:25.161
-and knocks it off.
+00:00:20.150 --> 00:00:23.512
+in its own setting, and its
+jobs keep changing.
 
 8
-00:00:25.161 --> 00:00:28.092
-On the agent's practice starts: 5 of 10.
+00:00:23.645 --> 00:00:26.577
+Turning skills into reliable
+work is engineering:
 
 9
-00:00:29.400 --> 00:00:35.001
-The agent writes a check: does the bowl
-stay in place while the next skill runs?
+00:00:26.722 --> 00:00:29.198
+watch the failures, find the cause,
 
 10
-00:00:35.001 --> 00:00:37.924
-Then it changes one thing at a time.
+00:00:29.218 --> 00:00:31.117
+change the system, prove it.
 
 11
-00:00:37.924 --> 00:00:40.359
-Open, then go home: 5 of 10.
+00:00:31.227 --> 00:00:33.192
+Today, specialists do that by hand,
 
 12
-00:00:40.359 --> 00:00:44.864
-Let the placement run 30 steps longer,
-then go home: 10 of 10.
+00:00:33.212 --> 00:00:38.280
+for every change, and that makes
+automation slow and expensive.
 
 13
-00:00:46.150 --> 00:00:51.435
-Confirmed 20 of 20 on unused starts, then
-20 of 20 reserved starts,
+00:00:39.217 --> 00:00:42.448
+Mayfly is building robot installations
+whose engineering is done
 
 14
-00:00:51.435 --> 00:00:55.717
-against 1 for the plain chain: 19 rescued,
-0 broken.
+00:00:42.468 --> 00:00:43.867
+by AI agents.
 
 15
-00:01:00.750 --> 00:01:04.665
-It keeps the job, the check, and a lesson:
-an open,
+00:00:44.209 --> 00:00:46.209
+Before building that on real robots,
 
 16
-00:01:04.665 --> 00:01:09.388
-still hand at one instant has not cleared
-the path that follows.
+00:00:46.229 --> 00:00:48.674
+we tested the core question in simulation:
 
 17
-00:01:10.700 --> 00:01:15.277
-Second job: the plate at the front of the
-stove and the bowl on the cabinet.
+00:00:48.935 --> 00:00:52.157
+can an agent find out on its own
+what needs to change,
 
 18
-00:01:15.277 --> 00:01:17.202
-Again, at least 18 of 20.
+00:00:52.232 --> 00:00:54.316
+change it, and prove that it works?
 
 19
-00:01:19.750 --> 00:01:23.124
-Plate first, then bowl: 7 of 10 practice
-starts.
+00:00:54.693 --> 00:00:58.412
+We ran two experiments, one for each kind
+of engineering an installation
 
 20
-00:01:23.124 --> 00:01:26.948
-Here the plate push runs out of time short
-of the stove.
+00:00:58.432 --> 00:00:59.355
+keeps needing.
 
 21
-00:01:28.250 --> 00:01:32.918
-The agent extends the first job's check to
-both goals and tests changes.
+00:00:59.697 --> 00:01:03.674
+The first: a new job, made from
+skills the robot already has.
 
 22
-00:01:32.918 --> 00:01:36.085
-Going home between skills: 8 of 10
-delivered.
+00:01:04.063 --> 00:01:07.436
+Every new product or packing rule
+asks for a job like this,
 
 23
-00:01:36.085 --> 00:01:40.253
-Loading the cheese into the bowl gets
-every plate to the stove,
+00:01:07.511 --> 00:01:10.199
+and today a specialist has to
+make it reliable.
 
 24
-00:01:40.253 --> 00:01:44.365
-but the loaded bowl becomes the
-bottleneck: 4 of 10 delivered.
+00:01:10.820 --> 00:01:14.472
+The second: faults we planted in
+a fleet of robots.
 
 25
-00:01:48.050 --> 00:01:52.476
-So the agent grasps the cheese, slides it
-aside onto the table,
+00:01:14.860 --> 00:01:17.603
+When robots that worked
+yesterday start to fail,
 
 26
-00:01:52.476 --> 00:01:55.898
-and leaves the bowl empty: 10 of 10
-delivered.
+00:01:17.623 --> 00:01:20.799
+someone has to find out why,
+and repair it.
 
 27
-00:02:00.450 --> 00:02:05.165
-Confirmed 20 of 20 on unused starts, then
-20 of 20 reserved starts,
+00:01:23.217 --> 00:01:26.494
+The test bench is a physics simulator
+with a kitchen scene from
 
 28
-00:02:05.165 --> 00:02:08.985
-against 5 for the plain chain: 15 rescued,
-0 broken.
+00:01:26.514 --> 00:01:28.274
+a public robotics benchmark.
 
 29
-00:02:08.985 --> 00:02:12.028
-Here the plain chain reaches the stove,
+00:01:28.407 --> 00:01:32.659
+In simulation, every start can be
+repeated exactly and every motion
 
 30
-00:02:12.028 --> 00:02:15.729
-but its bowl attempt leaves neither goal
-standing.
+00:01:32.679 --> 00:01:36.331
+measured, and the kitchen makes the
+failures easy to follow.
 
 31
-00:02:17.050 --> 00:02:20.211
-It keeps the job, the extended check, and
-a lesson:
+00:01:36.673 --> 00:01:42.345
+The robot runs X-VLA, an open robot
+vision-language-action model:
 
 32
-00:02:20.211 --> 00:02:23.923
-preparing the scene can move the
-bottleneck to the next skill.
+00:01:42.478 --> 00:01:45.955
+it turns camera images and a written
+instruction into motion.
 
 33
-00:02:25.200 --> 00:02:28.330
-Story two: a fleet of arms at several
-sites,
+00:01:46.077 --> 00:01:48.463
+For these experiments we kept it fixed,
 
 34
-00:02:28.330 --> 00:02:32.187
-with the same lag at one site and on one
-robot elsewhere.
+00:01:48.538 --> 00:01:51.935
+so every gain comes from the
+engineering around it.
 
 35
-00:02:32.187 --> 00:02:36.155
-The agent builds its own probe, commanded
-against measured:
+00:01:52.383 --> 00:01:55.547
+The engineer is an AI agent in a sandbox.
 
 36
-00:02:36.155 --> 00:02:40.850
-one lag is a fixed network delay, the
-other a controller falling behind.
+00:01:55.773 --> 00:01:57.936
+Like a robotics engineer at a desk,
 
 37
-00:02:42.150 --> 00:02:47.115
-After paired experiments it compensates
-for the delay,
+00:01:57.956 --> 00:02:01.047
+it looks at camera frames from its trials
+and reads the measurements
 
 38
-00:02:47.115 --> 00:02:51.704
-rolls back an update and services the
-controller.
+00:02:01.067 --> 00:02:03.953
+the simulator records: where the hand is,
 
 39
-00:02:51.704 --> 00:02:57.797
-On 576 reserved attempts it never saw,
-success rises from 451 to 558:
+00:02:03.982 --> 00:02:06.995
+where each object is, what touches what.
 
 40
-00:02:57.797 --> 00:03:00.354
-113 rescued, 6 broken.
+00:02:07.174 --> 00:02:10.869
+It writes its own checks, builds
+programs from the robot's skills
 
 41
-00:03:01.650 --> 00:03:04.677
-Two jobs at 20 and 20 of 20 reserved
-starts,
+00:02:10.889 --> 00:02:12.254
+and runs experiments.
 
 42
-00:03:04.677 --> 00:03:08.245
-and a fleet improved by an instrument the
-agent built.
+00:02:12.538 --> 00:02:14.318
+It knows the rules it is graded by,
 
 43
-00:03:08.245 --> 00:03:11.867
-The policy never changed; every clip is a
-recorded run.
+00:02:14.338 --> 00:02:15.749
+and cannot change them.
+
+44
+00:02:15.917 --> 00:02:18.350
+The faults we planted stay hidden from it,
+
+45
+00:02:18.378 --> 00:02:22.192
+and the exam layouts stay locked away
+until its solution is final.
+
+46
+00:02:22.302 --> 00:02:25.594
+We built the bench, wrote the
+requests and fixed the grading.
+
+47
+00:02:25.751 --> 00:02:29.713
+After that, no person took part: the
+agent chose every experiment
+
+48
+00:02:29.733 --> 00:02:31.875
+and wrote every solution.
+
+49
+00:02:34.817 --> 00:02:37.911
+Each try starts from a stored
+arrangement of the table:
+
+50
+00:02:37.987 --> 00:02:41.693
+a layout. The agent compares its
+programs on the same practice
+
+51
+00:02:41.713 --> 00:02:46.047
+layouts. 20 more stay locked away for a
+final exam it never sees
+
+52
+00:02:46.067 --> 00:02:50.029
+in advance. On those same 20, we
+also run the plain chain,
+
+53
+00:02:50.049 --> 00:02:52.354
+the skills simply one after the other.
+
+54
+00:02:52.453 --> 00:02:53.736
+That is the baseline.
+
+55
+00:02:53.881 --> 00:02:57.518
+Later, on real robots, the practice
+layouts will be simulated copies
+
+56
+00:02:57.538 --> 00:03:00.594
+of the real station, and the final
+exam will take place in the
+
+57
+00:03:00.614 --> 00:03:01.491
+real world.
+
+58
+00:03:03.917 --> 00:03:05.293
+Experiment one.
+
+59
+00:03:05.450 --> 00:03:07.917
+The request, as a shift lead
+would write it:
+
+60
+00:03:08.120 --> 00:03:11.165
+bowl on top of the cabinet,
+middle drawer open,
+
+61
+00:03:11.185 --> 00:03:13.443
+everything at rest, hand clear.
+
+62
+00:03:13.576 --> 00:03:17.457
+The bar: the whole job completed
+without a failure on at least
+
+63
+00:03:17.477 --> 00:03:20.096
+18 of 20 fresh layouts.
+
+64
+00:03:22.517 --> 00:03:24.822
+Chained plainly, the job falls apart.
+
+65
+00:03:24.955 --> 00:03:27.899
+The drawer skill starts the moment
+the bowl counts as placed.
+
+66
+00:03:27.997 --> 00:03:29.591
+But the hand still holds the bowl,
+
+67
+00:03:29.611 --> 00:03:31.173
+and drags it off.
+
+68
+00:03:34.117 --> 00:03:37.534
+The agent studies its first runs and
+writes a check for exactly
+
+69
+00:03:37.554 --> 00:03:38.547
+this hand-off.
+
+70
+00:03:38.633 --> 00:03:42.421
+In all 10, the next skill began while
+the bowl was still touched
+
+71
+00:03:42.441 --> 00:03:46.125
+and moving. The placing skill reports
+success before the job is
+
+72
+00:03:46.145 --> 00:03:47.185
+done.
+
+73
+00:03:48.617 --> 00:03:50.864
+Then it changes one thing at a time,
+
+74
+00:03:50.939 --> 00:03:52.930
+on the same practice layouts.
+
+75
+00:03:53.215 --> 00:03:54.695
+Open the fingers first?
+
+76
+00:03:54.886 --> 00:03:56.413
+They still catch the bowl.
+
+77
+00:03:56.535 --> 00:03:57.725
+Go home first?
+
+78
+00:03:57.951 --> 00:03:59.571
+The way home snags it.
+
+79
+00:03:59.658 --> 00:04:02.354
+What works: let the placement finish,
+
+80
+00:04:02.374 --> 00:04:05.527
+so the hand lets go and
+lifts, then go home,
+
+81
+00:04:05.602 --> 00:04:09.393
+then open the drawer: 10 of 10
+successful jobs.
+
+82
+00:04:11.317 --> 00:04:14.641
+Before the exam, it confirms the
+program on 20 practice layouts
+
+83
+00:04:14.661 --> 00:04:15.816
+it had never used.
+
+84
+00:04:16.402 --> 00:04:21.285
+20 of 20. Then the final exam, on
+the 20 locked layouts.
+
+85
+00:04:21.975 --> 00:04:23.862
+The plain chain gets 1 right.
+
+86
+00:04:24.506 --> 00:04:28.053
+The agent's job: 20 of 20.
+
+87
+00:04:33.483 --> 00:04:36.760
+The job and its check go into the
+installation's library,
+
+88
+00:04:36.780 --> 00:04:38.412
+ready for the next request.
+
+89
+00:04:38.800 --> 00:04:43.021
+From request to proven job, the
+agent took 41 minutes.
+
+90
+00:04:43.950 --> 00:04:45.907
+The second request is harder.
+
+91
+00:04:46.214 --> 00:04:49.526
+Two things must end up in place: the
+plate at the front of the
+
+92
+00:04:49.546 --> 00:04:52.083
+stove, and the bowl on top of the cabinet.
+
+93
+00:04:52.425 --> 00:04:56.179
+The robot has a skill for each:
+one pushes the plate,
+
+94
+00:04:56.199 --> 00:04:57.726
+the other places the bowl.
+
+95
+00:04:58.056 --> 00:05:02.857
+Chained plainly, the job succeeds on
+5 of 20 fresh layouts.
+
+96
+00:05:03.176 --> 00:05:06.294
+The trouble is a pack of cream
+cheese in the plate's way:
+
+97
+00:05:06.427 --> 00:05:10.485
+the push runs into it, or the hand
+grabs the cheese instead.
+
+98
+00:05:12.417 --> 00:05:15.056
+Starting from the check it saved
+in the first job,
+
+99
+00:05:15.076 --> 00:05:17.334
+the agent tries 18 programs.
+
+100
+00:05:17.467 --> 00:05:19.862
+Loading the cheese into the
+bowl clears the way,
+
+101
+00:05:19.882 --> 00:05:21.688
+and every plate push works.
+
+102
+00:05:21.926 --> 00:05:24.079
+But now the loaded bowl won't carry:
+
+103
+00:05:24.154 --> 00:05:26.459
+the job delivers 4 of 10.
+
+104
+00:05:26.546 --> 00:05:29.246
+Fixing one problem created the next.
+
+105
+00:05:30.683 --> 00:05:33.801
+Its answer: pick up the cheese
+and set it aside.
+
+106
+00:05:33.957 --> 00:05:36.181
+Then the plate, then the empty bowl:
+
+107
+00:05:36.302 --> 00:05:39.498
+10 of 10. On the final exam, 20 of 20,
+
+108
+00:05:39.518 --> 00:05:42.032
+against 5 for the plain chain.
+
+109
+00:05:44.450 --> 00:05:46.627
+What did the first experiment show?
+
+110
+00:05:46.865 --> 00:05:50.749
+Twice, a new job failed when the robot's
+skills were simply chained.
+
+111
+00:05:50.928 --> 00:05:53.454
+Twice, the agent found the physical cause,
+
+112
+00:05:53.529 --> 00:05:56.865
+changed how the job is done, and
+proved its solution on layouts
+
+113
+00:05:56.885 --> 00:05:59.886
+it had never seen, with no
+person in the loop.
+
+114
+00:05:59.996 --> 00:06:03.517
+That matters, because this is the
+engineering that makes every
+
+115
+00:06:03.537 --> 00:06:05.679
+new job slow and expensive today.
+
+116
+00:06:05.824 --> 00:06:09.824
+Here, an agent did it, in 41
+and 113 minutes.
+
+117
+00:06:12.750 --> 00:06:15.392
+Experiment two asks a different question:
+
+118
+00:06:15.455 --> 00:06:17.200
+when working robots start to fail,
+
+119
+00:06:17.220 --> 00:06:18.898
+can the agent find out why?
+
+120
+00:06:19.019 --> 00:06:22.239
+We built a fleet of 12
+simulated arms at 3 sites,
+
+121
+00:06:22.259 --> 00:06:25.400
+doing pick-and-place work, and
+planted problems in it.
+
+122
+00:06:25.521 --> 00:06:27.432
+The agent is told nothing about them.
+
+123
+00:06:27.750 --> 00:06:30.819
+It sees what an operator sees: results,
+
+124
+00:06:30.839 --> 00:06:33.570
+telemetry, change and maintenance logs,
+
+125
+00:06:33.590 --> 00:06:36.360
+and the actions an operator can take.
+
+126
+00:06:37.283 --> 00:06:38.590
+Here is what we planted.
+
+127
+00:06:38.688 --> 00:06:41.814
+At the first site, the model that
+drives the robots runs in the
+
+128
+00:06:41.834 --> 00:06:45.614
+customer's distant data centre, and
+the line adds a delay.
+
+129
+00:06:45.712 --> 00:06:48.597
+The customer requires that
+link, so it stays.
+
+130
+00:06:48.719 --> 00:06:52.170
+At the second site, one robot's
+controller is overloaded and falls
+
+131
+00:06:52.190 --> 00:06:55.990
+behind. At the third site, a software
+update crops part of every
+
+132
+00:06:56.010 --> 00:06:58.245
+camera image before the model sees it.
+
+133
+00:06:58.459 --> 00:07:01.945
+On the same day, a camera's
+calibration record is rewritten,
+
+134
+00:07:01.965 --> 00:07:03.782
+which changes nothing at all.
+
+135
+00:07:03.904 --> 00:07:06.000
+That one is our false lead.
+
+136
+00:07:08.450 --> 00:07:11.092
+The agent is not told what
+causes the failures.
+
+137
+00:07:11.248 --> 00:07:13.228
+It sees the operating records.
+
+138
+00:07:13.373 --> 00:07:16.603
+The robots at the first site trail
+their commands and succeed far
+
+139
+00:07:16.623 --> 00:07:20.507
+less often. One robot at the second
+site trails just the same.
+
+140
+00:07:20.641 --> 00:07:24.292
+The robots at the third site fail more
+often than the healthy robots,
+
+141
+00:07:24.425 --> 00:07:27.613
+and the change log shows two
+changes on the same day.
+
+142
+00:07:27.711 --> 00:07:29.552
+Same symptom, same cause?
+
+143
+00:07:29.685 --> 00:07:32.477
+And which of the two changes is to blame?
+
+144
+00:07:34.417 --> 00:07:37.210
+The task records can't tell the
+first two apart.
+
+145
+00:07:37.389 --> 00:07:39.311
+So the agent builds an instrument:
+
+146
+00:07:39.363 --> 00:07:42.942
+a small test motion, with the
+robot's model switched off,
+
+147
+00:07:42.962 --> 00:07:45.337
+timing how each arm follows a command.
+
+148
+00:07:45.424 --> 00:07:48.181
+At the first site, the hand
+always starts late,
+
+149
+00:07:48.210 --> 00:07:51.003
+by the same amount: a delay on the line.
+
+150
+00:07:51.089 --> 00:07:54.613
+The robot at the second site
+starts nearly on time,
+
+151
+00:07:54.805 --> 00:07:57.330
+then falls further and further behind:
+
+152
+00:07:57.463 --> 00:07:59.373
+its controller can't keep up.
+
+153
+00:07:59.472 --> 00:08:02.064
+They look alike, but they are two
+different problems,
+
+154
+00:08:02.084 --> 00:08:04.436
+and they need different repairs.
+
+155
+00:08:06.383 --> 00:08:09.210
+Each repair is tested on its own
+before it is adopted.
+
+156
+00:08:09.448 --> 00:08:11.611
+The first site's link has to stay,
+
+157
+00:08:11.631 --> 00:08:14.699
+so the agent has the robots skip
+commands that would be out of
+
+158
+00:08:14.719 --> 00:08:16.211
+date by the time they arrive.
+
+159
+00:08:16.426 --> 00:08:19.404
+It tests three compensation
+settings and keeps the best.
+
+160
+00:08:19.514 --> 00:08:22.492
+The overloaded controller at the
+second site is serviced.
+
+161
+00:08:22.602 --> 00:08:26.077
+At the third site, it undoes each of the
+two changes in a separate
+
+162
+00:08:26.097 --> 00:08:29.923
+test. Rolling back the software
+update brings the site back.
+
+163
+00:08:30.056 --> 00:08:32.918
+Rolling back the calibration
+shows no clear effect.
+
+164
+00:08:33.005 --> 00:08:35.356
+So it adopts the software rollback,
+
+165
+00:08:35.385 --> 00:08:37.748
+and leaves the calibration alone.
+
+166
+00:08:40.183 --> 00:08:44.903
+Then the test that counts: 576
+attempts the agent never saw.
+
+167
+00:08:45.140 --> 00:08:48.305
+As the fleet was, 451 successes.
+
+168
+00:08:48.391 --> 00:08:51.764
+With the agent's 3 changes, 558.
+
+169
+00:08:51.909 --> 00:08:54.655
+From 78% to 97%.
+
+170
+00:08:54.777 --> 00:08:58.022
+Against what we planted: all
+three problems found,
+
+171
+00:08:58.051 --> 00:09:01.888
+each with a tested repair, and the
+false lead left alone.
+
+172
+00:09:04.817 --> 00:09:08.562
+In both experiments, the agent did
+the engineering itself.
+
+173
+00:09:08.660 --> 00:09:13.391
+Two new jobs: from 1 to 20 of
+20, and from 5 to 20.
+
+174
+00:09:13.478 --> 00:09:17.501
+A fleet: from 78% to 97%.
+
+175
+00:09:17.681 --> 00:09:21.179
+The robots' vision-language-action
+model and their overall design
+
+176
+00:09:21.199 --> 00:09:23.086
+stayed the same throughout.
+
+177
+00:09:24.517 --> 00:09:27.937
+What we learned: the agent worked
+like a good engineer.
+
+178
+00:09:28.023 --> 00:09:31.152
+It looked at the evidence, found
+the physical cause,
+
+179
+00:09:31.181 --> 00:09:34.714
+changed one thing at a time, built a
+measurement when the records
+
+180
+00:09:34.734 --> 00:09:38.034
+weren't enough, and proved its
+solutions on cases it had never
+
+181
+00:09:38.054 --> 00:09:40.960
+seen. These were first, compact tests,
+
+182
+00:09:40.980 --> 00:09:44.060
+and in each one the agent carried the
+investigation through to
+
+183
+00:09:44.080 --> 00:09:45.943
+a working result.
+
+184
+00:09:48.383 --> 00:09:50.851
+Next, we take this to real robots:
+
+185
+00:09:50.902 --> 00:09:54.589
+a complete packing operation on
+two-armed mobile robots,
+
+186
+00:09:54.618 --> 00:09:58.571
+where agents engineer new work on the
+hardware and prove it there.
+
+187
+00:09:58.844 --> 00:10:02.620
+The question we will answer: how much
+less human work each new
+
+188
+00:10:02.640 --> 00:10:06.048
+job needs, once agents do the engineering.
+
+189
+00:10:07.483 --> 00:10:11.027
+That is what Mayfly is building: robot
+installations where taking
+
+190
+00:10:11.047 --> 00:10:12.989
+on new work is part of the product,
+
+191
+00:10:13.009 --> 00:10:15.117
+because agents do the engineering.

@@ -1,61 +1,113 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:07.050
-New jobs, made reliable
+00:00:00.000 --> 00:00:10.730
+One job, two skills
 
 2
-00:00:07.050 --> 00:00:18.350
-Job 1: the request
+00:00:10.730 --> 00:00:14.270
+Can an AI agent engineer a robot?
 
 3
-00:00:18.350 --> 00:00:28.900
-Job 1: what fails
+00:00:14.270 --> 00:00:38.770
+Skills are not jobs
 
 4
-00:00:28.900 --> 00:00:45.650
-Job 1: the experiment
+00:00:38.770 --> 00:01:22.770
+The question
 
 5
-00:00:45.650 --> 00:01:00.250
-Job 1: released
+00:01:22.770 --> 00:01:51.930
+The test bench
 
 6
-00:01:00.250 --> 00:01:10.200
-Job 1: what the installation keeps
+00:01:51.930 --> 00:02:34.370
+The engineer and its sandbox
 
 7
-00:01:10.200 --> 00:01:19.250
-Job 2: the request
+00:02:34.370 --> 00:03:03.470
+A fair test
 
 8
-00:01:19.250 --> 00:01:27.750
-Job 2: what fails
+00:03:03.470 --> 00:03:22.070
+Experiment one: the request
 
 9
-00:01:27.750 --> 00:01:47.550
-Job 2: the experiment
+00:03:22.070 --> 00:03:33.670
+Watch it fail
 
 10
-00:01:47.550 --> 00:01:59.950
-Job 2: the scene, prepared
+00:03:33.670 --> 00:03:48.170
+Measure why
 
 11
-00:01:59.950 --> 00:02:16.550
-Job 2: released
+00:03:48.170 --> 00:04:10.870
+One change at a time
 
 12
-00:02:16.550 --> 00:02:24.700
-Job 2: what the installation keeps
+00:04:10.870 --> 00:04:33.030
+The final exam
 
 13
-00:02:24.700 --> 00:02:41.650
-The instrument
+00:04:33.030 --> 00:04:43.500
+Kept for the next request
 
 14
-00:02:41.650 --> 00:03:01.150
-The fleet, repaired
+00:04:43.500 --> 00:05:11.970
+A harder job
 
 15
-00:03:01.150 --> 00:03:12.650
-The record
+00:05:11.970 --> 00:05:30.230
+The bottleneck moves
+
+16
+00:05:30.230 --> 00:05:44.000
+Set the cheese aside
+
+17
+00:05:44.000 --> 00:06:12.300
+What experiment one showed
+
+18
+00:06:12.300 --> 00:06:36.830
+Experiment two: planted faults
+
+19
+00:06:36.830 --> 00:07:08.000
+What we planted
+
+20
+00:07:08.000 --> 00:07:33.970
+What the agent sees
+
+21
+00:07:33.970 --> 00:08:05.930
+The agent builds an instrument
+
+22
+00:08:05.930 --> 00:08:39.730
+Tested repairs
+
+23
+00:08:39.730 --> 00:09:04.370
+The fleet result
+
+24
+00:09:04.370 --> 00:09:24.070
+The results
+
+25
+00:09:24.070 --> 00:09:47.930
+What we learned
+
+26
+00:09:47.930 --> 00:10:07.030
+Next: real robots
+
+27
+00:10:07.030 --> 00:10:17.100
+What it means
+
+28
+00:10:17.100 --> 00:10:29.100
+How this was recorded

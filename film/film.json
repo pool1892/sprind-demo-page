@@ -1,135 +1,184 @@
 {
  "format": "fleetlab.film-public/1",
  "note": "Public provenance: runs, tables and files by stable identifier and SHA-256. The full provenance, with where each file lies, is kept with the run records.",
- "built": "2026-10-21T02:08:42+00:00",
- "code_commit": "6e1a800bdad8b22431bf851443b56422bd413db6",
+ "built": "2026-10-21T13:09:49-07:00",
+ "code_commit": "dd749b8ed8c97188b8957e124298e126573cda6e",
  "film": [
   {
    "role": "master",
    "file": "film-master.mp4",
-   "sha256": "b59df4374a93b137ad2aae1849edef560ea0e6c88c848322fd9cd1880703cdac",
-   "bytes": 19857394,
-   "width": 1920,
-   "height": 1080,
-   "fps": 20,
-   "seconds": 192.65,
-   "video": "H.264 high, crf 16, preset slow",
-   "audio": "AAC 192 kb/s, 48000 Hz mono"
+   "sha256": "be6fde2f40612ab181e6581d56086225f499ec985eb43b99ac276ea842005b91",
+   "bytes": 75106880,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
   },
   {
    "role": "web",
    "file": "film.mp4",
-   "sha256": "6cd94c7174579a16190edb5d1ba1b76d2924fdd42198f120bb5cb8c766b049ee",
-   "bytes": 9375014,
-   "width": 1280,
-   "height": 720,
-   "fps": 20,
-   "seconds": 192.65,
-   "video": "H.264 high, crf 20, preset slow, at most 3000 kb/s",
-   "audio": "AAC 128 kb/s, 48000 Hz mono"
-  }
- ],
- "private_provenance_sha256": "8dee8f76057a198e21557518d83a18940baac033d747707d86bae190ba9da928",
- "beats": [
-  {
-   "id": "open",
-   "story": "A",
-   "title": "New jobs, made reliable",
-   "start_s": 0.0,
-   "end_s": 7.05,
-   "status": "card",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 13,
-    "seconds": 5.759,
-    "timing": "measured audio",
-    "text": "The robot's policy never changes. An engineering agent improves the installation around it.",
-    "voice_sha256": "90507c8f1b4882a67bf6a967bc9845a2652ed6d702d6a93b7ca7fd7b073a63e3"
-   },
-   "shots": [
-    {
-     "kind": "card",
-     "start_s": 0.0,
-     "end_s": 7.05,
-     "clips": [],
-     "counts": [],
-     "files": []
-    }
-   ]
+   "sha256": "7cb874bc5a04329ca98959dd40eb061c7326b53cd919a833e442abc6f3a4d480",
+   "bytes": 34984457,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
   },
   {
-   "id": "r1-request",
-   "story": "A",
-   "title": "Job 1: the request",
-   "start_s": 7.05,
-   "end_s": 18.35,
+   "role": "poster",
+   "file": "poster.jpg",
+   "sha256": "8c86886827cb695c2650c829dced2a6392031d6edb8a75e60c5a9bc852b976c6",
+   "bytes": 72749,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
+  },
+  {
+   "role": "captions",
+   "file": "captions.vtt",
+   "sha256": "71445ca28b895c140eb1689764ffb77c68032644978c6ae9d5d7ba4edb224b46",
+   "bytes": 15209,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
+  },
+  {
+   "role": "chapters",
+   "file": "chapters.vtt",
+   "sha256": "36f8f8f6a0fc8d5bf998280bce8ceb463c9f1c0d626e31a2d86491dbdb918ef0",
+   "bytes": 1503,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
+  },
+  {
+   "role": "chapters",
+   "file": "chapters.json",
+   "sha256": "9c0bad4bebd981c012227fbfed2188a6ce7416dca0d1ce855e61de90df14d3a7",
+   "bytes": 5989,
+   "width": null,
+   "height": null,
+   "fps": null,
+   "seconds": null,
+   "video": null,
+   "audio": null
+  }
+ ],
+ "private_provenance_sha256": "22080e501790f3303b1edc9b5230b80f914542cfe8bae0cb8976ee1120d25c38",
+ "beats": [
+  {
+   "id": "cold-open",
+   "story": "Why we ran these experiments",
+   "title": "One job, two skills",
+   "start_s": 0.0,
+   "end_s": 10.73,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 29,
-    "seconds": 9.985,
+    "words": 32,
+    "seconds": 9.567,
     "timing": "measured audio",
-    "text": "First job: the bowl on the cabinet and the middle drawer open, together, on at least 18 of 20 fresh starts. The robot has a skill for each half.",
-    "voice_sha256": "77b2f421325ab849426459b498fedf9d438c1b0e6296f286dbe2be975ddeb51c"
+    "text": "This robot can put a bowl on a cabinet. It can open a drawer. Ask for both in one job, and it gets it right in just 1 of 20 fresh tries.",
+    "voice_sha256": "d4bfcf47cd0f54c869d7554a34b462f4df26e150b6d84b71869c4f573c5df8ba"
    },
    "shots": [
     {
-     "kind": "text",
-     "start_s": 7.05,
-     "end_s": 13.05,
-     "clips": [],
-     "counts": [],
-     "files": []
-    },
-    {
      "kind": "clip",
-     "start_s": 13.05,
-     "end_s": 18.35,
+     "start_s": 0.0,
+     "end_s": 10.73,
      "clips": [
       {
-       "label": "plain chain, a reserved start",
-       "layout": "jobs-run",
+       "label": "single skill: put the bowl on top of the cabinet",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/screen-01/single-cabinet",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        103
+       ],
+       "outcome": "delivered",
+       "video_sha256": "21846935387fc5264ac908ca5b7921029569c54f27d4fc00dc026a4b633e8b11",
+       "file": "clips/cold-open-e000102-21846935.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "21846935387fc5264ac908ca5b7921029569c54f27d4fc00dc026a4b633e8b11",
+        "file": "clips/cold-open-e000102-21846935.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 104,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-1/skill-cabinet-e000102-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "single skill: open the middle drawer of the cabinet",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/screen-01/single-drawer",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        143
+       ],
+       "outcome": "delivered",
+       "video_sha256": "e4e9ca9fad6f6a40be328fbaad92554d17f89dc1a2759f9a613a088f9be05c34",
+       "file": "clips/cold-open-e000102-e4e9ca9f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "e4e9ca9fad6f6a40be328fbaad92554d17f89dc1a2759f9a613a088f9be05c34",
+        "file": "clips/cold-open-e000102-e4e9ca9f.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 144,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-1/skill-drawer-e000102-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 1, release, plain chain on reserved start 31: the bowl lands on the cabinet top at step 82 and falls off at steps 140-148",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
        "episode": "e000202",
        "control_steps_shown": [
         0,
-        82
+        382
        ],
        "outcome": "not delivered",
        "video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077",
-       "file": "clips/r1-release-e000202-f341aa22.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "f5f634f16751cfe3960f087728468286b65eed6cd43775e9d14cf096efcb4ca4"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/robot_steps/e000202.parquet",
-         "sha256": "37bd673e1102fb73348980ef09a6e2626efb6ddfb16fa116dd92d53ca09ecfba"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "af6a0b0f9fdbfeef03f1e72f54cc7f912da84d902f84a9990c48828e5fe5eed6"
-        }
-       ],
+       "file": "clips/r1-prove-e000202-f341aa22.mp4",
+       "records_read": [],
        "rerender": {
         "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "465270059da5fa8b3cb7c923433f97ecdedf9e378525a2016087cae3d6b104da",
-        "file": "clips/r1-release-e000202-46527005.rerender.mp4",
+        "reason": null,
+        "video_sha256": "9d95fcf2161cee96595ebd095d04a16e05274fb598c1a82b77cebba9b1f3c8bc",
+        "file": "clips/cold-open-e000202-9d95fcf2.rerender.mp4",
         "comparison": {
-         "label": "re-render",
+         "accepted": true,
          "hashes_compared": 383,
-         "recorded_hashes": 383,
          "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "304580cdc1dae038",
-         "end_state_hash": "304580cdc1dae038",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077"
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-1/j1-chain-e000202-hero.rerender.json"
         }
        }
       }
@@ -140,69 +189,1051 @@
    ]
   },
   {
-   "id": "r1-failure",
-   "story": "A",
-   "title": "Job 1: what fails",
-   "start_s": 18.35,
-   "end_s": 28.9,
+   "id": "title",
+   "story": "Why we ran these experiments",
+   "title": "Can an AI agent engineer a robot?",
+   "start_s": 10.73,
+   "end_s": 14.27,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": null,
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 10.73,
+     "end_s": 14.27,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "story": "Why we ran these experiments",
+   "title": "Skills are not jobs",
+   "start_s": 14.27,
+   "end_s": 38.77,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 24,
-    "seconds": 9.242,
+    "words": 58,
+    "seconds": 23.313,
     "timing": "measured audio",
-    "text": "Chained plainly, the hand turns to the drawer still touching the bowl, and knocks it off. On the agent's practice starts: 5 of 10.",
-    "voice_sha256": "eccbe9e82ae124889e80f62e05cf7c631d442d5edf2abe1b417f56cb5b3d0b7e"
+    "text": "Robot AI models are learning skills fast. But a business needs whole jobs done reliably, in its own setting, and its jobs keep changing. Turning skills into reliable work is engineering: watch the failures, find the cause, change the system, prove it. Today, specialists do that by hand, for every change, and that makes automation slow and expensive.",
+    "voice_sha256": "83be167c933875250b6da3170f55fad49f73927aa24959c499757adae1153f90"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 14.27,
+     "end_s": 38.77,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "question",
+   "story": "Why we ran these experiments",
+   "title": "The question",
+   "start_s": 38.77,
+   "end_s": 82.77,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 118,
+    "seconds": 41.332,
+    "timing": "measured audio",
+    "text": "Mayfly is building robot installations whose engineering is done by AI agents. Before building that on real robots, we tested the core question in simulation: can an agent find out on its own what needs to change, change it, and prove that it works? We ran two experiments, one for each kind of engineering an installation keeps needing. The first: a new job, made from skills the robot already has. Every new product or packing rule asks for a job like this, and today a specialist has to make it reliable. The second: faults we planted in a fleet of robots. When robots that worked yesterday start to fail, someone has to find out why, and repair it.",
+    "voice_sha256": "d21867ab271a399b746922c2fea9b80534c4941a5c87b28ddc77bf3be373ba95"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 38.77,
+     "end_s": 82.77,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "station",
+   "story": "The test bench and the rules",
+   "title": "The test bench",
+   "start_s": 82.77,
+   "end_s": 111.93,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 72,
+    "seconds": 28.468,
+    "timing": "measured audio",
+    "text": "The test bench is a physics simulator with a kitchen scene from a public robotics benchmark. In simulation, every start can be repeated exactly and every motion measured, and the kitchen makes the failures easy to follow. The robot runs X-VLA, an open robot vision-language-action model: it turns camera images and a written instruction into motion. For these experiments we kept it fixed, so every gain comes from the engineering around it.",
+    "voice_sha256": "62b8eab3a3285d1c80dffa470eeaf99bda0c46ce2c3293b82fc163b970c4cbcf"
    },
    "shots": [
     {
      "kind": "clip",
-     "start_s": 18.35,
-     "end_s": 28.9,
+     "start_s": 82.77,
+     "end_s": 111.93,
      "clips": [
       {
-       "label": "plain chain, a reserved start",
-       "layout": "jobs-run",
+       "label": "job 1, release, the saved job on start 31, the whole station",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        265
+       ],
+       "outcome": "delivered",
+       "video_sha256": "45f808cc11539031a1565600307e2920dc03731665c3f0b3c328f4ff97d4074c",
+       "file": "clips/r1-prove-e000102-45f808cc.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "a6ee98711ec322469281bc5529b4b916e64e7deb432b1f7bc2392df5414dc7d3",
+        "file": "clips/station-e000102-a6ee9871.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 266,
+         "hash_mismatches": 0,
+         "camera": "establishing",
+         "report": "probes:demo/explainer/footage/batch-1/j1-job-e000102-establishing.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 1, plain chain, reserved start 31",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
        "episode": "e000202",
        "control_steps_shown": [
-        82,
-        230
+        0,
+        382
+       ],
+       "outcome": null,
+       "video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077",
+       "file": "clips/r1-prove-e000202-f341aa22.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "465270059da5fa8b3cb7c923433f97ecdedf9e378525a2016087cae3d6b104da",
+        "file": "clips/station-e000202-46527005.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 383,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "camera": "scene",
+         "image_size": 720
+        }
+       }
+      },
+      {
+       "label": "job 1, plain chain, wrist camera",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000202",
+       "control_steps_shown": [
+        0,
+        382
+       ],
+       "outcome": null,
+       "video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077",
+       "file": "clips/r1-prove-e000202-f341aa22.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "9b9a5d775c2f59cd51a0001519e0ebb6b2deef9eeea83fdc096a0edc4f757d2a",
+        "file": "clips/station-e000202-9b9a5d77.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 383,
+         "hash_mismatches": 0,
+         "verdict_matches": true,
+         "camera": "wrist",
+         "image_size": 720
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "agent",
+   "story": "The test bench and the rules",
+   "title": "The engineer and its sandbox",
+   "start_s": 111.93,
+   "end_s": 154.37,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 114,
+    "seconds": 39.242,
+    "timing": "measured audio",
+    "text": "The engineer is an AI agent in a sandbox. Like a robotics engineer at a desk, it looks at camera frames from its trials and reads the measurements the simulator records: where the hand is, where each object is, what touches what. It writes its own checks, builds programs from the robot's skills and runs experiments. It knows the rules it is graded by, and cannot change them. The faults we planted stay hidden from it, and the exam layouts stay locked away until its solution is final. We built the bench, wrote the requests and fixed the grading. After that, no person took part: the agent chose every experiment and wrote every solution.",
+    "voice_sha256": "9f29f8df827567b319ba3168dbe9031000176e700d0ad60ab6e6ff74cbd9d3cf"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 111.93,
+     "end_s": 154.37,
+     "clips": [
+      {
+       "label": "job 1, plain chain, practice start 2 (original recording)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": null,
+       "video_sha256": "adaf452f37b63a7f8ceffd3db91f89ee1bd28d857589d082ecc8c1fad3c11987",
+       "file": "clips/lessons-e000103-adaf452f.mp4",
+       "records_read": []
+      },
+      {
+       "label": "job 1, plain chain, practice start 2, wrist camera (original recording)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": null,
+       "video_sha256": "7d1cd84b5b21aec83ed2adb5a505b6ada138daef4f18b7026b420621b07e5fa1",
+       "file": "clips/agent-e000103-7d1cd84b.mp4",
+       "records_read": []
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "story": "The test bench and the rules",
+   "title": "A fair test",
+   "start_s": 154.37,
+   "end_s": 183.47,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 83,
+    "seconds": 26.424,
+    "timing": "measured audio",
+    "text": "Each try starts from a stored arrangement of the table: a layout. The agent compares its programs on the same practice layouts. 20 more stay locked away for a final exam it never sees in advance. On those same 20, we also run the plain chain, the skills simply one after the other. That is the baseline. Later, on real robots, the practice layouts will be simulated copies of the real station, and the final exam will take place in the real world.",
+    "voice_sha256": "7ea595f5208832ed9d67e04967d410c0d24db160e44d617aa8cee64f9b932b0c"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 154.37,
+     "end_s": 183.47,
+     "clips": [
+      {
+       "label": "job 2, development, plain chain on practice start 1: the push times out",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "67c18d7221fe0a9452237bda544e0d760f451707225f7dee8ba4850579027078",
+       "file": "clips/r2-fail-e000102-67c18d72.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69f0689229ca59ac04a62dea373b290b4714aeddffd8b856f0d83e3cfa74b545",
+        "file": "clips/r2-fail-e000102-69f06892.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-chain-s01-e000102-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 2, development, plain chain on practice start 5: the push times out",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000106",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "d24b3663b808b65cdbc20476491ccde2ffa575e0f4bdb4d2277aefb0da02e120",
+       "file": "clips/r2-fail-e000106-d24b3663.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "d2be468936a1739c192a30ccaedf3f66eab4270c9b2a8dbaefb759aea9904576",
+        "file": "clips/rules-e000106-d2be4689.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-chain-s01-e000106-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 2, development, plain chain on practice start 7: the push reaches, the bowl step times out",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000108",
+       "control_steps_shown": [
+        0,
+        442
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "fc2546daf2762e991517843cf30271314deed600509de9230b5149d09003525a",
+       "file": "clips/rules-e000108-fc2546da.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "92c63ba037c3ab6faf65b2be1d31d0970434e396cf22cc4a021d28bc11084fa5",
+        "file": "clips/rules-e000108-92c63ba0.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 443,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-chain-s01-e000108-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 2, session 5: the cream cheese set aside; delivers",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run",
+       "episode": "e001501",
+       "control_steps_shown": [
+        0,
+        420
+       ],
+       "outcome": "delivered",
+       "video_sha256": "73ae6e414cfa8617273c004d340464f181959bd65781f9526910c6ba7fb85a67",
+       "file": "clips/r2-fix-e001501-73ae6e41.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4205b471102b8b0d4793a463d8963a2c8a1678977065fa866af6526902e37ba0",
+        "file": "clips/r2-fix-e001501-4205b471.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 421,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-cheese-aside-s05-e001501-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 30 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000201",
+       "control_steps_shown": [
+        0,
+        288
+       ],
+       "outcome": "delivered",
+       "video_sha256": "ca9e9242b13144d9bf2beb9eeaa0eddafe0387339058ccd1237410211883d01e",
+       "file": "clips/r1-prove-e000201-ca9e9242.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "e77875d6125631d3f858fde9468c45e2ffa2fd36480a7bfc4f3815e0869e2eb8",
+        "file": "clips/r1-prove-e000201-e77875d6.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 289,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 31 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000202",
+       "control_steps_shown": [
+        0,
+        382
        ],
        "outcome": "not delivered",
        "video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077",
-       "file": "clips/r1-release-e000202-f341aa22.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "f5f634f16751cfe3960f087728468286b65eed6cd43775e9d14cf096efcb4ca4"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/robot_steps/e000202.parquet",
-         "sha256": "37bd673e1102fb73348980ef09a6e2626efb6ddfb16fa116dd92d53ca09ecfba"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "af6a0b0f9fdbfeef03f1e72f54cc7f912da84d902f84a9990c48828e5fe5eed6"
-        }
-       ],
+       "file": "clips/r1-prove-e000202-f341aa22.mp4",
+       "records_read": [],
        "rerender": {
         "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "465270059da5fa8b3cb7c923433f97ecdedf9e378525a2016087cae3d6b104da",
-        "file": "clips/r1-release-e000202-46527005.rerender.mp4",
+        "reason": null,
+        "video_sha256": "7271b369e817a44b08a965026252766f8bc3a55be22aa6b1cda73a08d70de62d",
+        "file": "clips/r1-prove-e000202-7271b369.rerender.mp4",
         "comparison": {
-         "label": "re-render",
+         "accepted": true,
          "hashes_compared": 383,
-         "recorded_hashes": 383,
          "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "304580cdc1dae038",
-         "end_state_hash": "304580cdc1dae038",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077"
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 32 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000203",
+       "control_steps_shown": [
+        0,
+        372
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "633cc8b6cf55e2eccd6d3d048392b31af0f54ed8a1856bbb301f35a727376814",
+       "file": "clips/r1-prove-e000203-633cc8b6.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "43af0ead7abe10622c2d8f42261e6c7587e0600f697f68f633b2a2894486abc6",
+        "file": "clips/r1-prove-e000203-43af0ead.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 373,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 33 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000204",
+       "control_steps_shown": [
+        0,
+        390
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "8922212434bae4d20741ee98b0df32ce1c08fb0b92ab4a69c2e319478160fa65",
+       "file": "clips/r1-prove-e000204-89222124.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69d59ca8c34525270ea7adefea3aae6f178a7ef8646ceee61adfa69505533652",
+        "file": "clips/r1-prove-e000204-69d59ca8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 391,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 34 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000205",
+       "control_steps_shown": [
+        0,
+        388
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "23c89da16b164f7a9e1854d52891a9104d1e5d2238ba13deaa33223c7ca7f7ed",
+       "file": "clips/r1-prove-e000205-23c89da1.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "27f028ed9e899a04abb7d32d6c43f7c62ea771c55e8a1a9de742f899885f66d4",
+        "file": "clips/r1-prove-e000205-27f028ed.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 389,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 35 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000206",
+       "control_steps_shown": [
+        0,
+        442
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "5333da10a96698436de086ede290eb5ad1bc6e516cf9b6925575345df2ff502f",
+       "file": "clips/r1-prove-e000206-5333da10.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "f1eab8b27397d24e92f070a173fbd32dd8f805b9888320ada3155541052bf5ce",
+        "file": "clips/r1-prove-e000206-f1eab8b2.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 443,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 36 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000207",
+       "control_steps_shown": [
+        0,
+        387
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "f39e149656f0f9c0df6d9e966668192c4951994eade2a043b2bf2d1f8e9a0013",
+       "file": "clips/r1-prove-e000207-f39e1496.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "952852b3cd3ca077c2dea1501f2bdf72a5d58555cd22d1d5ca15f0a6593e6d60",
+        "file": "clips/r1-prove-e000207-952852b3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 388,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 37 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000208",
+       "control_steps_shown": [
+        0,
+        381
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "906ac421030005125bc23f464f580c151995147f0bf2bfc77562a508ea1e0f32",
+       "file": "clips/r1-prove-e000208-906ac421.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4043a260d1d1d8b24084ef6d7789171e34ce23757dfa3e1e6f589583fe0cc99e",
+        "file": "clips/r1-prove-e000208-4043a260.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 382,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 38 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000209",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "f668f329a62e7c513b803bb4e1ee15d137e6fb53faeabe5d35f9aadd16679730",
+       "file": "clips/r1-prove-e000209-f668f329.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "9e0beea3393b82042327622690825df51f1817280bb0cc4884db36db4ebeacb8",
+        "file": "clips/r1-prove-e000209-9e0beea3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 39 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000210",
+       "control_steps_shown": [
+        0,
+        386
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "a9454ac2aa89ceb60fadcd02b99d6bee7edd06291c455f7171babce2b7b77a65",
+       "file": "clips/r1-prove-e000210-a9454ac2.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "02de67a358033fe19acaf505a4f201e219b9e5194266fcee48ba11a1493d3f11",
+        "file": "clips/r1-prove-e000210-02de67a3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 387,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 40 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000211",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "043088b97356e7ef79496ea10cc0740476f0d2e62af700ee0cd9d38971320635",
+       "file": "clips/r1-prove-e000211-043088b9.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "40e7c349b201f3378490db3a41834498ead67146ca367f5d8a1fe00774440ff6",
+        "file": "clips/r1-prove-e000211-40e7c349.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 41 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000212",
+       "control_steps_shown": [
+        0,
+        321
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "e5764c7516bed4d752802e5dd876dc51f2763d86807edc5438bb40925f5b9594",
+       "file": "clips/r1-prove-e000212-e5764c75.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "dcc4e88b898432a8879ec2acbeadb91a984cd3131309da80334bc53f37f7807c",
+        "file": "clips/r1-prove-e000212-dcc4e88b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 322,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 42 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000213",
+       "control_steps_shown": [
+        0,
+        387
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "8ee1a20d19b1abb7d209872c5b88e97b09e201da53ad57254b26b8cdb9625c8b",
+       "file": "clips/r1-prove-e000213-8ee1a20d.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "701ab82fc471e18dfc509dea4671d54f3660d5527237027948cc3c838bbc2c36",
+        "file": "clips/r1-prove-e000213-701ab82f.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 388,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 43 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000214",
+       "control_steps_shown": [
+        0,
+        390
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "40893aa9b129337b6899915ccd30c43a9d4b8d6474f8698b24629835a35b313b",
+       "file": "clips/r1-prove-e000214-40893aa9.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "7e6707b00c2935724e55a7c406520b00b6adc794fbdd2ab1e1466df369a636bf",
+        "file": "clips/r1-prove-e000214-7e6707b0.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 391,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 44 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000215",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "3d9db902f247dfd305bbae95451201175425ceec900646dd773f5f16790fb915",
+       "file": "clips/r1-prove-e000215-3d9db902.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ae85aed82950f3892cc044ab9027774b3cd1f8c778cb4cee0c1d42866beb12df",
+        "file": "clips/r1-prove-e000215-ae85aed8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 45 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000216",
+       "control_steps_shown": [
+        0,
+        386
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "91cae47c4572c344c147a365f7095cae310e8b7646ff06b313caf23eeabb8df5",
+       "file": "clips/r1-prove-e000216-91cae47c.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ef1e73259194ae613fe9cb38d4c77bc0e65180a85eaeaa139e26e906652a1225",
+        "file": "clips/r1-prove-e000216-ef1e7325.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 387,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 46 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000217",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "6dd3718aed95785f0e95827d54821ddd570e67d9fddda36daede154c3f974986",
+       "file": "clips/r1-prove-e000217-6dd3718a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "7a9f312a164e009b584653bd13d89b5df3afcd5fd38c7876a1eac8ad5939dca3",
+        "file": "clips/r1-prove-e000217-7a9f312a.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 47 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000218",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "c7afd683faba91fc09d2c3b3f19edc3696e5eaa1a9e705f1e526920ff69c003d",
+       "file": "clips/r1-prove-e000218-c7afd683.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "dcf3038b9fd057cec5c1565514241b4b2a8360eb364db0433404a30b88943ba3",
+        "file": "clips/r1-prove-e000218-dcf3038b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 48 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000219",
+       "control_steps_shown": [
+        0,
+        310
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "b8d659bd3238eb9dd91266a8595caf513b68f816aca356283700bea1a4058364",
+       "file": "clips/r1-prove-e000219-b8d659bd.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "6a8eb080a0a88b648d38f9cb96203ccee6376f0a6cbcd43613b5abd03962b6d4",
+        "file": "clips/r1-prove-e000219-6a8eb080.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 311,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 49 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000220",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "ab704f69227a863a0e8be4f189ff4f7b6872e421fbabdcfa6b01a93cc316228e",
+       "file": "clips/r1-prove-e000220-ab704f69.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "87773055a4f06faf04b5604ac3b37a860ea805a0c01b581cd4cc8297155beaac",
+        "file": "clips/r1-prove-e000220-87773055.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "request",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "Experiment one: the request",
+   "start_s": 183.47,
+   "end_s": 202.07,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 42,
+    "seconds": 15.929,
+    "timing": "measured audio",
+    "text": "Experiment one. The request, as a shift lead would write it: bowl on top of the cabinet, middle drawer open, everything at rest, hand clear. The bar: the whole job completed without a failure on at least 18 of 20 fresh layouts.",
+    "voice_sha256": "29bcd6bfe0757f2dbc8131ec077c2e964355b560cde23a71f912b2273b16ccb1"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 183.47,
+     "end_s": 202.07,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r1-fail",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "Watch it fail",
+   "start_s": 202.07,
+   "end_s": 213.67,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 28,
+    "seconds": 8.406,
+    "timing": "measured audio",
+    "text": "Chained plainly, the job falls apart. The drawer skill starts the moment the bowl counts as placed. But the hand still holds the bowl, and drags it off.",
+    "voice_sha256": "e3037ccb0bf9120380d387e46b07b2a97b405edda302065bc61d1693fdb47e11"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 202.07,
+     "end_s": 213.67,
+     "clips": [
+      {
+       "label": "job 1, development, the plain chain (bowl-drawer-direct, j0001) on practice start 2 (base task 2, initial state 2, scene seed 3509256065, the start of session 3's e000503 and e000603); does not deliver",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "adaf452f37b63a7f8ceffd3db91f89ee1bd28d857589d082ecc8c1fad3c11987",
+       "file": "clips/lessons-e000103-adaf452f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "703b6563ba0edd90ac48cf53c126eb6afb885c7d2e8749186acccd2a904a59b5",
+        "file": "clips/lessons-e000103-703b6563.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 405,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-2/r1-chain-practice2-hero.rerender.json"
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r1-measure",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "Measure why",
+   "start_s": 213.67,
+   "end_s": 228.17,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 39,
+    "seconds": 12.818,
+    "timing": "measured audio",
+    "text": "The agent studies its first runs and writes a check for exactly this hand-off. In all 10, the next skill began while the bowl was still touched and moving. The placing skill reports success before the job is done.",
+    "voice_sha256": "4c0fbe6676af6eb80b83d50e251e9912ed0c41a4d42966ad4c33e6a249533773"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 213.67,
+     "end_s": 228.17,
+     "clips": [
+      {
+       "label": "job 1, development, the plain chain (bowl-drawer-direct, j0001) on practice start 2 (base task 2, initial state 2, scene seed 3509256065, the start of session 3's e000503 and e000603); does not deliver",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "adaf452f37b63a7f8ceffd3db91f89ee1bd28d857589d082ecc8c1fad3c11987",
+       "file": "clips/lessons-e000103-adaf452f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "703b6563ba0edd90ac48cf53c126eb6afb885c7d2e8749186acccd2a904a59b5",
+        "file": "clips/lessons-e000103-703b6563.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 405,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-2/r1-chain-practice2-hero.rerender.json"
         }
        }
       }
@@ -214,87 +1245,79 @@
   },
   {
    "id": "r1-experiment",
-   "story": "A",
-   "title": "Job 1: the experiment",
-   "start_s": 28.9,
-   "end_s": 45.65,
+   "story": "Experiment one: a new job from existing skills",
+   "title": "One change at a time",
+   "start_s": 228.17,
+   "end_s": 250.87,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 44,
-    "seconds": 15.464,
+    "words": 55,
+    "seconds": 20.526,
     "timing": "measured audio",
-    "text": "The agent writes a check: does the bowl stay in place while the next skill runs? Then it changes one thing at a time. Open, then go home: 5 of 10. Let the placement run 30 steps longer, then go home: 10 of 10.",
-    "voice_sha256": "dc9179cb49abd8b0b8d23ee062e5008e0d92b7ea5bc320fa273ec83404d9b9a6"
+    "text": "Then it changes one thing at a time, on the same practice layouts. Open the fingers first? They still catch the bowl. Go home first? The way home snags it. What works: let the placement finish, so the hand lets go and lifts, then go home, then open the drawer: 10 of 10 successful jobs.",
+    "voice_sha256": "34257f1bba4c681914f0ef910fa44632c5c13cca6189ae974ccafeadd7747aa2"
    },
    "shots": [
     {
-     "kind": "card",
-     "start_s": 28.9,
-     "end_s": 33.9,
-     "clips": [],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "pair",
-     "start_s": 33.9,
-     "end_s": 45.65,
+     "kind": "clip",
+     "start_s": 228.17,
+     "end_s": 250.87,
      "clips": [
       {
-       "label": "open, then home: practice start",
-       "layout": "jobs-run",
+       "label": "job 1, practice start 2: open, then home; fails",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run",
        "episode": "e000503",
        "control_steps_shown": [
-        30,
-        200
+        0,
+        315
        ],
        "outcome": "not delivered",
        "video_sha256": "a58637f2d78fec22f6549348ef4dcb16e34d31c2d3bcce77bb863541dbde7192",
        "file": "clips/r1-experiment-e000503-a58637f2.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/job_episodes.parquet",
-         "sha256": "686f7c58d535005341c03030db5fb7a577fc404cb2d716a8482056a0c4fd423f"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/robot_steps/e000503.parquet",
-         "sha256": "8f59a71ed6379748f96ddc875e72048846219b9db987c7a90d6dad4781d6c695"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/job_step_events.parquet",
-         "sha256": "88fe4f66058cbd6691030354eb18503d8c5afb2aec5a0221fa73c5aa4a4c6859"
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4f35792e3bf10002a550ce9727aa58cf8f07b6dcfda1400bbce55d1a39423843",
+        "file": "clips/r1-experiment-e000503-4f35792e.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 316,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-1/j1-practice2-e000503-openhome-hero.rerender.json"
         }
-       ]
+       }
       },
       {
-       "label": "placement runs on, then home",
-       "layout": "jobs-run",
+       "label": "job 1, practice start 2: finish, then home; delivers",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run",
        "episode": "e000603",
        "control_steps_shown": [
-        30,
-        200
+        0,
+        282
        ],
        "outcome": "delivered",
        "video_sha256": "86292e011ab5c39ca233f050d2a24c1aa24ed4238199d827325ce31b312552f9",
        "file": "clips/r1-experiment-e000603-86292e01.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/job_episodes.parquet",
-         "sha256": "686f7c58d535005341c03030db5fb7a577fc404cb2d716a8482056a0c4fd423f"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/robot_steps/e000603.parquet",
-         "sha256": "eebef95118f39d0ed9a509b68cd873b7fcf1e7acde6bc90cf286a5885ab0cf2d"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-03/run/log/job_step_events.parquet",
-         "sha256": "88fe4f66058cbd6691030354eb18503d8c5afb2aec5a0221fa73c5aa4a4c6859"
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "48b79ef4c26ea0b446b5483529923e5fc30f0e05bd74476195ba8bcb79a7719d",
+        "file": "clips/r1-experiment-e000603-48b79ef4.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 283,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-1/j1-practice2-e000603-finishhome-hero.rerender.json"
         }
-       ]
+       }
       }
      ],
      "counts": [],
@@ -303,30 +1326,57 @@
    ]
   },
   {
-   "id": "r1-release",
-   "story": "A",
-   "title": "Job 1: released",
-   "start_s": 45.65,
-   "end_s": 60.25,
+   "id": "r1-prove",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "The final exam",
+   "start_s": 250.87,
+   "end_s": 273.03,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 23,
-    "seconds": 9.567,
+    "words": 39,
+    "seconds": 16.486,
     "timing": "measured audio",
-    "text": "Confirmed 20 of 20 on unused starts, then 20 of 20 reserved starts, against 1 for the plain chain: 19 rescued, 0 broken.",
-    "voice_sha256": "7c1148f8925aba187c57f1585b7e44f7fa21cc4535fe9830f6d7430bf83885c5"
+    "text": "Before the exam, it confirms the program on 20 practice layouts it had never used. 20 of 20. Then the final exam, on the 20 locked layouts. The plain chain gets 1 right. The agent's job: 20 of 20.",
+    "voice_sha256": "b9dfe6512847e2857b977db5ca5a2e42f6a0e5265a41e9e0bdd4038e4ad1ff5b"
    },
    "shots": [
     {
-     "kind": "pair",
-     "start_s": 45.65,
-     "end_s": 56.25,
+     "kind": "clip",
+     "start_s": 250.87,
+     "end_s": 273.03,
      "clips": [
       {
-       "label": "plain chain",
-       "layout": "jobs-run",
+       "label": "r1 chain, reserved start 30 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000201",
+       "control_steps_shown": [
+        0,
+        288
+       ],
+       "outcome": "delivered",
+       "video_sha256": "ca9e9242b13144d9bf2beb9eeaa0eddafe0387339058ccd1237410211883d01e",
+       "file": "clips/r1-prove-e000201-ca9e9242.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "e77875d6125631d3f858fde9468c45e2ffa2fd36480a7bfc4f3815e0869e2eb8",
+        "file": "clips/r1-prove-e000201-e77875d6.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 289,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 31 (verified re-render)",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
        "episode": "e000202",
        "control_steps_shown": [
@@ -335,43 +1385,538 @@
        ],
        "outcome": "not delivered",
        "video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077",
-       "file": "clips/r1-release-e000202-f341aa22.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "f5f634f16751cfe3960f087728468286b65eed6cd43775e9d14cf096efcb4ca4"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/robot_steps/e000202.parquet",
-         "sha256": "37bd673e1102fb73348980ef09a6e2626efb6ddfb16fa116dd92d53ca09ecfba"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "af6a0b0f9fdbfeef03f1e72f54cc7f912da84d902f84a9990c48828e5fe5eed6"
-        }
-       ],
+       "file": "clips/r1-prove-e000202-f341aa22.mp4",
+       "records_read": [],
        "rerender": {
         "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "465270059da5fa8b3cb7c923433f97ecdedf9e378525a2016087cae3d6b104da",
-        "file": "clips/r1-release-e000202-46527005.rerender.mp4",
+        "reason": null,
+        "video_sha256": "7271b369e817a44b08a965026252766f8bc3a55be22aa6b1cda73a08d70de62d",
+        "file": "clips/r1-prove-e000202-7271b369.rerender.mp4",
         "comparison": {
-         "label": "re-render",
+         "accepted": true,
          "hashes_compared": 383,
-         "recorded_hashes": 383,
          "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "304580cdc1dae038",
-         "end_state_hash": "304580cdc1dae038",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "f341aa22262ff2385b30b0581085c59063100c222863abe11746225052a43077"
+         "camera": null,
+         "report": null
         }
        }
       },
       {
-       "label": "the saved job, same start",
-       "layout": "jobs-run",
+       "label": "r1 chain, reserved start 32 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000203",
+       "control_steps_shown": [
+        0,
+        372
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "633cc8b6cf55e2eccd6d3d048392b31af0f54ed8a1856bbb301f35a727376814",
+       "file": "clips/r1-prove-e000203-633cc8b6.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "43af0ead7abe10622c2d8f42261e6c7587e0600f697f68f633b2a2894486abc6",
+        "file": "clips/r1-prove-e000203-43af0ead.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 373,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 33 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000204",
+       "control_steps_shown": [
+        0,
+        390
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "8922212434bae4d20741ee98b0df32ce1c08fb0b92ab4a69c2e319478160fa65",
+       "file": "clips/r1-prove-e000204-89222124.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69d59ca8c34525270ea7adefea3aae6f178a7ef8646ceee61adfa69505533652",
+        "file": "clips/r1-prove-e000204-69d59ca8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 391,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 34 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000205",
+       "control_steps_shown": [
+        0,
+        388
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "23c89da16b164f7a9e1854d52891a9104d1e5d2238ba13deaa33223c7ca7f7ed",
+       "file": "clips/r1-prove-e000205-23c89da1.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "27f028ed9e899a04abb7d32d6c43f7c62ea771c55e8a1a9de742f899885f66d4",
+        "file": "clips/r1-prove-e000205-27f028ed.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 389,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 35 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000206",
+       "control_steps_shown": [
+        0,
+        442
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "5333da10a96698436de086ede290eb5ad1bc6e516cf9b6925575345df2ff502f",
+       "file": "clips/r1-prove-e000206-5333da10.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "f1eab8b27397d24e92f070a173fbd32dd8f805b9888320ada3155541052bf5ce",
+        "file": "clips/r1-prove-e000206-f1eab8b2.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 443,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 36 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000207",
+       "control_steps_shown": [
+        0,
+        387
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "f39e149656f0f9c0df6d9e966668192c4951994eade2a043b2bf2d1f8e9a0013",
+       "file": "clips/r1-prove-e000207-f39e1496.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "952852b3cd3ca077c2dea1501f2bdf72a5d58555cd22d1d5ca15f0a6593e6d60",
+        "file": "clips/r1-prove-e000207-952852b3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 388,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 37 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000208",
+       "control_steps_shown": [
+        0,
+        381
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "906ac421030005125bc23f464f580c151995147f0bf2bfc77562a508ea1e0f32",
+       "file": "clips/r1-prove-e000208-906ac421.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4043a260d1d1d8b24084ef6d7789171e34ce23757dfa3e1e6f589583fe0cc99e",
+        "file": "clips/r1-prove-e000208-4043a260.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 382,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 38 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000209",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "f668f329a62e7c513b803bb4e1ee15d137e6fb53faeabe5d35f9aadd16679730",
+       "file": "clips/r1-prove-e000209-f668f329.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "9e0beea3393b82042327622690825df51f1817280bb0cc4884db36db4ebeacb8",
+        "file": "clips/r1-prove-e000209-9e0beea3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 39 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000210",
+       "control_steps_shown": [
+        0,
+        386
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "a9454ac2aa89ceb60fadcd02b99d6bee7edd06291c455f7171babce2b7b77a65",
+       "file": "clips/r1-prove-e000210-a9454ac2.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "02de67a358033fe19acaf505a4f201e219b9e5194266fcee48ba11a1493d3f11",
+        "file": "clips/r1-prove-e000210-02de67a3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 387,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 40 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000211",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "043088b97356e7ef79496ea10cc0740476f0d2e62af700ee0cd9d38971320635",
+       "file": "clips/r1-prove-e000211-043088b9.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "40e7c349b201f3378490db3a41834498ead67146ca367f5d8a1fe00774440ff6",
+        "file": "clips/r1-prove-e000211-40e7c349.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 41 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000212",
+       "control_steps_shown": [
+        0,
+        321
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "e5764c7516bed4d752802e5dd876dc51f2763d86807edc5438bb40925f5b9594",
+       "file": "clips/r1-prove-e000212-e5764c75.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "dcc4e88b898432a8879ec2acbeadb91a984cd3131309da80334bc53f37f7807c",
+        "file": "clips/r1-prove-e000212-dcc4e88b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 322,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 42 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000213",
+       "control_steps_shown": [
+        0,
+        387
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "8ee1a20d19b1abb7d209872c5b88e97b09e201da53ad57254b26b8cdb9625c8b",
+       "file": "clips/r1-prove-e000213-8ee1a20d.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "701ab82fc471e18dfc509dea4671d54f3660d5527237027948cc3c838bbc2c36",
+        "file": "clips/r1-prove-e000213-701ab82f.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 388,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 43 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000214",
+       "control_steps_shown": [
+        0,
+        390
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "40893aa9b129337b6899915ccd30c43a9d4b8d6474f8698b24629835a35b313b",
+       "file": "clips/r1-prove-e000214-40893aa9.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "7e6707b00c2935724e55a7c406520b00b6adc794fbdd2ab1e1466df369a636bf",
+        "file": "clips/r1-prove-e000214-7e6707b0.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 391,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 44 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000215",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "3d9db902f247dfd305bbae95451201175425ceec900646dd773f5f16790fb915",
+       "file": "clips/r1-prove-e000215-3d9db902.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ae85aed82950f3892cc044ab9027774b3cd1f8c778cb4cee0c1d42866beb12df",
+        "file": "clips/r1-prove-e000215-ae85aed8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 45 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000216",
+       "control_steps_shown": [
+        0,
+        386
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "91cae47c4572c344c147a365f7095cae310e8b7646ff06b313caf23eeabb8df5",
+       "file": "clips/r1-prove-e000216-91cae47c.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ef1e73259194ae613fe9cb38d4c77bc0e65180a85eaeaa139e26e906652a1225",
+        "file": "clips/r1-prove-e000216-ef1e7325.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 387,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 46 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000217",
+       "control_steps_shown": [
+        0,
+        385
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "6dd3718aed95785f0e95827d54821ddd570e67d9fddda36daede154c3f974986",
+       "file": "clips/r1-prove-e000217-6dd3718a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "7a9f312a164e009b584653bd13d89b5df3afcd5fd38c7876a1eac8ad5939dca3",
+        "file": "clips/r1-prove-e000217-7a9f312a.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 386,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 47 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000218",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "c7afd683faba91fc09d2c3b3f19edc3696e5eaa1a9e705f1e526920ff69c003d",
+       "file": "clips/r1-prove-e000218-c7afd683.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "dcf3038b9fd057cec5c1565514241b4b2a8360eb364db0433404a30b88943ba3",
+        "file": "clips/r1-prove-e000218-dcf3038b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 48 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000219",
+       "control_steps_shown": [
+        0,
+        310
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "b8d659bd3238eb9dd91266a8595caf513b68f816aca356283700bea1a4058364",
+       "file": "clips/r1-prove-e000219-b8d659bd.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "6a8eb080a0a88b648d38f9cb96203ccee6376f0a6cbcd43613b5abd03962b6d4",
+        "file": "clips/r1-prove-e000219-6a8eb080.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 311,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 chain, reserved start 49 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000220",
+       "control_steps_shown": [
+        0,
+        389
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "ab704f69227a863a0e8be4f189ff4f7b6872e421fbabdcfa6b01a93cc316228e",
+       "file": "clips/r1-prove-e000220-ab704f69.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "87773055a4f06faf04b5604ac3b37a860ea805a0c01b581cd4cc8297155beaac",
+        "file": "clips/r1-prove-e000220-87773055.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 390,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 30 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000101",
+       "control_steps_shown": [
+        0,
+        287
+       ],
+       "outcome": "delivered",
+       "video_sha256": "faf97055651ec6382aff3e5e0750574f6e79b65ce063e746c52256a08f396bbc",
+       "file": "clips/r1-prove-e000101-faf97055.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "42a37df94d13bda5d9641c46322b7dfc7049e69aba0793b9d4e4e6eaa6997ebd",
+        "file": "clips/r1-prove-e000101-42a37df9.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 288,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 31 (verified re-render)",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
        "episode": "e000102",
        "control_steps_shown": [
@@ -380,464 +1925,811 @@
        ],
        "outcome": "delivered",
        "video_sha256": "45f808cc11539031a1565600307e2920dc03731665c3f0b3c328f4ff97d4074c",
-       "file": "clips/r1-release-e000102-45f808cc.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "f5f634f16751cfe3960f087728468286b65eed6cd43775e9d14cf096efcb4ca4"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/robot_steps/e000102.parquet",
-         "sha256": "a0c3f5c168e8a403cc7276ca199631dcecd767ab04c91c0e4041fe61771e2ef9"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "af6a0b0f9fdbfeef03f1e72f54cc7f912da84d902f84a9990c48828e5fe5eed6"
-        }
-       ],
+       "file": "clips/r1-prove-e000102-45f808cc.mp4",
+       "records_read": [],
        "rerender": {
         "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "59c5952800751e402a729c7aa8d554ba6e52113c7167a91efb1f2aea6bdecaff",
-        "file": "clips/r1-release-e000102-59c59528.rerender.mp4",
+        "reason": null,
+        "video_sha256": "661aa8e67c3998753a3b3eb99521183c99ab08a3de4ed6942c8dc66e3a949a4b",
+        "file": "clips/r1-prove-e000102-661aa8e6.rerender.mp4",
         "comparison": {
-         "label": "re-render",
+         "accepted": true,
          "hashes_compared": 266,
-         "recorded_hashes": 266,
          "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "d75041de7c022890",
-         "end_state_hash": "d75041de7c022890",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "45f808cc11539031a1565600307e2920dc03731665c3f0b3c328f4ff97d4074c"
-        }
-       }
-      }
-     ],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "card",
-     "start_s": 56.25,
-     "end_s": 60.25,
-     "clips": [],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "r1-kept",
-   "story": "A",
-   "title": "Job 1: what the installation keeps",
-   "start_s": 60.25,
-   "end_s": 70.2,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 23,
-    "seconds": 8.638,
-    "timing": "measured audio",
-    "text": "It keeps the job, the check, and a lesson: an open, still hand at one instant has not cleared the path that follows.",
-    "voice_sha256": "7b9c8213eba5a0729c72f5741e44dff1a735b8efd3543f5c90cedbac18a54d79"
-   },
-   "shots": [
-    {
-     "kind": "text",
-     "start_s": 60.25,
-     "end_s": 70.2,
-     "clips": [],
-     "counts": [],
-     "files": [
-      {
-       "id": "probes:demo/2026-10-20/reliability/replacement-01/run/library/skills/quiet-handoff-versus-path-clearance/SKILL.md",
-       "sha256": "dc76923d174998c55e2d3656502ad5d26f56628c1169780470caaa679f72db76"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "r2-request",
-   "story": "A",
-   "title": "Job 2: the request",
-   "start_s": 70.2,
-   "end_s": 79.25,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 22,
-    "seconds": 6.502,
-    "timing": "measured audio",
-    "text": "Second job: the plate at the front of the stove and the bowl on the cabinet. Again, at least 18 of 20.",
-    "voice_sha256": "bfe114e06756341016ca22bac9578c2dc9356bec7252930e5d2cdf2b304176d7"
-   },
-   "shots": [
-    {
-     "kind": "text",
-     "start_s": 70.2,
-     "end_s": 76.2,
-     "clips": [],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "clip",
-     "start_s": 76.2,
-     "end_s": 79.25,
-     "clips": [
-      {
-       "label": "plain chain, a practice start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
-       "episode": "e000102",
-       "control_steps_shown": [
-        0,
-        60
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "67c18d7221fe0a9452237bda544e0d760f451707225f7dee8ba4850579027078",
-       "file": "clips/r2-failure-e000102-67c18d72.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "921869a489a163f932c1ae2b2e539e6788068e8a8cf33cc96675b61964831082"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/robot_steps/e000102.parquet",
-         "sha256": "ab8f9cea4e3f09dfd6a9cba614026ffac2201549127bd08245273e8775e1ba38"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/job_step_events.parquet",
-         "sha256": "3c8b4526381908b6eda10744d00cac701a3f618f95895a18979bbdfe4083ed46"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "r2-failure",
-   "story": "A",
-   "title": "Job 2: what fails",
-   "start_s": 79.25,
-   "end_s": 87.75,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 21,
-    "seconds": 7.198,
-    "timing": "measured audio",
-    "text": "Plate first, then bowl: 7 of 10 practice starts. Here the plate push runs out of time short of the stove.",
-    "voice_sha256": "af2258eb32a3c2936cc4f092776d353d08919c22289ec106b0f29338ac704b15"
-   },
-   "shots": [
-    {
-     "kind": "clip",
-     "start_s": 79.25,
-     "end_s": 87.75,
-     "clips": [
-      {
-       "label": "plain chain, a practice start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
-       "episode": "e000102",
-       "control_steps_shown": [
-        60,
-        299
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "67c18d7221fe0a9452237bda544e0d760f451707225f7dee8ba4850579027078",
-       "file": "clips/r2-failure-e000102-67c18d72.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/job_episodes.parquet",
-         "sha256": "921869a489a163f932c1ae2b2e539e6788068e8a8cf33cc96675b61964831082"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/robot_steps/e000102.parquet",
-         "sha256": "ab8f9cea4e3f09dfd6a9cba614026ffac2201549127bd08245273e8775e1ba38"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run/log/job_step_events.parquet",
-         "sha256": "3c8b4526381908b6eda10744d00cac701a3f618f95895a18979bbdfe4083ed46"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "r2-loaded",
-   "story": "A",
-   "title": "Job 2: the experiment",
-   "start_s": 87.75,
-   "end_s": 107.55,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 44,
-    "seconds": 16.115,
-    "timing": "measured audio",
-    "text": "The agent extends the first job's check to both goals and tests changes. Going home between skills: 8 of 10 delivered. Loading the cheese into the bowl gets every plate to the stove, but the loaded bowl becomes the bottleneck: 4 of 10 delivered.",
-    "voice_sha256": "418ba822c500c81d95de572fde142f54982eb765561ca758f90fcbf372ed6bc2"
-   },
-   "shots": [
-    {
-     "kind": "clip",
-     "start_s": 87.75,
-     "end_s": 95.3,
-     "clips": [
-      {
-       "label": "cheese loaded into the bowl, a practice start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run",
-       "episode": "e001301",
-       "control_steps_shown": [
-        0,
-        301
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "d86d340e34106ea9f3eeebd5ddb50bffd7d94ecbfe27ec33c09f132763d5f7aa",
-       "file": "clips/r2-loaded-e001301-d86d340e.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/job_episodes.parquet",
-         "sha256": "ccd1218ef7af4a23bf2a4092506e16485199ce73b0a47ba15ce63724a7b0b266"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/robot_steps/e001301.parquet",
-         "sha256": "f31110ae8195bbde82be61b6b39ab8fe0c64d451578bf0c39188519ad25ae1f6"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/job_step_events.parquet",
-         "sha256": "79b762b5ecadd1709dcb41dbe262d57d752200a94db58baafffa18a1060709f0"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "clip",
-     "start_s": 95.3,
-     "end_s": 107.55,
-     "clips": [
-      {
-       "label": "cheese loaded into the bowl, a practice start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run",
-       "episode": "e001301",
-       "control_steps_shown": [
-        301,
-        637
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "d86d340e34106ea9f3eeebd5ddb50bffd7d94ecbfe27ec33c09f132763d5f7aa",
-       "file": "clips/r2-loaded-e001301-d86d340e.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/job_episodes.parquet",
-         "sha256": "ccd1218ef7af4a23bf2a4092506e16485199ce73b0a47ba15ce63724a7b0b266"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/robot_steps/e001301.parquet",
-         "sha256": "f31110ae8195bbde82be61b6b39ab8fe0c64d451578bf0c39188519ad25ae1f6"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run/log/job_step_events.parquet",
-         "sha256": "79b762b5ecadd1709dcb41dbe262d57d752200a94db58baafffa18a1060709f0"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "r2-relocated",
-   "story": "A",
-   "title": "Job 2: the scene, prepared",
-   "start_s": 107.55,
-   "end_s": 119.95,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 21,
-    "seconds": 7.848,
-    "timing": "measured audio",
-    "text": "So the agent grasps the cheese, slides it aside onto the table, and leaves the bowl empty: 10 of 10 delivered.",
-    "voice_sha256": "5d8aaac8754567aaed507b141739ab473f4d11c6a45e92b838b33c9ac4c99c98"
-   },
-   "shots": [
-    {
-     "kind": "clip",
-     "start_s": 107.55,
-     "end_s": 114.1,
-     "clips": [
-      {
-       "label": "cheese set aside, the same start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run",
-       "episode": "e001501",
-       "control_steps_shown": [
-        0,
-        130
-       ],
-       "outcome": "delivered",
-       "video_sha256": "73ae6e414cfa8617273c004d340464f181959bd65781f9526910c6ba7fb85a67",
-       "file": "clips/r2-relocated-e001501-73ae6e41.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/job_episodes.parquet",
-         "sha256": "f8fbea5e50b1414008d20c93b87d2856d39bc92364048685ae6fe207d44c7ce2"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/robot_steps/e001501.parquet",
-         "sha256": "d9869e2a68a68cde2d0ba121053181c01ca5cd80fa5bace85017c5587b1eebc2"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/job_step_events.parquet",
-         "sha256": "492c525c9c56c1b4cb9c187ef142196fc2ffb38dd7ac07420eb2ff4b0dd3315e"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "clip",
-     "start_s": 114.1,
-     "end_s": 119.95,
-     "clips": [
-      {
-       "label": "cheese set aside, the same start",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run",
-       "episode": "e001501",
-       "control_steps_shown": [
-        130,
-        420
-       ],
-       "outcome": "delivered",
-       "video_sha256": "73ae6e414cfa8617273c004d340464f181959bd65781f9526910c6ba7fb85a67",
-       "file": "clips/r2-relocated-e001501-73ae6e41.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/job_episodes.parquet",
-         "sha256": "f8fbea5e50b1414008d20c93b87d2856d39bc92364048685ae6fe207d44c7ce2"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/robot_steps/e001501.parquet",
-         "sha256": "d9869e2a68a68cde2d0ba121053181c01ca5cd80fa5bace85017c5587b1eebc2"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run/log/job_step_events.parquet",
-         "sha256": "492c525c9c56c1b4cb9c187ef142196fc2ffb38dd7ac07420eb2ff4b0dd3315e"
-        }
-       ]
-      }
-     ],
-     "counts": [],
-     "files": []
-    }
-   ]
-  },
-  {
-   "id": "r2-release",
-   "story": "A",
-   "title": "Job 2: released",
-   "start_s": 119.95,
-   "end_s": 136.55,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 38,
-    "seconds": 15.279,
-    "timing": "measured audio",
-    "text": "Confirmed 20 of 20 on unused starts, then 20 of 20 reserved starts, against 5 for the plain chain: 15 rescued, 0 broken. Here the plain chain reaches the stove, but its bowl attempt leaves neither goal standing.",
-    "voice_sha256": "86d61550010c7c77dc922fe7bcdb9edacf0719303680226807a332808b054196"
-   },
-   "shots": [
-    {
-     "kind": "card",
-     "start_s": 119.95,
-     "end_s": 123.95,
-     "clips": [],
-     "counts": [],
-     "files": []
-    },
-    {
-     "kind": "pair",
-     "start_s": 123.95,
-     "end_s": 136.55,
-     "clips": [
-      {
-       "label": "plain chain",
-       "layout": "jobs-run",
-       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
-       "episode": "e000202",
-       "control_steps_shown": [
-        0,
-        445
-       ],
-       "outcome": "not delivered",
-       "video_sha256": "3bdaaa10c162a159c3efd0ef66e2633c3f3363be9b030b41fcecedf1ac73205e",
-       "file": "clips/r2-release-e000202-3bdaaa10.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "def25f94fab1e7be33c0ec2157c3b94cae4c81b65c90944931f135c98ea50983"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/robot_steps/e000202.parquet",
-         "sha256": "c5e9a2fc9dc10c8b67ed041e0f98dfd22dc2f94b97b5e548c760adc14d7a4eec"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "09c29c090d00401aa6c808ed7e43a0695a27586ce001d57cca617f653917149c"
-        }
-       ],
-       "rerender": {
-        "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "3e54d280a960bd27ea96757ebd4c355fc338bd0cabc42e8cdb75d280e6e77094",
-        "file": "clips/r2-release-e000202-3e54d280.rerender.mp4",
-        "comparison": {
-         "label": "re-render",
-         "hashes_compared": 446,
-         "recorded_hashes": 446,
-         "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "163dd683f34ecc8d",
-         "end_state_hash": "163dd683f34ecc8d",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "3bdaaa10c162a159c3efd0ef66e2633c3f3363be9b030b41fcecedf1ac73205e"
+         "camera": null,
+         "report": null
         }
        }
       },
       {
-       "label": "the saved job, same start",
-       "layout": "jobs-run",
+       "label": "r1 job, reserved start 32 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        284
+       ],
+       "outcome": "delivered",
+       "video_sha256": "0d0d87ecbbd448aea4ac488fb10f26da77b1ef7e51511933f4feb84a6028e3d3",
+       "file": "clips/r1-prove-e000103-0d0d87ec.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "1be970a1fccc14cf9fcb3a533d49e7e1324b8ee5b5faa542bf30017168068a06",
+        "file": "clips/r1-prove-e000103-1be970a1.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 285,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 33 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000104",
+       "control_steps_shown": [
+        0,
+        280
+       ],
+       "outcome": "delivered",
+       "video_sha256": "62aa8122376bbdd7ac54b004325883ca2e722fdcebb0c24ab22aef790d4c74ec",
+       "file": "clips/r1-prove-e000104-62aa8122.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "2127bc58baa60a7805e43291a6883d459c9a6e5b27e618a67615592fb45c7c6e",
+        "file": "clips/r1-prove-e000104-2127bc58.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 281,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 34 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000105",
+       "control_steps_shown": [
+        0,
+        298
+       ],
+       "outcome": "delivered",
+       "video_sha256": "b08761e823ea276119ca8aa0fc0ee6caa14269d338a2be6faaa5df2a89dce6b7",
+       "file": "clips/r1-prove-e000105-b08761e8.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4aafb3f8676c4b52140b34365d7594d7c42085750364c47c35d52e2fcca37d2b",
+        "file": "clips/r1-prove-e000105-4aafb3f8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 299,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 35 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000106",
+       "control_steps_shown": [
+        0,
+        286
+       ],
+       "outcome": "delivered",
+       "video_sha256": "22c9b6982ebe023bedce1003a5cfaf757740cd9e3d7fac7b10dcbbb628beb2a7",
+       "file": "clips/r1-prove-e000106-22c9b698.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "75bc8f5e973bcb04e9377ae9a03f2587ca02c795b9317b321dd5ffb6412ac17e",
+        "file": "clips/r1-prove-e000106-75bc8f5e.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 287,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 36 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000107",
+       "control_steps_shown": [
+        0,
+        288
+       ],
+       "outcome": "delivered",
+       "video_sha256": "88d4936e566536723d90c757f195fb2749416c2dd6e4f480f93ed72456f8e815",
+       "file": "clips/r1-prove-e000107-88d4936e.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "d30efb681a3c6d1e041d05a6d39b7d32cb5c5581a6c1bd4aa95d9c775b5924e5",
+        "file": "clips/r1-prove-e000107-d30efb68.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 289,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 37 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000108",
+       "control_steps_shown": [
+        0,
+        290
+       ],
+       "outcome": "delivered",
+       "video_sha256": "556f316a6a7e095b2db9ee7dc1df52b387373c613b9dfeaf97d5ef268c29fbb8",
+       "file": "clips/r1-prove-e000108-556f316a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "c15166fb0f821e493bee6904d25796b09818e1597feb1a96d9e4ddf8a445c6e3",
+        "file": "clips/r1-prove-e000108-c15166fb.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 291,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 38 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000109",
+       "control_steps_shown": [
+        0,
+        275
+       ],
+       "outcome": "delivered",
+       "video_sha256": "92c7d1e449e2db8b5ccf0f9a9b5a9f2e7060d0c46792fa861432efffa5d3db3c",
+       "file": "clips/r1-prove-e000109-92c7d1e4.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "01951f037272890b55d7269bca8bba2fd637d09fb910275fa2465ef2bd59082d",
+        "file": "clips/r1-prove-e000109-01951f03.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 276,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 39 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000110",
+       "control_steps_shown": [
+        0,
+        263
+       ],
+       "outcome": "delivered",
+       "video_sha256": "caf6ca77633986d47d654b1d945039d9c9cf3ec331d4c48d6db6e844e9f0a131",
+       "file": "clips/r1-prove-e000110-caf6ca77.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69bb7c22dc9425c7fc2293b4c0ff35062efa6e7c8d2dbf6a643039b354844133",
+        "file": "clips/r1-prove-e000110-69bb7c22.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 264,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 40 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000111",
+       "control_steps_shown": [
+        0,
+        302
+       ],
+       "outcome": "delivered",
+       "video_sha256": "27403d7dbcd5a5fd51161de276b3840b18435c60279ae97314ae10ce2917e916",
+       "file": "clips/r1-prove-e000111-27403d7d.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ea7120c229c4c7f6e0ac0a3ea353b6f03a32dcaed648386e2a984b644ac83475",
+        "file": "clips/r1-prove-e000111-ea7120c2.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 303,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 41 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000112",
+       "control_steps_shown": [
+        0,
+        272
+       ],
+       "outcome": "delivered",
+       "video_sha256": "f6197531862f5b66c86a7df388727ed7d76d906319c03f1b4d5eda514855d25f",
+       "file": "clips/r1-prove-e000112-f6197531.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "a0ae0548a8b6f9c0bd9970de409fb15ea5e48a6c17ebc4217fd60915f8cbcc9a",
+        "file": "clips/r1-prove-e000112-a0ae0548.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 273,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 42 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000113",
+       "control_steps_shown": [
+        0,
+        272
+       ],
+       "outcome": "delivered",
+       "video_sha256": "1d5a3a73b87cdefe46f5fcdb672654b232fc42c6bc2d4f4f19ab2701d4e7dca9",
+       "file": "clips/r1-prove-e000113-1d5a3a73.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "3f08b2baa5445ff8d51343722fbad919ed92d65b53cc3dcd699a8e1bb599268f",
+        "file": "clips/r1-prove-e000113-3f08b2ba.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 273,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 43 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000114",
+       "control_steps_shown": [
+        0,
+        267
+       ],
+       "outcome": "delivered",
+       "video_sha256": "7ec5116aa76f3afda289d7153e1b98c0504a47a3ca54fa0b75d1f911b9fe9744",
+       "file": "clips/r1-prove-e000114-7ec5116a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "639b0e7b4a08f1e059fae54644dc8c8b4dd4ba45d15dceb6229dcb57291b0bc7",
+        "file": "clips/r1-prove-e000114-639b0e7b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 268,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 44 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000115",
+       "control_steps_shown": [
+        0,
+        265
+       ],
+       "outcome": "delivered",
+       "video_sha256": "96133a1bc3076a77a56f052a77c73569bd8514d8ca1b45bb7db882158947064d",
+       "file": "clips/r1-prove-e000115-96133a1b.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "aeb70c865ebdcc798432b338713eb235850fd592addf3e9bebd7951b7d582897",
+        "file": "clips/r1-prove-e000115-aeb70c86.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 266,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 45 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000116",
+       "control_steps_shown": [
+        0,
+        328
+       ],
+       "outcome": "delivered",
+       "video_sha256": "3a31767fe68dee81f21211e9ff34bfcdd443003360bb9031655c2eff4e1019dd",
+       "file": "clips/r1-prove-e000116-3a31767f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "77756ffbbf34f806a99e67f6724ecb32fa26edd57d0deabbbd0c68dd6a71ef9d",
+        "file": "clips/r1-prove-e000116-77756ffb.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 329,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 46 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000117",
+       "control_steps_shown": [
+        0,
+        261
+       ],
+       "outcome": "delivered",
+       "video_sha256": "7626562afc86a31a8aa9dba38c2357ccc86a35bc95135d07e0512958e53625e6",
+       "file": "clips/r1-prove-e000117-7626562a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "c7e68de1ae56245ae36f4c527d1a18b76d537c612d5a6546b1f3b5f6feef0b52",
+        "file": "clips/r1-prove-e000117-c7e68de1.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 262,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 47 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000118",
+       "control_steps_shown": [
+        0,
+        267
+       ],
+       "outcome": "delivered",
+       "video_sha256": "70a18439f0bd815f3fee9775a7523bbfd073fef3baec368759824d9048950bb4",
+       "file": "clips/r1-prove-e000118-70a18439.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "9b8555a71d67b604c97888af8a84ecd8fea0da2b9df4e1c52622715258307f4f",
+        "file": "clips/r1-prove-e000118-9b8555a7.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 268,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 48 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000119",
+       "control_steps_shown": [
+        0,
+        283
+       ],
+       "outcome": "delivered",
+       "video_sha256": "a7c6e30f249381a90102fc34f35982f05a73e68b4eefaac8875f585581e75b82",
+       "file": "clips/r1-prove-e000119-a7c6e30f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "fda2c89473d4437e34ae06c27b93d8f62b2b131e5c0ac66c4901f4a4d4bb2700",
+        "file": "clips/r1-prove-e000119-fda2c894.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 284,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r1 job, reserved start 49 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+       "episode": "e000120",
+       "control_steps_shown": [
+        0,
+        271
+       ],
+       "outcome": "delivered",
+       "video_sha256": "0285f7696c76f5c5151de9b7d43aab52e0153fdaecdcf766c9f0b3d5bf215484",
+       "file": "clips/r1-prove-e000120-0285f769.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "91e7b3caad9f305ca4f15ceb00aa20e90f2d41af54b252b97d40c33cf84bcff3",
+        "file": "clips/r1-prove-e000120-91e7b3ca.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 272,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r1-keep",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "Kept for the next request",
+   "start_s": 273.03,
+   "end_s": 283.5,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 25,
+    "seconds": 9.288,
+    "timing": "measured audio",
+    "text": "The job and its check go into the installation's library, ready for the next request. From request to proven job, the agent took 41 minutes.",
+    "voice_sha256": "3cf431a11113ff6a447f0d0f0a99f7e8106b0c0cc6010204101edd8dbba8aec9"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 273.03,
+     "end_s": 283.5,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r2-fail",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "A harder job",
+   "start_s": 283.5,
+   "end_s": 311.97,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 79,
+    "seconds": 26.285,
+    "timing": "measured audio",
+    "text": "The second request is harder. Two things must end up in place: the plate at the front of the stove, and the bowl on top of the cabinet. The robot has a skill for each: one pushes the plate, the other places the bowl. Chained plainly, the job succeeds on 5 of 20 fresh layouts. The trouble is a pack of cream cheese in the plate's way: the push runs into it, or the hand grabs the cheese instead.",
+    "voice_sha256": "b6102c758cf45ea8c61747691ed2532d999327ab45ef8b96c154a769f01dc546"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 283.5,
+     "end_s": 311.97,
+     "clips": [
+      {
+       "label": "job 2, development, plain chain on practice start 1: the push times out",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "67c18d7221fe0a9452237bda544e0d760f451707225f7dee8ba4850579027078",
+       "file": "clips/r2-fail-e000102-67c18d72.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69f0689229ca59ac04a62dea373b290b4714aeddffd8b856f0d83e3cfa74b545",
+        "file": "clips/r2-fail-e000102-69f06892.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-chain-s01-e000102-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "as r2-chain-dev1-top, from 25 degrees off vertical, so the cheese stays in sight under the hand",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000102",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "67c18d7221fe0a9452237bda544e0d760f451707225f7dee8ba4850579027078",
+       "file": "clips/r2-fail-e000102-67c18d72.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "d18bdbee94a17fbef7469e23bdbf16430cb287e44d8be15a48346f50b4d44e01",
+        "file": "clips/r2-fail-e000102-d18bdbee.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": "top-tilt",
+         "report": "probes:demo/explainer/footage/batch-2/r2-chain-dev1-top-tilt.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "as r2-chain-dev5-top, from 25 degrees off vertical",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-01/run",
+       "episode": "e000106",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "d24b3663b808b65cdbc20476491ccde2ffa575e0f4bdb4d2277aefb0da02e120",
+       "file": "clips/r2-fail-e000106-d24b3663.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "c48aedd7b6320f0442941e58cac26004df22380c47da1e97e4532c3a4d7f3c1c",
+        "file": "clips/r2-fail-e000106-c48aedd7.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": "top-tilt",
+         "report": "probes:demo/explainer/footage/batch-2/r2-chain-dev5-top-tilt.rerender.json"
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r2-bottleneck",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "The bottleneck moves",
+   "start_s": 311.97,
+   "end_s": 330.23,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 48,
+    "seconds": 16.579,
+    "timing": "measured audio",
+    "text": "Starting from the check it saved in the first job, the agent tries 18 programs. Loading the cheese into the bowl clears the way, and every plate push works. But now the loaded bowl won't carry: the job delivers 4 of 10. Fixing one problem created the next.",
+    "voice_sha256": "7b0105b9845893e0a134b6958826182a4aa156fbc9dcd316cce99349ed945aef"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 311.97,
+     "end_s": 330.23,
+     "clips": [
+      {
+       "label": "job 2, session 4: the cream cheese loaded into the bowl; the bowl step fails",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-04/run",
+       "episode": "e001301",
+       "control_steps_shown": [
+        0,
+        637
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "d86d340e34106ea9f3eeebd5ddb50bffd7d94ecbfe27ec33c09f132763d5f7aa",
+       "file": "clips/r2-bottleneck-e001301-d86d340e.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "fb5bc1d5dee5aee5e99014e1da4386e41c15a47266a0f7dc70617c2837f0b86d",
+        "file": "clips/r2-bottleneck-e001301-fb5bc1d5.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 638,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-cheese-loaded-s04-e001301-hero.rerender.json"
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "r2-fix",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "Set the cheese aside",
+   "start_s": 330.23,
+   "end_s": 344.0,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 33,
+    "seconds": 11.099,
+    "timing": "measured audio",
+    "text": "Its answer: pick up the cheese and set it aside. Then the plate, then the empty bowl: 10 of 10. On the final exam, 20 of 20, against 5 for the plain chain.",
+    "voice_sha256": "e4711ddae03b069a9cf5272e3b53871876e10d2c05a026635e76faebd3167658"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 330.23,
+     "end_s": 344.0,
+     "clips": [
+      {
+       "label": "job 2, session 5: the cream cheese set aside; delivers",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run",
+       "episode": "e001501",
+       "control_steps_shown": [
+        0,
+        420
+       ],
+       "outcome": "delivered",
+       "video_sha256": "73ae6e414cfa8617273c004d340464f181959bd65781f9526910c6ba7fb85a67",
+       "file": "clips/r2-fix-e001501-73ae6e41.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4205b471102b8b0d4793a463d8963a2c8a1678977065fa866af6526902e37ba0",
+        "file": "clips/r2-fix-e001501-4205b471.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 421,
+         "hash_mismatches": 0,
+         "camera": "hero-plate",
+         "report": "probes:demo/explainer/footage/batch-1/j2-cheese-aside-s05-e001501-hero.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "job 2, session 5, the cream cheese set aside (the slide, steps 60-100), practice start 0, from 25 degrees off vertical: batch 1's j2-cheese-aside-s05-e001501-top shows the cheese with 0 pixels through the slide",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/runs/session-05/run",
+       "episode": "e001501",
+       "control_steps_shown": [
+        0,
+        420
+       ],
+       "outcome": "delivered",
+       "video_sha256": "73ae6e414cfa8617273c004d340464f181959bd65781f9526910c6ba7fb85a67",
+       "file": "clips/r2-fix-e001501-73ae6e41.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "74f0471ecd9d73845c9ba42548e248a5f258e84d03c137cfd14f08e10f1c74cc",
+        "file": "clips/r2-fix-e001501-74f0471e.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 421,
+         "hash_mismatches": 0,
+         "camera": "top-tilt",
+         "report": "probes:demo/explainer/footage/batch-2/r2-aside-0-top-tilt.rerender.json"
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 30 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000101",
+       "control_steps_shown": [
+        0,
+        414
+       ],
+       "outcome": "delivered",
+       "video_sha256": "9f5ab7a3c6dcb632cb5c4d2b892ad2187364bfeecf66811ef5f36360d3f4f53d",
+       "file": "clips/r2-fix-e000101-9f5ab7a3.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "6ad9ee639bcfc00c63acba1b1c335f7537ba615538ffe4d84bee98677645a89f",
+        "file": "clips/r2-fix-e000101-6ad9ee63.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 415,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 31 (verified re-render)",
+       "layout": "explainer",
        "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
        "episode": "e000102",
        "control_steps_shown": [
@@ -846,37 +2738,1045 @@
        ],
        "outcome": "delivered",
        "video_sha256": "366622e4cfdd8ec5bc70cbb455b071139d0f2e09e372d4391be0940b7c5176ac",
-       "file": "clips/r2-release-e000102-366622e4.mp4",
-       "records_read": [
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/job_episodes.parquet",
-         "sha256": "def25f94fab1e7be33c0ec2157c3b94cae4c81b65c90944931f135c98ea50983"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/robot_steps/e000102.parquet",
-         "sha256": "3d3e029cf3ef5e926e36d0928d316aa7dafe2f616232fa150e8402e126b2c98c"
-        },
-        {
-         "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run/log/job_step_events.parquet",
-         "sha256": "09c29c090d00401aa6c808ed7e43a0695a27586ce001d57cca617f653917149c"
-        }
-       ],
+       "file": "clips/r2-fix-e000102-366622e4.mp4",
+       "records_read": [],
        "rerender": {
         "used": true,
-        "reason": "accepted by the replay's report: the same run, episode, original video and camera, every state hash and the delivery verdict matched",
-        "video_sha256": "cdafb8dd2d37f1c5272f27b125930b852797d88713937dc554bffc137d71ef3f",
-        "file": "clips/r2-release-e000102-cdafb8dd.rerender.mp4",
+        "reason": null,
+        "video_sha256": "b22e146676fd3a0c1d9bed245a5bbd5b605feed1924cb4f0944243ec32cc1cc9",
+        "file": "clips/r2-fix-e000102-b22e1466.rerender.mp4",
         "comparison": {
-         "label": "re-render",
+         "accepted": true,
          "hashes_compared": 404,
-         "recorded_hashes": 404,
          "hash_mismatches": 0,
-         "verdict_matches": true,
-         "recorded_end_state_hash": "b96f61ea418b90e2",
-         "end_state_hash": "b96f61ea418b90e2",
-         "image_size": 720,
-         "recorded_image_size": 360,
-         "original_video_sha256": "366622e4cfdd8ec5bc70cbb455b071139d0f2e09e372d4391be0940b7c5176ac"
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 32 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        409
+       ],
+       "outcome": "delivered",
+       "video_sha256": "e2a23650fc381965f342a0b150b89c64c892daf74cf571704135c837c90e2ba9",
+       "file": "clips/r2-fix-e000103-e2a23650.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "0cb26d4d6a29114240d7148a51ab4c69136d806763d0341e05376db72b0b9f02",
+        "file": "clips/r2-fix-e000103-0cb26d4d.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 410,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 33 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000104",
+       "control_steps_shown": [
+        0,
+        415
+       ],
+       "outcome": "delivered",
+       "video_sha256": "8714476071f42aa80df93a83c7b0594238dfe65c4bb1e2342e11788c50fb5cda",
+       "file": "clips/r2-fix-e000104-87144760.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "37d9e8c8eae57ea123c953ba29b336f2e3d470dcee339c771507a4a85fbd5a1b",
+        "file": "clips/r2-fix-e000104-37d9e8c8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 416,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 34 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000105",
+       "control_steps_shown": [
+        0,
+        413
+       ],
+       "outcome": "delivered",
+       "video_sha256": "8879020fa97b21cbf33f59d0c637592e06c1da628269d90597c029bc76d2166e",
+       "file": "clips/r2-fix-e000105-8879020f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "aa13885a328ebb5d59e826fd2191f230f33e1f78f65de50266ee9bf73de1e74d",
+        "file": "clips/r2-fix-e000105-aa13885a.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 414,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 35 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000106",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": "delivered",
+       "video_sha256": "ee34e9084d4d8da671abcfc8f0c89b0e142927b2e5f13cf5ab39846ed3e3b418",
+       "file": "clips/r2-fix-e000106-ee34e908.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "5b64cd986dc491c5cab040d2d390ff4453fdbc02c26bca0f98ebdc8103527a5e",
+        "file": "clips/r2-fix-e000106-5b64cd98.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 405,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 36 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000107",
+       "control_steps_shown": [
+        0,
+        406
+       ],
+       "outcome": "delivered",
+       "video_sha256": "2d8e6941c228859115c2179d2bfe567d5e41dc6e4a2e2790d0ad119615929dfc",
+       "file": "clips/r2-fix-e000107-2d8e6941.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "542fbeece3fed4db1ef29aa9c6556508cf301225c6e5e8f73da3980e8cc6715f",
+        "file": "clips/r2-fix-e000107-542fbeec.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 407,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 37 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000108",
+       "control_steps_shown": [
+        0,
+        409
+       ],
+       "outcome": "delivered",
+       "video_sha256": "094d35b1e3dd9d7b503e9cc44b13e4ec330a616cd5fc9e74b47125b29c5c899f",
+       "file": "clips/r2-fix-e000108-094d35b1.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "423cec3da3380e4168fd4a567469873bc07d85ea769eaa518ca8b391fc7bee3d",
+        "file": "clips/r2-fix-e000108-423cec3d.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 410,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 38 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000109",
+       "control_steps_shown": [
+        0,
+        402
+       ],
+       "outcome": "delivered",
+       "video_sha256": "6dc08b0b17b082e1d6a9083f785e954b7703ad71fb562cd6d45dd29bc0b86560",
+       "file": "clips/r2-fix-e000109-6dc08b0b.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "3ee8078da8119d7ff8b66d88711d1abea8a4d6f0eefd69d0339a825a06e22e8c",
+        "file": "clips/r2-fix-e000109-3ee8078d.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 403,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 39 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000110",
+       "control_steps_shown": [
+        0,
+        413
+       ],
+       "outcome": "delivered",
+       "video_sha256": "cc540800e59dfea495bf6ff9e51630a30751233ab7e75e879f1ae0707cf85e78",
+       "file": "clips/r2-fix-e000110-cc540800.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "30762ee55f0437d256162d422d20f204cd3d687232b55f4edfeb5017491463b6",
+        "file": "clips/r2-fix-e000110-30762ee5.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 414,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 40 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000111",
+       "control_steps_shown": [
+        0,
+        405
+       ],
+       "outcome": "delivered",
+       "video_sha256": "1704088e510845eb223f57216aa1a089c634b9fc0bb14913d35d9b8b2b09bbc7",
+       "file": "clips/r2-fix-e000111-1704088e.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "69ec89430fce43b45fb6829898400e5f65b07178562ae0d89acb195d36b798a4",
+        "file": "clips/r2-fix-e000111-69ec8943.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 406,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 41 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000112",
+       "control_steps_shown": [
+        0,
+        405
+       ],
+       "outcome": "delivered",
+       "video_sha256": "d8117833f5d6bba4dea50f93bdf4e57d29831e01482760101b4e32b8f1e610f8",
+       "file": "clips/r2-fix-e000112-d8117833.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "e52d3433c1858e9356e2246c8c60eee9cf3a1f193ae914145d9734d22d3939c7",
+        "file": "clips/r2-fix-e000112-e52d3433.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 406,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 42 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000113",
+       "control_steps_shown": [
+        0,
+        384
+       ],
+       "outcome": "delivered",
+       "video_sha256": "8a845c48baaf4948eb02234f252595f8733118ab496fb6242b15b2bc232997a5",
+       "file": "clips/r2-fix-e000113-8a845c48.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ed4c27b1770378a836965f5c930b2178b7e625a8855b59ec46d71800f9532520",
+        "file": "clips/r2-fix-e000113-ed4c27b1.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 385,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 43 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000114",
+       "control_steps_shown": [
+        0,
+        398
+       ],
+       "outcome": "delivered",
+       "video_sha256": "7fd073c58d4950d9a942857427bc6ec06afa0f3aa56ba18492158b3385b14462",
+       "file": "clips/r2-fix-e000114-7fd073c5.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "d0d4ba6a1aaafa9e439754e73cf31bea31af27a947cc35293f81edf48dd9f80d",
+        "file": "clips/r2-fix-e000114-d0d4ba6a.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 399,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 44 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000115",
+       "control_steps_shown": [
+        0,
+        400
+       ],
+       "outcome": "delivered",
+       "video_sha256": "b1371b13597765ef22170ef0207237bd9b628417fa9bbe2e9f4d4a170da67c36",
+       "file": "clips/r2-fix-e000115-b1371b13.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "4666c87400a0b26e2d7f87e1a0f72fbdc6428d83f357764a9c979ae60bc19ec8",
+        "file": "clips/r2-fix-e000115-4666c874.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 401,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 45 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000116",
+       "control_steps_shown": [
+        0,
+        472
+       ],
+       "outcome": "delivered",
+       "video_sha256": "e919bf17887f6d369c1f09e045a0ac49303d8ba0ec5e6034d9bfaaaa6a47d3ae",
+       "file": "clips/r2-fix-e000116-e919bf17.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "29b6987b43d0e135233b7cd65c365c561ced0e47aaca3772f95c3255810d1c94",
+        "file": "clips/r2-fix-e000116-29b6987b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 473,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 46 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000117",
+       "control_steps_shown": [
+        0,
+        402
+       ],
+       "outcome": "delivered",
+       "video_sha256": "d5f82e153c08158368aae01e5daaae1fdc63d4ad86fe3b4e671940186e09cc85",
+       "file": "clips/r2-fix-e000117-d5f82e15.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "1254e192c94844aeb8b84b9a7d4a0bb079c880163c46eaf8ff1a53baf956ffcb",
+        "file": "clips/r2-fix-e000117-1254e192.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 403,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 47 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000118",
+       "control_steps_shown": [
+        0,
+        408
+       ],
+       "outcome": "delivered",
+       "video_sha256": "59db485fc8cc51322035c7dcb5c453a07f3d62efd99e0e857d57258e7788869b",
+       "file": "clips/r2-fix-e000118-59db485f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "ac188c64c59d2c9d9c0f30915cb943fc7c24618c79913bf3b5c903e5a7402f69",
+        "file": "clips/r2-fix-e000118-ac188c64.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 409,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 48 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000119",
+       "control_steps_shown": [
+        0,
+        408
+       ],
+       "outcome": "delivered",
+       "video_sha256": "dc5fe2f7723e3e05935f622d4713c3d640579a5c8673e8372d543994907a2dc6",
+       "file": "clips/r2-fix-e000119-dc5fe2f7.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "8423f46d96e1ce9d65492752531589f54c3ab07c130f5ddab1df60040c10580e",
+        "file": "clips/r2-fix-e000119-8423f46d.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 409,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 job, reserved start 49 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000120",
+       "control_steps_shown": [
+        0,
+        408
+       ],
+       "outcome": "delivered",
+       "video_sha256": "bc0e7e965c1d54deb91764036aaf80346787c8e3b1413f03aef7603ee73076d4",
+       "file": "clips/r2-fix-e000120-bc0e7e96.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "94edc2c310a640a939bc87dc675652f430b162928330e4edeee0fb42f003af30",
+        "file": "clips/r2-fix-e000120-94edc2c3.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 409,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 30 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000201",
+       "control_steps_shown": [
+        0,
+        447
+       ],
+       "outcome": "delivered",
+       "video_sha256": "a2f064acf7dadc143c0cdc022c3fec9e0a1c1fb13d615df7178c2583be97bbbd",
+       "file": "clips/r2-fix-e000201-a2f064ac.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "266fdab619fb26d3c68d37cfd0645a8510ed10eef27170c55d3f7adf0e5cbafe",
+        "file": "clips/r2-fix-e000201-266fdab6.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 448,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 31 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000202",
+       "control_steps_shown": [
+        0,
+        445
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "3bdaaa10c162a159c3efd0ef66e2633c3f3363be9b030b41fcecedf1ac73205e",
+       "file": "clips/r2-fix-e000202-3bdaaa10.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "91123950b9de4b6aff9e605a6f42892b928e2562b1ebb3b36d2d0b31c7cca345",
+        "file": "clips/r2-fix-e000202-91123950.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 446,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 32 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000203",
+       "control_steps_shown": [
+        0,
+        377
+       ],
+       "outcome": "delivered",
+       "video_sha256": "8ad750862b5070ffc9aebd27ae8868cbef1b0237560c68ce9b6dbd12353fb52c",
+       "file": "clips/r2-fix-e000203-8ad75086.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "9e90c956f0999ae718fc3c6c08c9069deadc8caceccdb04aa641aaa847cb884e",
+        "file": "clips/r2-fix-e000203-9e90c956.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 378,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 33 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000204",
+       "control_steps_shown": [
+        0,
+        440
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "9b05f8796647b975eef5f643f9a34a5ed813beeb4212af2d70b387f56d430e71",
+       "file": "clips/r2-fix-e000204-9b05f879.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "48c7b3b53467580a42b8c181f7b1375867b7f3f081f6ed9f3813e5e9ecbd2072",
+        "file": "clips/r2-fix-e000204-48c7b3b5.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 441,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 34 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000205",
+       "control_steps_shown": [
+        0,
+        487
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "b104601ef34f03365128c980263c13ca446708b9d0f0177ef48dd1bac6f055f8",
+       "file": "clips/r2-fix-e000205-b104601e.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "0eb205a16ced8c7a61413a38a2f3182de753a917ee57901ee573c7a445792190",
+        "file": "clips/r2-fix-e000205-0eb205a1.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 488,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 35 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000206",
+       "control_steps_shown": [
+        0,
+        432
+       ],
+       "outcome": "delivered",
+       "video_sha256": "ec4a65a6e33805de781650997a8a6a07948364b73deb49b22b12ee8334ecdab5",
+       "file": "clips/r2-fix-e000206-ec4a65a6.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "480c414c4b2ee2ac3f9db384b692098faef79a4f84f11af611f3594a7690283f",
+        "file": "clips/r2-fix-e000206-480c414c.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 433,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 36 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000207",
+       "control_steps_shown": [
+        0,
+        352
+       ],
+       "outcome": "delivered",
+       "video_sha256": "0af78cde240b76ca8572d5bcc6f9c2cf3e8726f8c7d207ba285141063fdbe824",
+       "file": "clips/r2-fix-e000207-0af78cde.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "daa4250b1f457519b321de74045fed47d8d1b9c355e4c8877807e2a7d1394f7b",
+        "file": "clips/r2-fix-e000207-daa4250b.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 353,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 37 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000208",
+       "control_steps_shown": [
+        0,
+        438
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "9a68b42faef3ac690ef120d9be6e83c3b239dc7d1477c8bb5ce2f52d6a37267d",
+       "file": "clips/r2-fix-e000208-9a68b42f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "2a12ebeb53cd5db07a88b8be06867bc7257ee7d5a614d7fb3ddae688d2cb2e4c",
+        "file": "clips/r2-fix-e000208-2a12ebeb.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 439,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 38 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000209",
+       "control_steps_shown": [
+        0,
+        373
+       ],
+       "outcome": "delivered",
+       "video_sha256": "ba629f1b932c3a425c1669a00db386f7865548f8acc3fd009791cbad693d6a86",
+       "file": "clips/r2-fix-e000209-ba629f1b.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "627e9fe080c8ed09d93a8cff8cb40c736a81bb251431f1d60e66ee20acbfd9f5",
+        "file": "clips/r2-fix-e000209-627e9fe0.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 374,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 39 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000210",
+       "control_steps_shown": [
+        0,
+        438
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "1b37f1de924ee5e33e990c62b9e9b2c263c6b6d8bd4da5ce7a69aa04a60aa831",
+       "file": "clips/r2-fix-e000210-1b37f1de.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "bdcfc0bccc2a78aad6580935e1680cee6ff3d3ac6673fd09d783869dc3d0da51",
+        "file": "clips/r2-fix-e000210-bdcfc0bc.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 439,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 40 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000211",
+       "control_steps_shown": [
+        0,
+        470
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "a09ac93be1beba9ab99c0d2846304b5ecca8acc8ab28080db2c981522080bea0",
+       "file": "clips/r2-fix-e000211-a09ac93b.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "72003045ec5d344b5f36d1287eb1084501580a5eda9babeba9d372fbb017e4f3",
+        "file": "clips/r2-fix-e000211-72003045.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 471,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 41 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000212",
+       "control_steps_shown": [
+        0,
+        444
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "62fb725a0130e2af3db2b054f5e310635445843d1ec29843bdddb9721ef52627",
+       "file": "clips/r2-fix-e000212-62fb725a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "905761a052e6e93baa7637ebf5cf86dd0cd58a91c257fd8f5824a9b7e5af4518",
+        "file": "clips/r2-fix-e000212-905761a0.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 445,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 42 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000213",
+       "control_steps_shown": [
+        0,
+        418
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "2ac3cd9c035567dd328ece1ef5c685b3f353e4e69cd99df525560377ec71ba93",
+       "file": "clips/r2-fix-e000213-2ac3cd9c.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "b86dad86fc8b22aefde7809c7c63109cc791a773568713e1cb9f500241ec8315",
+        "file": "clips/r2-fix-e000213-b86dad86.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 419,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 43 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000214",
+       "control_steps_shown": [
+        0,
+        440
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "f03bcd4fcf4df1f10f4a33a11cde05d6c96fce8122e444ee648935f48e85d9c8",
+       "file": "clips/r2-fix-e000214-f03bcd4f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "0f8f2a513b1dea3a8884763b1c2575aa39ad53eb7d6c71111a16bb14cf191950",
+        "file": "clips/r2-fix-e000214-0f8f2a51.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 441,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 44 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000215",
+       "control_steps_shown": [
+        0,
+        300
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "4ffdce85efc299c75106077c22d4629afc7ab8e740833cdc6a1ed28dbca0e3f1",
+       "file": "clips/r2-fix-e000215-4ffdce85.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "135ca6b81a5a34b265e68770d7e8fb4f631b9cb91d162e25d3e720e66bd3a81f",
+        "file": "clips/r2-fix-e000215-135ca6b8.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 301,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 45 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000216",
+       "control_steps_shown": [
+        0,
+        500
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "dd8e590a2cdfa3c585235801f6416a6c21af634dd52bc8e3249a04e45812b3db",
+       "file": "clips/r2-fix-e000216-dd8e590a.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "fa92b835cd8439a9c1558fb38560a42fd6c5d7df21f453c60db89fd9bd0b62d5",
+        "file": "clips/r2-fix-e000216-fa92b835.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 501,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 46 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000217",
+       "control_steps_shown": [
+        0,
+        444
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "35ac5e469b1985c47dae3e4a0844a7d618681b7925685d3b5a57788ef01a97c1",
+       "file": "clips/r2-fix-e000217-35ac5e46.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "6e18aa48f5327e111d31ddebec89c3e41c0519ebb28e511a5979688e98c53159",
+        "file": "clips/r2-fix-e000217-6e18aa48.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 445,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 47 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000218",
+       "control_steps_shown": [
+        0,
+        440
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "49719df6a82e910f930ff78f939a21b6e71c012890354b65c5359d72978449ec",
+       "file": "clips/r2-fix-e000218-49719df6.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "a44d91a9e8a17d2b9e171ba1867d760f563cbce9026ce5cd797bf29edfc5f55a",
+        "file": "clips/r2-fix-e000218-a44d91a9.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 441,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 48 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000219",
+       "control_steps_shown": [
+        0,
+        435
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "864709cd022cb8ad7fda214096d0250532328e7355b068ea17a6e1a5d7eecd00",
+       "file": "clips/r2-fix-e000219-864709cd.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "c939e8f926611f5095634da4292dc3e2792a48ee036f5a06103a154f905b6aca",
+        "file": "clips/r2-fix-e000219-c939e8f9.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 436,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
+        }
+       }
+      },
+      {
+       "label": "r2 chain, reserved start 49 (verified re-render)",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+       "episode": "e000220",
+       "control_steps_shown": [
+        0,
+        437
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "d6619a9c662588ce0654a151c3c930d23352489dca922ec518d8a0e820d8b690",
+       "file": "clips/r2-fix-e000220-d6619a9c.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "36d95a268bc0f0684a6b7c5da645fd6439310081036e0d17e0053e9e981322bb",
+        "file": "clips/r2-fix-e000220-36d95a26.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 438,
+         "hash_mismatches": 0,
+         "camera": null,
+         "report": null
         }
        }
       }
@@ -887,116 +3787,26 @@
    ]
   },
   {
-   "id": "r2-kept",
-   "story": "A",
-   "title": "Job 2: what the installation keeps",
-   "start_s": 136.55,
-   "end_s": 144.7,
+   "id": "r-summary",
+   "story": "Experiment one: a new job from existing skills",
+   "title": "What experiment one showed",
+   "start_s": 344.0,
+   "end_s": 372.3,
    "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 21,
-    "seconds": 6.873,
+    "words": 73,
+    "seconds": 25.124,
     "timing": "measured audio",
-    "text": "It keeps the job, the extended check, and a lesson: preparing the scene can move the bottleneck to the next skill.",
-    "voice_sha256": "d2c7a7765f68d82136c91cd825482afa71c9dc363e66182b103f78250fca3f18"
+    "text": "What did the first experiment show? Twice, a new job failed when the robot's skills were simply chained. Twice, the agent found the physical cause, changed how the job is done, and proved its solution on layouts it had never seen, with no person in the loop. That matters, because this is the engineering that makes every new job slow and expensive today. Here, an agent did it, in 41 and 113 minutes.",
+    "voice_sha256": "5d8a001a6460218315b2ca5102375aa7f1eec3bf024a652cf282776fdc7e482a"
    },
    "shots": [
-    {
-     "kind": "text",
-     "start_s": 136.55,
-     "end_s": 144.7,
-     "clips": [],
-     "counts": [],
-     "files": [
-      {
-       "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/library/skills/scene-preparation-can-move-the-bottleneck/SKILL.md",
-       "sha256": "cdb12c0586a1e62193f65d641d0311ab0ba9ed02b8ca07f501c87555696eaa9f"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "b-instrument",
-   "story": "B",
-   "title": "The instrument",
-   "start_s": 144.7,
-   "end_s": 161.65,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 43,
-    "seconds": 15.65,
-    "timing": "measured audio",
-    "text": "Story two: a fleet of arms at several sites, with the same lag at one site and on one robot elsewhere. The agent builds its own probe, commanded against measured: one lag is a fixed network delay, the other a controller falling behind.",
-    "voice_sha256": "b0d9897e6cac9284e7eabbcac0c7b4e79706ba9f3db68cf140d092bac6226fca"
-   },
-   "shots": [
-    {
-     "kind": "image",
-     "start_s": 144.7,
-     "end_s": 149.7,
-     "clips": [],
-     "counts": [],
-     "files": [
-      {
-       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/r1-fleet-sites.png",
-       "sha256": "e952e90c78cf161acf69caf2694f90687adc62447e54fccc602bc95727b888a7"
-      }
-     ]
-    },
-    {
-     "kind": "image",
-     "start_s": 149.7,
-     "end_s": 161.65,
-     "clips": [],
-     "counts": [],
-     "files": [
-      {
-       "id": "probes:demo/2026-10-20/film/rehearsal-3/figures/probe-first-fleet.png",
-       "sha256": "aa301a643ff0e544309171092a88c26c75e6095d2027b3cad482be7aabfacd62"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "b-result",
-   "story": "B",
-   "title": "The fleet, repaired",
-   "start_s": 161.65,
-   "end_s": 181.15,
-   "status": "record",
-   "placeholder": null,
-   "needs": null,
-   "narration": {
-    "words": 33,
-    "seconds": 18.204,
-    "timing": "measured audio",
-    "text": "After paired experiments it compensates for the delay, rolls back an update and services the controller. On 576 reserved attempts it never saw, success rises from 451 to 558: 113 rescued, 6 broken.",
-    "voice_sha256": "677ac005cc65dae411bbc3b46410a2faa5844c4b3ae2ca4ba777ec3caa4988db"
-   },
-   "shots": [
-    {
-     "kind": "image",
-     "start_s": 161.65,
-     "end_s": 167.65,
-     "clips": [],
-     "counts": [],
-     "files": [
-      {
-       "id": "probes:demo/2026-10-20/instrument/engagement-1/exhibit/figures/panel-states.png",
-       "sha256": "697bea4bca9ecd80e2805160d47c701714af44306fcef33b00da7fd1c262294c"
-      }
-     ]
-    },
     {
      "kind": "card",
-     "start_s": 167.65,
-     "end_s": 181.15,
+     "start_s": 344.0,
+     "end_s": 372.3,
      "clips": [],
      "counts": [],
      "files": []
@@ -1004,26 +3814,318 @@
    ]
   },
   {
-   "id": "close",
-   "story": null,
-   "title": "The record",
-   "start_s": 181.15,
-   "end_s": 192.65,
-   "status": "card",
+   "id": "b-fleet",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "Experiment two: planted faults",
+   "start_s": 372.3,
+   "end_s": 396.83,
+   "status": "record",
    "placeholder": null,
    "needs": null,
    "narration": {
-    "words": 30,
-    "seconds": 10.217,
+    "words": 63,
+    "seconds": 23.36,
     "timing": "measured audio",
-    "text": "Two jobs at 20 and 20 of 20 reserved starts, and a fleet improved by an instrument the agent built. The policy never changed; every clip is a recorded run.",
-    "voice_sha256": "d81b3decd563e283f333236faac147398002dd14bd42ca145691b086b8dd5330"
+    "text": "Experiment two asks a different question: when working robots start to fail, can the agent find out why? We built a fleet of 12 simulated arms at 3 sites, doing pick-and-place work, and planted problems in it. The agent is told nothing about them. It sees what an operator sees: results, telemetry, change and maintenance logs, and the actions an operator can take.",
+    "voice_sha256": "ac3d83cc8dd741de241b9580c8ec96df751a5c6fdb605be59a028b6f5198da84"
    },
    "shots": [
     {
      "kind": "card",
-     "start_s": 181.15,
-     "end_s": 192.65,
+     "start_s": 372.3,
+     "end_s": 396.83,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b-planted",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "What we planted",
+   "start_s": 396.83,
+   "end_s": 428.0,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 87,
+    "seconds": 28.467,
+    "timing": "measured audio",
+    "text": "Here is what we planted. At the first site, the model that drives the robots runs in the customer's distant data centre, and the line adds a delay. The customer requires that link, so it stays. At the second site, one robot's controller is overloaded and falls behind. At the third site, a software update crops part of every camera image before the model sees it. On the same day, a camera's calibration record is rewritten, which changes nothing at all. That one is our false lead.",
+    "voice_sha256": "9ab9ace58bae80c8edb6a4fa7005d5c425cd4d3ca289b1b1946119da7a4de1f4"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 396.83,
+     "end_s": 428.0,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b-symptom",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "What the agent sees",
+   "start_s": 428.0,
+   "end_s": 453.97,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 75,
+    "seconds": 23.777,
+    "timing": "measured audio",
+    "text": "The agent is not told what causes the failures. It sees the operating records. The robots at the first site trail their commands and succeed far less often. One robot at the second site trails just the same. The robots at the third site fail more often than the healthy robots, and the change log shows two changes on the same day. Same symptom, same cause? And which of the two changes is to blame?",
+    "voice_sha256": "50c0978ab4b2e584cb7b8a88acb2470c4bae9c053c67b7bcf4af519a0db98fe7"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 428.0,
+     "end_s": 453.97,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b-probe",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "The agent builds an instrument",
+   "start_s": 453.97,
+   "end_s": 485.93,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 85,
+    "seconds": 29.769,
+    "timing": "measured audio",
+    "text": "The task records can't tell the first two apart. So the agent builds an instrument: a small test motion, with the robot's model switched off, timing how each arm follows a command. At the first site, the hand always starts late, by the same amount: a delay on the line. The robot at the second site starts nearly on time, then falls further and further behind: its controller can't keep up. They look alike, but they are two different problems, and they need different repairs.",
+    "voice_sha256": "77a4f9eaedcfe520ba77ee1716acaea725eb0c09d1c643e83fa51dc70f5cda0d"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 453.97,
+     "end_s": 485.93,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b-fix",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "Tested repairs",
+   "start_s": 485.93,
+   "end_s": 519.73,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 98,
+    "seconds": 31.115,
+    "timing": "measured audio",
+    "text": "Each repair is tested on its own before it is adopted. The first site's link has to stay, so the agent has the robots skip commands that would be out of date by the time they arrive. It tests three compensation settings and keeps the best. The overloaded controller at the second site is serviced. At the third site, it undoes each of the two changes in a separate test. Rolling back the software update brings the site back. Rolling back the calibration shows no clear effect. So it adopts the software rollback, and leaves the calibration alone.",
+    "voice_sha256": "997732a78c06a42d8072d30c2e919b01bc63c4d4e2aeb90668bad1ddc80dfbac"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 485.93,
+     "end_s": 519.73,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "b-result",
+   "story": "Experiment two: faults planted in a fleet",
+   "title": "The fleet result",
+   "start_s": 519.73,
+   "end_s": 544.37,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 46,
+    "seconds": 21.455,
+    "timing": "measured audio",
+    "text": "Then the test that counts: 576 attempts the agent never saw. As the fleet was, 451 successes. With the agent's 3 changes, 558. From 78% to 97%. Against what we planted: all three problems found, each with a tested repair, and the false lead left alone.",
+    "voice_sha256": "746da11eff7c0125e57b54118479da8fca1bf832092ef11fba5c5e56105adee4"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 519.73,
+     "end_s": 544.37,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "results",
+   "story": "What we learned, and what comes next",
+   "title": "The results",
+   "start_s": 544.37,
+   "end_s": 564.07,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 41,
+    "seconds": 18.019,
+    "timing": "measured audio",
+    "text": "In both experiments, the agent did the engineering itself. Two new jobs: from 1 to 20 of 20, and from 5 to 20. A fleet: from 78% to 97%. The robots' vision-language-action model and their overall design stayed the same throughout.",
+    "voice_sha256": "8223f97b9908e5207f3d58278256230c2d2bae98ed7e4cacbdc2de660e84c60c"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 544.37,
+     "end_s": 564.07,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "lessons",
+   "story": "What we learned, and what comes next",
+   "title": "What we learned",
+   "start_s": 564.07,
+   "end_s": 587.93,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 62,
+    "seconds": 21.176,
+    "timing": "measured audio",
+    "text": "What we learned: the agent worked like a good engineer. It looked at the evidence, found the physical cause, changed one thing at a time, built a measurement when the records weren't enough, and proved its solutions on cases it had never seen. These were first, compact tests, and in each one the agent carried the investigation through to a working result.",
+    "voice_sha256": "dc1eb678bffe084355254a5c4994c26ce14e730efdc2e6e320dee06251d091e0"
+   },
+   "shots": [
+    {
+     "kind": "clip",
+     "start_s": 564.07,
+     "end_s": 587.93,
+     "clips": [
+      {
+       "label": "job 1, development, the plain chain (bowl-drawer-direct, j0001) on practice start 2 (base task 2, initial state 2, scene seed 3509256065, the start of session 3's e000503 and e000603); does not deliver",
+       "layout": "explainer",
+       "run": "probes:demo/2026-10-20/reliability/replacement-01/run/runs/session-01/run",
+       "episode": "e000103",
+       "control_steps_shown": [
+        0,
+        404
+       ],
+       "outcome": "not delivered",
+       "video_sha256": "adaf452f37b63a7f8ceffd3db91f89ee1bd28d857589d082ecc8c1fad3c11987",
+       "file": "clips/lessons-e000103-adaf452f.mp4",
+       "records_read": [],
+       "rerender": {
+        "used": true,
+        "reason": null,
+        "video_sha256": "703b6563ba0edd90ac48cf53c126eb6afb885c7d2e8749186acccd2a904a59b5",
+        "file": "clips/lessons-e000103-703b6563.rerender.mp4",
+        "comparison": {
+         "accepted": true,
+         "hashes_compared": 405,
+         "hash_mismatches": 0,
+         "camera": "hero-cabinet",
+         "report": "probes:demo/explainer/footage/batch-2/r1-chain-practice2-hero.rerender.json"
+        }
+       }
+      }
+     ],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "next",
+   "story": "What we learned, and what comes next",
+   "title": "Next: real robots",
+   "start_s": 587.93,
+   "end_s": 607.03,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 46,
+    "seconds": 17.415,
+    "timing": "measured audio",
+    "text": "Next, we take this to real robots: a complete packing operation on two-armed mobile robots, where agents engineer new work on the hardware and prove it there. The question we will answer: how much less human work each new job needs, once agents do the engineering.",
+    "voice_sha256": "b99047ac8a38a2e3424857901c79df9a057a8fef70e1eadd41352af2375c7a59"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 587.93,
+     "end_s": 607.03,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "mayfly",
+   "story": "What we learned, and what comes next",
+   "title": "What it means",
+   "start_s": 607.03,
+   "end_s": 617.1,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": {
+    "words": 23,
+    "seconds": 7.384,
+    "timing": "measured audio",
+    "text": "That is what Mayfly is building: robot installations where taking on new work is part of the product, because agents do the engineering.",
+    "voice_sha256": "80c28d02834b9bf8ffa2022f1f60029834b21509d14c7391092e81924579ee50"
+   },
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 607.03,
+     "end_s": 617.1,
+     "clips": [],
+     "counts": [],
+     "files": []
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "story": "What we learned, and what comes next",
+   "title": "How this was recorded",
+   "start_s": 617.1,
+   "end_s": 629.1,
+   "status": "record",
+   "placeholder": null,
+   "needs": null,
+   "narration": null,
+   "shots": [
+    {
+     "kind": "card",
+     "start_s": 617.1,
+     "end_s": 629.1,
      "clips": [],
      "counts": [],
      "files": []

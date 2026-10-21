@@ -1,152 +1,282 @@
 [
-  {
-    "id": "open",
-    "story": "A",
-    "title": "New jobs, made reliable",
-    "start_s": 0.0,
-    "end_s": 7.05,
-    "status": "card",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r1-request",
-    "story": "A",
-    "title": "Job 1: the request",
-    "start_s": 7.05,
-    "end_s": 18.35,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r1-failure",
-    "story": "A",
-    "title": "Job 1: what fails",
-    "start_s": 18.35,
-    "end_s": 28.9,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r1-experiment",
-    "story": "A",
-    "title": "Job 1: the experiment",
-    "start_s": 28.9,
-    "end_s": 45.65,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r1-release",
-    "story": "A",
-    "title": "Job 1: released",
-    "start_s": 45.65,
-    "end_s": 60.25,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r1-kept",
-    "story": "A",
-    "title": "Job 1: what the installation keeps",
-    "start_s": 60.25,
-    "end_s": 70.2,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-request",
-    "story": "A",
-    "title": "Job 2: the request",
-    "start_s": 70.2,
-    "end_s": 79.25,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-failure",
-    "story": "A",
-    "title": "Job 2: what fails",
-    "start_s": 79.25,
-    "end_s": 87.75,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-loaded",
-    "story": "A",
-    "title": "Job 2: the experiment",
-    "start_s": 87.75,
-    "end_s": 107.55,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-relocated",
-    "story": "A",
-    "title": "Job 2: the scene, prepared",
-    "start_s": 107.55,
-    "end_s": 119.95,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-release",
-    "story": "A",
-    "title": "Job 2: released",
-    "start_s": 119.95,
-    "end_s": 136.55,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "r2-kept",
-    "story": "A",
-    "title": "Job 2: what the installation keeps",
-    "start_s": 136.55,
-    "end_s": 144.7,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "b-instrument",
-    "story": "B",
-    "title": "The instrument",
-    "start_s": 144.7,
-    "end_s": 161.65,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "b-result",
-    "story": "B",
-    "title": "The fleet, repaired",
-    "start_s": 161.65,
-    "end_s": 181.15,
-    "status": "record",
-    "placeholder": null,
-    "needs": null
-  },
-  {
-    "id": "close",
-    "story": null,
-    "title": "The record",
-    "start_s": 181.15,
-    "end_s": 192.65,
-    "status": "card",
-    "placeholder": null,
-    "needs": null
-  }
+ {
+  "id": "cold-open",
+  "story": "Why we ran these experiments",
+  "title": "One job, two skills",
+  "start_s": 0.0,
+  "end_s": 10.73,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "title",
+  "story": "Why we ran these experiments",
+  "title": "Can an AI agent engineer a robot?",
+  "start_s": 10.73,
+  "end_s": 14.27,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "why",
+  "story": "Why we ran these experiments",
+  "title": "Skills are not jobs",
+  "start_s": 14.27,
+  "end_s": 38.77,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "question",
+  "story": "Why we ran these experiments",
+  "title": "The question",
+  "start_s": 38.77,
+  "end_s": 82.77,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "station",
+  "story": "The test bench and the rules",
+  "title": "The test bench",
+  "start_s": 82.77,
+  "end_s": 111.93,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "agent",
+  "story": "The test bench and the rules",
+  "title": "The engineer and its sandbox",
+  "start_s": 111.93,
+  "end_s": 154.37,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "rules",
+  "story": "The test bench and the rules",
+  "title": "A fair test",
+  "start_s": 154.37,
+  "end_s": 183.47,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "request",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "Experiment one: the request",
+  "start_s": 183.47,
+  "end_s": 202.07,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r1-fail",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "Watch it fail",
+  "start_s": 202.07,
+  "end_s": 213.67,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r1-measure",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "Measure why",
+  "start_s": 213.67,
+  "end_s": 228.17,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r1-experiment",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "One change at a time",
+  "start_s": 228.17,
+  "end_s": 250.87,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r1-prove",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "The final exam",
+  "start_s": 250.87,
+  "end_s": 273.03,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r1-keep",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "Kept for the next request",
+  "start_s": 273.03,
+  "end_s": 283.5,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r2-fail",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "A harder job",
+  "start_s": 283.5,
+  "end_s": 311.97,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r2-bottleneck",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "The bottleneck moves",
+  "start_s": 311.97,
+  "end_s": 330.23,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r2-fix",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "Set the cheese aside",
+  "start_s": 330.23,
+  "end_s": 344.0,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "r-summary",
+  "story": "Experiment one: a new job from existing skills",
+  "title": "What experiment one showed",
+  "start_s": 344.0,
+  "end_s": 372.3,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-fleet",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "Experiment two: planted faults",
+  "start_s": 372.3,
+  "end_s": 396.83,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-planted",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "What we planted",
+  "start_s": 396.83,
+  "end_s": 428.0,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-symptom",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "What the agent sees",
+  "start_s": 428.0,
+  "end_s": 453.97,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-probe",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "The agent builds an instrument",
+  "start_s": 453.97,
+  "end_s": 485.93,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-fix",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "Tested repairs",
+  "start_s": 485.93,
+  "end_s": 519.73,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "b-result",
+  "story": "Experiment two: faults planted in a fleet",
+  "title": "The fleet result",
+  "start_s": 519.73,
+  "end_s": 544.37,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "results",
+  "story": "What we learned, and what comes next",
+  "title": "The results",
+  "start_s": 544.37,
+  "end_s": 564.07,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "lessons",
+  "story": "What we learned, and what comes next",
+  "title": "What we learned",
+  "start_s": 564.07,
+  "end_s": 587.93,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "next",
+  "story": "What we learned, and what comes next",
+  "title": "Next: real robots",
+  "start_s": 587.93,
+  "end_s": 607.03,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "mayfly",
+  "story": "What we learned, and what comes next",
+  "title": "What it means",
+  "start_s": 607.03,
+  "end_s": 617.1,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ },
+ {
+  "id": "end",
+  "story": "What we learned, and what comes next",
+  "title": "How this was recorded",
+  "start_s": 617.1,
+  "end_s": 629.1,
+  "status": "record",
+  "placeholder": null,
+  "needs": null
+ }
 ]
