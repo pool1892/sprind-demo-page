@@ -1,482 +1,206 @@
 WEBVTT
 
 1
-00:00:00.500 --> 00:00:05.437
-This is a simulated robot installation:
-one robot arm at a kitchen table.
+00:00:00.500 --> 00:00:02.773
+The robot's policy never changes.
 
 2
-00:00:05.437 --> 00:00:09.096
-Its policy, the model that turns its
-camera images,
+00:00:02.773 --> 00:00:06.259
+An engineering agent improves the
+installation around it.
 
 3
-00:00:09.096 --> 00:00:14.033
-a written instruction and the hand's
-measured pose into motion, is fixed.
+00:00:07.550 --> 00:00:12.262
+First job: the bowl on the cabinet and the
+middle drawer open, together,
 
 4
-00:00:14.033 --> 00:00:17.809
-Agents watch the installation, run
-experiments on it,
+00:00:12.262 --> 00:00:14.842
+on at least 18 of 20 fresh starts.
 
 5
-00:00:17.809 --> 00:00:21.352
-and change how the installation uses that
-policy.
+00:00:14.842 --> 00:00:17.535
+The robot has a skill for each half.
 
 6
-00:00:22.650 --> 00:00:25.158
-First story: make this one job.
+00:00:18.850 --> 00:00:23.471
+Chained plainly, the hand turns to the
+drawer still touching the bowl,
 
 7
-00:00:26.450 --> 00:00:28.723
-The robot already has skills.
+00:00:23.471 --> 00:00:25.161
+and knocks it off.
 
 8
-00:00:28.723 --> 00:00:33.988
-Each skill is one task on this table, done
-by the policy under its own instruction.
+00:00:25.161 --> 00:00:28.092
+On the agent's practice starts: 5 of 10.
 
 9
-00:00:33.988 --> 00:00:36.815
-Here, each one runs alone and delivers.
+00:00:29.400 --> 00:00:35.001
+The agent writes a check: does the bowl
+stay in place while the next skill runs?
 
 10
-00:00:36.815 --> 00:00:40.196
-The policy does not change anywhere in
-this film.
+00:00:35.001 --> 00:00:37.924
+Then it changes one thing at a time.
 
 11
-00:00:41.500 --> 00:00:45.624
-A shift lead asks for one job: the cheese
-into the black bowl,
+00:00:37.924 --> 00:00:40.359
+Open, then go home: 5 of 10.
 
 12
-00:00:45.624 --> 00:00:48.577
-and the loaded bowl onto the cabinet top.
+00:00:40.359 --> 00:00:44.864
+Let the placement run 30 steps longer,
+then go home: 10 of 10.
 
 13
-00:00:48.577 --> 00:00:51.531
-The cheese goes in before the bowl moves.
+00:00:46.150 --> 00:00:51.435
+Confirmed 20 of 20 on unused starts, then
+20 of 20 reserved starts,
 
 14
-00:00:51.531 --> 00:00:56.045
-The shift lead's bar: 3 deliveries in
-every 5 fresh starts, 12 of 20.
+00:00:51.435 --> 00:00:55.717
+against 1 for the plain chain: 19 rescued,
+0 broken.
 
 15
-00:00:56.045 --> 00:00:59.054
-The agent offers to be judged on 14 of 20.
+00:01:00.750 --> 00:01:04.665
+It keeps the job, the check, and a lesson:
+an open,
 
 16
-00:01:00.350 --> 00:01:05.114
-The obvious chain switches to the next
-skill the moment the first one reports
+00:01:04.665 --> 00:01:09.388
+still hand at one instant has not cleared
+the path that follows.
 
 17
-00:01:05.114 --> 00:01:06.185
-success.
+00:01:10.700 --> 00:01:15.277
+Second job: the plate at the front of the
+stove and the bowl on the cabinet.
 
 18
-00:01:06.185 --> 00:01:09.076
-That is the signal published scores count.
+00:01:15.277 --> 00:01:17.202
+Again, at least 18 of 20.
 
 19
-00:01:09.076 --> 00:01:12.555
-On the first 10 development starts, it
-delivers on 0.
+00:01:19.750 --> 00:01:23.124
+Plate first, then bowl: 7 of 10 practice
+starts.
 
 20
-00:01:12.555 --> 00:01:15.071
-A success signal is not a delivery.
+00:01:23.124 --> 00:01:26.948
+Here the plate push runs out of time short
+of the stove.
 
 21
-00:01:16.350 --> 00:01:21.125
-The agent reads the object traces, looks
-at the frames, and writes its own check:
+00:01:28.250 --> 00:01:32.918
+The agent extends the first job's check to
+both goals and tests changes.
 
 22
-00:01:21.125 --> 00:01:24.873
-was the cheese released and settled when
-the bowl task began,
+00:01:32.918 --> 00:01:36.085
+Going home between skills: 8 of 10
+delivered.
 
 23
-00:01:24.873 --> 00:01:27.492
-and did it stay in the bowl to the end?
+00:01:36.085 --> 00:01:40.253
+Loading the cheese into the bowl gets
+every plate to the stove,
 
 24
-00:01:27.492 --> 00:01:30.470
-Then it tests transitions on the
-installation.
+00:01:40.253 --> 00:01:44.365
+but the loaded bowl becomes the
+bottleneck: 4 of 10 delivered.
 
 25
-00:01:30.470 --> 00:01:35.297
-Letting the cheese instruction run on a
-little after its goal first holds delivers
+00:01:48.050 --> 00:01:52.476
+So the agent grasps the cheese, slides it
+aside onto the table,
 
 26
-00:01:35.297 --> 00:01:37.299
-on 9 of the same 10 starts.
+00:01:52.476 --> 00:01:55.898
+and leaves the bowl empty: 10 of 10
+delivered.
 
 27
-00:01:37.299 --> 00:01:40.585
-On 20 fresh starts, the same program
-delivers on 11.
+00:02:00.450 --> 00:02:05.165
+Confirmed 20 of 20 on unused starts, then
+20 of 20 reserved starts,
 
 28
-00:01:40.585 --> 00:01:44.539
-Adding a return home at the end breaks
-starts that had delivered.
+00:02:05.165 --> 00:02:08.985
+against 5 for the plain chain: 15 rescued,
+0 broken.
 
 29
-00:01:45.850 --> 00:01:50.650
-The first shift writes its account to the
-shift lead and hands on what it built:
+00:02:08.985 --> 00:02:12.028
+Here the plain chain reaches the stove,
 
 30
-00:01:50.650 --> 00:01:53.572
-a check that finds where a delivery is
-lost,
+00:02:12.028 --> 00:02:15.729
+but its bowl attempt leaves neither goal
+standing.
 
 31
-00:01:53.572 --> 00:01:57.016
-and a skill on why a return home can break
-a delivery.
+00:02:17.050 --> 00:02:20.211
+It keeps the job, the extended check, and
+a lesson:
 
 32
-00:01:57.016 --> 00:02:01.243
-It took 5 sessions, 100 development
-executions on 30 distinct starts,
+00:02:20.211 --> 00:02:23.923
+preparing the scene can move the
+bottleneck to the next skill.
 
 33
-00:02:01.243 --> 00:02:04.008
-and 38 minutes of the agent's model time.
+00:02:25.200 --> 00:02:28.330
+Story two: a fleet of arms at several
+sites,
 
 34
-00:02:05.300 --> 00:02:08.226
-The second shift starts from that library.
+00:02:28.330 --> 00:02:32.187
+with the same lag at one site and on one
+robot elsewhere.
 
 35
-00:02:08.226 --> 00:02:11.695
-It runs the first shift's check on its own
-baseline,
+00:02:32.187 --> 00:02:36.155
+The agent builds its own probe, commanded
+against measured:
 
 36
-00:02:11.695 --> 00:02:16.301
-then builds a sharper one that finds where
-the load is lost in transport.
+00:02:36.155 --> 00:02:40.850
+one lag is a fixed network delay, the
+other a controller falling behind.
 
 37
-00:02:16.301 --> 00:02:21.070
-Its longer continuation delivers on 17 of
-20 starts it had already examined.
+00:02:42.150 --> 00:02:47.115
+After paired experiments it compensates
+for the delay,
 
 38
-00:02:21.070 --> 00:02:25.134
-It took 5 sessions, 130 executions on 30
-starts and 45 minutes.
-
-39
-00:02:25.134 --> 00:02:28.386
-The third shift starts from the library of
-both.
-
-40
-00:02:28.386 --> 00:02:32.505
-Its shorter continuation delivers on 9 of
-10 development starts,
-
-41
-00:02:32.505 --> 00:02:35.810
-and the agent saves it as the job, in 5
-sessions,
-
-42
-00:02:35.810 --> 00:02:38.737
-60 executions on 10 starts and 39 minutes.
-
-43
-00:02:42.250 --> 00:02:47.065
-The saved job runs on the 20 reserved
-starts no shift had touched,
-
-44
-00:02:47.065 --> 00:02:50.522
-and the naive chain runs on the same
-starts.
-
-45
-00:02:50.522 --> 00:02:54.041
-The job delivers on 13; the naive chain on
-1.
-
-46
-00:02:54.041 --> 00:02:55.523
-Rescued: 13.
-
-47
-00:02:55.523 --> 00:02:56.881
-Broken: 1.
-
-48
-00:02:56.881 --> 00:02:58.856
-Order violations: 0.
-
-49
-00:02:58.856 --> 00:03:02.684
-Against the lead's bar of 12, the job is
-released.
-
-50
-00:03:04.550 --> 00:03:06.863
-The robot policy stayed the same.
-
-51
-00:03:06.863 --> 00:03:11.592
-The installation now runs a released job
-it did not have before the first shift:
-
-52
-00:03:11.592 --> 00:03:15.241
-the cheese in the bowl, and the loaded
-bowl on the cabinet.
-
-53
-00:03:15.241 --> 00:03:19.816
-Behind it, the library holds the job, 4
-checks and the skills of every shift.
-
-54
-00:03:19.816 --> 00:03:22.489
-The second job, the bowl onto the plate,
-
-55
-00:03:22.489 --> 00:03:25.470
-builds on job one's library over three
-shifts:
-
-56
-00:03:25.470 --> 00:03:28.400
-the first two each save a check of their
-own,
-
-57
-00:03:28.400 --> 00:03:33.283
-and the third builds a guarded placement
-retry that delivers on 7 of 10 development
-
-58
-00:03:33.283 --> 00:03:34.260
-starts.
-
-59
-00:03:34.260 --> 00:03:38.732
-On the 20 reserved starts it delivers on
-7, level with the naive chain's 7,
-
-60
-00:03:38.732 --> 00:03:41.919
-so the installation's release check holds
-it back,
-
-61
-00:03:41.919 --> 00:03:45.928
-and the library keeps the program and 6
-checks for the next shift.
-
-62
-00:03:52.550 --> 00:03:56.451
-Second story: make that a check the next
-shift can run.
-
-63
-00:03:57.750 --> 00:04:00.968
-A fleet of robot arms works at several
-sites.
-
-64
-00:04:00.968 --> 00:04:04.977
-At one site, inference stays in the
-customer's data center,
-
-65
-00:04:04.977 --> 00:04:08.929
-so commands arrive late, and nobody on
-site can undo that.
-
-66
-00:04:08.929 --> 00:04:14.180
-Task telemetry shows a lag there, and a
-lag on one robot at another site as well.
-
-67
-00:04:14.180 --> 00:04:19.205
-From the telemetry alone, the agent cannot
-tell what kind of lag each one is.
-
-68
-00:04:20.500 --> 00:04:22.898
-So the agent builds a measurement.
-
-69
-00:04:22.898 --> 00:04:26.391
-From a bounded set of motions it composes
-a step probe,
-
-70
-00:04:26.391 --> 00:04:30.614
-and asks for it on a robot at the delayed
-site, on the lagging robot,
-
-71
-00:04:30.614 --> 00:04:34.159
-on a healthy reference and on a robot at
-the third site.
-
-72
-00:04:34.159 --> 00:04:37.287
-Commanded against measured: at the delayed
-site,
-
-73
-00:04:37.287 --> 00:04:40.519
-the arm starts late by the same amount
-every time.
-
-74
-00:04:40.519 --> 00:04:44.690
-On the lagging robot, the delay changes
-from one repeat to the next,
-
-75
-00:04:44.690 --> 00:04:46.723
-and grows within the probe.
-
-76
-00:04:46.723 --> 00:04:48.443
-One is a fixed delay.
-
-77
-00:04:48.443 --> 00:04:50.268
-The other is a backlog.
-
-78
-00:04:51.550 --> 00:04:56.028
-The probe picks candidates; task
-experiments on paired starts decide.
-
-79
-00:04:56.028 --> 00:04:59.511
-The agent adopts its changes, each with
-its reason:
-
-80
-00:04:59.511 --> 00:05:03.768
-compensate for the delay at the first site
-rather than remove it,
-
-81
-00:05:03.768 --> 00:05:07.085
-roll back the software update at the third
-site,
-
-82
-00:05:07.085 --> 00:05:10.126
-and service the lagging robot's
+00:02:47.115 --> 00:02:51.704
+rolls back an update and services the
 controller.
 
-83
-00:05:36.200 --> 00:05:41.793
-Then the changed fleet runs 576 reserved
-attempts the agent never saw,
+39
+00:02:51.704 --> 00:02:57.797
+On 576 reserved attempts it never saw,
+success rises from 451 to 558:
 
-84
-00:05:41.793 --> 00:05:45.818
-beside the original state on the same
-attempts.
+40
+00:02:57.797 --> 00:03:00.354
+113 rescued, 6 broken.
 
-85
-00:05:45.818 --> 00:05:48.478
-Before: 451 of 576 succeed.
+41
+00:03:01.650 --> 00:03:04.677
+Two jobs at 20 and 20 of 20 reserved
+starts,
 
-86
-00:05:48.478 --> 00:05:50.047
-After: 558.
+42
+00:03:04.677 --> 00:03:08.245
+and a fleet improved by an instrument the
+agent built.
 
-87
-00:05:50.047 --> 00:05:51.753
-Rescued: 113.
-
-88
-00:05:51.753 --> 00:05:53.253
-Broken: 6.
-
-89
-00:05:53.253 --> 00:05:57.005
-The lagging robot goes from 29 to 46 of
-48.
-
-90
-00:05:58.300 --> 00:06:03.430
-The probe and its analysis became a recipe
-in the library, runnable on named robots.
-
-91
-00:06:03.430 --> 00:06:07.118
-On a later fleet, robots fail again, and
-the recipe runs.
-
-92
-00:06:07.118 --> 00:06:08.721
-At the third site,
-
-93
-00:06:08.721 --> 00:06:13.638
-the arms first move 18 rows after the
-command and are half-way 21 rows after it:
-
-94
-00:06:13.638 --> 00:06:15.027
-a fixed delay.
-
-95
-00:06:15.027 --> 00:06:19.303
-The robot that fails on its own responds
-like the healthy reference.
-
-96
-00:06:19.303 --> 00:06:24.326
-Its first movement comes 1 row after the
-command; the reference's, 1 row after it.
-
-97
-00:06:24.326 --> 00:06:27.159
-So the skill's rule points at the images,
-
-98
-00:06:27.159 --> 00:06:30.846
-not at the controller service that fixed
-the first fleet.
-
-99
-00:06:30.846 --> 00:06:35.282
-The operator's recorded decision follows
-it: no service for that robot;
-
-100
-00:06:35.282 --> 00:06:37.954
-inspect its images and its change log,
-
-101
-00:06:37.954 --> 00:06:42.604
-and test the first fleet's adaptation at
-the third site before adopting it.
-
-102
-00:06:43.900 --> 00:06:46.408
-Every clip in this film is a recorded run.
-
-103
-00:06:46.408 --> 00:06:48.172
-The record lists each one.
+43
+00:03:08.245 --> 00:03:11.867
+The policy never changed; every clip is a
+recorded run.
