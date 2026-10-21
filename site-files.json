@@ -1245,8 +1245,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 273734,
-      "sha256": "92700a170e96d0b611090746817a7c1cc6b7ddd8a1c13c248e636ca402deebf2"
+      "bytes": 255103,
+      "sha256": "09e943260a48edcfef41c005956f3a69f97ac9d73046a3d663c33295a8966792"
     },
     {
       "path": "record/index.html",
@@ -1259,24 +1259,24 @@
       "sha256": "5539bd01ce04c819ed1e1ec7a3f7b189dcbbf63b7d98cb74d92f4b299533b46e"
     },
     {
-      "path": "static/hero-band.jpg",
-      "bytes": 235442,
-      "sha256": "4b9770ca7e8e2060928594280662a890d4c016ae7e760c945e8cf5628866dd1c"
+      "path": "static/hero-wall-small.jpg",
+      "bytes": 191624,
+      "sha256": "2d491484a55bda1a4385ad43d66f64e1d8cf533dc65403383d1983a40bb87fda"
     },
     {
       "path": "static/hero-wall.jpg",
-      "bytes": 235739,
-      "sha256": "a8d19ba14eef357a02237e97875dfc161edb267a3ac74ce64389e07a8c37e873"
+      "bytes": 547600,
+      "sha256": "92d82ecb96f1df98e015ce189ae61e614a424372da64e18e48827a55b218dc66"
     },
     {
       "path": "static/hero-wall.json",
-      "bytes": 6930,
-      "sha256": "4e3dbf9388a546f6b74e813fa4ed3c10cb8025c85df1b5599b585a7f827e8843"
+      "bytes": 6957,
+      "sha256": "b63d3d826f17086e6bce2380ea1ee6272b11aa015ac9283b8a8ffdcdac60fa8a"
     },
     {
       "path": "static/style.css",
-      "bytes": 33982,
-      "sha256": "23624e8148e88dfcf14c9c3d440441e89bf1525540660fc5582391e4af15bc68"
+      "bytes": 32745,
+      "sha256": "4893535f78ea22b4f03959ad1a384aa9bea9a67655d88b159d921c2fc7046ecf"
     },
     {
       "path": "story-values.json",

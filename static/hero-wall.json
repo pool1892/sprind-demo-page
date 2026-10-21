@@ -2,8 +2,8 @@
  "made_by": "site/explainer/hero_wall.py",
  "shows": "the saved jobs on the locked exam layouts, one tile per recorded run, at 45% of the run; the green light is the run's verdict",
  "files": {
-  "hero-wall.jpg": "8 tiles across",
-  "hero-band.jpg": "10 tiles across"
+  "hero-wall.jpg": "416-pixel tiles, 8 across",
+  "hero-wall-small.jpg": "208-pixel tiles, 8 across"
  },
  "tiles": [
   {

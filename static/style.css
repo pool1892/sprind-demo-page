@@ -262,6 +262,7 @@ svg circle:hover, svg rect:hover { opacity: 0.75; }
 svg.bar { display: block; overflow: visible; }
 .bar-track { fill: var(--paper-2); }
 .bar-fill { fill: var(--agent); }
+rect.bar-ok { fill: var(--ok); }
 line.ref { stroke: var(--ink); stroke-width: 1.5; }
 
 .probe-panel + .probe-panel { margin-top: 10px; }
@@ -450,25 +451,26 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
   .loop li:last-child::after { right: -26px; }
 }
 
-/* ---- the opening: logo, the exam wall behind the text, an invitation to the film -------- */
+/* ---- the opening: logo, the exam wall beside the text, an invitation to the film -------- */
 .hero { position: relative; overflow: hidden; isolation: isolate; }
-/* the agent's two jobs on every locked exam layout, one tile per recorded run, a wall leaning
-   into the page at the right; it pans slowly and a band of light passes over it */
-.hero-wall { position: absolute; z-index: -2; top: -6%; bottom: -6%; right: -4%; width: 60%;
+/* the agent's two jobs on every locked exam layout, one tile per recorded run: a wall leaning
+   into the page at the right, a band of light passing over it */
+.hero-wall { position: absolute; z-index: -2; top: -6%; bottom: -6%; right: -4%; width: 56%;
   overflow: hidden; opacity: 0.92; transform: perspective(1500px) rotateY(-24deg) rotateX(3deg);
   transform-origin: 100% 50%; }
-.hero-wall-img { position: absolute; top: 0; bottom: 0; left: 0; width: 160%;
-  background: url("hero-wall.jpg") 0 50% / cover no-repeat; will-change: transform;
-  animation: wall-pan 90s ease-in-out infinite alternate; }
+.hero-wall-img { position: absolute; inset: 0; background: url("hero-wall.jpg") 0 50% / cover no-repeat; }
 .hero-wall::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 50%;
   background: linear-gradient(105deg, transparent 20%, rgba(150, 165, 255, 0.16) 50%, transparent 80%);
-  mix-blend-mode: screen; will-change: transform; animation: wall-scan 9s linear infinite; }
+  mix-blend-mode: screen; animation: wall-scan 9s linear infinite; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(90deg, var(--dark) 0%, var(--dark) 48%, rgba(21, 23, 28, 0.9) 56%,
     rgba(21, 23, 28, 0.5) 69%, rgba(21, 23, 28, 0.14) 100%),
     linear-gradient(0deg, var(--dark) 0%, rgba(21, 23, 28, 0) 26%); }
-@keyframes wall-pan { from { transform: translateX(0); } to { transform: translateX(-37.5%); } }
 @keyframes wall-scan { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+/* the text keeps to the dark side at every width */
+.hero h1 { max-width: 9.6em; }
+.hero .answer, .hero-pages { max-width: min(46rem, 54%); }
+.hero-pages a { white-space: nowrap; }
 
 .brand { display: flex; align-items: center; gap: 10px; margin: 0 0 26px; }
 .brand svg { width: 30px; height: 30px; flex: none; }
@@ -484,42 +486,20 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
 .watch-button .len { color: var(--dark-ink-3); font-weight: 500; }
 .photo-note { margin: 26px 0 0; font-size: 0.78rem; color: var(--dark-ink-3); text-align: right; max-width: none; }
 
-@media (max-width: 1199.98px) {
-  /* below 1200 px the summary would reach into the wall: the wall becomes a band across the
-     top, behind the title, all 40 runs in four rows of ten */
-  .hero-wall { left: 0; right: 0; width: auto; top: 0; bottom: auto; height: 440px; transform: none;
-    opacity: 0.5; }
-  .hero-wall-img { width: 100%; background-image: url("hero-band.jpg"); background-position: 50% 0;
-    animation: none; }
-  .hero::after { background: linear-gradient(180deg, rgba(21, 23, 28, 0.25) 0%,
-    rgba(21, 23, 28, 0.7) 220px, var(--dark) 430px); }
-}
 @media (max-width: 860px) {
-  /* phones: the wall of eight by five, smaller tiles, panning */
-  .hero-wall { height: 400px; }
-  .hero-wall-img { width: 160%; background-image: url("hero-wall.jpg");
-    animation: wall-pan 90s ease-in-out infinite alternate; }
-  .hero::after { background: linear-gradient(180deg, rgba(21, 23, 28, 0.25) 0%,
-    rgba(21, 23, 28, 0.7) 200px, var(--dark) 390px); }
+  /* narrow screens: the wall is a picture above the title, leaning back */
+  .hero { padding-top: 230px; }
+  .hero-wall { top: -80px; bottom: auto; left: -10%; right: -10%; width: auto; height: 380px;
+    opacity: 0.9; transform: perspective(800px) rotateX(20deg); transform-origin: 50% 100%; }
+  .hero-wall-img { background-image: url("hero-wall-small.jpg"); background-position: 50% 30%; }
+  .hero::after { background: linear-gradient(180deg, rgba(21, 23, 28, 0) 0, rgba(21, 23, 28, 0.15) 120px,
+    var(--dark) 290px); }
+  .hero h1, .hero .answer, .hero-pages { max-width: none; }
   .photo-note { text-align: left; }
 }
-/* after the width rules, so that it wins over the phones' pan */
-@media (prefers-reduced-motion: reduce) { .hero-wall-img, .hero-wall::after { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-wall::after { animation: none; } }
 
-/* ---- the results at a glance: one drawn image, in the layout that suits the width -------- */
-.chart-glance { margin: 26px 0 18px; padding: 0; background: none; border: 0; border-radius: 0; }
-.chart-glance figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden;
-  clip: rect(0 0 0 0); white-space: nowrap; }
-.glance-img { display: none; width: 100%; height: auto;
-  filter: drop-shadow(0 10px 24px rgba(20, 22, 28, 0.07)); }
-.chart-glance .numbers { max-width: 48rem; margin: 12px auto 0; }
-/* each layout where its smallest type renders at about 12 px or more */
-@media (min-width: 1000px) {
-  /* wider than the text, so the results stand side by side at their drawn size */
-  .chart-glance { width: min(1080px, calc(100vw - 40px)); margin-left: 50%;
-    transform: translateX(-50%); }
-  .glance-wide { display: block; }
-}
-@media (min-width: 768px) and (max-width: 999.98px) { .glance-rows { display: block; } }
-@media (max-width: 767.98px) { .glance-stack { display: block; max-width: 420px; margin: 0 auto; } }
-@media print { .glance-img { filter: none; } }
+/* ---- the results at a glance: a chart like the others, one drawn image in two layouts ---- */
+.glance-img { display: none; width: 100%; height: auto; }
+@media (min-width: 768px) { .glance-rows { display: block; } }
+@media (max-width: 767.98px) { .glance-stack { display: block; max-width: 440px; margin: 0 auto; } }
