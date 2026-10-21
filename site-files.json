@@ -1260,13 +1260,13 @@
     },
     {
       "path": "static/style.css",
-      "bytes": 28866,
-      "sha256": "4983b4fc1b6205ade23a247b46847806107ddd446ec877f2a4fbfd5c8fc1ce3f"
+      "bytes": 29101,
+      "sha256": "250624e4e312bf7d7919294fb5be1282a4048fe336075696d323db964564a4f0"
     },
     {
       "path": "story-values.json",
       "bytes": 46771,
-      "sha256": "f68894b69439fbeb2b542b92341eadc7fb88b66feadcf1313001f541ea640b11"
+      "sha256": "ea7acc2aeadecb500c456ac5f767ab2be33c712afb28e6a93ebf8b46004a57dd"
     }
   ],
   "warnings": [],
