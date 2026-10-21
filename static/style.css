@@ -461,3 +461,36 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
   .loop li:not(:last-child)::after { content: "\2193"; right: auto; left: 24px; top: auto; bottom: -23px; transform: none; }
   .loop li:last-child::after { right: -26px; }
 }
+
+/* ---- the opening: logo, a recorded frame behind the text, an invitation to the film ----- */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+/* the frame fills the right part, centred on the cabinet with the bowl and the open drawer */
+.hero::before { content: ""; position: absolute; top: 0; bottom: 0; right: 0; left: 44%; z-index: -2;
+  background: url("hero-job-done.jpg") 34% 58% / cover no-repeat; opacity: 0.7;
+  animation: hero-drift 24s ease-in-out infinite alternate; transform-origin: 40% 60%; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, var(--dark) 0%, var(--dark) 44%, rgba(21, 23, 28, 0.78) 52%,
+    rgba(21, 23, 28, 0.30) 72%, rgba(21, 23, 28, 0.12) 100%),
+    linear-gradient(0deg, var(--dark) 0%, rgba(21, 23, 28, 0) 24%); }
+@keyframes hero-drift { from { transform: scale(1.06); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
+
+.brand { display: flex; align-items: center; gap: 10px; margin: 0 0 26px; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+.brand .wordmark { font-size: 1.45rem; font-weight: 820; letter-spacing: -0.03em; color: #fff; }
+.hero .brand .kicker { margin: 0 0 0 8px; padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, 0.25);
+  line-height: 1.6; }
+
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.watch-button { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45); color: #fff; font-weight: 650; font-size: 0.98rem;
+  text-decoration: none; background: rgba(21, 23, 28, 0.35); }
+.watch-button:hover { background: rgba(255, 255, 255, 0.12); border-color: #fff; }
+.watch-button .len { color: var(--dark-ink-3); font-weight: 500; }
+.photo-note { margin: 26px 0 0; font-size: 0.78rem; color: var(--dark-ink-3); text-align: right; max-width: none; }
+
+@media (max-width: 860px) {
+  .hero::before { left: 0; background-position: 40% 40%; opacity: 0.36; }
+  .hero::after { background: linear-gradient(180deg, rgba(21, 23, 28, 0.55) 0%, var(--dark) 62%); }
+  .photo-note { text-align: left; }
+}

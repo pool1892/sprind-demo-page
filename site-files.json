@@ -1245,8 +1245,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 220286,
-      "sha256": "11b4631cf95e5659ec260dfc5388b4112765723e88a5ea5e27af57be4b607838"
+      "bytes": 220817,
+      "sha256": "10eb62491656a96d2b7ecfc78b9f81ac329ccc97a2b06cff9b19bf7ea270d856"
     },
     {
       "path": "record/index.html",
@@ -1259,14 +1259,19 @@
       "sha256": "5539bd01ce04c819ed1e1ec7a3f7b189dcbbf63b7d98cb74d92f4b299533b46e"
     },
     {
+      "path": "static/hero-job-done.jpg",
+      "bytes": 68275,
+      "sha256": "cccf5518772a5f3cddccab03431a98951028cfff34268946cbaf037ef6ae734b"
+    },
+    {
       "path": "static/style.css",
-      "bytes": 30541,
-      "sha256": "38cc1786a4d544f152c0c144eeacf9c641027c506bba8f404608434cf5053a31"
+      "bytes": 32763,
+      "sha256": "dbe551871f75811c67b52d10c513dc72f1d634e3e8f066561bb0861720f8ecae"
     },
     {
       "path": "story-values.json",
       "bytes": 46771,
-      "sha256": "c8fcf3d582960c32ed3235cd311df8186c32da8c2b88cbfae6d9ff2219f74668"
+      "sha256": "05d90743549ce8dbbdde45a12b6bf83126486804a939b09354608f19e6050aad"
     }
   ],
   "warnings": [],
