@@ -1,7 +1,7 @@
 {
  "format": "fleetlab.film-story-values/2",
  "note": "Every number on the story page: in 'values', each number of the text with the value it was filled with and where it came from ('numbers' are the film's bound numbers, bound from the run records; the others are derived from the film data's recorded tables); in 'charts', every chart's numbers with the records they were read from; in 'fleet_record', the tables of the fleet record page.",
- "text_sha256": "3f64b083b863b4961234d2f500aa078888da02d68537f435c71181b9d7abb724",
+ "text_sha256": "28722596b1cb9c4550d81b2b619a923e6935fe9b7d66567d6f2d13bfb95295d7",
  "data_sha256": "4fe16eaea3fec9f6ae34e4fa9460bbd912dca7af733cbe44ac0a0b1f2336c48f",
  "values": {
   "b_comp_settings": {
@@ -291,7 +291,388 @@
  },
  "charts": [
   {
-   "figure": "fig-1-notebook",
+   "figure": "fig-1-glance",
+   "kind": "glance",
+   "title": "The results, before and after the agent's work",
+   "values": [
+    {
+     "result": "Experiment one · job one: Bowl on the cabinet, drawer open",
+     "before": "1",
+     "after": "20",
+     "unit": "of 20",
+     "marks": [
+      {
+       "label": "plain chain of skills",
+       "count": "1 of 20"
+      },
+      {
+       "label": "the agent's job",
+       "count": "20 of 20"
+      }
+     ]
+    },
+    {
+     "result": "Experiment one · job two: Plate at the stove, bowl on the cabinet",
+     "before": "5",
+     "after": "20",
+     "unit": "of 20",
+     "marks": [
+      {
+       "label": "plain chain of skills",
+       "count": "5 of 20"
+      },
+      {
+       "label": "the agent's job",
+       "count": "20 of 20"
+      }
+     ]
+    },
+    {
+     "result": "Experiment two · fleet: Problems planted in 12 arms at 3 sites",
+     "before": "78%",
+     "after": "97%",
+     "unit": "",
+     "marks": [
+      {
+       "label": "as the fleet was",
+       "count": "451 of 576"
+      },
+      {
+       "label": "with the agent's 3 changes",
+       "count": "558 of 576"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000201"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000202"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000203"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000204"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000205"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000206"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000207"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000208"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000209"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000210"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000211"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000212"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000213"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000214"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000215"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000216"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000217"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000218"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000219"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000220"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000101"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000102"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000103"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000104"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000105"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000106"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000107"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000108"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000109"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000110"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000111"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000112"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000113"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000114"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000115"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000116"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000117"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000118"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000119"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/replacement-01/run/release/run/run",
+     "episode": "e000120"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000201"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000202"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000203"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000204"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000205"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000206"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000207"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000208"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000209"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000210"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000211"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000212"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000213"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000214"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000215"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000216"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000217"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000218"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000219"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000220"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000101"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000102"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000103"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000104"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000105"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000106"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000107"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000108"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000109"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000110"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000111"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000112"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000113"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000114"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000115"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000116"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000117"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000118"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000119"
+    },
+    {
+     "id": "probes:demo/2026-10-20/reliability/plate-cabinet-01/run/release/run/run",
+     "episode": "e000120"
+    },
+    {
+     "id": "probes:demo/2026-10-20/instrument/engagement-1/engagement/engagement.json",
+     "sha256": "bd82a0c6aced0ff2648da7031461563189b9623ed65542dedb59fe62b6f90d25"
+    }
+   ]
+  },
+  {
+   "figure": "fig-2-notebook",
    "kind": "notebook",
    "title": "The agent's lab notebook, job one",
    "values": [
@@ -576,7 +957,7 @@
    ]
   },
   {
-   "figure": "fig-2-notebook",
+   "figure": "fig-3-notebook",
    "kind": "notebook",
    "title": "The agent's lab notebook, job two",
    "values": [
@@ -1199,7 +1580,7 @@
    ]
   },
   {
-   "figure": "fig-3-exam",
+   "figure": "fig-4-exam",
    "kind": "exam",
    "title": "Plain chain against the agent's job, layout by layout",
    "values": [
@@ -1728,7 +2109,7 @@
    ]
   },
   {
-   "figure": "fig-4-fleet",
+   "figure": "fig-5-fleet",
    "kind": "fleet",
    "title": "The regular work, robot by robot",
    "values": [
@@ -1818,7 +2199,7 @@
    ]
   },
   {
-   "figure": "fig-5-probe",
+   "figure": "fig-6-probe",
    "kind": "probe",
    "title": "The agent's test motion, as recorded",
    "values": [
@@ -1919,7 +2300,7 @@
    ]
   },
   {
-   "figure": "fig-6-repairs",
+   "figure": "fig-7-repairs",
    "kind": "repairs",
    "title": "The tested repairs",
    "values": [
@@ -2034,7 +2415,7 @@
    ]
   },
   {
-   "figure": "fig-7-fleet-result",
+   "figure": "fig-8-fleet-result",
    "kind": "fleet-result",
    "title": "576 attempts the agent never saw",
    "values": [
