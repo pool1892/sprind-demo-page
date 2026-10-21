@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Can an AI agent engineer a robot? &middot; Mayfly</title>
-<meta name="description" content="The question. Can an AI agent do a robot&#x27;s engineering on its own: find out what needs to change, change it, and prove that it works? The evidence. In two experiments in simulation, it did, with the robot&#x27;s own model unchanged and no person in the loop. From skills the robot already had, it built two new jobs that succeeded on 20 of 20 and 20 of 20 layouts it had never seen, where the skills simply chained managed 1 and 5. In a fleet with planted faults, it found all three problems and lifted success on 576 unseen attempts from 78% to 97%. Why it matters. This engineering is what makes every new robot job slow and expensive today. Agents can do it. Mayfly is building the robot installations where they do.">
+<meta name="description" content="The question. Can an AI agent do a robot&#x27;s engineering on its own: find out what needs to change, change it, and prove that it works? The evidence. In two experiments in simulation, it did, with the robot&#x27;s model unchanged and no person involved after setup. Two new jobs built from the robot&#x27;s existing skills completed 20 of 20 and 20 of 20 unseen layouts, against 1 and 5 for the skills simply chained. In a fleet with planted faults, the agent built its own instrument, found all three problems and lifted success on 576 unseen attempts from 78% to 97%. Why it matters. This engineering makes every new robot job slow and expensive today, and agents can do it. Mayfly is building robot installations that take on new work themselves, starting with packing for fulfilment providers.">
 <meta name="generator" content="fleetlab.film-site/1">
 <meta name="color-scheme" content="light">
 <meta property="og:title" content="Can an AI agent engineer a robot?">
-<meta property="og:description" content="The question. Can an AI agent do a robot&#x27;s engineering on its own: find out what needs to change, change it, and prove that it works? The evidence. In two experiments in simulation, it did, with the robot&#x27;s own model unchanged and no person in the loop. From skills the robot already had, it built two new jobs that succeeded on 20 of 20 and 20 of 20 layouts it had never seen, where the skills simply chained managed 1 and 5. In a fleet with planted faults, it found all three problems and lifted success on 576 unseen attempts from 78% to 97%. Why it matters. This engineering is what makes every new robot job slow and expensive today. Agents can do it. Mayfly is building the robot installations where they do.">
+<meta property="og:description" content="The question. Can an AI agent do a robot&#x27;s engineering on its own: find out what needs to change, change it, and prove that it works? The evidence. In two experiments in simulation, it did, with the robot&#x27;s model unchanged and no person involved after setup. Two new jobs built from the robot&#x27;s existing skills completed 20 of 20 and 20 of 20 unseen layouts, against 1 and 5 for the skills simply chained. In a fleet with planted faults, the agent built its own instrument, found all three problems and lifted success on 576 unseen attempts from 78% to 97%. Why it matters. This engineering makes every new robot job slow and expensive today, and agents can do it. Mayfly is building robot installations that take on new work themselves, starting with packing for fulfilment providers.">
 <meta property="og:type" content="video.other">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://pool1892.github.io/sprind-demo-page/film/poster.jpg">
@@ -26,14 +26,16 @@
     <p class="subtitle">Two experiments in simulation</p>
     <div class="answer"><p><strong>The question.</strong> Can an AI agent do a robot's engineering on its own: find out what needs to
 change, change it, and prove that it works?</p>
-<p><strong>The evidence.</strong> In two experiments in simulation, it did, with the robot's own model
-unchanged and no person in the loop. From skills the robot already had, it built two new jobs
-that succeeded on 20 of 20 and 20 of 20
-layouts it had never seen, where the skills simply chained managed 1 and
-5. In a fleet with planted faults, it found all three problems and lifted
-success on 576 unseen attempts from 78% to 97%.</p>
-<p><strong>Why it matters.</strong> This engineering is what makes every new robot job slow and expensive
-today. Agents can do it. Mayfly is building the robot installations where they do.</p></div>
+<p><strong>The evidence.</strong> In two experiments in simulation, it did, with the robot's model unchanged
+and no person involved after setup. Two new jobs built from the robot's existing skills
+completed 20 of 20 and 20 of 20 unseen
+layouts, against 1 and 5 for the skills simply chained.
+In a fleet with planted faults, the agent built its own instrument, found all three problems
+and lifted success on 576 unseen attempts from 78% to
+97%.</p>
+<p><strong>Why it matters.</strong> This engineering makes every new robot job slow and expensive today, and
+agents can do it. Mayfly is building robot installations that take on new work themselves,
+starting with packing for fulfilment providers.</p></div>
     <div class="hero-links">
       <a class="code-button" href="https://github.com/pool1892/sprind-demo-code"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span>The code on GitHub</span><span class="url">github.com/pool1892/sprind-demo-code</span></a>
       <p class="hero-pages">Behind every number:
@@ -178,8 +180,9 @@ follow. The robot runs X-VLA, an open vision-language-action model that turns ca
 a written instruction into motion. We kept it fixed, so every gain comes from the engineering
 around it.</p>
 <h3 id="the-sandbox">The sandbox</h3>
-<p>The engineer is an AI agent in a sandbox. It works from the evidence; the grading stays out of
-its reach.</p>
+<p>Two AI models play different parts. The engineering agent reads the records, writes programs
+and chooses experiments, in a sandbox; X-VLA, the robot's model, executes the skills,
+unchanged. The agent works from the evidence; the grading stays out of its reach.</p>
 <div class="sandbox">
 <div class="sb sb-sees"><h4>Sees</h4><ul>
 <li>camera frames from its trials</li>
@@ -192,11 +195,10 @@ its reach.</p>
 <li>runs experiments and test motions</li>
 <li>saves what works in the installation's library</li>
 </ul></div>
-<div class="sb sb-locked"><h4>Cannot see or change</h4><ul>
-<li>the problems we planted</li>
-<li>the exam layouts and reserved attempts, until its work is final</li>
-<li>the grading rules: it knows them and cannot change them</li>
-<li>the robot model's weights</li>
+<div class="sb sb-locked"><h4>Fixed boundaries</h4><ul>
+<li>hidden from it: the problems we planted</li>
+<li>locked away until its work is final: the exam layouts and the reserved attempts</li>
+<li>fixed: the grading rules, which it knows, and the robot model's weights</li>
 </ul></div>
 </div>
 
@@ -205,8 +207,8 @@ its reach.</p>
 <p>Each try starts from a stored arrangement of the table, a layout. The agent compares its
 programs on practice layouts; 20 more stay locked away for a final exam, and the
 bar is set before any program runs. The plain chain, the skills one after the other, runs on
-the same 20: that is the baseline. On real robots the split carries over: practice
-on simulated copies of the station, the exam in the real world.</p>
+the same 20: that is the baseline. In the planned hardware programme, agents will
+practise on simulated copies of the station and qualify their solutions on the real robots.</p>
 </section>
 <section class="story-section" id="section-experiment-one" aria-labelledby="experiment-one"><h2 data-toc="Experiment one" id="experiment-one">Experiment one: a new job from skills the robot already has</h2>
 <p>Twice, chaining the robot's skills failed the job. Twice, the agent found the physical cause,
@@ -299,25 +301,34 @@ with a tested repair, and the false lead left alone.</p>
 <p>The agent worked like a good engineer: it read the evidence, found the physical cause, changed
 one thing at a time, built a measurement when the records were not enough, and kept what
 worked, the two jobs, their checks and its test motion, in the installation's library.</p>
+<p>For the second job, it tested and extended the check it had saved from the first. In the fleet,
+it built a test motion when the task records could not tell two faults apart.</p>
 </section>
 <section class="story-section" id="section-next" aria-labelledby="next"><h2 data-toc="Next" id="next">What comes next</h2>
-<p>Next, real robots: a complete packing operation on two-armed mobile robots, with practice on
-simulated copies of the station and the final exam on the hardware. The question we will
-answer: how much less human work each new job needs once agents do the engineering.</p>
+<p>Next, real robots: a complete packing operation on two mobile two-armed robots from different
+makers, turning picked items into correct, protected parcels ready for dispatch. Agents will
+engineer with physical measurements and experiments, while the safety functions stay outside
+their reach, practising on simulated copies of the station and proving each solution on the
+hardware. The measure: all the human work each new requirement still needs, at a fixed
+operating standard.</p>
 </section>
 <section class="story-section" id="section-what-it-means" aria-labelledby="what-it-means"><h2 data-toc="What it means" id="what-it-means">What it means</h2>
 <div class="so-what">
 <p>What stands between a robot's skills and paid work is engineering, done by hand today for
 every job and every change. Here an agent did that engineering from start to finish and proved
 it on cases it had never seen.</p>
+<p>Our ambition is the economics that follow: smaller installations that recover their setup
+costs, shorter runs that carry their changeover costs, and customers who buy the result while
+Mayfly is responsible for delivering it.</p>
 <p class="so-what-line">That is what Mayfly is building: robot installations where taking on
 new work is part of the product, because agents do the engineering.</p>
 </div>
 
 </section>
 <section class="story-section" id="section-evidence" aria-labelledby="evidence"><h2 data-toc="Evidence" id="evidence">The evidence</h2>
-<p>Every clip in the film is a recorded run, and every count on this page comes from the run
-records.</p>
+<p>These experiments are newer than the simulation evidence attached to our application: they add
+a diagnostic instrument the agent built itself, which that evidence had not yet shown. Every
+clip in the film is a recorded run, and every count on this page comes from the run records.</p>
 <table class="results">
 <thead><tr><th scope="col">Result</th><th scope="col">Before</th><th scope="col">After the agent's work</th><th scope="col">Rescued · broken</th></tr></thead>
 <tbody>

@@ -328,7 +328,7 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
   .card-figure .to { font-size: 2.5rem; }
 }
 @media (max-width: 640px) {
-  .wrap { padding: 0 14px; }
+  .wrap { padding-left: 14px; padding-right: 14px; }
   .top { padding: 28px 0 18px; }
   .top h1 { font-size: 1.6rem; }
   .top .lede { font-size: 1rem; }
@@ -434,3 +434,30 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
 /* The summary above the film: question, evidence, why it matters, one paragraph each. */
 .hero .answer p + p { margin-top: 14px; }
 .hero .answer strong { color: #fff; font-weight: 750; }
+
+/* ---- visual polish round (Astra, 21 October) -------------------------------------------- */
+:root { --ink-3-text: #5f6570; } /* small grey text: at least 4.5:1 on white and on the paper */
+
+/* 1: the repair names wrap (the general table rule kept them on one line, into the decision) */
+.story-section table.repairs tbody th { white-space: normal; }
+
+/* 2: the record's long tables: the meaning gets room, and on phones the table scrolls rather
+   than squeezing its columns into strips */
+.prose table td, .prose table th { min-width: 4.5em; }
+.prose table:has(td:nth-child(4) code) td:nth-child(3) { min-width: 15em; }
+
+/* 3: small labels in the darker grey; decorative marks keep --ink-3 */
+.probe-axis span, .numbers > summary, .card-kicker, .repairs thead th, .repairs .site-row th,
+.bar-site, .muted .row-label, .muted .row-count, .muted .row-count strong { color: var(--ink-3-text); }
+
+@media (max-width: 640px) {
+  .prose table td, .prose table th { min-width: 8em; }
+  .repairs td.num::before, .results td::before { color: var(--ink-3-text); }
+}
+
+/* 5: on the narrowest screens the loop is a column, its arrows pointing down */
+@media (max-width: 420px) {
+  .loop { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .loop li:not(:last-child)::after { content: "\2193"; right: auto; left: 24px; top: auto; bottom: -23px; transform: none; }
+  .loop li:last-child::after { right: -26px; }
+}
