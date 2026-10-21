@@ -430,3 +430,6 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
 @media (max-width: 520px) {
   .code-button .url { display: none; }
 }
+/* The summary above the film: question, evidence, why it matters, one paragraph each. */
+.hero .answer p + p { margin-top: 14px; }
+.hero .answer strong { color: #fff; font-weight: 750; }
