@@ -411,3 +411,22 @@ rect.cell-lost { fill: var(--line); stroke: var(--bad); stroke-width: 2; }
   .fleet-record .record-table td.change { min-width: 9em; }
 }
 .fleet-record main.prose { max-width: 1000px; }
+
+/* Pointers to the code and the sub pages: the code first and prominent, the records quieter. */
+.hero-links { margin-top: 30px; }
+.code-button { display: inline-flex; align-items: center; gap: 10px; padding: 11px 20px; border-radius: 999px;
+  background: #fff; color: #15171c; font-weight: 700; font-size: 1rem; text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25); }
+.code-button:hover { background: #eef0ff; }
+.code-button svg { width: 20px; height: 20px; flex: none; }
+.code-button .url { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 500;
+  font-size: 0.86rem; color: #5a5f6b; padding-left: 10px; border-left: 1px solid #d8dae0; }
+.hero-pages { margin: 14px 0 0; font-size: 0.95rem; color: var(--dark-ink-3); max-width: none; }
+.hero-pages a { color: #d3d8ff; text-decoration: underline; text-decoration-color: rgba(211, 216, 255, 0.4);
+  text-underline-offset: 3px; }
+.hero-pages a:hover { color: #fff; text-decoration-color: #fff; }
+.toc .toc-code a { color: var(--agent); }
+.pointers { margin: 18px 0 0; font-size: 0.95rem; color: var(--ink-2); }
+@media (max-width: 520px) {
+  .code-button .url { display: none; }
+}

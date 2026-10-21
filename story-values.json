@@ -1,8 +1,8 @@
 {
  "format": "fleetlab.film-story-values/2",
  "note": "Every number on the story page: in 'values', each number of the text with the value it was filled with and where it came from ('numbers' are the film's bound numbers, bound from the run records; the others are derived from the film data's recorded tables); in 'charts', every chart's numbers with the records they were read from; in 'fleet_record', the tables of the fleet record page.",
- "text_sha256": "7352306ca16e1d2f56e744019d3dbaefe759951a8c44be2a3deea1eb50d1ac76",
- "data_sha256": "4fe16eaea3fec9f6ae34e4fa9460bbd912dca7af733cbe44ac0a0b1f2336c48f",
+ "text_sha256": "935f6cb6870fb2cd0fb97a58b7e94b38a09ec0ef6ba461e76e3eb3711f0b132e",
+ "data_sha256": "f4eca807e00a5d7f789804480f342f3e60f80812b08a110506c22bc0cf35d2cf",
  "values": {
   "b_comp_settings": {
    "value": "3",
