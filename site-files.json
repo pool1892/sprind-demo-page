@@ -1240,13 +1240,13 @@
     },
     {
       "path": "fleet-record.html",
-      "bytes": 10145,
-      "sha256": "24d9c22e6e2fc247e25fd32124e37ad79484ededcbf21bc19da21869e7d365bd"
+      "bytes": 10222,
+      "sha256": "0706398a7887fb47eab1af056bfa0d2ab0a890286bd08ebcfd0fcbbab7095061"
     },
     {
       "path": "index.html",
-      "bytes": 255103,
-      "sha256": "09e943260a48edcfef41c005956f3a69f97ac9d73046a3d663c33295a8966792"
+      "bytes": 261454,
+      "sha256": "6cb5fd02c976fd92a3e0a6da32ce4b28b21bf4a3f6a1c3a6967a1ff1c51b079d"
     },
     {
       "path": "record/index.html",
@@ -1275,13 +1275,13 @@
     },
     {
       "path": "static/style.css",
-      "bytes": 32745,
-      "sha256": "4893535f78ea22b4f03959ad1a384aa9bea9a67655d88b159d921c2fc7046ecf"
+      "bytes": 32779,
+      "sha256": "3159ce09856e80e9bd9c9fbf81a40c60c463afb755175dce70e64d7c694b0364"
     },
     {
       "path": "story-values.json",
-      "bytes": 58069,
-      "sha256": "db6a022b3fa288adb1a0607e7ed56f20e539aeb00231a6db5cd8fa9e4a517bc5"
+      "bytes": 58306,
+      "sha256": "4791049361b08c604bc22017da20a80035ecf4a55b3219df0f8af311456c4dc3"
     }
   ],
   "warnings": [],

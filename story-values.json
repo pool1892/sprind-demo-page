@@ -1,7 +1,7 @@
 {
  "format": "fleetlab.film-story-values/2",
  "note": "Every number on the story page: in 'values', each number of the text with the value it was filled with and where it came from ('numbers' are the film's bound numbers, bound from the run records; the others are derived from the film data's recorded tables); in 'charts', every chart's numbers with the records they were read from; in 'fleet_record', the tables of the fleet record page.",
- "text_sha256": "28722596b1cb9c4550d81b2b619a923e6935fe9b7d66567d6f2d13bfb95295d7",
+ "text_sha256": "76f6814b68e14299aee63c7192922ffb254edebf78f30d71ae60eae2abd2450c",
  "data_sha256": "4fe16eaea3fec9f6ae34e4fa9460bbd912dca7af733cbe44ac0a0b1f2336c48f",
  "values": {
   "b_comp_settings": {
@@ -293,52 +293,52 @@
   {
    "figure": "fig-1-glance",
    "kind": "glance",
-   "title": "The results, before and after the agent's work",
+   "title": "The final results, before and after the agent's work",
    "values": [
     {
-     "result": "Experiment one · job one: Bowl on the cabinet, drawer open",
+     "result": "Experiment one · job one: Put the bowl on the cabinet, then open the drawer",
      "before": "1",
      "after": "20",
      "unit": "of 20",
      "marks": [
       {
-       "label": "plain chain of skills",
+       "label": "skills in sequence",
        "count": "1 of 20"
       },
       {
-       "label": "the agent's job",
+       "label": "the agent's program",
        "count": "20 of 20"
       }
      ]
     },
     {
-     "result": "Experiment one · job two: Plate at the stove, bowl on the cabinet",
+     "result": "Experiment one · job two: Push the plate to the stove, put the bowl on the cabinet",
      "before": "5",
      "after": "20",
      "unit": "of 20",
      "marks": [
       {
-       "label": "plain chain of skills",
+       "label": "skills in sequence",
        "count": "5 of 20"
       },
       {
-       "label": "the agent's job",
+       "label": "the agent's program",
        "count": "20 of 20"
       }
      ]
     },
     {
-     "result": "Experiment two · fleet: Problems planted in 12 arms at 3 sites",
+     "result": "Experiment two · fleet: Find the faults planted in 12 robot arms at 3 sites",
      "before": "78%",
      "after": "97%",
      "unit": "",
      "marks": [
       {
-       "label": "as the fleet was",
+       "label": "before the repairs",
        "count": "451 of 576"
       },
       {
-       "label": "with the agent's 3 changes",
+       "label": "after the agent's 3 repairs",
        "count": "558 of 576"
       }
      ]
@@ -677,7 +677,7 @@
    "title": "The agent's lab notebook, job one",
    "values": [
     {
-     "program": "straight to the drawer (the plain chain)",
+     "program": "straight to the drawer (skills in sequence)",
      "role": "plain",
      "k": 5,
      "n": 10,
@@ -962,7 +962,7 @@
    "title": "The agent's lab notebook, job two",
    "values": [
     {
-     "program": "plate, then bowl (the plain chain)",
+     "program": "plate, then bowl (skills in sequence)",
      "role": "plain",
      "k": 7,
      "n": 10,
@@ -1582,11 +1582,11 @@
   {
    "figure": "fig-4-exam",
    "kind": "exam",
-   "title": "Plain chain against the agent's job, layout by layout",
+   "title": "Skills in sequence against the agent's program, final test by final test",
    "values": [
     {
-     "job": "Job one: bowl on the cabinet, drawer open",
-     "row": "Plain chain",
+     "job": "Job one: put the bowl on the cabinet, then open the drawer",
+     "row": "Skills in sequence",
      "k": 1,
      "n": 20,
      "layouts": [
@@ -1635,8 +1635,8 @@
      ]
     },
     {
-     "job": "Job one: bowl on the cabinet, drawer open",
-     "row": "Agent's job",
+     "job": "Job one: put the bowl on the cabinet, then open the drawer",
+     "row": "Agent's program",
      "k": 20,
      "n": 20,
      "layouts": [
@@ -1685,8 +1685,8 @@
      ]
     },
     {
-     "job": "Job two: plate at the stove, bowl on the cabinet",
-     "row": "Plain chain",
+     "job": "Job two: push the plate to the stove, put the bowl on the cabinet",
+     "row": "Skills in sequence",
      "k": 5,
      "n": 20,
      "layouts": [
@@ -1735,8 +1735,8 @@
      ]
     },
     {
-     "job": "Job two: plate at the stove, bowl on the cabinet",
-     "row": "Agent's job",
+     "job": "Job two: push the plate to the stove, put the bowl on the cabinet",
+     "row": "Agent's program",
      "k": 20,
      "n": 20,
      "layouts": [
@@ -2111,7 +2111,7 @@
   {
    "figure": "fig-5-fleet",
    "kind": "fleet",
-   "title": "The regular work, robot by robot",
+   "title": "The fleet before the investigation, robot by robot",
    "values": [
     {
      "site": "site 1",
@@ -2201,11 +2201,11 @@
   {
    "figure": "fig-6-probe",
    "kind": "probe",
-   "title": "The agent's test motion, as recorded",
+   "title": "The agent's instrument: its test motion, as recorded",
    "values": [
     {
      "robot": "site 1 · r01",
-     "shows": "the same wait out and back: a delay on the line",
+     "shows": "the same wait out and back: a delay on the connection",
      "wait_steps": [
       18,
       18
@@ -2417,7 +2417,7 @@
   {
    "figure": "fig-8-fleet-result",
    "kind": "fleet-result",
-   "title": "576 attempts the agent never saw",
+   "title": "576 final test attempts, before and after the repairs",
    "values": [
     {
      "attempts": 576,
@@ -2750,7 +2750,7 @@
   ],
   "evaluation": [
    {
-    "state": "As the fleet was",
+    "state": "Before the repairs",
     "k": 451,
     "n": 576,
     "pct": "78%",
@@ -2758,7 +2758,7 @@
     "high_pct": "81%"
    },
    {
-    "state": "With the agent's 3 changes",
+    "state": "After the agent's 3 repairs",
     "k": 558,
     "n": 576,
     "pct": "97%",
