@@ -1245,8 +1245,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 261454,
-      "sha256": "6cb5fd02c976fd92a3e0a6da32ce4b28b21bf4a3f6a1c3a6967a1ff1c51b079d"
+      "bytes": 259707,
+      "sha256": "a631a05b3cd33d238c49211d84ee4d4545e37bbc33cbf580ec9a9a7b01b84d95"
     },
     {
       "path": "record/index.html",
@@ -1275,13 +1275,13 @@
     },
     {
       "path": "static/style.css",
-      "bytes": 32779,
-      "sha256": "3159ce09856e80e9bd9c9fbf81a40c60c463afb755175dce70e64d7c694b0364"
+      "bytes": 34107,
+      "sha256": "91ff60d6ce9c4bc7c386e8b0c037a856ff82d091d96e192737672f66b1e50238"
     },
     {
       "path": "story-values.json",
       "bytes": 58306,
-      "sha256": "4791049361b08c604bc22017da20a80035ecf4a55b3219df0f8af311456c4dc3"
+      "sha256": "a75107658d1080d898b25037d953e9f26f4e8d9b310e87369d1a32365b512017"
     }
   ],
   "warnings": [],
